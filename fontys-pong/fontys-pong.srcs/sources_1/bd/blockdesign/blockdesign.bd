@@ -2,12 +2,1351 @@
   "design": {
     "design_info": {
       "boundary_crc": "0x0",
+      "device": "xc7z020clg400-1",
       "gen_directory": "../../../../fontys-pong.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2023.1"
     },
-    "design_tree": {}
+    "design_tree": {
+      "position_paddles_0": "",
+      "ultrasonic_controller_0": "",
+      "ultrasonic_controller_1": "",
+      "score_counter_0": "",
+      "util_vector_logic_0": "",
+      "collision_detection_0": "",
+      "util_vector_logic_1": "",
+      "position_ball_0": "",
+      "paint_rectangle_0": "",
+      "paint_rectangle_1": "",
+      "paint_rectangle_2": "",
+      "clk_wiz": "",
+      "paint_centerline_0": "",
+      "clk_divider_0": "",
+      "Constants": {
+        "xlconstant_0": "",
+        "xlconstant_1": "",
+        "xlconstant_2": "",
+        "xlconstant_3": "",
+        "xlconstant_4": "",
+        "xlconstant_5": "",
+        "xlconstant_6": ""
+      }
+    },
+    "ports": {
+      "trigger_0": {
+        "direction": "O"
+      },
+      "trigger_1": {
+        "direction": "O"
+      },
+      "sensor_0": {
+        "direction": "I"
+      },
+      "sensor_1": {
+        "direction": "I"
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "PHASE": {
+            "value": "0.0"
+          }
+        }
+      },
+      "hsync_o_0": {
+        "direction": "O"
+      },
+      "vsync_o_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "position_paddles_0": {
+        "vlnv": "xilinx.com:module_ref:position_paddles:1.0",
+        "xci_name": "blockdesign_position_paddles_0_0",
+        "xci_path": "ip\\blockdesign_position_paddles_0_0\\blockdesign_position_paddles_0_0.xci",
+        "inst_hier_path": "position_paddles_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "position_paddles",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "paddle_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_offset_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "screen_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "screen_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "controller_value_l": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "controller_value_r": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "paddle_l_pos_x": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_l_pos_y": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_r_pos_x": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_r_pos_y": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          }
+        }
+      },
+      "ultrasonic_controller_0": {
+        "vlnv": "xilinx.com:module_ref:ultrasonic_controller:1.0",
+        "xci_name": "blockdesign_ultrasonic_controller_0_0",
+        "xci_path": "ip\\blockdesign_ultrasonic_controller_0_0\\blockdesign_ultrasonic_controller_0_0.xci",
+        "inst_hier_path": "ultrasonic_controller_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ultrasonic_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "sensor": {
+            "direction": "I"
+          },
+          "trigger": {
+            "direction": "O"
+          },
+          "value": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          }
+        }
+      },
+      "ultrasonic_controller_1": {
+        "vlnv": "xilinx.com:module_ref:ultrasonic_controller:1.0",
+        "xci_name": "blockdesign_ultrasonic_controller_1_0",
+        "xci_path": "ip\\blockdesign_ultrasonic_controller_1_0\\blockdesign_ultrasonic_controller_1_0.xci",
+        "inst_hier_path": "ultrasonic_controller_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ultrasonic_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "sensor": {
+            "direction": "I"
+          },
+          "trigger": {
+            "direction": "O"
+          },
+          "value": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          }
+        }
+      },
+      "score_counter_0": {
+        "vlnv": "xilinx.com:module_ref:score_counter:1.0",
+        "xci_name": "blockdesign_score_counter_0_0",
+        "xci_path": "ip\\blockdesign_score_counter_0_0\\blockdesign_score_counter_0_0.xci",
+        "inst_hier_path": "score_counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "score_counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "point_l": {
+            "direction": "I"
+          },
+          "point_r": {
+            "direction": "I"
+          },
+          "max_score": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "score_left": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "score_right": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "game_reset": {
+            "type": "rst",
+            "direction": "O",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "blockdesign_util_vector_logic_0_0",
+        "xci_path": "ip\\blockdesign_util_vector_logic_0_0\\blockdesign_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "collision_detection_0": {
+        "vlnv": "xilinx.com:module_ref:collision_detection:1.0",
+        "xci_name": "blockdesign_collision_detection_0_0",
+        "xci_path": "ip\\blockdesign_collision_detection_0_0\\blockdesign_collision_detection_0_0.xci",
+        "inst_hier_path": "collision_detection_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "collision_detection",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "screen_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "screen_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_l_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_l_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_r_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "paddle_r_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "ball_size": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "ball_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "ball_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "collision_ball_paddle": {
+            "direction": "O"
+          },
+          "collision_paddle_index": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "collision_ball_edge_l": {
+            "direction": "O"
+          },
+          "collision_ball_edge_r": {
+            "direction": "O"
+          },
+          "collision_ball_topbottom": {
+            "direction": "O"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "blockdesign_util_vector_logic_0_1",
+        "xci_path": "ip\\blockdesign_util_vector_logic_0_1\\blockdesign_util_vector_logic_0_1.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "position_ball_0": {
+        "vlnv": "xilinx.com:module_ref:position_ball:1.0",
+        "xci_name": "blockdesign_position_ball_0_1",
+        "xci_path": "ip\\blockdesign_position_ball_0_1\\blockdesign_position_ball_0_1.xci",
+        "inst_hier_path": "position_ball_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "position_ball",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "screen_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "screen_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "ball_size": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "collision_ball_paddle": {
+            "direction": "I"
+          },
+          "collision_ball_paddle_index": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "collision_ball_topbottom": {
+            "direction": "I"
+          },
+          "collision_ball_edge": {
+            "direction": "I"
+          },
+          "ball_pos_x": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "ball_pox_y": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          }
+        }
+      },
+      "paint_rectangle_0": {
+        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+        "xci_name": "blockdesign_paint_rectangle_0_0",
+        "xci_path": "ip\\blockdesign_paint_rectangle_0_0\\blockdesign_paint_rectangle_0_0.xci",
+        "inst_hier_path": "paint_rectangle_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "paint_rectangle",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "hsync_i": {
+            "direction": "I"
+          },
+          "vsync_i": {
+            "direction": "I"
+          },
+          "pxl_x_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "rect_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "hsync_o": {
+            "direction": "O"
+          },
+          "vsync_o": {
+            "direction": "O"
+          },
+          "pxl_x_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "paint_rectangle_1": {
+        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+        "xci_name": "blockdesign_paint_rectangle_1_0",
+        "xci_path": "ip\\blockdesign_paint_rectangle_1_0\\blockdesign_paint_rectangle_1_0.xci",
+        "inst_hier_path": "paint_rectangle_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "paint_rectangle",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "hsync_i": {
+            "direction": "I"
+          },
+          "vsync_i": {
+            "direction": "I"
+          },
+          "pxl_x_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "rect_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "hsync_o": {
+            "direction": "O"
+          },
+          "vsync_o": {
+            "direction": "O"
+          },
+          "pxl_x_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "paint_rectangle_2": {
+        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+        "xci_name": "blockdesign_paint_rectangle_2_0",
+        "xci_path": "ip\\blockdesign_paint_rectangle_2_0\\blockdesign_paint_rectangle_2_0.xci",
+        "inst_hier_path": "paint_rectangle_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "paint_rectangle",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "hsync_i": {
+            "direction": "I"
+          },
+          "vsync_i": {
+            "direction": "I"
+          },
+          "pxl_x_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "rect_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "hsync_o": {
+            "direction": "O"
+          },
+          "vsync_o": {
+            "direction": "O"
+          },
+          "pxl_x_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "blockdesign_clk_wiz_0",
+        "xci_path": "ip\\blockdesign_clk_wiz_0\\blockdesign_clk_wiz_0.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "124.615"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "124.615"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "100.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "false"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "8.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "1"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "1"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "paint_centerline_0": {
+        "vlnv": "xilinx.com:module_ref:paint_centerline:1.0",
+        "xci_name": "blockdesign_paint_centerline_0_0",
+        "xci_path": "ip\\blockdesign_paint_centerline_0_0\\blockdesign_paint_centerline_0_0.xci",
+        "inst_hier_path": "paint_centerline_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "paint_centerline",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "hsync_i": {
+            "direction": "I"
+          },
+          "vsync_i": {
+            "direction": "I"
+          },
+          "pxl_x_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "screen_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "screen_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "hsync_o": {
+            "direction": "O"
+          },
+          "vsync_o": {
+            "direction": "O"
+          },
+          "pxl_x_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "clk_divider_0": {
+        "vlnv": "xilinx.com:module_ref:clk_divider:1.0",
+        "xci_name": "blockdesign_clk_divider_0_0",
+        "xci_path": "ip\\blockdesign_clk_divider_0_0\\blockdesign_clk_divider_0_0.xci",
+        "inst_hier_path": "clk_divider_0",
+        "parameters": {
+          "division": {
+            "value": "750000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "Constants": {
+        "ports": {
+          "dout": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "dout1": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "dout2": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "dout3": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "dout4": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "dout5": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "dout6": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          }
+        },
+        "components": {
+          "xlconstant_0": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_xlconstant_0_0",
+            "xci_path": "ip\\blockdesign_xlconstant_0_0\\blockdesign_xlconstant_0_0.xci",
+            "inst_hier_path": "Constants/xlconstant_0",
+            "parameters": {
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "xlconstant_1": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_xlconstant_0_1",
+            "xci_path": "ip\\blockdesign_xlconstant_0_1\\blockdesign_xlconstant_0_1.xci",
+            "inst_hier_path": "Constants/xlconstant_1",
+            "parameters": {
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "xlconstant_2": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_xlconstant_0_2",
+            "xci_path": "ip\\blockdesign_xlconstant_0_2\\blockdesign_xlconstant_0_2.xci",
+            "inst_hier_path": "Constants/xlconstant_2",
+            "parameters": {
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "xlconstant_3": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_xlconstant_0_3",
+            "xci_path": "ip\\blockdesign_xlconstant_0_3\\blockdesign_xlconstant_0_3.xci",
+            "inst_hier_path": "Constants/xlconstant_3",
+            "parameters": {
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "xlconstant_4": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_xlconstant_0_4",
+            "xci_path": "ip\\blockdesign_xlconstant_0_4\\blockdesign_xlconstant_0_4.xci",
+            "inst_hier_path": "Constants/xlconstant_4",
+            "parameters": {
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "xlconstant_5": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_xlconstant_0_5",
+            "xci_path": "ip\\blockdesign_xlconstant_0_5\\blockdesign_xlconstant_0_5.xci",
+            "inst_hier_path": "Constants/xlconstant_5",
+            "parameters": {
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "xlconstant_6": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_xlconstant_0_6",
+            "xci_path": "ip\\blockdesign_xlconstant_0_6\\blockdesign_xlconstant_0_6.xci",
+            "inst_hier_path": "Constants/xlconstant_6",
+            "parameters": {
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          }
+        },
+        "nets": {
+          "Net5": {
+            "ports": [
+              "xlconstant_0/dout",
+              "dout"
+            ]
+          },
+          "Net6": {
+            "ports": [
+              "xlconstant_1/dout",
+              "dout1"
+            ]
+          },
+          "Net7": {
+            "ports": [
+              "xlconstant_2/dout",
+              "dout2"
+            ]
+          },
+          "Net8": {
+            "ports": [
+              "xlconstant_3/dout",
+              "dout3"
+            ]
+          },
+          "Net9": {
+            "ports": [
+              "xlconstant_4/dout",
+              "dout4"
+            ]
+          },
+          "xlconstant_5_dout": {
+            "ports": [
+              "xlconstant_5/dout",
+              "dout5"
+            ]
+          },
+          "xlconstant_6_dout": {
+            "ports": [
+              "xlconstant_6/dout",
+              "dout6"
+            ]
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "ultrasonic_controller_0/clk",
+          "ultrasonic_controller_1/clk"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "ultrasonic_controller_0/enable",
+          "ultrasonic_controller_1/enable",
+          "position_ball_0/enable"
+        ]
+      },
+      "Net3": {
+        "ports": [
+          "reset",
+          "util_vector_logic_0/Op1",
+          "score_counter_0/reset",
+          "clk_wiz/reset",
+          "ultrasonic_controller_0/reset",
+          "ultrasonic_controller_1/reset",
+          "clk_divider_0/reset"
+        ]
+      },
+      "Net4": {
+        "ports": [
+          "clk_divider_0/clk_o",
+          "score_counter_0/clk",
+          "position_ball_0/clk"
+        ]
+      },
+      "Net5": {
+        "ports": [
+          "Constants/dout",
+          "position_paddles_0/screen_size_x",
+          "collision_detection_0/screen_size_x",
+          "position_ball_0/screen_size_x",
+          "paint_centerline_0/screen_size_x"
+        ]
+      },
+      "Net6": {
+        "ports": [
+          "Constants/dout1",
+          "position_paddles_0/screen_size_y",
+          "collision_detection_0/screen_size_y",
+          "position_ball_0/screen_size_y",
+          "paint_centerline_0/screen_size_y"
+        ]
+      },
+      "Net7": {
+        "ports": [
+          "Constants/dout2",
+          "collision_detection_0/paddle_size_x",
+          "position_paddles_0/paddle_size_x"
+        ]
+      },
+      "Net8": {
+        "ports": [
+          "Constants/dout3",
+          "collision_detection_0/paddle_size_y",
+          "position_paddles_0/paddle_size_y"
+        ]
+      },
+      "Net9": {
+        "ports": [
+          "Constants/dout4",
+          "collision_detection_0/ball_size",
+          "position_ball_0/ball_size"
+        ]
+      },
+      "Net10": {
+        "ports": [
+          "paint_rectangle_2/clk",
+          "paint_rectangle_0/clk",
+          "paint_rectangle_1/clk",
+          "paint_centerline_0/clk"
+        ]
+      },
+      "collision_detection_0_collision_ball_edge_l": {
+        "ports": [
+          "collision_detection_0/collision_ball_edge_l",
+          "util_vector_logic_1/Op1",
+          "score_counter_0/point_r"
+        ]
+      },
+      "collision_detection_0_collision_ball_edge_r": {
+        "ports": [
+          "collision_detection_0/collision_ball_edge_r",
+          "util_vector_logic_1/Op2",
+          "score_counter_0/point_l"
+        ]
+      },
+      "collision_detection_0_collision_ball_paddle": {
+        "ports": [
+          "collision_detection_0/collision_ball_paddle",
+          "position_ball_0/collision_ball_paddle"
+        ]
+      },
+      "collision_detection_0_collision_ball_topbottom": {
+        "ports": [
+          "collision_detection_0/collision_ball_topbottom",
+          "position_ball_0/collision_ball_topbottom"
+        ]
+      },
+      "collision_detection_0_collision_paddle_index": {
+        "ports": [
+          "collision_detection_0/collision_paddle_index",
+          "position_ball_0/collision_ball_paddle_index"
+        ]
+      },
+      "paint_centerline_0_hsync_o": {
+        "ports": [
+          "paint_centerline_0/hsync_o",
+          "hsync_o_0"
+        ]
+      },
+      "paint_centerline_0_vsync_o": {
+        "ports": [
+          "paint_centerline_0/vsync_o",
+          "vsync_o_0"
+        ]
+      },
+      "paint_rectangle_0_hsync_o": {
+        "ports": [
+          "paint_rectangle_0/hsync_o",
+          "paint_rectangle_1/hsync_i"
+        ]
+      },
+      "paint_rectangle_0_pxl_value_o": {
+        "ports": [
+          "paint_rectangle_0/pxl_value_o",
+          "paint_rectangle_1/pxl_value_i"
+        ]
+      },
+      "paint_rectangle_0_pxl_x_o": {
+        "ports": [
+          "paint_rectangle_0/pxl_x_o",
+          "paint_rectangle_1/pxl_x_i"
+        ]
+      },
+      "paint_rectangle_0_pxl_y_o": {
+        "ports": [
+          "paint_rectangle_0/pxl_y_o",
+          "paint_rectangle_1/pxl_y_i"
+        ]
+      },
+      "paint_rectangle_0_vsync_o": {
+        "ports": [
+          "paint_rectangle_0/vsync_o",
+          "paint_rectangle_1/vsync_i"
+        ]
+      },
+      "paint_rectangle_1_hsync_o": {
+        "ports": [
+          "paint_rectangle_1/hsync_o",
+          "paint_rectangle_2/hsync_i"
+        ]
+      },
+      "paint_rectangle_1_pxl_value_o": {
+        "ports": [
+          "paint_rectangle_1/pxl_value_o",
+          "paint_rectangle_2/pxl_value_i"
+        ]
+      },
+      "paint_rectangle_1_pxl_x_o": {
+        "ports": [
+          "paint_rectangle_1/pxl_x_o",
+          "paint_rectangle_2/pxl_x_i"
+        ]
+      },
+      "paint_rectangle_1_pxl_y_o": {
+        "ports": [
+          "paint_rectangle_1/pxl_y_o",
+          "paint_rectangle_2/pxl_y_i"
+        ]
+      },
+      "paint_rectangle_1_vsync_o": {
+        "ports": [
+          "paint_rectangle_1/vsync_o",
+          "paint_rectangle_2/vsync_i"
+        ]
+      },
+      "paint_rectangle_2_hsync_o": {
+        "ports": [
+          "paint_rectangle_2/hsync_o",
+          "paint_centerline_0/hsync_i"
+        ]
+      },
+      "paint_rectangle_2_pxl_value_o": {
+        "ports": [
+          "paint_rectangle_2/pxl_value_o",
+          "paint_centerline_0/pxl_value_i"
+        ]
+      },
+      "paint_rectangle_2_pxl_x_o": {
+        "ports": [
+          "paint_rectangle_2/pxl_x_o",
+          "paint_centerline_0/pxl_x_i"
+        ]
+      },
+      "paint_rectangle_2_pxl_y_o": {
+        "ports": [
+          "paint_rectangle_2/pxl_y_o",
+          "paint_centerline_0/pxl_y_i"
+        ]
+      },
+      "paint_rectangle_2_vsync_o": {
+        "ports": [
+          "paint_rectangle_2/vsync_o",
+          "paint_centerline_0/vsync_i"
+        ]
+      },
+      "position_ball_0_ball_pos_x": {
+        "ports": [
+          "position_ball_0/ball_pos_x",
+          "collision_detection_0/ball_pos_x",
+          "paint_rectangle_0/rect_pos_x"
+        ]
+      },
+      "position_ball_0_ball_pox_y": {
+        "ports": [
+          "position_ball_0/ball_pox_y",
+          "collision_detection_0/ball_pos_y",
+          "paint_rectangle_0/rect_pos_y"
+        ]
+      },
+      "position_paddles_0_paddle_l_pos_x": {
+        "ports": [
+          "position_paddles_0/paddle_l_pos_x",
+          "collision_detection_0/paddle_l_pos_x",
+          "paint_rectangle_1/rect_pos_x"
+        ]
+      },
+      "position_paddles_0_paddle_l_pos_y": {
+        "ports": [
+          "position_paddles_0/paddle_l_pos_y",
+          "collision_detection_0/paddle_l_pos_y",
+          "paint_rectangle_1/rect_pos_y"
+        ]
+      },
+      "position_paddles_0_paddle_r_pos_x": {
+        "ports": [
+          "position_paddles_0/paddle_r_pos_x",
+          "collision_detection_0/paddle_r_pos_x",
+          "paint_rectangle_2/rect_pos_x"
+        ]
+      },
+      "position_paddles_0_paddle_r_pos_y": {
+        "ports": [
+          "position_paddles_0/paddle_r_pos_y",
+          "collision_detection_0/paddle_r_pos_y",
+          "paint_rectangle_2/rect_pos_y"
+        ]
+      },
+      "score_counter_0_game_reset": {
+        "ports": [
+          "score_counter_0/game_reset",
+          "util_vector_logic_0/Op2"
+        ]
+      },
+      "sensor_0_1": {
+        "ports": [
+          "sensor_0",
+          "ultrasonic_controller_1/sensor"
+        ]
+      },
+      "sensor_1_1": {
+        "ports": [
+          "sensor_1",
+          "ultrasonic_controller_0/sensor"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz/clk_in1",
+          "clk_divider_0/clk_i"
+        ]
+      },
+      "ultrasonic_controller_0_trigger": {
+        "ports": [
+          "ultrasonic_controller_0/trigger",
+          "trigger_1"
+        ]
+      },
+      "ultrasonic_controller_0_value": {
+        "ports": [
+          "ultrasonic_controller_0/value",
+          "position_paddles_0/controller_value_r"
+        ]
+      },
+      "ultrasonic_controller_1_trigger": {
+        "ports": [
+          "ultrasonic_controller_1/trigger",
+          "trigger_0"
+        ]
+      },
+      "ultrasonic_controller_1_value": {
+        "ports": [
+          "ultrasonic_controller_1/value",
+          "position_paddles_0/controller_value_l"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "position_ball_0/reset"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "position_ball_0/collision_ball_edge"
+        ]
+      },
+      "xlconstant_5_dout": {
+        "ports": [
+          "Constants/dout5",
+          "position_paddles_0/paddle_offset_x"
+        ]
+      },
+      "xlconstant_6_dout": {
+        "ports": [
+          "Constants/dout6",
+          "score_counter_0/max_score"
+        ]
+      }
+    }
   }
 }

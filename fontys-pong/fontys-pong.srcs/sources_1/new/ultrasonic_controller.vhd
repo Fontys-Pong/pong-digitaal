@@ -18,7 +18,7 @@ entity ultrasonic_controller is
            enable  : in STD_LOGIC;
            sensor : in STD_LOGIC;
            trigger : out STD_LOGIC;
-           value : out STD_LOGIC_VECTOR (10 downto 0));
+           value : out STD_LOGIC_VECTOR (8 downto 0));
 end ultrasonic_controller;
 
 architecture Behavioral of ultrasonic_controller is

@@ -10,7 +10,6 @@ entity paint_centerline is
         space_between_lines : integer := 10
     );
     Port ( clk : in STD_LOGIC;
-           reset : in STD_LOGIC;
            hsync_i : in STD_LOGIC;
            vsync_i : in STD_LOGIC;
            pxl_x_i : in STD_LOGIC_VECTOR (10 downto 0);

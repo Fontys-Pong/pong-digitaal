@@ -19,10 +19,10 @@ entity position_ball is
            screen_size_x : in STD_LOGIC_VECTOR (10 downto 0);
            screen_size_y : in STD_LOGIC_VECTOR (10 downto 0);
            ball_size : in STD_LOGIC_VECTOR (10 downto 0);
-           collision_ball_peddle : in STD_LOGIC;
-           collision_ball_peddle_index : in STD_LOGIC_VECTOR (1 downto 0);
+           collision_ball_paddle : in STD_LOGIC;
+           collision_ball_paddle_index : in STD_LOGIC_VECTOR (1 downto 0);
            collision_ball_topbottom : in STD_LOGIC;
-           collision_side : in STD_LOGIC;
+           collision_ball_edge : in STD_LOGIC;
            ball_pos_x : out STD_LOGIC_VECTOR (10 downto 0);
            ball_pox_y : out STD_LOGIC_VECTOR (10 downto 0));
 end position_ball;
@@ -48,8 +48,8 @@ architecture Behavioral of position_ball is
     -- Angle of the ball
     signal angle                : unsigned(9 downto 0) := to_unsigned(start_angle, 10);
     signal angle_counter        : unsigned(9 downto 0) := (others => '0');
-    signal collision_side_r         : std_logic := '0';
-    signal collision_ball_peddle_r       : std_logic := '0';
+    signal collision_ball_edge_r         : std_logic := '0';
+    signal collision_ball_paddle_r       : std_logic := '0';
     signal collision_ball_topbottom_r   : std_logic := '0';
 
 begin
@@ -65,14 +65,14 @@ begin
 
         elsif rising_edge(clk) then
             if enable = '1' then
-                collision_side_r <= collision_side;
-                collision_ball_peddle_r <= collision_ball_peddle;
+                collision_ball_edge_r <= collision_ball_edge;
+                collision_ball_paddle_r <= collision_ball_paddle;
                 collision_ball_topbottom_r <= collision_ball_topbottom;
                     ------------------
                     --- Direction ----
                     ------------------
                 -- check if the ball is touching the peddel, flip the x
-                if (collision_ball_peddle = '1' AND collision_ball_peddle_r = '0') OR (collision_side = '1' AND collision_side_r = '0') then
+                if (collision_ball_paddle = '1' AND collision_ball_paddle_r = '0') OR (collision_ball_edge = '1' AND collision_ball_edge_r = '0') then
                     if x_dir = right then
                         x_dir <= left;
                     else
@@ -81,14 +81,14 @@ begin
                 end if;
                 
                 -- check if the ball is touching the top or bottom, flip the y
-                if (collision_ball_topbottom = '1' AND collision_ball_topbottom_r = '0') OR (collision_side = '1' AND collision_side_r = '0')  then
+                if (collision_ball_topbottom = '1' AND collision_ball_topbottom_r = '0') OR (collision_ball_edge = '1' AND collision_ball_edge_r = '0')  then
                     if y_dir = up then
                         y_dir <= down;
                     else
                         y_dir <= up;
                     end if;
-                elsif (collision_ball_peddle = '1' AND collision_ball_peddle_r = '0') then
-                    case collision_ball_peddle_index is
+                elsif (collision_ball_paddle = '1' AND collision_ball_paddle_r = '0') then
+                    case collision_ball_paddle_index is
                         when "00" => 
                             -- if y_dir = up then
                             --     y_dir <= down;
@@ -140,7 +140,7 @@ begin
                     --- Outputs ---
                     ---------------
                 -- check if the ball is touching the top or bottom else add the step
-                if (collision_side = '1' AND collision_side_r = '0') then
+                if (collision_ball_edge = '1' AND collision_ball_edge_r = '0') then
                     x_pos <= x_start;
                 elsif x_dir = right then
                     x_pos <=  x_pos + to_unsigned(step_x, x_pos'length);
@@ -149,7 +149,7 @@ begin
                 end if;
 
                 -- check if the ball is touching the top or bottom else add the step based on the angle
-                if (collision_side = '1' AND collision_side_r = '0') then
+                if (collision_ball_edge = '1' AND collision_ball_edge_r = '0') then
                     y_pos <= y_start;
                     angle_counter <= (others => '0');
                 elsif angle_counter >= angle then--AND angle /= 0 then

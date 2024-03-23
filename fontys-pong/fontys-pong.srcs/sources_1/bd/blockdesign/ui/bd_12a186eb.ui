@@ -1,0 +1,88 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.644054",
+   "Default View_TopLeft":"-107,-401",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_trigger_0 -pg 1 -lvl 11 -x 3420 -y 600 -defaultsOSRD
+preplace port port-id_trigger_1 -pg 1 -lvl 11 -x 3420 -y 780 -defaultsOSRD
+preplace port port-id_sensor_0 -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
+preplace port port-id_sensor_1 -pg 1 -lvl 0 -x 0 -y 860 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace port port-id_hsync_o_0 -pg 1 -lvl 11 -x 3420 -y 190 -defaultsOSRD
+preplace port port-id_vsync_o_0 -pg 1 -lvl 11 -x 3420 -y 220 -defaultsOSRD
+preplace inst position_paddles_0 -pg 1 -lvl 2 -x 440 -y 360 -defaultsOSRD
+preplace inst ultrasonic_controller_0 -pg 1 -lvl 10 -x 3250 -y 790 -defaultsOSRD
+preplace inst ultrasonic_controller_1 -pg 1 -lvl 10 -x 3250 -y 610 -defaultsOSRD
+preplace inst score_counter_0 -pg 1 -lvl 4 -x 1260 -y 590 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 5 -x 1580 -y 620 -defaultsOSRD
+preplace inst collision_detection_0 -pg 1 -lvl 3 -x 890 -y 180 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 5 -x 1580 -y 500 -defaultsOSRD
+preplace inst position_ball_0 -pg 1 -lvl 6 -x 2000 -y 200 -defaultsOSRD
+preplace inst paint_rectangle_0 -pg 1 -lvl 7 -x 2340 -y 160 -defaultsOSRD
+preplace inst paint_rectangle_1 -pg 1 -lvl 8 -x 2630 -y 190 -defaultsOSRD
+preplace inst paint_rectangle_2 -pg 1 -lvl 9 -x 2920 -y 220 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 9 -x 2920 -y 790 -defaultsOSRD
+preplace inst paint_centerline_0 -pg 1 -lvl 10 -x 3250 -y 230 -defaultsOSRD
+preplace inst clk_divider_0 -pg 1 -lvl 3 -x 890 -y 500 -defaultsOSRD
+preplace inst Constants -pg 1 -lvl 1 -x 110 -y 300 -defaultsOSRD
+preplace netloc ultrasonic_controller_0_value 1 1 10 260 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 NJ 720 3060J 880 3400
+preplace netloc ultrasonic_controller_1_value 1 1 10 250 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 3400
+preplace netloc ultrasonic_controller_1_trigger 1 10 1 NJ 600
+preplace netloc ultrasonic_controller_0_trigger 1 10 1 NJ 780
+preplace netloc sensor_0_1 1 0 10 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 NJ 690 3090J
+preplace netloc sensor_1_1 1 0 10 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 3100J
+preplace netloc Net 1 9 1 3080 580n
+preplace netloc Net2 1 5 5 1810 450 NJ 450 NJ 450 NJ 450 3070
+preplace netloc Net4 1 3 3 1110 430 NJ 430 1720
+preplace netloc Net5 1 1 9 210 100 670 340 NJ 340 NJ 340 1790 370 NJ 370 NJ 370 NJ 370 3070J
+preplace netloc Net6 1 1 9 220 110 680 350 NJ 350 NJ 350 1760 380 NJ 380 NJ 380 NJ 380 3100J
+preplace netloc util_vector_logic_0_Res 1 5 1 1750 150n
+preplace netloc score_counter_0_game_reset 1 4 1 1410 610n
+preplace netloc Net3 1 0 10 NJ 520 NJ 520 700 570 1100 490 1420 730 NJ 730 NJ 730 NJ 730 2780 710 3100
+preplace netloc Net7 1 1 2 250 120 NJ
+preplace netloc Net8 1 1 2 240 140 NJ
+preplace netloc position_paddles_0_paddle_l_pos_x 1 2 6 640 390 NJ 390 NJ 390 NJ 390 NJ 390 2480
+preplace netloc position_paddles_0_paddle_l_pos_y 1 2 6 650 400 NJ 400 NJ 400 NJ 400 NJ 400 2490
+preplace netloc position_paddles_0_paddle_r_pos_x 1 2 7 660 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 2770
+preplace netloc position_paddles_0_paddle_r_pos_y 1 2 7 630 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 2780
+preplace netloc Net9 1 1 5 230 240 620 360 NJ 360 NJ 360 1730J
+preplace netloc position_ball_0_ball_pos_x 1 2 5 700 370 NJ 370 NJ 370 1780J 350 2200
+preplace netloc position_ball_0_ball_pox_y 1 2 5 690 380 NJ 380 NJ 380 1740J 360 2190
+preplace netloc collision_detection_0_collision_ball_paddle 1 3 3 NJ 140 NJ 140 1780
+preplace netloc collision_detection_0_collision_paddle_index 1 3 3 NJ 160 NJ 160 1770
+preplace netloc collision_detection_0_collision_ball_topbottom 1 3 3 NJ 220 NJ 220 1740
+preplace netloc collision_detection_0_collision_ball_edge_l 1 3 2 1090 470 1440J
+preplace netloc collision_detection_0_collision_ball_edge_r 1 3 2 1080 480 1430J
+preplace netloc util_vector_logic_1_Res 1 5 1 1800 290n
+preplace netloc Net10 1 6 4 2200 10 2480 40 2770 70 3070
+preplace netloc paint_rectangle_0_hsync_o 1 7 1 N 120
+preplace netloc paint_rectangle_0_vsync_o 1 7 1 N 140
+preplace netloc paint_rectangle_0_pxl_x_o 1 7 1 N 160
+preplace netloc paint_rectangle_0_pxl_y_o 1 7 1 N 180
+preplace netloc paint_rectangle_0_pxl_value_o 1 7 1 N 200
+preplace netloc paint_rectangle_1_hsync_o 1 8 1 N 150
+preplace netloc paint_rectangle_1_vsync_o 1 8 1 N 170
+preplace netloc paint_rectangle_1_pxl_x_o 1 8 1 N 190
+preplace netloc paint_rectangle_1_pxl_y_o 1 8 1 N 210
+preplace netloc paint_rectangle_1_pxl_value_o 1 8 1 N 230
+preplace netloc sys_clock_1 1 0 9 NJ 490 NJ 490 620 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ
+preplace netloc paint_rectangle_2_hsync_o 1 9 1 N 180
+preplace netloc paint_rectangle_2_vsync_o 1 9 1 N 200
+preplace netloc paint_rectangle_2_pxl_x_o 1 9 1 N 220
+preplace netloc paint_rectangle_2_pxl_y_o 1 9 1 N 240
+preplace netloc paint_rectangle_2_pxl_value_o 1 9 1 N 260
+preplace netloc paint_centerline_0_hsync_o 1 10 1 NJ 190
+preplace netloc paint_centerline_0_vsync_o 1 10 1 3400J 210n
+preplace netloc xlconstant_5_dout 1 1 1 N 340
+preplace netloc xlconstant_6_dout 1 1 3 200 630 NJ 630 NJ
+levelinfo -pg 1 0 110 440 890 1260 1580 2000 2340 2630 2920 3250 3420
+pagesize -pg 1 -db -bbox -sgen -110 0 3540 890
+"
+}
+{
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"1"
+}
