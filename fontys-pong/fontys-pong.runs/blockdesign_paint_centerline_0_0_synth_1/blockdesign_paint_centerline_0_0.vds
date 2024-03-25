@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Mar 25 10:42:00 2024
+# Process ID: 10860
+# Current directory: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_paint_centerline_0_0_synth_1
+# Command line: vivado.exe -log blockdesign_paint_centerline_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blockdesign_paint_centerline_0_0.tcl
+# Log file: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_paint_centerline_0_0_synth_1/blockdesign_paint_centerline_0_0.vds
+# Journal file: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_paint_centerline_0_0_synth_1\vivado.jou
+# Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
+#-----------------------------------------------------------
+source blockdesign_paint_centerline_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1363.293 ; gain = 158.590
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: blockdesign_paint_centerline_0_0
+Command: synth_design -top blockdesign_paint_centerline_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20200
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2218.453 ; gain = 409.602
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'blockdesign_paint_centerline_0_0' [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_centerline_0_0/synth/blockdesign_paint_centerline_0_0.vhd:76]
+	Parameter width_line bound to: 10 - type: integer 
+	Parameter space_between_lines bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'paint_centerline' declared at 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd:7' bound to instance 'U0' of component 'paint_centerline' [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_centerline_0_0/synth/blockdesign_paint_centerline_0_0.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'paint_centerline' [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd:29]
+ERROR: [Synth 8-421] mismatched array sizes in rhs and lhs of assignment [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd:32]
+ERROR: [Synth 8-285] failed synthesizing module 'paint_centerline' [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd:29]
+ERROR: [Synth 8-285] failed synthesizing module 'blockdesign_paint_centerline_0_0' [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_centerline_0_0/synth/blockdesign_paint_centerline_0_0.vhd:76]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2309.234 ; gain = 500.383
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+13 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 25 10:42:39 2024...

@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_paint_rectangle_0_0",
-    "cell_name": "paint_rectangle_0",
+    "cell_name": "paint_ball",
     "component_reference": "xilinx.com:module_ref:paint_rectangle:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_0",
@@ -37,6 +37,7 @@
     "boundary": {
       "ports": {
         "clk": [ { "direction": "in" } ],
+        "video_enable_i": [ { "direction": "in" } ],
         "hsync_i": [ { "direction": "in" } ],
         "vsync_i": [ { "direction": "in" } ],
         "pxl_x_i": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
@@ -46,6 +47,7 @@
         "rect_pos_y": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
         "rect_size_x": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
         "rect_size_y": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
+        "video_enable_o": [ { "direction": "out" } ],
         "hsync_o": [ { "direction": "out" } ],
         "vsync_o": [ { "direction": "out" } ],
         "pxl_x_o": [ { "direction": "out", "size_left": "10", "size_right": "0" } ],

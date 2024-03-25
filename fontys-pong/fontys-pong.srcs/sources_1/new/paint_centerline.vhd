@@ -10,6 +10,7 @@ entity paint_centerline is
         space_between_lines : integer := 10
     );
     Port ( clk : in STD_LOGIC;
+           video_enable_i : in STD_LOGIC;
            hsync_i : in STD_LOGIC;
            vsync_i : in STD_LOGIC;
            pxl_x_i : in STD_LOGIC_VECTOR (10 downto 0);
@@ -17,6 +18,7 @@ entity paint_centerline is
            pxl_value_i : in STD_LOGIC;
            screen_size_x : in STD_LOGIC_VECTOR (10 downto 0);
            screen_size_y : in STD_LOGIC_VECTOR (10 downto 0);
+           video_enable_o : out STD_LOGIC;
            hsync_o : out STD_LOGIC;
            vsync_o : out STD_LOGIC;
            pxl_x_o : out STD_LOGIC_VECTOR (10 downto 0);
@@ -37,6 +39,7 @@ begin
     begin
         if (rising_edge(clk)) then
             -- pass through signals
+            video_enable_o <= video_enable_i;
             hsync_o <= hsync_i;
             vsync_o <= vsync_i;
             pxl_y_o <= pxl_y_i;

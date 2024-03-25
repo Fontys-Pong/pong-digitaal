@@ -43,6 +43,7 @@
     "boundary": {
       "ports": {
         "clk": [ { "direction": "in" } ],
+        "video_enable_i": [ { "direction": "in" } ],
         "hsync_i": [ { "direction": "in" } ],
         "vsync_i": [ { "direction": "in" } ],
         "pxl_x_i": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
@@ -50,6 +51,7 @@
         "pxl_value_i": [ { "direction": "in" } ],
         "screen_size_x": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
         "screen_size_y": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
+        "video_enable_o": [ { "direction": "out" } ],
         "hsync_o": [ { "direction": "out" } ],
         "vsync_o": [ { "direction": "out" } ],
         "pxl_x_o": [ { "direction": "out", "size_left": "10", "size_right": "0" } ],

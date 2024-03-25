@@ -92,7 +92,61 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/new/position_paddles.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/score_counter.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/collision_detection.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/position_ball.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/clk_divider.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/controller_interconnect.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/controller_ultrasonic.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/controller_buttons.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/paint_rectangle.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/paint_centerline.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -100,83 +154,94 @@
       </File>
       <File Path="$PSRCDIR/sources_1/bd/blockdesign/blockdesign.bd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0.xci">
+          <Proxy FileSetName="blockdesign_position_paddles_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_paint_rectangle_0_0/blockdesign_paint_rectangle_0_0.xci">
+          <Proxy FileSetName="blockdesign_paint_rectangle_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0.xci">
+          <Proxy FileSetName="blockdesign_paint_rectangle_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0.xci">
+          <Proxy FileSetName="blockdesign_clk_wiz_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_controller_ultrasonic_0_0/blockdesign_controller_ultrasonic_0_0.xci">
+          <Proxy FileSetName="blockdesign_controller_ultrasonic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1.xci">
+          <Proxy FileSetName="blockdesign_position_ball_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_controller_interconn_0_0/blockdesign_controller_interconn_0_0.xci">
+          <Proxy FileSetName="blockdesign_controller_interconn_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_controller_buttons_1_0/blockdesign_controller_buttons_1_0.xci">
+          <Proxy FileSetName="blockdesign_controller_buttons_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_collision_detection_0_0/blockdesign_collision_detection_0_0.xci">
+          <Proxy FileSetName="blockdesign_collision_detection_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_vector_logic_0_1/blockdesign_util_vector_logic_0_1.xci">
+          <Proxy FileSetName="blockdesign_util_vector_logic_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.xci">
+          <Proxy FileSetName="blockdesign_clk_divider_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_util_vector_logic_0_0/blockdesign_util_vector_logic_0_0.xci">
+          <Proxy FileSetName="blockdesign_util_vector_logic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_paint_rectangle_1_0/blockdesign_paint_rectangle_1_0.xci">
+          <Proxy FileSetName="blockdesign_paint_rectangle_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0.xci">
+          <Proxy FileSetName="blockdesign_paint_centerline_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_score_counter_0_0/blockdesign_score_counter_0_0.xci">
+          <Proxy FileSetName="blockdesign_score_counter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_clk_divider_1_0/blockdesign_clk_divider_1_0.xci">
+          <Proxy FileSetName="blockdesign_clk_divider_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_controller_ultrasonic_1_0/blockdesign_controller_ultrasonic_1_0.xci">
+          <Proxy FileSetName="blockdesign_controller_ultrasonic_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="blockdesign.bd" FileRelPathName="ip/blockdesign_controller_buttons_0_0/blockdesign_controller_buttons_0_0.xci">
+          <Proxy FileSetName="blockdesign_controller_buttons_0_0"/>
+        </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/paint_centerline.vhd">
+      <File Path="$PGENDIR/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/paint_rectangle.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/position_ball.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/score_counter.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/ultrasonic_controller.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/position_paddles.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/clk_divider.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="collision_detection"/>
-        <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopArchitecture" Val="Behavioral"/>
-        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/collision_detection.vhd"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="blockdesign_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="collision_detection"/>
+        <Option Name="TopModule" Val="blockdesign_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopArchitecture" Val="Behavioral"/>
-        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/collision_detection.vhd"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -192,6 +257,114 @@
       <Filter Type="Utils"/>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_position_paddles_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_position_paddles_0_0" RelGenDir="$PGENDIR/blockdesign_position_paddles_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_position_paddles_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_score_counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_score_counter_0_0" RelGenDir="$PGENDIR/blockdesign_score_counter_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_score_counter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_util_vector_logic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_util_vector_logic_0_0" RelGenDir="$PGENDIR/blockdesign_util_vector_logic_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_util_vector_logic_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_collision_detection_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_collision_detection_0_0" RelGenDir="$PGENDIR/blockdesign_collision_detection_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_collision_detection_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_util_vector_logic_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_util_vector_logic_0_1" RelGenDir="$PGENDIR/blockdesign_util_vector_logic_0_1">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_util_vector_logic_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_position_ball_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_position_ball_0_1" RelGenDir="$PGENDIR/blockdesign_position_ball_0_1">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_position_ball_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_paint_rectangle_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_paint_rectangle_0_0" RelGenDir="$PGENDIR/blockdesign_paint_rectangle_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_paint_rectangle_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_paint_rectangle_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_paint_rectangle_1_0" RelGenDir="$PGENDIR/blockdesign_paint_rectangle_1_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_paint_rectangle_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_paint_rectangle_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_paint_rectangle_2_0" RelGenDir="$PGENDIR/blockdesign_paint_rectangle_2_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_paint_rectangle_2_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_clk_wiz_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_clk_wiz_0" RelGenDir="$PGENDIR/blockdesign_clk_wiz_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_clk_wiz_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_paint_centerline_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_paint_centerline_0_0" RelGenDir="$PGENDIR/blockdesign_paint_centerline_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_paint_centerline_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_clk_divider_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_clk_divider_0_0" RelGenDir="$PGENDIR/blockdesign_clk_divider_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_clk_divider_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_controller_ultrasonic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_controller_ultrasonic_0_0" RelGenDir="$PGENDIR/blockdesign_controller_ultrasonic_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_controller_ultrasonic_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_controller_ultrasonic_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_controller_ultrasonic_1_0" RelGenDir="$PGENDIR/blockdesign_controller_ultrasonic_1_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_controller_ultrasonic_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_controller_buttons_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_controller_buttons_0_0" RelGenDir="$PGENDIR/blockdesign_controller_buttons_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_controller_buttons_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_controller_buttons_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_controller_buttons_1_0" RelGenDir="$PGENDIR/blockdesign_controller_buttons_1_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_controller_buttons_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_clk_divider_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_clk_divider_1_0" RelGenDir="$PGENDIR/blockdesign_clk_divider_1_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_clk_divider_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="blockdesign_controller_interconn_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blockdesign_controller_interconn_0_0" RelGenDir="$PGENDIR/blockdesign_controller_interconn_0_0">
+      <Config>
+        <Option Name="TopModule" Val="blockdesign_controller_interconn_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -216,20 +389,494 @@
   <Runs Version="1" Minor="20">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="blockdesign_position_paddles_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_position_paddles_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_position_paddles_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_position_paddles_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_position_paddles_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_score_counter_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_score_counter_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_score_counter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_score_counter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_score_counter_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_util_vector_logic_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_collision_detection_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_collision_detection_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_collision_detection_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_collision_detection_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_collision_detection_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_collision_detection_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_util_vector_logic_0_1_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_util_vector_logic_0_1" Part="xc7z020clg400-1" ConstrsSet="blockdesign_util_vector_logic_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_position_ball_0_1_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_position_ball_0_1" Part="xc7z020clg400-1" ConstrsSet="blockdesign_position_ball_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_position_ball_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_position_ball_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_paint_rectangle_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_paint_rectangle_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_paint_rectangle_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_paint_rectangle_1_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_paint_rectangle_1_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_paint_rectangle_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_paint_rectangle_2_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_paint_rectangle_2_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_paint_rectangle_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_2_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_2_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_clk_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_clk_wiz_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_wiz_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_clk_wiz_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_wiz_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_wiz_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_paint_centerline_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_paint_centerline_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_paint_centerline_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_paint_centerline_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_paint_centerline_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_paint_centerline_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_clk_divider_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_clk_divider_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_divider_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_clk_divider_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_ultrasonic_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_controller_ultrasonic_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_ultrasonic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_controller_ultrasonic_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_ultrasonic_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_ultrasonic_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_ultrasonic_1_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_controller_ultrasonic_1_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_ultrasonic_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_controller_ultrasonic_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_ultrasonic_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_ultrasonic_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_buttons_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_controller_buttons_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_buttons_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_controller_buttons_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_buttons_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_buttons_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_buttons_1_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_controller_buttons_1_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_buttons_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_controller_buttons_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_buttons_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_buttons_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_clk_divider_1_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_clk_divider_1_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_divider_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_clk_divider_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_interconn_0_0_synth_1" Type="Ft3:Synth" SrcSet="blockdesign_controller_interconn_0_0" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_interconn_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/blockdesign_controller_interconn_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_interconn_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_interconn_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_position_paddles_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_position_paddles_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_position_paddles_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_position_paddles_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_position_paddles_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_score_counter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_score_counter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_score_counter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_score_counter_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_score_counter_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_util_vector_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_util_vector_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_util_vector_logic_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_collision_detection_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_collision_detection_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_collision_detection_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_collision_detection_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_collision_detection_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_util_vector_logic_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_util_vector_logic_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_util_vector_logic_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_util_vector_logic_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_position_ball_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_position_ball_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_position_ball_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_position_ball_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_position_ball_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_paint_rectangle_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_paint_rectangle_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_paint_rectangle_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_paint_rectangle_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_paint_rectangle_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_paint_rectangle_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_paint_rectangle_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_paint_rectangle_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_paint_rectangle_2_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_2_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_paint_rectangle_2_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_clk_wiz_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_wiz_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_clk_wiz_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_wiz_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_wiz_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_paint_centerline_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_paint_centerline_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_paint_centerline_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_paint_centerline_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_paint_centerline_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_clk_divider_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_divider_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_clk_divider_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_ultrasonic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_ultrasonic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_controller_ultrasonic_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_ultrasonic_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_ultrasonic_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_ultrasonic_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_ultrasonic_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_controller_ultrasonic_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_ultrasonic_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_ultrasonic_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_buttons_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_buttons_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_controller_buttons_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_buttons_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_buttons_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_buttons_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_buttons_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_controller_buttons_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_buttons_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_buttons_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_clk_divider_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_clk_divider_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_clk_divider_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_clk_divider_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="blockdesign_controller_interconn_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="blockdesign_controller_interconn_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="blockdesign_controller_interconn_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/blockdesign_controller_interconn_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/blockdesign_controller_interconn_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
