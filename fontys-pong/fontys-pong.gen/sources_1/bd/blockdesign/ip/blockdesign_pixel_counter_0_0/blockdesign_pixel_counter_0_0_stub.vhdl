@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Tue Mar 26 09:44:08 2024
--- Host        : XPS-Tommy running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_pixel_counter_0_0/blockdesign_pixel_counter_0_0_stub.vhdl
+-- Date        : Mon Mar 25 18:24:15 2024
+-- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub -rename_top blockdesign_pixel_counter_0_0 -prefix
+--               blockdesign_pixel_counter_0_0_ blockdesign_pixel_counter_0_0_stub.vhdl
 -- Design      : blockdesign_pixel_counter_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

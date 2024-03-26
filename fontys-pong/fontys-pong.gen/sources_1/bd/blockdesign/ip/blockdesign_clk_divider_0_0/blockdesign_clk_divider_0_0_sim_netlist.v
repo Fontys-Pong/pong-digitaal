@@ -2,18 +2,18 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Tue Mar 26 09:44:23 2024
-// Host        : XPS-Tommy running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0_sim_netlist.v
-// Design      : blockdesign_clk_divider_0_0
+// Date        : Mon Mar 25 10:36:23 2024
+// Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top blockdesign_clk_divider_0_0 -prefix
+//               blockdesign_clk_divider_0_0_ blockdesign_clk_divider_1_0_sim_netlist.v
+// Design      : blockdesign_clk_divider_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "blockdesign_clk_divider_0_0,clk_divider,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* CHECK_LICENSE_TYPE = "blockdesign_clk_divider_1_0,clk_divider,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
 (* x_core_info = "clk_divider,Vivado 2023.1" *) 
 (* NotValidForBitStream *)
 module blockdesign_clk_divider_0_0
@@ -34,7 +34,6 @@ module blockdesign_clk_divider_0_0
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "clk_divider" *) 
 module blockdesign_clk_divider_0_0_clk_divider
    (clk_o,
     clk_i,

@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Tue Mar 26 09:44:29 2024
--- Host        : XPS-Tommy running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_collision_detection_0_0/blockdesign_collision_detection_0_0_sim_netlist.vhdl
+-- Date        : Mon Mar 25 10:38:17 2024
+-- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_collision_detection_0_0 -prefix
+--               blockdesign_collision_detection_0_0_ blockdesign_collision_detection_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_collision_detection_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -33,8 +33,6 @@ entity blockdesign_collision_detection_0_0_collision_detection is
     ball_size : in STD_LOGIC_VECTOR ( 10 downto 0 );
     screen_size_x : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blockdesign_collision_detection_0_0_collision_detection : entity is "collision_detection";
 end blockdesign_collision_detection_0_0_collision_detection;
 
 architecture STRUCTURE of blockdesign_collision_detection_0_0_collision_detection is

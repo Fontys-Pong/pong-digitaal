@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/constrs_1/new/constraints.xdc rfile:../../../fontys-pong.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/constrs_1/new/constraints.xdc rfile:../../../fontys-pong.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U17 [get_ports reset]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]

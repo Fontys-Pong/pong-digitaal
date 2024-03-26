@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Tue Mar 26 09:44:30 2024
--- Host        : XPS-Tommy running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0_sim_netlist.vhdl
+-- Date        : Mon Mar 25 18:34:14 2024
+-- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_position_paddles_0_0 -prefix
+--               blockdesign_position_paddles_0_0_ blockdesign_position_paddles_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_position_paddles_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity blockdesign_position_paddles_0_0_position_paddles is
     controller_value_l : in STD_LOGIC_VECTOR ( 8 downto 0 );
     controller_value_r : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blockdesign_position_paddles_0_0_position_paddles : entity is "position_paddles";
 end blockdesign_position_paddles_0_0_position_paddles;
 
 architecture STRUCTURE of blockdesign_position_paddles_0_0_position_paddles is

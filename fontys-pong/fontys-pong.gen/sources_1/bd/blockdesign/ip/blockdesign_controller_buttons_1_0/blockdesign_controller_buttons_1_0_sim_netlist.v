@@ -2,18 +2,18 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Tue Mar 26 09:44:25 2024
-// Host        : XPS-Tommy running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_buttons_1_0/blockdesign_controller_buttons_1_0_sim_netlist.v
-// Design      : blockdesign_controller_buttons_1_0
+// Date        : Mon Mar 25 10:39:10 2024
+// Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top blockdesign_controller_buttons_1_0 -prefix
+//               blockdesign_controller_buttons_1_0_ blockdesign_controller_buttons_0_0_sim_netlist.v
+// Design      : blockdesign_controller_buttons_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "blockdesign_controller_buttons_1_0,controller_buttons,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* CHECK_LICENSE_TYPE = "blockdesign_controller_buttons_0_0,controller_buttons,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
 (* x_core_info = "controller_buttons,Vivado 2023.1" *) 
 (* NotValidForBitStream *)
 module blockdesign_controller_buttons_1_0
@@ -46,7 +46,6 @@ module blockdesign_controller_buttons_1_0
         .value(value));
 endmodule
 
-(* ORIG_REF_NAME = "controller_buttons" *) 
 module blockdesign_controller_buttons_1_0_controller_buttons
    (value,
     btn_up,

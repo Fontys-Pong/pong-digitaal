@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Mar 26 09:40:13 2024
---Host        : XPS-Tommy running 64-bit major release  (build 9200)
+--Date        : Tue Mar 26 15:54:35 2024
+--Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
 --Purpose     : IP block netlist
@@ -127,19 +127,6 @@ entity controllers_imp_Z9LQ6G is
 end controllers_imp_Z9LQ6G;
 
 architecture STRUCTURE of controllers_imp_Z9LQ6G is
-  component blockdesign_controller_interconn_0_0 is
-  port (
-    switch : in STD_LOGIC;
-    value_l_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_l_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_r_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_r_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    enable_1 : out STD_LOGIC;
-    enable_2 : out STD_LOGIC;
-    value_l_o : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_r_o : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component blockdesign_controller_interconn_0_0;
   component blockdesign_controller_ultrasonic_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -187,6 +174,19 @@ architecture STRUCTURE of controllers_imp_Z9LQ6G is
     clk_o : out STD_LOGIC
   );
   end component blockdesign_clk_divider_1_0;
+  component blockdesign_controller_interconn_0_0 is
+  port (
+    switch : in STD_LOGIC;
+    value_l_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_l_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_r_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_r_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    enable_1 : out STD_LOGIC;
+    enable_2 : out STD_LOGIC;
+    value_l_o : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_r_o : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component blockdesign_controller_interconn_0_0;
   signal Net : STD_LOGIC;
   signal Net2 : STD_LOGIC;
   signal Net3 : STD_LOGIC;
@@ -288,6 +288,7 @@ entity blockdesign is
     btn_up_r : in STD_LOGIC;
     controller_switch : in STD_LOGIC;
     enable : in STD_LOGIC;
+    ext_clk : in STD_LOGIC;
     hdmi_out_clk_n : out STD_LOGIC;
     hdmi_out_clk_p : out STD_LOGIC;
     hdmi_out_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -296,7 +297,6 @@ entity blockdesign is
     reset : in STD_LOGIC;
     sensor_l : in STD_LOGIC;
     sensor_r : in STD_LOGIC;
-    sys_clock : in STD_LOGIC;
     trigger_l : out STD_LOGIC;
     trigger_r : out STD_LOGIC
   );
@@ -584,6 +584,7 @@ architecture STRUCTURE of blockdesign is
   signal controller_ultrasonic_0_trigger : STD_LOGIC;
   signal controller_ultrasonic_1_trigger : STD_LOGIC;
   signal enable_0_1 : STD_LOGIC;
+  signal ext_clk_1 : STD_LOGIC;
   signal one_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal paint_ball_video_enable_o : STD_LOGIC;
   signal paint_centerline_0_hsync_o : STD_LOGIC;
@@ -626,7 +627,6 @@ architecture STRUCTURE of blockdesign is
   signal sensor_0_1 : STD_LOGIC;
   signal sensor_1_1 : STD_LOGIC;
   signal switch_0_1 : STD_LOGIC;
-  signal sys_clock_1 : STD_LOGIC;
   signal util_vector_logic_1_Res : STD_LOGIC_VECTOR ( 0 to 0 );
   signal util_vector_logic_2_Res : STD_LOGIC_VECTOR ( 0 to 0 );
   signal v_tc_0_active_video_out : STD_LOGIC;
@@ -647,15 +647,15 @@ architecture STRUCTURE of blockdesign is
   signal NLW_score_counter_0_score_right_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_v_tc_0_fsync_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of hdmi_out_clk_n : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_N CLK";
+  attribute X_INTERFACE_INFO of ext_clk : signal is "xilinx.com:signal:clock:1.0 CLK.EXT_CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of ext_clk : signal is "XIL_INTERFACENAME CLK.EXT_CLK, CLK_DOMAIN blockdesign_ext_clk, FREQ_HZ 12500000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_INFO of hdmi_out_clk_n : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_N CLK";
   attribute X_INTERFACE_PARAMETER of hdmi_out_clk_n : signal is "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of hdmi_out_clk_p : signal is "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_P CLK";
   attribute X_INTERFACE_PARAMETER of hdmi_out_clk_p : signal is "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
   attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
-  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN blockdesign_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
 begin
   Net3 <= reset;
   btn_down_0_1 <= btn_down_l;
@@ -663,6 +663,7 @@ begin
   btn_up_0_1 <= btn_up_l;
   btn_up_1_1 <= btn_up_r;
   enable_0_1 <= enable;
+  ext_clk_1 <= ext_clk;
   hdmi_out_clk_n <= rgb2dvi_0_TMDS_Clk_n;
   hdmi_out_clk_p <= rgb2dvi_0_TMDS_Clk_p;
   hdmi_out_data_n(2 downto 0) <= rgb2dvi_0_TMDS_Data_n(2 downto 0);
@@ -671,7 +672,6 @@ begin
   sensor_0_1 <= sensor_l;
   sensor_1_1 <= sensor_r;
   switch_0_1 <= controller_switch;
-  sys_clock_1 <= sys_clock;
   trigger_l <= controller_ultrasonic_0_trigger;
   trigger_r <= controller_ultrasonic_1_trigger;
 Constants: entity work.Constants_imp_15CBHTD
@@ -692,7 +692,7 @@ clk_divider_0: component blockdesign_clk_divider_0_0
     );
 clk_wiz: component blockdesign_clk_wiz_0
      port map (
-      clk_in1 => sys_clock_1,
+      clk_in1 => ext_clk_1,
       clk_out1 => Net,
       reset => Net3
     );

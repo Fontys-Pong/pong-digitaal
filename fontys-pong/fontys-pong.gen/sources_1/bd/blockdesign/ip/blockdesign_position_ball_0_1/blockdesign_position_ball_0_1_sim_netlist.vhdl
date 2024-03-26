@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Tue Mar 26 09:44:25 2024
--- Host        : XPS-Tommy running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1_sim_netlist.vhdl
+-- Date        : Mon Mar 25 18:21:42 2024
+-- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_position_ball_0_1 -prefix
+--               blockdesign_position_ball_0_1_ blockdesign_position_ball_0_1_sim_netlist.vhdl
 -- Design      : blockdesign_position_ball_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -30,8 +30,6 @@ entity blockdesign_position_ball_0_1_position_ball is
     collision_ball_paddle : in STD_LOGIC;
     collision_ball_topbottom : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of blockdesign_position_ball_0_1_position_ball : entity is "position_ball";
 end blockdesign_position_ball_0_1_position_ball;
 
 architecture STRUCTURE of blockdesign_position_ball_0_1_position_ball is

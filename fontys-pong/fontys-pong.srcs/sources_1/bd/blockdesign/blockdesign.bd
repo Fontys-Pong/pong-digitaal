@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x63926434BA68EFD9",
+      "boundary_crc": "0x581764ADD2F193F7",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../fontys-pong.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
@@ -23,12 +23,12 @@
         "max_score": ""
       },
       "controllers": {
-        "controller_interconn_0": "",
         "controller_ultrasonic_0": "",
         "controller_ultrasonic_1": "",
         "controller_buttons_0": "",
         "controller_buttons_1": "",
-        "clk_divider_1": ""
+        "clk_divider_1": "",
+        "controller_interconn_0": ""
       },
       "clk_wiz_0": "",
       "v_tc_0": "",
@@ -72,30 +72,6 @@
           },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
-          }
-        }
-      },
-      "sys_clock": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "blockdesign_sys_clock",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "125000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0"
           }
         }
       },
@@ -175,6 +151,31 @@
         "direction": "O",
         "left": "2",
         "right": "0"
+      },
+      "ext_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "blockdesign_ext_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "12500000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -198,11 +199,14 @@
         "xci_path": "ip\\blockdesign_clk_wiz_0\\blockdesign_clk_wiz_0.xci",
         "inst_hier_path": "clk_wiz",
         "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "800.0"
+          },
           "CLKOUT1_JITTER": {
-            "value": "124.615"
+            "value": "444.844"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "96.948"
+            "value": "651.718"
           },
           "CLKOUT2_JITTER": {
             "value": "124.615"
@@ -217,22 +221,28 @@
             "value": "false"
           },
           "CLK_IN1_BOARD_INTERFACE": {
-            "value": "sys_clock"
+            "value": "Custom"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "8.000"
+            "value": "64.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "80.000"
           },
           "MMCM_CLKIN2_PERIOD": {
-            "value": "10.000"
+            "value": "10.0"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "10.000"
+            "value": "8.000"
           },
           "MMCM_CLKOUT1_DIVIDE": {
             "value": "1"
           },
           "NUM_OUT_CLKS": {
             "value": "1"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "12.5"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
@@ -474,58 +484,6 @@
           }
         },
         "components": {
-          "controller_interconn_0": {
-            "vlnv": "xilinx.com:module_ref:controller_interconnect:1.0",
-            "xci_name": "blockdesign_controller_interconn_0_0",
-            "xci_path": "ip\\blockdesign_controller_interconn_0_0\\blockdesign_controller_interconn_0_0.xci",
-            "inst_hier_path": "controllers/controller_interconn_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "controller_interconnect",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "switch": {
-                "direction": "I"
-              },
-              "value_l_1": {
-                "direction": "I",
-                "left": "8",
-                "right": "0"
-              },
-              "value_l_2": {
-                "direction": "I",
-                "left": "8",
-                "right": "0"
-              },
-              "value_r_1": {
-                "direction": "I",
-                "left": "8",
-                "right": "0"
-              },
-              "value_r_2": {
-                "direction": "I",
-                "left": "8",
-                "right": "0"
-              },
-              "enable_1": {
-                "direction": "O"
-              },
-              "enable_2": {
-                "direction": "O"
-              },
-              "value_l_o": {
-                "direction": "O",
-                "left": "8",
-                "right": "0"
-              },
-              "value_r_o": {
-                "direction": "O",
-                "left": "8",
-                "right": "0"
-              }
-            }
-          },
           "controller_ultrasonic_0": {
             "vlnv": "xilinx.com:module_ref:controller_ultrasonic:1.0",
             "xci_name": "blockdesign_controller_ultrasonic_0_0",
@@ -778,6 +736,58 @@
               },
               "clk_o": {
                 "direction": "O"
+              }
+            }
+          },
+          "controller_interconn_0": {
+            "vlnv": "xilinx.com:module_ref:controller_interconnect:1.0",
+            "xci_name": "blockdesign_controller_interconn_0_0",
+            "xci_path": "ip\\blockdesign_controller_interconn_0_0\\blockdesign_controller_interconn_0_0.xci",
+            "inst_hier_path": "controllers/controller_interconn_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_interconnect",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "switch": {
+                "direction": "I"
+              },
+              "value_l_1": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "value_l_2": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "value_r_1": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "value_r_2": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "enable_1": {
+                "direction": "O"
+              },
+              "enable_2": {
+                "direction": "O"
+              },
+              "value_l_o": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              },
+              "value_r_o": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
               }
             }
           }
@@ -2081,6 +2091,12 @@
           "position_ball_0/enable"
         ]
       },
+      "ext_clk_1": {
+        "ports": [
+          "ext_clk",
+          "clk_wiz/clk_in1"
+        ]
+      },
       "one_dout": {
         "ports": [
           "one/dout",
@@ -2337,12 +2353,6 @@
         "ports": [
           "controller_switch",
           "controllers/switch_0"
-        ]
-      },
-      "sys_clock_1": {
-        "ports": [
-          "sys_clock",
-          "clk_wiz/clk_in1"
         ]
       },
       "util_vector_logic_1_Res": {
