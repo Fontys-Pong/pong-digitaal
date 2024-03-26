@@ -23,9 +23,9 @@ architecture Behavioral of position_paddles is
 begin
 
     paddle_l_pos_x <= paddle_offset_x;
-    paddle_l_pos_y <= std_logic_vector(to_unsigned(to_integer((unsigned(screen_size_y) - unsigned(paddle_size_y)) * unsigned(controller_value_l) / to_unsigned(511, 10)), 10));
+    paddle_l_pos_y <= std_logic_vector(to_unsigned(to_integer((unsigned(screen_size_y) - unsigned(paddle_size_y)) * unsigned(controller_value_l) / to_unsigned(511, 10)), 11));
     
-    paddle_r_pos_x <= std_logic_vector(to_unsigned(to_integer(unsigned(screen_size_x) - unsigned(paddle_size_x) - unsigned(paddle_offset_x)), 10));
-    paddle_r_pos_y <= std_logic_vector(to_unsigned(to_integer((unsigned(screen_size_y) - unsigned(paddle_size_y)) * unsigned(controller_value_r) / to_unsigned(511, 10)), 10));
+    paddle_r_pos_x <= std_logic_vector(to_unsigned(to_integer(unsigned(screen_size_x) - unsigned(paddle_size_x) - unsigned(paddle_offset_x)), 11));
+    paddle_r_pos_y <= std_logic_vector(to_unsigned(to_integer((unsigned(screen_size_y) - unsigned(paddle_size_y)) * unsigned(controller_value_r) / to_unsigned(511, 10)), 11));
 
 end Behavioral;

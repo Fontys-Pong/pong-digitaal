@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Mon Mar 25 10:34:20 2024
+--Date        : Mon Mar 25 18:34:50 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign_wrapper.bd
 --Design      : blockdesign_wrapper
@@ -20,15 +20,17 @@ entity blockdesign_wrapper is
     btn_up_r : in STD_LOGIC;
     controller_switch : in STD_LOGIC;
     enable : in STD_LOGIC;
-    hsync_o_0 : out STD_LOGIC;
+    hdmi_out_clk_n : out STD_LOGIC;
+    hdmi_out_clk_p : out STD_LOGIC;
+    hdmi_out_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_out_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     reset : in STD_LOGIC;
     sensor_l : in STD_LOGIC;
     sensor_r : in STD_LOGIC;
     sys_clock : in STD_LOGIC;
     trigger_l : out STD_LOGIC;
-    trigger_r : out STD_LOGIC;
-    video_enable_o_0 : out STD_LOGIC;
-    vsync_o_0 : out STD_LOGIC
+    trigger_r : out STD_LOGIC
   );
 end blockdesign_wrapper;
 
@@ -41,15 +43,17 @@ architecture STRUCTURE of blockdesign_wrapper is
     sensor_r : in STD_LOGIC;
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC;
-    hsync_o_0 : out STD_LOGIC;
-    vsync_o_0 : out STD_LOGIC;
     controller_switch : in STD_LOGIC;
     btn_up_l : in STD_LOGIC;
     btn_down_l : in STD_LOGIC;
     btn_up_r : in STD_LOGIC;
     btn_down_r : in STD_LOGIC;
     enable : in STD_LOGIC;
-    video_enable_o_0 : out STD_LOGIC
+    hdmi_out_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
+    hdmi_out_clk_p : out STD_LOGIC;
+    hdmi_out_clk_n : out STD_LOGIC;
+    hdmi_out_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    hdmi_out_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component blockdesign;
 begin
@@ -61,14 +65,16 @@ blockdesign_i: component blockdesign
       btn_up_r => btn_up_r,
       controller_switch => controller_switch,
       enable => enable,
-      hsync_o_0 => hsync_o_0,
+      hdmi_out_clk_n => hdmi_out_clk_n,
+      hdmi_out_clk_p => hdmi_out_clk_p,
+      hdmi_out_data_n(2 downto 0) => hdmi_out_data_n(2 downto 0),
+      hdmi_out_data_p(2 downto 0) => hdmi_out_data_p(2 downto 0),
+      hdmi_out_hpd(0) => hdmi_out_hpd(0),
       reset => reset,
       sensor_l => sensor_l,
       sensor_r => sensor_r,
       sys_clock => sys_clock,
       trigger_l => trigger_l,
-      trigger_r => trigger_r,
-      video_enable_o_0 => video_enable_o_0,
-      vsync_o_0 => vsync_o_0
+      trigger_r => trigger_r
     );
 end STRUCTURE;

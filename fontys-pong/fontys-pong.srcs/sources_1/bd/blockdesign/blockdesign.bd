@@ -1,16 +1,16 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF6CD3EC21D09469F",
+      "boundary_crc": "0x63926434BA68EFD9",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../fontys-pong.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
-      "util_vector_logic_0": "",
       "util_vector_logic_1": "",
       "clk_wiz": "",
       "Constants": {
@@ -30,6 +30,11 @@
         "controller_buttons_0": "",
         "controller_buttons_1": ""
       },
+      "clk_wiz_0": "",
+      "v_tc_0": "",
+      "zero": "",
+      "one": "",
+      "rgb2dvi_0": "",
       "score_counter_0": "",
       "collision_detection_0": "",
       "position_ball_0": "",
@@ -37,42 +42,12 @@
       "paint_ball": "",
       "paint_paddle_l": "",
       "paint_paddle_r": "",
-      "paint_centerline_0": "",
-      "position_paddles_0": "",
-      "clk_wiz_0": "",
-      "v_tc_0": "",
       "pixel_counter_0": "",
-      "zero": "",
-      "one": "",
       "color_generator_0": "",
       "video_buffer_0": "",
-      "rgb2dvi_0": "",
-      "util_vector_logic_2": ""
-    },
-    "interface_ports": {
-      "hdmi_out": {
-        "mode": "Master",
-        "vlnv_bus_definition": "digilentinc.com:interface:tmds:1.0",
-        "vlnv": "digilentinc.com:interface:tmds_rtl:1.0",
-        "port_maps": {
-          "CLK_P": {
-            "physical_name": "hdmi_out_clk_p",
-            "direction": "O"
-          },
-          "CLK_N": {
-            "physical_name": "hdmi_out_clk_n",
-            "direction": "O"
-          },
-          "DATA_P": {
-            "physical_name": "hdmi_out_data_p",
-            "direction": "O"
-          },
-          "DATA_N": {
-            "physical_name": "hdmi_out_data_n",
-            "direction": "O"
-          }
-        }
-      }
+      "util_vector_logic_2": "",
+      "position_paddles_0": "",
+      "paint_centerline_0": ""
     },
     "ports": {
       "trigger_l": {
@@ -91,6 +66,10 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -100,8 +79,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "blockdesign_sys_clock",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -130,23 +121,63 @@
         "direction": "O",
         "left": "0",
         "right": "0"
-      }
-    },
-    "components": {
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "blockdesign_util_vector_logic_0_0",
-        "xci_path": "ip\\blockdesign_util_vector_logic_0_0\\blockdesign_util_vector_logic_0_0.xci",
-        "inst_hier_path": "util_vector_logic_0",
+      },
+      "hdmi_out_clk_p": {
+        "type": "clk",
+        "direction": "O",
         "parameters": {
-          "C_OPERATION": {
-            "value": "or"
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
           },
-          "C_SIZE": {
-            "value": "1"
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
           }
         }
       },
+      "hdmi_out_clk_n": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "hdmi_out_data_p": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "hdmi_out_data_n": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      }
+    },
+    "components": {
       "util_vector_logic_1": {
         "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
         "xci_name": "blockdesign_util_vector_logic_0_1",
@@ -460,7 +491,21 @@
             },
             "ports": {
               "clk_i": {
-                "direction": "I"
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
               },
               "reset": {
                 "type": "rst",
@@ -546,6 +591,18 @@
                   "ASSOCIATED_RESET": {
                     "value": "reset",
                     "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_clk_out1",
+                    "value_src": "ip_prop"
                   }
                 }
               },
@@ -592,6 +649,18 @@
                   "ASSOCIATED_RESET": {
                     "value": "reset",
                     "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_clk_out1",
+                    "value_src": "ip_prop"
                   }
                 }
               },
@@ -845,6 +914,81 @@
           }
         }
       },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "blockdesign_clk_wiz_0_0",
+        "xci_path": "ip\\blockdesign_clk_wiz_0_0\\blockdesign_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "217.614"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "245.344"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "148.5"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_hdmi"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "37.125"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "6.250"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "4"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "100.000"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          }
+        }
+      },
+      "v_tc_0": {
+        "vlnv": "xilinx.com:ip:v_tc:6.2",
+        "xci_name": "blockdesign_v_tc_0_0",
+        "xci_path": "ip\\blockdesign_v_tc_0_0\\blockdesign_v_tc_0_0.xci",
+        "inst_hier_path": "v_tc_0",
+        "parameters": {
+          "HAS_AXI4_LITE": {
+            "value": "false"
+          },
+          "VIDEO_MODE": {
+            "value": "1080p"
+          },
+          "enable_detection": {
+            "value": "false"
+          }
+        }
+      },
+      "zero": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "blockdesign_xlconstant_0_7",
+        "xci_path": "ip\\blockdesign_xlconstant_0_7\\blockdesign_xlconstant_0_7.xci",
+        "inst_hier_path": "zero",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "one": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "blockdesign_xlconstant_0_8",
+        "xci_path": "ip\\blockdesign_xlconstant_0_8\\blockdesign_xlconstant_0_8.xci",
+        "inst_hier_path": "one"
+      },
+      "rgb2dvi_0": {
+        "vlnv": "digilentinc.com:ip:rgb2dvi:1.4",
+        "xci_name": "blockdesign_rgb2dvi_0_0",
+        "xci_path": "ip\\blockdesign_rgb2dvi_0_0\\blockdesign_rgb2dvi_0_0.xci",
+        "inst_hier_path": "rgb2dvi_0"
+      },
       "score_counter_0": {
         "vlnv": "xilinx.com:module_ref:score_counter:1.0",
         "xci_name": "blockdesign_score_counter_0_0",
@@ -876,10 +1020,30 @@
             }
           },
           "point_l": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "point_r": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "max_score": {
             "direction": "I",
@@ -982,10 +1146,30 @@
             "right": "0"
           },
           "collision_ball_edge_l": {
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "collision_ball_edge_r": {
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "collision_ball_topbottom": {
             "direction": "O"
@@ -1052,7 +1236,17 @@
             "direction": "I"
           },
           "collision_ball_edge": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "ball_pos_x": {
             "direction": "O",
@@ -1083,7 +1277,21 @@
         },
         "ports": {
           "clk_i": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "reset": {
             "type": "rst",
@@ -1112,7 +1320,21 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "video_enable_i": {
             "direction": "I"
@@ -1193,7 +1415,21 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "video_enable_i": {
             "direction": "I"
@@ -1274,7 +1510,21 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "video_enable_i": {
             "direction": "I"
@@ -1342,55 +1592,58 @@
           }
         }
       },
-      "paint_centerline_0": {
-        "vlnv": "xilinx.com:module_ref:paint_centerline:1.0",
-        "xci_name": "blockdesign_paint_centerline_0_0",
-        "xci_path": "ip\\blockdesign_paint_centerline_0_0\\blockdesign_paint_centerline_0_0.xci",
-        "inst_hier_path": "paint_centerline_0",
+      "pixel_counter_0": {
+        "vlnv": "xilinx.com:module_ref:pixel_counter:1.0",
+        "xci_name": "blockdesign_pixel_counter_0_0",
+        "xci_path": "ip\\blockdesign_pixel_counter_0_0\\blockdesign_pixel_counter_0_0.xci",
+        "inst_hier_path": "pixel_counter_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "paint_centerline",
+          "ref_name": "pixel_counter",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
+          "pxCLK_i": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "video_enable_i": {
+            "direction": "I"
+          },
+          "hblank_i": {
             "direction": "I"
           },
           "hsync_i": {
             "direction": "I"
           },
+          "vblank_i": {
+            "direction": "I"
+          },
           "vsync_i": {
             "direction": "I"
           },
-          "pxl_x_i": {
-            "direction": "I",
+          "hpx_o": {
+            "direction": "O",
             "left": "10",
             "right": "0"
           },
-          "pxl_y_i": {
-            "direction": "I",
+          "vpx_o": {
+            "direction": "O",
             "left": "10",
             "right": "0"
-          },
-          "pxl_value_i": {
-            "direction": "I"
-          },
-          "screen_size_x": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "screen_size_y": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "video_enable_o": {
-            "direction": "O"
           },
           "hsync_o": {
             "direction": "O"
@@ -1398,18 +1651,102 @@
           "vsync_o": {
             "direction": "O"
           },
-          "pxl_x_o": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_y_o": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_value_o": {
+          "video_enable_o": {
             "direction": "O"
+          }
+        }
+      },
+      "color_generator_0": {
+        "vlnv": "xilinx.com:module_ref:color_generator:1.0",
+        "xci_name": "blockdesign_color_generator_0_0",
+        "xci_path": "ip\\blockdesign_color_generator_0_0\\blockdesign_color_generator_0_0.xci",
+        "inst_hier_path": "color_generator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "color_generator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "enable_i": {
+            "direction": "I"
+          },
+          "data_o": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "video_buffer_0": {
+        "vlnv": "xilinx.com:module_ref:video_buffer:1.0",
+        "xci_name": "blockdesign_video_buffer_0_0",
+        "xci_path": "ip\\blockdesign_video_buffer_0_0\\blockdesign_video_buffer_0_0.xci",
+        "inst_hier_path": "video_buffer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "video_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "Vdata_i": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "HSync_i": {
+            "direction": "I"
+          },
+          "VSync_i": {
+            "direction": "I"
+          },
+          "Vdata_enable_i": {
+            "direction": "I"
+          },
+          "Vdata_o": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "HSync_o": {
+            "direction": "O"
+          },
+          "VSync_o": {
+            "direction": "O"
+          },
+          "Vdata_enable_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "util_vector_logic_2": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "blockdesign_util_vector_logic_1_2",
+        "xci_path": "ip\\blockdesign_util_vector_logic_1_2\\blockdesign_util_vector_logic_1_2.xci",
+        "inst_hier_path": "util_vector_logic_2",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
           }
         }
       },
@@ -1481,96 +1818,69 @@
           }
         }
       },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "blockdesign_clk_wiz_0_0",
-        "xci_path": "ip\\blockdesign_clk_wiz_0_0\\blockdesign_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
-        "parameters": {
-          "CLKOUT1_JITTER": {
-            "value": "217.614"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "245.344"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "148.5"
-          },
-          "CLK_OUT1_PORT": {
-            "value": "clk_hdmi"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "37.125"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "6.250"
-          },
-          "MMCM_DIVCLK_DIVIDE": {
-            "value": "4"
-          },
-          "PRIM_IN_FREQ": {
-            "value": "100.000"
-          },
-          "USE_LOCKED": {
-            "value": "false"
-          }
-        }
-      },
-      "v_tc_0": {
-        "vlnv": "xilinx.com:ip:v_tc:6.2",
-        "xci_name": "blockdesign_v_tc_0_0",
-        "xci_path": "ip\\blockdesign_v_tc_0_0\\blockdesign_v_tc_0_0.xci",
-        "inst_hier_path": "v_tc_0",
-        "parameters": {
-          "HAS_AXI4_LITE": {
-            "value": "false"
-          },
-          "VIDEO_MODE": {
-            "value": "1080p"
-          },
-          "enable_detection": {
-            "value": "false"
-          }
-        }
-      },
-      "pixel_counter_0": {
-        "vlnv": "xilinx.com:module_ref:pixel_counter:1.0",
-        "xci_name": "blockdesign_pixel_counter_0_0",
-        "xci_path": "ip\\blockdesign_pixel_counter_0_0\\blockdesign_pixel_counter_0_0.xci",
-        "inst_hier_path": "pixel_counter_0",
+      "paint_centerline_0": {
+        "vlnv": "xilinx.com:module_ref:paint_centerline:1.0",
+        "xci_name": "blockdesign_paint_centerline_0_0",
+        "xci_path": "ip\\blockdesign_paint_centerline_0_0\\blockdesign_paint_centerline_0_0.xci",
+        "inst_hier_path": "paint_centerline_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "pixel_counter",
+          "ref_name": "paint_centerline",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "pxCLK_i": {
-            "direction": "I"
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "video_enable_i": {
-            "direction": "I"
-          },
-          "hblank_i": {
             "direction": "I"
           },
           "hsync_i": {
             "direction": "I"
           },
-          "vblank_i": {
-            "direction": "I"
-          },
           "vsync_i": {
             "direction": "I"
           },
-          "hpx_o": {
-            "direction": "O",
+          "pxl_x_i": {
+            "direction": "I",
             "left": "10",
             "right": "0"
           },
-          "vpx_o": {
-            "direction": "O",
+          "pxl_y_i": {
+            "direction": "I",
             "left": "10",
             "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "screen_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "screen_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "video_enable_o": {
+            "direction": "O"
           },
           "hsync_o": {
             "direction": "O"
@@ -1578,121 +1888,20 @@
           "vsync_o": {
             "direction": "O"
           },
-          "video_enable_o": {
-            "direction": "O"
-          }
-        }
-      },
-      "zero": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "blockdesign_xlconstant_0_7",
-        "xci_path": "ip\\blockdesign_xlconstant_0_7\\blockdesign_xlconstant_0_7.xci",
-        "inst_hier_path": "zero",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "0"
-          }
-        }
-      },
-      "one": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "blockdesign_xlconstant_0_8",
-        "xci_path": "ip\\blockdesign_xlconstant_0_8\\blockdesign_xlconstant_0_8.xci",
-        "inst_hier_path": "one"
-      },
-      "color_generator_0": {
-        "vlnv": "xilinx.com:module_ref:color_generator:1.0",
-        "xci_name": "blockdesign_color_generator_0_0",
-        "xci_path": "ip\\blockdesign_color_generator_0_0\\blockdesign_color_generator_0_0.xci",
-        "inst_hier_path": "color_generator_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "color_generator",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "enable_i": {
-            "direction": "I"
-          },
-          "data_o": {
+          "pxl_x_o": {
             "direction": "O",
-            "left": "23",
-            "right": "0"
-          }
-        }
-      },
-      "video_buffer_0": {
-        "vlnv": "xilinx.com:module_ref:video_buffer:1.0",
-        "xci_name": "blockdesign_video_buffer_0_0",
-        "xci_path": "ip\\blockdesign_video_buffer_0_0\\blockdesign_video_buffer_0_0.xci",
-        "inst_hier_path": "video_buffer_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "video_buffer",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "pixel_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "Vdata_i": {
-            "direction": "I",
-            "left": "23",
+            "left": "10",
             "right": "0"
           },
-          "HSync_i": {
-            "direction": "I"
-          },
-          "VSync_i": {
-            "direction": "I"
-          },
-          "Vdata_enable_i": {
-            "direction": "I"
-          },
-          "Vdata_o": {
+          "pxl_y_o": {
             "direction": "O",
-            "left": "23",
+            "left": "10",
             "right": "0"
           },
-          "HSync_o": {
-            "direction": "O"
-          },
-          "VSync_o": {
-            "direction": "O"
-          },
-          "Vdata_enable_o": {
+          "pxl_value_o": {
             "direction": "O"
           }
         }
-      },
-      "rgb2dvi_0": {
-        "vlnv": "digilentinc.com:ip:rgb2dvi:1.4",
-        "xci_name": "blockdesign_rgb2dvi_0_0",
-        "xci_path": "ip\\blockdesign_rgb2dvi_0_0\\blockdesign_rgb2dvi_0_0.xci",
-        "inst_hier_path": "rgb2dvi_0"
-      },
-      "util_vector_logic_2": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "blockdesign_util_vector_logic_2_0",
-        "xci_path": "ip\\blockdesign_util_vector_logic_2_0\\blockdesign_util_vector_logic_2_0.xci",
-        "inst_hier_path": "util_vector_logic_2",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      }
-    },
-    "interface_nets": {
-      "rgb2dvi_0_TMDS": {
-        "interface_ports": [
-          "hdmi_out",
-          "rgb2dvi_0/TMDS"
-        ]
       }
     },
     "nets": {
@@ -1700,19 +1909,19 @@
         "ports": [
           "clk_wiz/clk_out1",
           "controllers/clk",
-          "clk_divider_0/clk_i",
-          "clk_wiz_0/clk_in1"
+          "clk_wiz_0/clk_in1",
+          "clk_divider_0/clk_i"
         ]
       },
       "Net3": {
         "ports": [
-          "util_vector_logic_2/Res",
-          "util_vector_logic_0/Op1",
+          "reset",
           "clk_wiz/reset",
           "controllers/reset",
+          "clk_wiz_0/reset",
           "score_counter_0/reset",
           "clk_divider_0/reset",
-          "clk_wiz_0/reset"
+          "util_vector_logic_2/Op1"
         ]
       },
       "Net4": {
@@ -1727,8 +1936,8 @@
           "Constants/screen_size_x",
           "collision_detection_0/screen_size_x",
           "position_ball_0/screen_size_x",
-          "paint_centerline_0/screen_size_x",
-          "position_paddles_0/screen_size_x"
+          "position_paddles_0/screen_size_x",
+          "paint_centerline_0/screen_size_x"
         ]
       },
       "Net6": {
@@ -1736,8 +1945,8 @@
           "Constants/screen_size_y",
           "collision_detection_0/screen_size_y",
           "position_ball_0/screen_size_y",
-          "paint_centerline_0/screen_size_y",
-          "position_paddles_0/screen_size_y"
+          "position_paddles_0/screen_size_y",
+          "paint_centerline_0/screen_size_y"
         ]
       },
       "Net7": {
@@ -1795,13 +2004,13 @@
         "ports": [
           "clk_wiz_0/clk_hdmi",
           "v_tc_0/clk",
-          "pixel_counter_0/pxCLK_i",
+          "rgb2dvi_0/PixelClk",
           "paint_ball/clk",
           "paint_paddle_l/clk",
           "paint_paddle_r/clk",
-          "paint_centerline_0/clk",
-          "rgb2dvi_0/PixelClk",
-          "video_buffer_0/pixel_clk"
+          "pixel_counter_0/pxCLK_i",
+          "video_buffer_0/pixel_clk",
+          "paint_centerline_0/clk"
         ]
       },
       "collision_detection_0_collision_ball_edge_l": {
@@ -2082,16 +2291,34 @@
           "paint_paddle_r/rect_pos_y"
         ]
       },
-      "reset_1": {
+      "rgb2dvi_0_TMDS_Clk_n": {
         "ports": [
-          "reset",
-          "util_vector_logic_2/Op1"
+          "rgb2dvi_0/TMDS_Clk_n",
+          "hdmi_out_clk_n"
+        ]
+      },
+      "rgb2dvi_0_TMDS_Clk_p": {
+        "ports": [
+          "rgb2dvi_0/TMDS_Clk_p",
+          "hdmi_out_clk_p"
+        ]
+      },
+      "rgb2dvi_0_TMDS_Data_n": {
+        "ports": [
+          "rgb2dvi_0/TMDS_Data_n",
+          "hdmi_out_data_n"
+        ]
+      },
+      "rgb2dvi_0_TMDS_Data_p": {
+        "ports": [
+          "rgb2dvi_0/TMDS_Data_p",
+          "hdmi_out_data_p"
         ]
       },
       "score_counter_0_game_reset": {
         "ports": [
           "score_counter_0/game_reset",
-          "util_vector_logic_0/Op2"
+          "util_vector_logic_2/Op2"
         ]
       },
       "sensor_0_1": {
@@ -2118,16 +2345,16 @@
           "clk_wiz/clk_in1"
         ]
       },
-      "util_vector_logic_0_Res": {
-        "ports": [
-          "util_vector_logic_0/Res",
-          "position_ball_0/reset"
-        ]
-      },
       "util_vector_logic_1_Res": {
         "ports": [
           "util_vector_logic_1/Res",
           "position_ball_0/collision_ball_edge"
+        ]
+      },
+      "util_vector_logic_2_Res": {
+        "ports": [
+          "util_vector_logic_2/Res",
+          "position_ball_0/reset"
         ]
       },
       "v_tc_0_active_video_out": {

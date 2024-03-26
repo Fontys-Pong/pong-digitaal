@@ -28,10 +28,10 @@ end paint_centerline;
 
 architecture Behavioral of paint_centerline is
     -- Define the position and size of the line
-    constant size_x : unsigned(9 downto 0) := to_unsigned(width_line, 10);
-    constant size_y : unsigned(8 downto 0) := unsigned(screen_size_y);
-    constant pos_x : unsigned(9 downto 0) := to_unsigned(to_integer(unsigned(screen_size_x) / 2) - to_integer(size_x / 2), 10);
-    constant pos_y : unsigned(8 downto 0) := to_unsigned(0, 9);
+    constant size_x : unsigned(10 downto 0) := to_unsigned(width_line, 11);
+    constant size_y : unsigned(10 downto 0) := unsigned(screen_size_y);
+    constant pos_x : unsigned(10 downto 0) := to_unsigned(to_integer(unsigned(screen_size_x) / 2) - to_integer(size_x / 2), 11);
+    constant pos_y : unsigned(10 downto 0) := to_unsigned(0, 11);
 
 begin
 

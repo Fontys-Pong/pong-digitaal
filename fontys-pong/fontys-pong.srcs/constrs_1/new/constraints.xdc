@@ -1,4 +1,4 @@
-set_property PACKAGE_PIN W18 [get_ports reset]
+set_property PACKAGE_PIN U17 [get_ports reset]
 set_property IOSTANDARD LVCMOS33 [get_ports reset]
 
 set_property PACKAGE_PIN M19 [get_ports enable]
