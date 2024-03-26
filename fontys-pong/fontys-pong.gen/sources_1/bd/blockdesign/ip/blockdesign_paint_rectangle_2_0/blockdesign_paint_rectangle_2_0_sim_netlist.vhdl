@@ -2,11 +2,11 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Mon Mar 25 18:21:39 2024
--- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_paint_rectangle_2_0 -prefix
---               blockdesign_paint_rectangle_2_0_ blockdesign_paint_rectangle_1_0_sim_netlist.vhdl
--- Design      : blockdesign_paint_rectangle_1_0
+-- Date        : Tue Mar 26 09:44:23 2024
+-- Host        : XPS-Tommy running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0_sim_netlist.vhdl
+-- Design      : blockdesign_paint_rectangle_2_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg400-1
@@ -35,6 +35,8 @@ entity blockdesign_paint_rectangle_2_0_paint_rectangle is
     rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
     pxl_value_i : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_paint_rectangle_2_0_paint_rectangle : entity is "paint_rectangle";
 end blockdesign_paint_rectangle_2_0_paint_rectangle;
 
 architecture STRUCTURE of blockdesign_paint_rectangle_2_0_paint_rectangle is
@@ -1380,7 +1382,7 @@ entity blockdesign_paint_rectangle_2_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of blockdesign_paint_rectangle_2_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of blockdesign_paint_rectangle_2_0 : entity is "blockdesign_paint_rectangle_1_0,paint_rectangle,{}";
+  attribute CHECK_LICENSE_TYPE of blockdesign_paint_rectangle_2_0 : entity is "blockdesign_paint_rectangle_2_0,paint_rectangle,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of blockdesign_paint_rectangle_2_0 : entity is "yes";
   attribute ip_definition_source : string;

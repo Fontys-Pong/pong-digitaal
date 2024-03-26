@@ -2,8 +2,8 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Mon Mar 25 18:34:50 2024
---Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+--Date        : Tue Mar 26 09:40:13 2024
+--Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
 --Purpose     : IP block netlist
@@ -15,7 +15,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity Constants_imp_15CBHTD is
   port (
     ball_size : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    max_score : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    max_score : out STD_LOGIC_VECTOR ( 3 downto 0 );
     paddle_offset_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
     paddle_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
     paddle_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -57,7 +57,7 @@ architecture STRUCTURE of Constants_imp_15CBHTD is
   end component blockdesign_xlconstant_0_5;
   component blockdesign_xlconstant_0_6 is
   port (
-    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component blockdesign_xlconstant_0_6;
   signal Net5 : STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -66,10 +66,10 @@ architecture STRUCTURE of Constants_imp_15CBHTD is
   signal Net8 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net9 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal xlconstant_5_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal xlconstant_6_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal xlconstant_6_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
   ball_size(10 downto 0) <= Net9(10 downto 0);
-  max_score(10 downto 0) <= xlconstant_6_dout(10 downto 0);
+  max_score(3 downto 0) <= xlconstant_6_dout(3 downto 0);
   paddle_offset_x(10 downto 0) <= xlconstant_5_dout(10 downto 0);
   paddle_size_x(10 downto 0) <= Net7(10 downto 0);
   paddle_size_y(10 downto 0) <= Net8(10 downto 0);
@@ -81,7 +81,7 @@ ball_size_RnM: component blockdesign_xlconstant_0_4
     );
 max_score_RnM: component blockdesign_xlconstant_0_6
      port map (
-      dout(10 downto 0) => xlconstant_6_dout(10 downto 0)
+      dout(3 downto 0) => xlconstant_6_dout(3 downto 0)
     );
 paddle_offset_x_RnM: component blockdesign_xlconstant_0_5
      port map (
@@ -127,13 +127,6 @@ entity controllers_imp_Z9LQ6G is
 end controllers_imp_Z9LQ6G;
 
 architecture STRUCTURE of controllers_imp_Z9LQ6G is
-  component blockdesign_clk_divider_1_0 is
-  port (
-    clk_i : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    clk_o : out STD_LOGIC
-  );
-  end component blockdesign_clk_divider_1_0;
   component blockdesign_controller_interconn_0_0 is
   port (
     switch : in STD_LOGIC;
@@ -187,6 +180,13 @@ architecture STRUCTURE of controllers_imp_Z9LQ6G is
     value : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component blockdesign_controller_buttons_1_0;
+  component blockdesign_clk_divider_1_0 is
+  port (
+    clk_i : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    clk_o : out STD_LOGIC
+  );
+  end component blockdesign_clk_divider_1_0;
   signal Net : STD_LOGIC;
   signal Net2 : STD_LOGIC;
   signal Net3 : STD_LOGIC;
@@ -367,6 +367,13 @@ architecture STRUCTURE of blockdesign is
     PixelClk : in STD_LOGIC
   );
   end component blockdesign_rgb2dvi_0_0;
+  component blockdesign_util_vector_logic_1_2 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Op2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component blockdesign_util_vector_logic_1_2;
   component blockdesign_score_counter_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -519,13 +526,6 @@ architecture STRUCTURE of blockdesign is
     Vdata_enable_o : out STD_LOGIC
   );
   end component blockdesign_video_buffer_0_0;
-  component blockdesign_util_vector_logic_1_2 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Op2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component blockdesign_util_vector_logic_1_2;
   component blockdesign_position_paddles_0_0 is
   port (
     paddle_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -639,7 +639,7 @@ architecture STRUCTURE of blockdesign is
   signal video_buffer_0_Vdata_enable_o : STD_LOGIC;
   signal video_buffer_0_Vdata_o : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal xlconstant_5_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal xlconstant_6_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal xlconstant_6_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal zero_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_paint_centerline_0_pxl_x_o_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal NLW_paint_centerline_0_pxl_y_o_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -677,7 +677,7 @@ begin
 Constants: entity work.Constants_imp_15CBHTD
      port map (
       ball_size(10 downto 0) => Net9(10 downto 0),
-      max_score(10 downto 0) => xlconstant_6_dout(10 downto 0),
+      max_score(3 downto 0) => xlconstant_6_dout(3 downto 0),
       paddle_offset_x(10 downto 0) => xlconstant_5_dout(10 downto 0),
       paddle_size_x(10 downto 0) => Net7(10 downto 0),
       paddle_size_y(10 downto 0) => Net8(10 downto 0),

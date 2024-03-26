@@ -87,12 +87,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_2_0 || ORIG_REF_NAME==blockdesign_paint_rectangle_2_0} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_centerline_0_0 || ORIG_REF_NAME==blockdesign_paint_centerline_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_position_paddles_0_0 || ORIG_REF_NAME==blockdesign_position_paddles_0_0} -quiet] -quiet
-
 # IP: bd/blockdesign/ip/blockdesign_pixel_counter_0_0/blockdesign_pixel_counter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_pixel_counter_0_0 || ORIG_REF_NAME==blockdesign_pixel_counter_0_0} -quiet] -quiet
 
@@ -105,4 +99,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_util_vector_logic_1_2/blockdesign_util_vector_logic_1_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_util_vector_logic_1_2 || ORIG_REF_NAME==blockdesign_util_vector_logic_1_2} -quiet] -quiet
 
-# XDC: c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/blockdesign_ooc.xdc
+# IP: bd/blockdesign/ip/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_position_paddles_0_0 || ORIG_REF_NAME==blockdesign_position_paddles_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_centerline_0_0 || ORIG_REF_NAME==blockdesign_paint_centerline_0_0} -quiet] -quiet
+
+# XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/blockdesign_ooc.xdc

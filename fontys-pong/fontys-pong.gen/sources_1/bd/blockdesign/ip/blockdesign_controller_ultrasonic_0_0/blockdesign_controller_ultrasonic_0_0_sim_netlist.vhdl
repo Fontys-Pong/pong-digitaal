@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Mon Mar 25 10:41:32 2024
--- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_controller_ultrasonic_0_0 -prefix
---               blockdesign_controller_ultrasonic_0_0_ blockdesign_controller_ultrasonic_0_0_sim_netlist.vhdl
+-- Date        : Tue Mar 26 09:44:33 2024
+-- Host        : XPS-Tommy running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/blockdesign_controller_ultrasonic_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_controller_ultrasonic_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,6 +24,8 @@ entity blockdesign_controller_ultrasonic_0_0_controller_ultrasonic is
     reset : in STD_LOGIC;
     sensor : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_controller_ultrasonic_0_0_controller_ultrasonic : entity is "controller_ultrasonic";
 end blockdesign_controller_ultrasonic_0_0_controller_ultrasonic;
 
 architecture STRUCTURE of blockdesign_controller_ultrasonic_0_0_controller_ultrasonic is

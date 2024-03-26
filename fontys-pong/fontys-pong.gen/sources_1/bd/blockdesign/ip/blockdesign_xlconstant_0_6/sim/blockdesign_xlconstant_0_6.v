@@ -57,11 +57,11 @@ module blockdesign_xlconstant_0_6 (
   dout
 );
 
-output wire [10 : 0] dout;
+output wire [3 : 0] dout;
 
   xlconstant_v1_1_7_xlconstant #(
-    .CONST_WIDTH(11),
-    .CONST_VAL(11'H003)
+    .CONST_WIDTH(4),
+    .CONST_VAL(4'H3)
   ) inst (
     .dout(dout)
   );

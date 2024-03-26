@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Mon Mar 25 10:35:25 2024
--- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top blockdesign_clk_divider_0_0 -prefix
---               blockdesign_clk_divider_0_0_ blockdesign_clk_divider_0_0_sim_netlist.vhdl
+-- Date        : Tue Mar 26 09:44:23 2024
+-- Host        : XPS-Tommy running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_clk_divider_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,10 +21,13 @@ entity blockdesign_clk_divider_0_0_clk_divider is
     clk_i : in STD_LOGIC;
     reset : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of blockdesign_clk_divider_0_0_clk_divider : entity is "clk_divider";
 end blockdesign_clk_divider_0_0_clk_divider;
 
 architecture STRUCTURE of blockdesign_clk_divider_0_0_clk_divider is
   signal \^clk_o\ : STD_LOGIC;
+  signal clk_o_i_10_n_0 : STD_LOGIC;
   signal clk_o_i_1_n_0 : STD_LOGIC;
   signal clk_o_i_2_n_0 : STD_LOGIC;
   signal clk_o_i_3_n_0 : STD_LOGIC;
@@ -112,109 +115,118 @@ architecture STRUCTURE of blockdesign_clk_divider_0_0_clk_divider is
   attribute ADDER_THRESHOLD of \count_reg[8]_i_1\ : label is 11;
 begin
   clk_o <= \^clk_o\;
-clk_o_i_1: unisim.vcomponents.LUT4
+clk_o_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"8B88"
+      INIT => X"AA03AA00"
     )
         port map (
       I0 => \^clk_o\,
-      I1 => reset,
-      I2 => clk_o_i_2_n_0,
-      I3 => clk_o_i_3_n_0,
+      I1 => clk_o_i_2_n_0,
+      I2 => count_reg(5),
+      I3 => reset,
+      I4 => clk_o_i_3_n_0,
       O => clk_o_i_1_n_0
+    );
+clk_o_i_10: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => count_reg(13),
+      I1 => count_reg(0),
+      I2 => count_reg(3),
+      I3 => count_reg(7),
+      O => clk_o_i_10_n_0
     );
 clk_o_i_2: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => clk_o_i_4_n_0,
-      I1 => clk_o_i_5_n_0,
-      I2 => clk_o_i_6_n_0,
-      I3 => count_reg(31),
-      I4 => count_reg(30),
-      I5 => count_reg(25),
+      I0 => count_reg(24),
+      I1 => count_reg(28),
+      I2 => count_reg(27),
+      I3 => count_reg(29),
+      I4 => clk_o_i_4_n_0,
+      I5 => clk_o_i_5_n_0,
       O => clk_o_i_2_n_0
     );
-clk_o_i_3: unisim.vcomponents.LUT6
+clk_o_i_3: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000000000020000"
+      INIT => X"00000004"
     )
         port map (
-      I0 => clk_o_i_7_n_0,
-      I1 => clk_o_i_8_n_0,
-      I2 => clk_o_i_9_n_0,
-      I3 => count_reg(9),
-      I4 => count_reg(16),
-      I5 => count_reg(18),
+      I0 => clk_o_i_6_n_0,
+      I1 => clk_o_i_7_n_0,
+      I2 => clk_o_i_8_n_0,
+      I3 => clk_o_i_9_n_0,
+      I4 => clk_o_i_10_n_0,
       O => clk_o_i_3_n_0
     );
 clk_o_i_4: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"DFFF"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => count_reg(7),
-      I1 => count_reg(2),
-      I2 => count_reg(4),
-      I3 => count_reg(12),
+      I0 => count_reg(30),
+      I1 => count_reg(31),
+      I2 => count_reg(26),
+      I3 => count_reg(25),
       O => clk_o_i_4_n_0
     );
 clk_o_i_5: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FF7F"
     )
         port map (
-      I0 => count_reg(29),
-      I1 => count_reg(27),
-      I2 => count_reg(28),
-      I3 => count_reg(24),
+      I0 => count_reg(11),
+      I1 => count_reg(17),
+      I2 => count_reg(16),
+      I3 => count_reg(9),
       O => clk_o_i_5_n_0
     );
 clk_o_i_6: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFDF"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => count_reg(5),
-      I1 => count_reg(20),
-      I2 => count_reg(8),
-      I3 => count_reg(26),
+      I0 => count_reg(23),
+      I1 => count_reg(21),
+      I2 => count_reg(18),
+      I3 => count_reg(1),
       O => clk_o_i_6_n_0
     );
-clk_o_i_7: unisim.vcomponents.LUT6
+clk_o_i_7: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0000000400000000"
+      INIT => X"0001"
     )
         port map (
-      I0 => count_reg(21),
-      I1 => count_reg(13),
-      I2 => count_reg(3),
-      I3 => count_reg(22),
-      I4 => count_reg(6),
-      I5 => count_reg(19),
+      I0 => count_reg(20),
+      I1 => count_reg(19),
+      I2 => count_reg(22),
+      I3 => count_reg(14),
       O => clk_o_i_7_n_0
     );
 clk_o_i_8: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEF"
+      INIT => X"FFDF"
     )
         port map (
-      I0 => count_reg(11),
-      I1 => count_reg(10),
-      I2 => count_reg(14),
-      I3 => count_reg(1),
+      I0 => count_reg(10),
+      I1 => count_reg(5),
+      I2 => count_reg(8),
+      I3 => count_reg(15),
       O => clk_o_i_8_n_0
     );
 clk_o_i_9: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFD"
+      INIT => X"FFEF"
     )
         port map (
-      I0 => count_reg(17),
-      I1 => count_reg(23),
-      I2 => count_reg(15),
-      I3 => count_reg(0),
+      I0 => count_reg(12),
+      I1 => count_reg(4),
+      I2 => count_reg(6),
+      I3 => count_reg(2),
       O => clk_o_i_9_n_0
     );
 clk_o_reg: unisim.vcomponents.FDRE

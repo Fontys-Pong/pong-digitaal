@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 25 18:34:55 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar 26 09:40:14 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="blockdesign" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -27,15 +27,15 @@
     <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
-        <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_ultrasonic_0" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_ultrasonic_1" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_buttons_0" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_buttons_1" PORT="reset"/>
+        <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="reset"/>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
+        <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op1"/>
         <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
         <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
-        <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op1"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="125000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
@@ -126,13 +126,13 @@
     <MODULE COREREVISION="7" FULLNAME="/Constants/max_score" HWVERSION="1.1" INSTANCE="Constants_max_score" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="11"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x003"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x3"/>
         <PARAMETER NAME="Component_Name" VALUE="blockdesign_xlconstant_0_6"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_max_score_dout">
+        <PORT DIR="O" LEFT="3" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_max_score_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="score_counter_0" PORT="max_score"/>
           </CONNECTIONS>
@@ -240,7 +240,7 @@
     <MODULE COREREVISION="1" FULLNAME="/clk_divider_0" HWVERSION="1.0" INSTANCE="clk_divider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_divider" VLNV="xilinx.com:module_ref:clk_divider:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="division" VALUE="750000"/>
+        <PARAMETER NAME="division" VALUE="200000"/>
         <PARAMETER NAME="Component_Name" VALUE="blockdesign_clk_divider_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -856,9 +856,9 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="clk_i"/>
             <CONNECTION INSTANCE="controllers_controller_ultrasonic_0" PORT="clk"/>
             <CONNECTION INSTANCE="controllers_controller_ultrasonic_1" PORT="clk"/>
+            <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="clk_i"/>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
             <CONNECTION INSTANCE="clk_divider_0" PORT="clk_i"/>
           </CONNECTIONS>
@@ -2432,7 +2432,7 @@
     </MODULE>
     <MODULE COREREVISION="7" FULLNAME="/rgb2dvi_0" HWVERSION="1.4" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="d:/Vivado/vivado-library-zmod-v1-2019.1-2/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="d:/_code/Vivado/vivado-library-zmod-v1-2019.1-2/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="true"/>

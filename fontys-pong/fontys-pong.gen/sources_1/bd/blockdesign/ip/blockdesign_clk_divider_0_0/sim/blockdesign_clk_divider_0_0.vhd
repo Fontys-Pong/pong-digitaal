@@ -81,7 +81,7 @@ ARCHITECTURE blockdesign_clk_divider_0_0_arch OF blockdesign_clk_divider_0_0 IS
 BEGIN
   U0 : clk_divider
     GENERIC MAP (
-      division => 750000
+      division => 200000
     )
     PORT MAP (
       clk_i => clk_i,

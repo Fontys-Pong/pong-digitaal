@@ -62,7 +62,7 @@ typedef bit bit_as_bool;
 
 (* SC_MODULE_EXPORT *)
 module blockdesign_xlconstant_0_6 (
-  output bit [10 : 0 ] dout
+  output bit [3 : 0 ] dout
 );
 endmodule
 `endif
@@ -72,7 +72,7 @@ endmodule
 module blockdesign_xlconstant_0_6 (dout)
 (* integer foreign = "SystemC";
 *);
- output wire [10 : 0 ] dout;  
+ output wire [3 : 0 ] dout;  
 endmodule
 `endif
 

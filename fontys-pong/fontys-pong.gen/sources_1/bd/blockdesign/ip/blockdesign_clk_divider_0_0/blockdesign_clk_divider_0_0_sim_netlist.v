@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Mon Mar 25 10:35:25 2024
-// Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top blockdesign_clk_divider_0_0 -prefix
-//               blockdesign_clk_divider_0_0_ blockdesign_clk_divider_0_0_sim_netlist.v
+// Date        : Tue Mar 26 09:44:23 2024
+// Host        : XPS-Tommy running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0_sim_netlist.v
 // Design      : blockdesign_clk_divider_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,6 +34,7 @@ module blockdesign_clk_divider_0_0
         .reset(reset));
 endmodule
 
+(* ORIG_REF_NAME = "clk_divider" *) 
 module blockdesign_clk_divider_0_0_clk_divider
    (clk_o,
     clk_i,
@@ -44,6 +45,7 @@ module blockdesign_clk_divider_0_0_clk_divider
 
   wire clk_i;
   wire clk_o;
+  wire clk_o_i_10_n_0;
   wire clk_o_i_1_n_0;
   wire clk_o_i_2_n_0;
   wire clk_o_i_3_n_0;
@@ -122,83 +124,89 @@ module blockdesign_clk_divider_0_0_clk_divider
   wire reset;
   wire [3:3]\NLW_count_reg[28]_i_1_CO_UNCONNECTED ;
 
-  LUT4 #(
-    .INIT(16'h8B88)) 
+  LUT5 #(
+    .INIT(32'hAA03AA00)) 
     clk_o_i_1
        (.I0(clk_o),
-        .I1(reset),
-        .I2(clk_o_i_2_n_0),
-        .I3(clk_o_i_3_n_0),
+        .I1(clk_o_i_2_n_0),
+        .I2(count_reg[5]),
+        .I3(reset),
+        .I4(clk_o_i_3_n_0),
         .O(clk_o_i_1_n_0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    clk_o_i_10
+       (.I0(count_reg[13]),
+        .I1(count_reg[0]),
+        .I2(count_reg[3]),
+        .I3(count_reg[7]),
+        .O(clk_o_i_10_n_0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     clk_o_i_2
-       (.I0(clk_o_i_4_n_0),
-        .I1(clk_o_i_5_n_0),
-        .I2(clk_o_i_6_n_0),
-        .I3(count_reg[31]),
-        .I4(count_reg[30]),
-        .I5(count_reg[25]),
+       (.I0(count_reg[24]),
+        .I1(count_reg[28]),
+        .I2(count_reg[27]),
+        .I3(count_reg[29]),
+        .I4(clk_o_i_4_n_0),
+        .I5(clk_o_i_5_n_0),
         .O(clk_o_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000020000)) 
+  LUT5 #(
+    .INIT(32'h00000004)) 
     clk_o_i_3
-       (.I0(clk_o_i_7_n_0),
-        .I1(clk_o_i_8_n_0),
-        .I2(clk_o_i_9_n_0),
-        .I3(count_reg[9]),
-        .I4(count_reg[16]),
-        .I5(count_reg[18]),
+       (.I0(clk_o_i_6_n_0),
+        .I1(clk_o_i_7_n_0),
+        .I2(clk_o_i_8_n_0),
+        .I3(clk_o_i_9_n_0),
+        .I4(clk_o_i_10_n_0),
         .O(clk_o_i_3_n_0));
   LUT4 #(
-    .INIT(16'hDFFF)) 
+    .INIT(16'hFFFE)) 
     clk_o_i_4
-       (.I0(count_reg[7]),
-        .I1(count_reg[2]),
-        .I2(count_reg[4]),
-        .I3(count_reg[12]),
+       (.I0(count_reg[30]),
+        .I1(count_reg[31]),
+        .I2(count_reg[26]),
+        .I3(count_reg[25]),
         .O(clk_o_i_4_n_0));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'hFF7F)) 
     clk_o_i_5
-       (.I0(count_reg[29]),
-        .I1(count_reg[27]),
-        .I2(count_reg[28]),
-        .I3(count_reg[24]),
+       (.I0(count_reg[11]),
+        .I1(count_reg[17]),
+        .I2(count_reg[16]),
+        .I3(count_reg[9]),
         .O(clk_o_i_5_n_0));
   LUT4 #(
-    .INIT(16'hFFDF)) 
+    .INIT(16'hFFFE)) 
     clk_o_i_6
-       (.I0(count_reg[5]),
-        .I1(count_reg[20]),
-        .I2(count_reg[8]),
-        .I3(count_reg[26]),
+       (.I0(count_reg[23]),
+        .I1(count_reg[21]),
+        .I2(count_reg[18]),
+        .I3(count_reg[1]),
         .O(clk_o_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h0000000400000000)) 
+  LUT4 #(
+    .INIT(16'h0001)) 
     clk_o_i_7
-       (.I0(count_reg[21]),
-        .I1(count_reg[13]),
-        .I2(count_reg[3]),
-        .I3(count_reg[22]),
-        .I4(count_reg[6]),
-        .I5(count_reg[19]),
+       (.I0(count_reg[20]),
+        .I1(count_reg[19]),
+        .I2(count_reg[22]),
+        .I3(count_reg[14]),
         .O(clk_o_i_7_n_0));
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hFFDF)) 
     clk_o_i_8
-       (.I0(count_reg[11]),
-        .I1(count_reg[10]),
-        .I2(count_reg[14]),
-        .I3(count_reg[1]),
+       (.I0(count_reg[10]),
+        .I1(count_reg[5]),
+        .I2(count_reg[8]),
+        .I3(count_reg[15]),
         .O(clk_o_i_8_n_0));
   LUT4 #(
-    .INIT(16'hFFFD)) 
+    .INIT(16'hFFEF)) 
     clk_o_i_9
-       (.I0(count_reg[17]),
-        .I1(count_reg[23]),
-        .I2(count_reg[15]),
-        .I3(count_reg[0]),
+       (.I0(count_reg[12]),
+        .I1(count_reg[4]),
+        .I2(count_reg[6]),
+        .I3(count_reg[2]),
         .O(clk_o_i_9_n_0));
   FDRE clk_o_reg
        (.C(clk_i),

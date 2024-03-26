@@ -12,10 +12,13 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source blockdesign_score_counter_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1363.984 ; gain = 159.793
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 1371.914 ; gain = 160.863
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/vivado-library-zmod-v1-2019.1-2'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Vivado/vivado-library-zmod-v1-2019.1-2'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:00 ; elapsed = 00:00:26 . Memory (MB): peak = 1401.484 ; gain = 24.840
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: blockdesign_score_counter_0_0
 Command: synth_design -top blockdesign_score_counter_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -24,58 +27,58 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26500
+INFO: [Synth 8-7075] Helper process launched with PID 28820
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.707 ; gain = 410.410
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:31 . Memory (MB): peak = 2236.973 ; gain = 409.129
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'blockdesign_score_counter_0_0' [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/synth/blockdesign_score_counter_0_0.vhd:69]
-INFO: [Synth 8-3491] module 'score_counter' declared at 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd:7' bound to instance 'U0' of component 'score_counter' [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/synth/blockdesign_score_counter_0_0.vhd:101]
-INFO: [Synth 8-638] synthesizing module 'score_counter' [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'score_counter' (0#1) [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'blockdesign_score_counter_0_0' (0#1) [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/synth/blockdesign_score_counter_0_0.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_score_counter_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/synth/blockdesign_score_counter_0_0.vhd:69]
+INFO: [Synth 8-3491] module 'score_counter' declared at 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd:7' bound to instance 'U0' of component 'score_counter' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/synth/blockdesign_score_counter_0_0.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'score_counter' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'score_counter' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'blockdesign_score_counter_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/synth/blockdesign_score_counter_0_0.vhd:69]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 2322.480 ; gain = 502.184
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:35 . Memory (MB): peak = 2329.348 ; gain = 501.504
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 2322.480 ; gain = 502.184
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:36 . Memory (MB): peak = 2347.281 ; gain = 519.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 2322.480 ; gain = 502.184
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:36 . Memory (MB): peak = 2347.281 ; gain = 519.438
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2322.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2347.281 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.078 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2441.766 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2368.164 ; gain = 0.086
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2441.809 ; gain = 0.043
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:51 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:51 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:51 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:52 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -105,25 +108,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:58 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:57 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:17 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:13 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:17 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:13 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:17 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:01:13 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -141,37 +144,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:24 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:24 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:24 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:24 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:24 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:24 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -196,26 +199,26 @@ Report Cell Usage:
 |7     |FDRE |    12|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:38 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:24 . Memory (MB): peak = 2441.809 ; gain = 613.965
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:01:34 . Memory (MB): peak = 2368.164 ; gain = 502.184
-Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:39 . Memory (MB): peak = 2368.164 ; gain = 547.867
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:01:20 . Memory (MB): peak = 2441.809 ; gain = 519.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:25 . Memory (MB): peak = 2441.809 ; gain = 613.965
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2441.809 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2373.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2441.809 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 9c93543b
 INFO: [Common 17-83] Releasing license: Synthesis
-22 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+22 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:56 . Memory (MB): peak = 2373.484 ; gain = 956.680
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_score_counter_0_0_synth_1/blockdesign_score_counter_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blockdesign_score_counter_0_0, cache-ID = f9d9f98b2fb88ebc
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_score_counter_0_0_synth_1/blockdesign_score_counter_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:49 . Memory (MB): peak = 2441.809 ; gain = 1017.062
+INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_score_counter_0_0_synth_1/blockdesign_score_counter_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blockdesign_score_counter_0_0, cache-ID = 17f9587294248c7b
+INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_score_counter_0_0_synth_1/blockdesign_score_counter_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blockdesign_score_counter_0_0_utilization_synth.rpt -pb blockdesign_score_counter_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 25 18:21:41 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 26 09:44:25 2024...

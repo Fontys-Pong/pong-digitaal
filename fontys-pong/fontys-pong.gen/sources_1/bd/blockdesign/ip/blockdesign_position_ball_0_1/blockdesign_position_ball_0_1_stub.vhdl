@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Mon Mar 25 18:21:45 2024
--- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+-- Date        : Tue Mar 26 09:44:25 2024
+-- Host        : XPS-Tommy running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1_stub.vhdl
+--               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1_stub.vhdl
 -- Design      : blockdesign_position_ball_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Mon Mar 25 10:35:25 2024
-// Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top blockdesign_clk_divider_0_0 -prefix
-//               blockdesign_clk_divider_0_0_ blockdesign_clk_divider_0_0_stub.v
+// Date        : Tue Mar 26 09:44:23 2024
+// Host        : XPS-Tommy running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0_stub.v
 // Design      : blockdesign_clk_divider_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

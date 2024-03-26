@@ -3,19 +3,22 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Mon Mar 25 10:40:36 2024
-# Process ID: 14348
-# Current directory: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1
+# Start of session at: Tue Mar 26 09:40:28 2024
+# Process ID: 13688
+# Current directory: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1
 # Command line: vivado.exe -log blockdesign_controller_ultrasonic_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blockdesign_controller_ultrasonic_0_0.tcl
-# Log file: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1/blockdesign_controller_ultrasonic_0_0.vds
-# Journal file: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1\vivado.jou
-# Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
+# Log file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1/blockdesign_controller_ultrasonic_0_0.vds
+# Journal file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
 #-----------------------------------------------------------
 source blockdesign_controller_ultrasonic_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1364.766 ; gain = 160.770
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1371.434 ; gain = 160.059
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Vivado/vivado-library-zmod-v1-2019.1-2'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:00 ; elapsed = 00:00:25 . Memory (MB): peak = 1401.027 ; gain = 24.848
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: blockdesign_controller_ultrasonic_0_0
 Command: synth_design -top blockdesign_controller_ultrasonic_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -24,75 +27,75 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 300
+INFO: [Synth 8-7075] Helper process launched with PID 7480
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2219.418 ; gain = 408.996
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 2236.531 ; gain = 407.992
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'blockdesign_controller_ultrasonic_0_0' [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/synth/blockdesign_controller_ultrasonic_0_0.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'blockdesign_controller_ultrasonic_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/synth/blockdesign_controller_ultrasonic_0_0.vhd:67]
 	Parameter input_frequency bound to: 100000000 - type: integer 
 	Parameter trigger_frequency bound to: 10 - type: integer 
 	Parameter trigger_duration_precent bound to: 10 - type: integer 
 	Parameter max_distance_mm bound to: 500 - type: integer 
 	Parameter min_distance_mm bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'controller_ultrasonic' declared at 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:8' bound to instance 'U0' of component 'controller_ultrasonic' [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/synth/blockdesign_controller_ultrasonic_0_0.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'controller_ultrasonic' [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:24]
-WARNING: [Synth 8-7193] Integer conversion function is truncating input [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:36]
-WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:61]
-WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:61]
-WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:78]
-WARNING: [Synth 8-614] signal 'trigger_reset' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:78]
-WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:78]
-WARNING: [Synth 8-614] signal 'counter_enable' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:100]
-INFO: [Synth 8-226] default block is never used [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:112]
-WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:148]
-WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:148]
-INFO: [Synth 8-226] default block is never used [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:161]
-WARNING: [Synth 8-614] signal 'counter' is read in the process but is not in the sensitivity list [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:159]
-INFO: [Synth 8-256] done synthesizing module 'controller_ultrasonic' (0#1) [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:24]
-INFO: [Synth 8-256] done synthesizing module 'blockdesign_controller_ultrasonic_0_0' (0#1) [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/synth/blockdesign_controller_ultrasonic_0_0.vhd:67]
+INFO: [Synth 8-3491] module 'controller_ultrasonic' declared at 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:8' bound to instance 'U0' of component 'controller_ultrasonic' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/synth/blockdesign_controller_ultrasonic_0_0.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'controller_ultrasonic' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:24]
+WARNING: [Synth 8-7193] Integer conversion function is truncating input [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:36]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:61]
+WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:61]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:78]
+WARNING: [Synth 8-614] signal 'trigger_reset' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:78]
+WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:78]
+WARNING: [Synth 8-614] signal 'counter_enable' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:100]
+INFO: [Synth 8-226] default block is never used [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:112]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:148]
+WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:148]
+INFO: [Synth 8-226] default block is never used [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:161]
+WARNING: [Synth 8-614] signal 'counter' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:159]
+INFO: [Synth 8-256] done synthesizing module 'controller_ultrasonic' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'blockdesign_controller_ultrasonic_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/synth/blockdesign_controller_ultrasonic_0_0.vhd:67]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2311.105 ; gain = 500.684
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:31 . Memory (MB): peak = 2329.188 ; gain = 500.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2329.020 ; gain = 518.598
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:33 . Memory (MB): peak = 2347.098 ; gain = 518.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2329.020 ; gain = 518.598
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:33 . Memory (MB): peak = 2347.098 ; gain = 518.559
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2329.020 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2347.098 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2435.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2453.715 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2435.652 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 2453.727 ; gain = 0.012
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:57 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:57 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:57 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'controller_ultrasonic'
-WARNING: [Synth 8-327] inferring latch for variable 'trigger_enable_reg' [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:84]
+WARNING: [Synth 8-327] inferring latch for variable 'trigger_enable_reg' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:84]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -102,11 +105,11 @@ WARNING: [Synth 8-327] inferring latch for variable 'trigger_enable_reg' [C:/Use
              no_feedback |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'controller_ultrasonic'
-WARNING: [Synth 8-327] inferring latch for variable 'distance_mm_reg' [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'counter_reset_reg' [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:164]
-WARNING: [Synth 8-327] inferring latch for variable 'go_to_next_reg' [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:168]
+WARNING: [Synth 8-327] inferring latch for variable 'distance_mm_reg' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'counter_reset_reg' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:164]
+WARNING: [Synth 8-327] inferring latch for variable 'go_to_next_reg' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd:168]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:58 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -155,7 +158,7 @@ DSP Report: Generating DSP distance_mm1, operation Mode is: (PCIN>>17)+(A:0x29de
 DSP Report: operator distance_mm1 is absorbed into DSP distance_mm1.
 DSP Report: operator distance_mm1 is absorbed into DSP distance_mm1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:01:09 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -178,19 +181,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:33 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:33 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -208,37 +211,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:43 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:43 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:43 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:43 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:43 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:43 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -276,19 +279,19 @@ Report Cell Usage:
 |10    |LD      |    19|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:43 . Memory (MB): peak = 2453.727 ; gain = 625.188
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:34 . Memory (MB): peak = 2435.652 ; gain = 518.598
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2435.652 ; gain = 625.230
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:01:32 . Memory (MB): peak = 2453.727 ; gain = 518.559
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:43 . Memory (MB): peak = 2453.727 ; gain = 625.188
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2435.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2453.727 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 247 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'blockdesign_controller_ultrasonic_0_0' is not ideal for floorplanning, since the cellview 'controller_ultrasonic' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2435.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2453.727 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 19 instances were transformed.
   LD => LDCE: 17 instances
@@ -296,11 +299,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 Synth Design complete | Checksum: e7dac133
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+28 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2435.652 ; gain = 1029.258
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1/blockdesign_controller_ultrasonic_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blockdesign_controller_ultrasonic_0_0, cache-ID = 866a53d0265f0852
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1/blockdesign_controller_ultrasonic_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:59 . Memory (MB): peak = 2453.727 ; gain = 1030.043
+INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1/blockdesign_controller_ultrasonic_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP blockdesign_controller_ultrasonic_0_0, cache-ID = 0a8e9caca963ecc7
+INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1/blockdesign_controller_ultrasonic_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file blockdesign_controller_ultrasonic_0_0_utilization_synth.rpt -pb blockdesign_controller_ultrasonic_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 25 10:41:33 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 26 09:44:33 2024...

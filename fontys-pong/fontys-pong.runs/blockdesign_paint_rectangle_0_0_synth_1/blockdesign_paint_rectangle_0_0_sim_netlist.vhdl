@@ -2,8 +2,8 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
--- Date        : Mon Mar 25 18:23:27 2024
--- Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
+-- Date        : Tue Mar 26 09:44:22 2024
+-- Host        : XPS-Tommy running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ blockdesign_paint_rectangle_0_0_sim_netlist.vhdl
 -- Design      : blockdesign_paint_rectangle_0_0

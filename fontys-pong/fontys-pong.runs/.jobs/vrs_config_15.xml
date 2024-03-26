@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="blockdesign_controller_interconn_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_interconn_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_controller_buttons_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_buttons_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_controller_buttons_1_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_buttons_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_controller_ultrasonic_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_clk_divider_1_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_clk_divider_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_controller_ultrasonic_1_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_controller_ultrasonic_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_paint_rectangle_2_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_paint_rectangle_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_paint_rectangle_1_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_paint_rectangle_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_paint_rectangle_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_paint_rectangle_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_position_ball_0_1_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_position_ball_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_pixel_counter_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_pixel_counter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_video_buffer_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_video_buffer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_color_generator_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_color_generator_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_paint_centerline_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_paint_centerline_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_clk_divider_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_clk_divider_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_position_paddles_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_position_paddles_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_collision_detection_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_collision_detection_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="blockdesign_score_counter_0_0_synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/blockdesign_score_counter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="blockdesign_controller_interconn_0_0_synth_1"/>
+		<Parent Id="blockdesign_controller_buttons_0_0_synth_1"/>
+		<Parent Id="blockdesign_controller_buttons_1_0_synth_1"/>
+		<Parent Id="blockdesign_controller_ultrasonic_0_0_synth_1"/>
+		<Parent Id="blockdesign_clk_divider_1_0_synth_1"/>
+		<Parent Id="blockdesign_controller_ultrasonic_1_0_synth_1"/>
+		<Parent Id="blockdesign_paint_rectangle_2_0_synth_1"/>
+		<Parent Id="blockdesign_paint_rectangle_1_0_synth_1"/>
+		<Parent Id="blockdesign_paint_rectangle_0_0_synth_1"/>
+		<Parent Id="blockdesign_position_ball_0_1_synth_1"/>
+		<Parent Id="blockdesign_pixel_counter_0_0_synth_1"/>
+		<Parent Id="blockdesign_video_buffer_0_0_synth_1"/>
+		<Parent Id="blockdesign_color_generator_0_0_synth_1"/>
+		<Parent Id="blockdesign_paint_centerline_0_0_synth_1"/>
+		<Parent Id="blockdesign_clk_divider_0_0_synth_1"/>
+		<Parent Id="blockdesign_position_paddles_0_0_synth_1"/>
+		<Parent Id="blockdesign_collision_detection_0_0_synth_1"/>
+		<Parent Id="blockdesign_score_counter_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="blockdesign_controller_interconn_0_0_synth_1"/>
+		<Parent Id="blockdesign_controller_buttons_0_0_synth_1"/>
+		<Parent Id="blockdesign_controller_buttons_1_0_synth_1"/>
+		<Parent Id="blockdesign_controller_ultrasonic_0_0_synth_1"/>
+		<Parent Id="blockdesign_clk_divider_1_0_synth_1"/>
+		<Parent Id="blockdesign_controller_ultrasonic_1_0_synth_1"/>
+		<Parent Id="blockdesign_paint_rectangle_2_0_synth_1"/>
+		<Parent Id="blockdesign_paint_rectangle_1_0_synth_1"/>
+		<Parent Id="blockdesign_paint_rectangle_0_0_synth_1"/>
+		<Parent Id="blockdesign_position_ball_0_1_synth_1"/>
+		<Parent Id="blockdesign_pixel_counter_0_0_synth_1"/>
+		<Parent Id="blockdesign_video_buffer_0_0_synth_1"/>
+		<Parent Id="blockdesign_color_generator_0_0_synth_1"/>
+		<Parent Id="blockdesign_paint_centerline_0_0_synth_1"/>
+		<Parent Id="blockdesign_clk_divider_0_0_synth_1"/>
+		<Parent Id="blockdesign_position_paddles_0_0_synth_1"/>
+		<Parent Id="blockdesign_collision_detection_0_0_synth_1"/>
+		<Parent Id="blockdesign_score_counter_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

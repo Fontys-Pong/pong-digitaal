@@ -79,7 +79,7 @@ ARCHITECTURE blockdesign_clk_divider_0_0_arch OF blockdesign_clk_divider_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF blockdesign_clk_divider_0_0_arch : ARCHITECTURE IS "blockdesign_clk_divider_0_0,clk_divider,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF blockdesign_clk_divider_0_0_arch: ARCHITECTURE IS "blockdesign_clk_divider_0_0,clk_divider,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=clk_divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,division=750000}";
+  ATTRIBUTE CORE_GENERATION_INFO OF blockdesign_clk_divider_0_0_arch: ARCHITECTURE IS "blockdesign_clk_divider_0_0,clk_divider,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=clk_divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,division=200000}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF blockdesign_clk_divider_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -89,7 +89,7 @@ ARCHITECTURE blockdesign_clk_divider_0_0_arch OF blockdesign_clk_divider_0_0 IS
 BEGIN
   U0 : clk_divider
     GENERIC MAP (
-      division => 750000
+      division => 200000
     )
     PORT MAP (
       clk_i => clk_i,
