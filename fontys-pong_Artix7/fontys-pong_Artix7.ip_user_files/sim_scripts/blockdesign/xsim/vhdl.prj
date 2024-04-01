@@ -1,0 +1,13 @@
+vhdl xil_defaultlib  \
+"../../../bd/blockdesign/ip/blockdesign_v_tc_0_0/sim/blockdesign_v_tc_0_0.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/20df/src/ClockGen.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/20df/src/SyncAsync.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/20df/src/SyncAsyncReset.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/20df/src/DVI_Constants.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/20df/src/OutputSERDES.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/20df/src/TMDS_Encoder.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/20df/src/rgb2dvi.vhd" \
+"../../../bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/sim/blockdesign_rgb2dvi_0_1.vhd" \
+
+# Do not sort compile order
+nosort

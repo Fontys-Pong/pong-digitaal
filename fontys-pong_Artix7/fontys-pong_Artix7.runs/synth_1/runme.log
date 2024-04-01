@@ -1,0 +1,463 @@
+
+*** Running vivado
+    with args -log blockdesign_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blockdesign_wrapper.tcl
+
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source blockdesign_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/ip 
+add_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1419.930 ; gain = 15.914
+Command: read_checkpoint -auto_incremental -incremental D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/utils_1/imports/synth_1/clk_divider.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/utils_1/imports/synth_1/clk_divider.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top blockdesign_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21064
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 2224.027 ; gain = 411.398
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_wrapper' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:60]
+INFO: [Synth 8-6157] synthesizing module 'Constants_imp_15CBHTD' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:13]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_4' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_4/synth/blockdesign_xlconstant_0_4.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_4' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_4/synth/blockdesign_xlconstant_0_4.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_6' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_6/synth/blockdesign_xlconstant_0_6.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_6' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_6/synth/blockdesign_xlconstant_0_6.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_5' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_5/synth/blockdesign_xlconstant_0_5.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_5' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_5/synth/blockdesign_xlconstant_0_5.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_2' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_2/synth/blockdesign_xlconstant_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized2' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized2' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_2' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_2/synth/blockdesign_xlconstant_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_3' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_3/synth/blockdesign_xlconstant_0_3.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized3' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized3' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_3' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_3/synth/blockdesign_xlconstant_0_3.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_0/synth/blockdesign_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized4' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized4' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_0/synth/blockdesign_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_1' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_1/synth/blockdesign_xlconstant_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized5' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized5' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_1' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_1/synth/blockdesign_xlconstant_0_1.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'Constants_imp_15CBHTD' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:13]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_clk_divider_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_clk_divider_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_clk_divider_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_clk_divider_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_clk_wiz_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_clk_wiz_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_clk_wiz_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_clk_wiz_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_collision_detection_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_collision_detection_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_collision_detection_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_collision_detection_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_color_generator_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_color_generator_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_color_generator_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_color_generator_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'controllers_imp_Z9LQ6G' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:408]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_clk_divider_1_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_clk_divider_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_clk_divider_1_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_clk_divider_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_controller_buttons_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_buttons_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_controller_buttons_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_buttons_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_controller_buttons_1_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_buttons_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_controller_buttons_1_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_buttons_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_controller_interconn_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_interconn_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_controller_interconn_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_interconn_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_controller_ultrasonic_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_ultrasonic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_controller_ultrasonic_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_ultrasonic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_controller_ultrasonic_1_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_ultrasonic_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_controller_ultrasonic_1_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_controller_ultrasonic_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'controllers_imp_Z9LQ6G' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:408]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_8' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_8/synth/blockdesign_xlconstant_0_8.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized6' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized6' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_8' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_8/synth/blockdesign_xlconstant_0_8.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_paint_rectangle_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_paint_rectangle_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_paint_rectangle_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_paint_rectangle_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_paint_centerline_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_paint_centerline_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_paint_centerline_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_paint_centerline_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'pxl_x_o' of module 'blockdesign_paint_centerline_0_0' is unconnected for instance 'paint_centerline_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:270]
+WARNING: [Synth 8-7071] port 'pxl_y_o' of module 'blockdesign_paint_centerline_0_0' is unconnected for instance 'paint_centerline_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:270]
+WARNING: [Synth 8-7023] instance 'paint_centerline_0' of module 'blockdesign_paint_centerline_0_0' has 15 connections declared, but only 13 given [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:270]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_paint_rectangle_1_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_paint_rectangle_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_paint_rectangle_1_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_paint_rectangle_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_paint_rectangle_2_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_paint_rectangle_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_paint_rectangle_2_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_paint_rectangle_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_pixel_counter_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_pixel_counter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_pixel_counter_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_pixel_counter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_position_ball_0_1' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_position_ball_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_position_ball_0_1' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_position_ball_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_position_paddles_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_position_paddles_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_position_paddles_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_position_paddles_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_rgb2dvi_0_1' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_rgb2dvi_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_rgb2dvi_0_1' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_rgb2dvi_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_score_counter_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_score_counter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_score_counter_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_score_counter_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'score_left' of module 'blockdesign_score_counter_0_0' is unconnected for instance 'score_counter_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:368]
+WARNING: [Synth 8-7071] port 'score_right' of module 'blockdesign_score_counter_0_0' is unconnected for instance 'score_counter_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:368]
+WARNING: [Synth 8-7023] instance 'score_counter_0' of module 'blockdesign_score_counter_0_0' has 8 connections declared, but only 6 given [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:368]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_util_vector_logic_0_1' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_util_vector_logic_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_util_vector_logic_0_1' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_util_vector_logic_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_util_vector_logic_1_2' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_util_vector_logic_1_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_util_vector_logic_1_2' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_util_vector_logic_1_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_v_tc_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_v_tc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_v_tc_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_v_tc_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'fsync_out' of module 'blockdesign_v_tc_0_0' is unconnected for instance 'v_tc_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:383]
+WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'blockdesign_v_tc_0_0' has 11 connections declared, but only 10 given [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:383]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_video_buffer_0_0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_video_buffer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_video_buffer_0_0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/.Xil/Vivado-20164-XPS-Tommy/realtime/blockdesign_video_buffer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_xlconstant_0_7' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_7/synth/blockdesign_xlconstant_0_7.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized7' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized7' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_xlconstant_0_7' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_7/synth/blockdesign_xlconstant_0_7.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/synth/blockdesign.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_wrapper' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2317.164 ; gain = 504.535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2335.082 ; gain = 522.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2335.082 ; gain = 522.453
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2335.082 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_1_0/blockdesign_clk_divider_1_0/blockdesign_clk_divider_1_0_in_context.xdc] for cell 'blockdesign_i/controllers/clk_divider_1'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_1_0/blockdesign_clk_divider_1_0/blockdesign_clk_divider_1_0_in_context.xdc] for cell 'blockdesign_i/controllers/clk_divider_1'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_buttons_0_0/blockdesign_controller_buttons_0_0/blockdesign_controller_buttons_0_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_buttons_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_buttons_0_0/blockdesign_controller_buttons_0_0/blockdesign_controller_buttons_0_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_buttons_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_buttons_1_0/blockdesign_controller_buttons_1_0/blockdesign_controller_buttons_1_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_buttons_1'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_buttons_1_0/blockdesign_controller_buttons_1_0/blockdesign_controller_buttons_1_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_buttons_1'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_interconn_0_0/blockdesign_controller_interconn_0_0/blockdesign_controller_interconn_0_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_interconn_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_interconn_0_0/blockdesign_controller_interconn_0_0/blockdesign_controller_interconn_0_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_interconn_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/blockdesign_controller_ultrasonic_0_0/blockdesign_controller_ultrasonic_0_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_ultrasonic_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/blockdesign_controller_ultrasonic_0_0/blockdesign_controller_ultrasonic_0_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_ultrasonic_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_1_0/blockdesign_controller_ultrasonic_1_0/blockdesign_controller_ultrasonic_1_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_ultrasonic_1'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_1_0/blockdesign_controller_ultrasonic_1_0/blockdesign_controller_ultrasonic_1_0_in_context.xdc] for cell 'blockdesign_i/controllers/controller_ultrasonic_1'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0_in_context.xdc] for cell 'blockdesign_i/clk_divider_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0_in_context.xdc] for cell 'blockdesign_i/clk_divider_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0_in_context.xdc] for cell 'blockdesign_i/clk_wiz'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0_in_context.xdc] for cell 'blockdesign_i/clk_wiz'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_in_context.xdc] for cell 'blockdesign_i/clk_wiz_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_in_context.xdc] for cell 'blockdesign_i/clk_wiz_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_collision_detection_0_0/blockdesign_collision_detection_0_0/blockdesign_collision_detection_0_0_in_context.xdc] for cell 'blockdesign_i/collision_detection_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_collision_detection_0_0/blockdesign_collision_detection_0_0/blockdesign_collision_detection_0_0_in_context.xdc] for cell 'blockdesign_i/collision_detection_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_color_generator_0_0/blockdesign_color_generator_0_0/blockdesign_color_generator_0_0_in_context.xdc] for cell 'blockdesign_i/color_generator_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_color_generator_0_0/blockdesign_color_generator_0_0/blockdesign_color_generator_0_0_in_context.xdc] for cell 'blockdesign_i/color_generator_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0_in_context.xdc] for cell 'blockdesign_i/paint_centerline_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0_in_context.xdc] for cell 'blockdesign_i/paint_centerline_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_0/blockdesign_paint_rectangle_0_0/blockdesign_paint_rectangle_0_0_in_context.xdc] for cell 'blockdesign_i/paint_ball'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_0/blockdesign_paint_rectangle_0_0/blockdesign_paint_rectangle_0_0_in_context.xdc] for cell 'blockdesign_i/paint_ball'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_1_0/blockdesign_paint_rectangle_1_0/blockdesign_paint_rectangle_1_0_in_context.xdc] for cell 'blockdesign_i/paint_paddle_l'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_1_0/blockdesign_paint_rectangle_1_0/blockdesign_paint_rectangle_1_0_in_context.xdc] for cell 'blockdesign_i/paint_paddle_l'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0_in_context.xdc] for cell 'blockdesign_i/paint_paddle_r'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0_in_context.xdc] for cell 'blockdesign_i/paint_paddle_r'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_pixel_counter_0_0/blockdesign_pixel_counter_0_0/blockdesign_pixel_counter_0_0_in_context.xdc] for cell 'blockdesign_i/pixel_counter_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_pixel_counter_0_0/blockdesign_pixel_counter_0_0/blockdesign_pixel_counter_0_0_in_context.xdc] for cell 'blockdesign_i/pixel_counter_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1_in_context.xdc] for cell 'blockdesign_i/position_ball_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1_in_context.xdc] for cell 'blockdesign_i/position_ball_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0_in_context.xdc] for cell 'blockdesign_i/position_paddles_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0_in_context.xdc] for cell 'blockdesign_i/position_paddles_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/blockdesign_score_counter_0_0/blockdesign_score_counter_0_0_in_context.xdc] for cell 'blockdesign_i/score_counter_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/blockdesign_score_counter_0_0/blockdesign_score_counter_0_0_in_context.xdc] for cell 'blockdesign_i/score_counter_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_util_vector_logic_0_1/blockdesign_util_vector_logic_0_1/blockdesign_util_vector_logic_0_1_in_context.xdc] for cell 'blockdesign_i/util_vector_logic_1'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_util_vector_logic_0_1/blockdesign_util_vector_logic_0_1/blockdesign_util_vector_logic_0_1_in_context.xdc] for cell 'blockdesign_i/util_vector_logic_1'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_util_vector_logic_1_2/blockdesign_util_vector_logic_1_2/blockdesign_util_vector_logic_0_1_in_context.xdc] for cell 'blockdesign_i/util_vector_logic_2'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_util_vector_logic_1_2/blockdesign_util_vector_logic_1_2/blockdesign_util_vector_logic_0_1_in_context.xdc] for cell 'blockdesign_i/util_vector_logic_2'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0_in_context.xdc] for cell 'blockdesign_i/v_tc_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0_in_context.xdc] for cell 'blockdesign_i/v_tc_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_video_buffer_0_0/blockdesign_video_buffer_0_0/blockdesign_video_buffer_0_0_in_context.xdc] for cell 'blockdesign_i/video_buffer_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_video_buffer_0_0/blockdesign_video_buffer_0_0/blockdesign_video_buffer_0_0_in_context.xdc] for cell 'blockdesign_i/video_buffer_0'
+Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc] for cell 'blockdesign_i/rgb2dvi_0'
+Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc] for cell 'blockdesign_i/rgb2dvi_0'
+Parsing XDC File [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/constrs_1/new/constraints_cmodA7.xdc]
+Finished Parsing XDC File [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/constrs_1/new/constraints_cmodA7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/constrs_1/new/constraints_cmodA7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/blockdesign_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/blockdesign_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2362.949 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2362.949 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_clk_n. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_clk_n. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_clk_p. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_clk_p. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_n[0]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_n[0]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_n[1]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_n[1]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_n[2]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_n[2]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_p[0]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_p[0]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_p[1]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_p[1]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for hdmi_out_data_p[2]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_out_data_p[2]. (constraint file  d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1/blockdesign_rgb2dvi_0_1_in_context.xdc, line 16).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/Constants/screen_size_x_RnM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/Constants/screen_size_y_RnM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/Constants/paddle_size_x_RnM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/Constants/paddle_size_y_RnM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/Constants/ball_size_RnM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/Constants/paddle_offset_x_RnM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/Constants/max_score_RnM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/controllers/clk_divider_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/controllers/controller_buttons_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/controllers/controller_buttons_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/controllers/controller_interconn_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/controllers/controller_ultrasonic_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/controllers/controller_ultrasonic_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/clk_divider_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/collision_detection_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/color_generator_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/paint_centerline_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/paint_ball. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/paint_paddle_l. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/paint_paddle_r. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/pixel_counter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/position_ball_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/position_paddles_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/score_counter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/util_vector_logic_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/util_vector_logic_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/v_tc_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/video_buffer_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/zero. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/one. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for blockdesign_i/rgb2dvi_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:15 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------------+----------+
+|      |BlackBox name                         |Instances |
++------+--------------------------------------+----------+
+|1     |blockdesign_clk_divider_0_0           |         1|
+|2     |blockdesign_clk_wiz_0                 |         1|
+|3     |blockdesign_clk_wiz_0_0               |         1|
+|4     |blockdesign_collision_detection_0_0   |         1|
+|5     |blockdesign_color_generator_0_0       |         1|
+|6     |blockdesign_paint_rectangle_0_0       |         1|
+|7     |blockdesign_paint_centerline_0_0      |         1|
+|8     |blockdesign_paint_rectangle_1_0       |         1|
+|9     |blockdesign_paint_rectangle_2_0       |         1|
+|10    |blockdesign_pixel_counter_0_0         |         1|
+|11    |blockdesign_position_ball_0_1         |         1|
+|12    |blockdesign_position_paddles_0_0      |         1|
+|13    |blockdesign_rgb2dvi_0_1               |         1|
+|14    |blockdesign_score_counter_0_0         |         1|
+|15    |blockdesign_util_vector_logic_0_1     |         1|
+|16    |blockdesign_util_vector_logic_1_2     |         1|
+|17    |blockdesign_v_tc_0_0                  |         1|
+|18    |blockdesign_video_buffer_0_0          |         1|
+|19    |blockdesign_clk_divider_1_0           |         1|
+|20    |blockdesign_controller_buttons_0_0    |         1|
+|21    |blockdesign_controller_buttons_1_0    |         1|
+|22    |blockdesign_controller_interconn_0_0  |         1|
+|23    |blockdesign_controller_ultrasonic_0_0 |         1|
+|24    |blockdesign_controller_ultrasonic_1_0 |         1|
++------+--------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------+------+
+|      |Cell                                |Count |
++------+------------------------------------+------+
+|1     |blockdesign_clk_divider_0           |     1|
+|2     |blockdesign_clk_divider_1           |     1|
+|3     |blockdesign_clk_wiz                 |     1|
+|4     |blockdesign_clk_wiz_0               |     1|
+|5     |blockdesign_collision_detection_0   |     1|
+|6     |blockdesign_color_generator_0       |     1|
+|7     |blockdesign_controller_buttons_0    |     1|
+|8     |blockdesign_controller_buttons_1    |     1|
+|9     |blockdesign_controller_interconn_0  |     1|
+|10    |blockdesign_controller_ultrasonic_0 |     1|
+|11    |blockdesign_controller_ultrasonic_1 |     1|
+|12    |blockdesign_paint_centerline_0      |     1|
+|13    |blockdesign_paint_rectangle_0       |     1|
+|14    |blockdesign_paint_rectangle_1       |     1|
+|15    |blockdesign_paint_rectangle_2       |     1|
+|16    |blockdesign_pixel_counter_0         |     1|
+|17    |blockdesign_position_ball_0         |     1|
+|18    |blockdesign_position_paddles_0      |     1|
+|19    |blockdesign_rgb2dvi_0               |     1|
+|20    |blockdesign_score_counter_0         |     1|
+|21    |blockdesign_util_vector_logic_0     |     1|
+|22    |blockdesign_util_vector_logic_1     |     1|
+|23    |blockdesign_v_tc_0                  |     1|
+|24    |blockdesign_video_buffer_0          |     1|
+|25    |IBUF                                |     9|
+|26    |OBUF                                |     3|
++------+------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.949 ; gain = 550.320
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 2362.949 ; gain = 522.453
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.949 ; gain = 550.320
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2362.949 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2362.949 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1d37edc6
+INFO: [Common 17-83] Releasing license: Synthesis
+114 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:21 . Memory (MB): peak = 2362.949 ; gain = 934.812
+INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/blockdesign_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file blockdesign_wrapper_utilization_synth.rpt -pb blockdesign_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 17:12:43 2024...
