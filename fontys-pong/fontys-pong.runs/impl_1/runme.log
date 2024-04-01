@@ -12,35 +12,95 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source blockdesign_wrapper.tcl -notrace
-Command: open_checkpoint C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1/blockdesign_wrapper.dcp
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1799.914 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 803 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2023.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'blockdesign_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.158 . Memory (MB): peak = 2428.184 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.158 . Memory (MB): peak = 2428.184 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2428.184 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-INFO: [Project 1-604] Checkpoint was created with Vivado v2023.1 (64-bit) build 3865809
-open_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 2428.184 ; gain = 1223.336
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1364.086 ; gain = 158.863
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/vivado-library-zmod-v1-2019.1-2'.
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Vivado/vivado-library-zmod-v1-2019.1-2'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.1/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:37 . Memory (MB): peak = 1420.164 ; gain = 26.117
+Command: link_design -top blockdesign_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.dcp' for cell 'blockdesign_i/clk_divider_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0.dcp' for cell 'blockdesign_i/clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.dcp' for cell 'blockdesign_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_collision_detection_0_0/blockdesign_collision_detection_0_0.dcp' for cell 'blockdesign_i/collision_detection_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_color_generator_0_0/blockdesign_color_generator_0_0.dcp' for cell 'blockdesign_i/color_generator_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_0/blockdesign_paint_rectangle_0_0.dcp' for cell 'blockdesign_i/paint_ball'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0.dcp' for cell 'blockdesign_i/paint_centerline_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_1_0/blockdesign_paint_rectangle_1_0.dcp' for cell 'blockdesign_i/paint_paddle_l'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0.dcp' for cell 'blockdesign_i/paint_paddle_r'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_pixel_counter_0_0/blockdesign_pixel_counter_0_0.dcp' for cell 'blockdesign_i/pixel_counter_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1.dcp' for cell 'blockdesign_i/position_ball_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0.dcp' for cell 'blockdesign_i/position_paddles_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0/blockdesign_rgb2dvi_0_0.dcp' for cell 'blockdesign_i/rgb2dvi_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_score_counter_0_0/blockdesign_score_counter_0_0.dcp' for cell 'blockdesign_i/score_counter_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_util_vector_logic_0_1/blockdesign_util_vector_logic_0_1.dcp' for cell 'blockdesign_i/util_vector_logic_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_util_vector_logic_1_2/blockdesign_util_vector_logic_1_2.dcp' for cell 'blockdesign_i/util_vector_logic_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0.dcp' for cell 'blockdesign_i/v_tc_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_video_buffer_0_0/blockdesign_video_buffer_0_0.dcp' for cell 'blockdesign_i/video_buffer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_divider_1_0/blockdesign_clk_divider_1_0.dcp' for cell 'blockdesign_i/controllers/clk_divider_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_buttons_0_0/blockdesign_controller_buttons_0_0.dcp' for cell 'blockdesign_i/controllers/controller_buttons_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_buttons_1_0/blockdesign_controller_buttons_1_0.dcp' for cell 'blockdesign_i/controllers/controller_buttons_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_interconn_0_0/blockdesign_controller_interconn_0_0.dcp' for cell 'blockdesign_i/controllers/controller_interconn_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/blockdesign_controller_ultrasonic_0_0.dcp' for cell 'blockdesign_i/controllers/controller_ultrasonic_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_1_0/blockdesign_controller_ultrasonic_1_0.dcp' for cell 'blockdesign_i/controllers/controller_ultrasonic_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_scoreboard_controller_0_0/blockdesign_scoreboard_controller_0_0.dcp' for cell 'blockdesign_i/paint_scoreboard/scoreboard_controller_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_1/blockdesign_paint_rectangle_0_1.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_2/blockdesign_paint_rectangle_0_2.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_3/blockdesign_paint_rectangle_0_3.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_4/blockdesign_paint_rectangle_0_4.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_5/blockdesign_paint_rectangle_0_5.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_6/blockdesign_paint_rectangle_0_6.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_5'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_7/blockdesign_paint_rectangle_0_7.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_seven_seg_display_co_0_0/blockdesign_seven_seg_display_co_0_0.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_0_10/blockdesign_paint_rectangle_0_10.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_1_2/blockdesign_paint_rectangle_1_2.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_2_2/blockdesign_paint_rectangle_2_2.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_3_1/blockdesign_paint_rectangle_3_1.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_4_1/blockdesign_paint_rectangle_4_1.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_5_1/blockdesign_paint_rectangle_5_1.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_5'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_paint_rectangle_6_1/blockdesign_paint_rectangle_6_1.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_6'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_seven_seg_display_co_0_2/blockdesign_seven_seg_display_co_0_2.dcp' for cell 'blockdesign_i/paint_scoreboard/paint_seg_r/seven_seg_display_co_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.163 . Memory (MB): peak = 1911.656 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1057 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. blockdesign_i/clk_wiz_0/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'blockdesign_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0_board.xdc] for cell 'blockdesign_i/clk_wiz/inst'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0_board.xdc] for cell 'blockdesign_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0.xdc] for cell 'blockdesign_i/clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 2613.559 ; gain = 544.109
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0.xdc] for cell 'blockdesign_i/clk_wiz/inst'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_board.xdc] for cell 'blockdesign_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_board.xdc] for cell 'blockdesign_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.xdc] for cell 'blockdesign_i/clk_wiz_0/inst'
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.xdc:57]
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.xdc] for cell 'blockdesign_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'blockdesign_i/rgb2dvi_0/U0'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0/src/rgb2dvi.xdc] for cell 'blockdesign_i/rgb2dvi_0/U0'
+Parsing XDC File [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.srcs/constrs_1/new/constraints.xdc]
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0_clocks.xdc] for cell 'blockdesign_i/v_tc_0/U0'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0_clocks.xdc] for cell 'blockdesign_i/v_tc_0/U0'
+Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'blockdesign_i/rgb2dvi_0/U0'
+Finished Parsing XDC File [c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc] for cell 'blockdesign_i/rgb2dvi_0/U0'
+INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2613.559 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+55 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 2613.559 ; gain = 1193.395
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -51,37 +111,37 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2467.156 ; gain = 29.930
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2613.559 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1561a4f39
+Ending Cache Timing Information Task | Checksum: 16275d7f7
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.341 . Memory (MB): peak = 2518.762 ; gain = 51.605
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.582 . Memory (MB): peak = 2613.559 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-1566] Pulled 3 inverters resulting in an inversion of 26 pins
+INFO: [Opt 31-1566] Pulled 11 inverters resulting in an inversion of 110 pins
 INFO: [Opt 31-138] Pushed 3 inverter(s) to 10 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1758f9326
+Phase 1 Retarget | Checksum: ec347505
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.541 . Memory (MB): peak = 2855.320 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 295 cells and removed 470 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2940.742 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 632 cells and removed 992 cells
 INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 24a8cf6e0
+Phase 2 Constant propagation | Checksum: 1934e16ff
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.730 . Memory (MB): peak = 2855.320 ; gain = 0.000
-INFO: [Opt 31-389] Phase Constant propagation created 139 cells and removed 501 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2940.742 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 414 cells and removed 1072 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 16d374ae7
+Phase 3 Sweep | Checksum: 12d4c7c2b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.903 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2940.742 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 89 cells
 
 Phase 4 BUFG optimization
@@ -89,22 +149,22 @@ INFO: [Opt 31-194] Inserted BUFG blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.Clo
 INFO: [Opt 31-194] Inserted BUFG blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG_inst to drive 8 load(s) on clock net blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG
 INFO: [Opt 31-194] Inserted BUFG blockdesign_i/clk_divider_0/U0/clk_o_BUFG_inst to drive 71 load(s) on clock net blockdesign_i/clk_divider_0/U0/clk_o_BUFG
 INFO: [Opt 31-193] Inserted 3 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 239188818
+Phase 4 BUFG optimization | Checksum: 151f0c115
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.999 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2940.742 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 3 cells of which 3 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 15f9d311c
+Phase 5 Shift Register Optimization | Checksum: 1fc64a966
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2940.742 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 15f9d311c
+Phase 6 Post Processing Netlist | Checksum: 1fc64a966
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2940.742 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -113,8 +173,8 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             295  |             470  |                                              1  |
-|  Constant propagation         |             139  |             501  |                                              0  |
+|  Retarget                     |             632  |             992  |                                              1  |
+|  Constant propagation         |             414  |            1072  |                                              0  |
 |  Sweep                        |               0  |              89  |                                              0  |
 |  BUFG optimization            |               3  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
@@ -125,31 +185,31 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2855.320 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 15f9d311c
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2940.742 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1fc64a966
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2940.742 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 15f9d311c
+Ending Power Optimization Task | Checksum: 1fc64a966
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2940.742 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 15f9d311c
+Ending Final Cleanup Task | Checksum: 1fc64a966
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2940.742 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2855.320 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 15f9d311c
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2940.742 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1fc64a966
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2940.742 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-37 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+78 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2855.320 ; gain = 427.137
+opt_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 2940.742 ; gain = 327.184
 INFO: [runtcl-4] Executing : report_drc -file blockdesign_wrapper_drc_opted.rpt -pb blockdesign_wrapper_drc_opted.pb -rpx blockdesign_wrapper_drc_opted.rpx
 Command: report_drc -file blockdesign_wrapper_drc_opted.rpt -pb blockdesign_wrapper_drc_opted.pb -rpx blockdesign_wrapper_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -161,7 +221,7 @@ INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 2955.367 ; gain = 8.984
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1/blockdesign_wrapper_opt.dcp' has been generated.
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -180,58 +240,58 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2855.320 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 7db7cd1f
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2959.664 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 13f2d114f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2855.320 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2959.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2959.664 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e193fa96
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 4e001b28
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.363 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.566 . Memory (MB): peak = 2959.664 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 14ee85b8d
+Phase 1.3 Build Placer Netlist Model | Checksum: af8f2763
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 14ee85b8d
+Phase 1.4 Constrain Clocks/Macros | Checksum: af8f2763
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2855.320 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 14ee85b8d
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2964.730 ; gain = 5.066
+Phase 1 Placer Initialization | Checksum: af8f2763
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1b79fc0db
+Phase 2.1 Floorplanning | Checksum: 71094eaf
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1aac32932
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 5245ecb3
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 13093d545
+Phase 2.3 Post-Processing in Floorplanning | Checksum: b0534bfd
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 114b5cb90
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1336632a9
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 2 LUTNM shape to break, 456 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 2, total 2, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 229 nets or LUTs. Breaked 2 LUTs, combined 227 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1035] Found 8 LUTNM shape to break, 437 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 8, total 8, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 224 nets or LUTs. Breaked 8 LUTs, combined 216 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -249,7 +309,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2964.730 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -258,7 +318,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            2  |            227  |                   229  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            8  |            216  |                   224  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -267,69 +327,69 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            2  |            227  |                   229  |           0  |           9  |  00:00:00  |
+|  Total                                            |            8  |            216  |                   224  |           0  |           9  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 11d6e17aa
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: b5e559db
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2855.320 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 90cbf848
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2964.730 ; gain = 5.066
+Phase 2.4 Global Placement Core | Checksum: 1511ddc30
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2855.320 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 90cbf848
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2964.730 ; gain = 5.066
+Phase 2 Global Placement | Checksum: 1511ddc30
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 16bf428c5
+Phase 3.1 Commit Multi Column Macros | Checksum: 14d917dc2
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: a67e549f
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: e850902f
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 125e8ee69
+Phase 3.3 Area Swap Optimization | Checksum: 166f9c435
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: ef7d4df3
+Phase 3.4 Pipeline Register Optimization | Checksum: 14142c7b7
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 10da0e214
+Phase 3.5 Fast Optimization | Checksum: f1e91b15
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: f9b16268
+Phase 3.6 Small Shape Detail Placement | Checksum: eddedd9f
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 8a81a84d
+Phase 3.7 Re-assign LUT pins | Checksum: 12ec0f1a8
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 15db41719
+Phase 3.8 Pipeline Register Optimization | Checksum: 17315856e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: a6d87dc5
+Phase 3.9 Fast Optimization | Checksum: ddefef12
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2855.320 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: a6d87dc5
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 2964.730 ; gain = 5.066
+Phase 3 Detail Placement | Checksum: ddefef12
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2855.320 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 2964.730 ; gain = 5.066
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -337,7 +397,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1411c5bde
+Post Placement Optimization Initialization | Checksum: 192a005ed
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -345,33 +405,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.903 | TNS=-0.903 |
-Phase 1 Physical Synthesis Initialization | Checksum: 138bd3fbc
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.527 | TNS=-59.117 |
+Phase 1 Physical Synthesis Initialization | Checksum: 22fcbfb4f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 2867.012 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.345 . Memory (MB): peak = 2979.477 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
-Ending Physical Synthesis Task | Checksum: 138bd3fbc
+Ending Physical Synthesis Task | Checksum: 22fcbfb4f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 2867.012 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1411c5bde
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.456 . Memory (MB): peak = 2979.477 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 192a005ed
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 2867.012 ; gain = 11.691
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 2979.477 ; gain = 19.812
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.306. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 969c0ef1
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-5.308. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 17dd0a605
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
-Phase 4.1 Post Commit Optimization | Checksum: 969c0ef1
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
+Phase 4.1 Post Commit Optimization | Checksum: 17dd0a605
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 969c0ef1
+Phase 4.2 Post Placement Cleanup | Checksum: 17dd0a605
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
 
 Phase 4.3 Placer Reporting
 
@@ -383,44 +443,44 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |___________|___________________|___________________|
 |      North|                1x1|                2x2|
 |___________|___________________|___________________|
-|      South|                1x1|                2x2|
+|      South|                1x1|                1x1|
 |___________|___________________|___________________|
 |       East|                1x1|                1x1|
 |___________|___________________|___________________|
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 969c0ef1
+Phase 4.3.1 Print Estimated Congestion | Checksum: 17dd0a605
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
-Phase 4.3 Placer Reporting | Checksum: 969c0ef1
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
+Phase 4.3 Placer Reporting | Checksum: 17dd0a605
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2867.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2979.477 ; gain = 0.000
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 12657447d
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 9676c529
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
-Ending Placer Task | Checksum: e6698271
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
+Ending Placer Task | Checksum: 1631fb44
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 2867.012 ; gain = 11.691
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 2979.477 ; gain = 19.812
 INFO: [Common 17-83] Releasing license: Implementation
-79 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+120 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 2867.012 ; gain = 11.691
+place_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:44 . Memory (MB): peak = 2979.477 ; gain = 24.109
 INFO: [runtcl-4] Executing : report_io -file blockdesign_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2867.012 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 2979.477 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file blockdesign_wrapper_utilization_placed.rpt -pb blockdesign_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file blockdesign_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2867.012 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2979.477 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.651 . Memory (MB): peak = 2883.879 ; gain = 16.867
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2999.000 ; gain = 19.523
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1/blockdesign_wrapper_placed.dcp' has been generated.
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -428,57 +488,89 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.635 . Memory (MB): peak = 2883.879 ; gain = 0.000
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 0.68s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2883.879 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2999.000 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 1.41s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2999.000 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.306 | TNS=-0.306 |
-Phase 1 Physical Synthesis Initialization | Checksum: 14465dc31
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.308 | TNS=-57.353 |
+Phase 1 Physical Synthesis Initialization | Checksum: cd6b22af
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.571 . Memory (MB): peak = 2883.879 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.306 | TNS=-0.306 |
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2999.000 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.308 | TNS=-57.353 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 14465dc31
+Phase 2 DSP Register Optimization | Checksum: cd6b22af
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.601 . Memory (MB): peak = 2883.879 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2999.000 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.306 | TNS=-0.306 |
-INFO: [Physopt 32-702] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net blockdesign_i/clk_wiz_0/inst/clk_hdmi_blockdesign_clk_wiz_0_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
-INFO: [Physopt 32-735] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o_i_2_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.259 | TNS=-0.259 |
-INFO: [Physopt 32-702] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o_i_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o2__35_carry__0_n_6. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o2__35_carry_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o2__35_carry_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o2__29_carry_n_7. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o2__1_carry__1_n_4. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o2__1_carry__0_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
-INFO: [Physopt 32-735] Processed net blockdesign_i/paint_centerline_0/U0/pxl_value_o2__1_carry__0_i_6_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.094 | TNS=0.000 |
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.094 | TNS=0.000 |
-Phase 3 Critical Path Optimization | Checksum: 14465dc31
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.308 | TNS=-57.353 |
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/clk_wiz/inst/clk_out1_blockdesign_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/__21_carry__1_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/__21_carry__1_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o2__6_carry__1_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o2__6_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y_carry_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_e_pos_y[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_y[2]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_y[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.278 | TNS=-57.221 |
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_y[2]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/clk_wiz/inst/clk_out1_blockdesign_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/__21_carry__1_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/__21_carry__1_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o2__6_carry__1_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y_carry_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_e_pos_y[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_y[2]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.278 | TNS=-57.221 |
+Phase 3 Critical Path Optimization | Checksum: cd6b22af
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.776 . Memory (MB): peak = 2886.312 ; gain = 2.434
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2999.000 ; gain = 0.000
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.094 | TNS=0.000 |
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.094 | TNS=0.000 |
-Phase 4 Critical Path Optimization | Checksum: 14465dc31
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.278 | TNS=-57.221 |
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/clk_wiz/inst/clk_out1_blockdesign_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/__21_carry__1_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/__21_carry__1_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o2__6_carry__1_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o2__6_carry__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y_carry_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y_carry_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_e_pos_y[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_y[2]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/clk_wiz/inst/clk_out1_blockdesign_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/__21_carry__1_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/__21_carry__1_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o2__6_carry__1_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_g_pos_y_carry_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/U0/seg_e_pos_y[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_y[2]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.278 | TNS=-57.221 |
+Phase 4 Critical Path Optimization | Checksum: cd6b22af
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.776 . Memory (MB): peak = 2886.312 ; gain = 2.434
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2886.312 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.094 | TNS=0.000 |
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2999.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2999.000 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-5.278 | TNS=-57.221 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -488,27 +580,30 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.400  |          0.306  |            0  |              0  |                     2  |           0  |           2  |  00:00:00  |
-|  Total          |          0.400  |          0.306  |            0  |              0  |                     2  |           0  |           3  |  00:00:00  |
+|  Critical Path  |          0.030  |          0.132  |            1  |              0  |                     1  |           0  |           2  |  00:00:01  |
+|  Total          |          0.030  |          0.132  |            1  |              0  |                     1  |           0  |           3  |  00:00:01  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2886.312 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 16399b047
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2999.000 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 10f5e92d4
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.830 . Memory (MB): peak = 2886.312 ; gain = 2.434
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2999.000 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-112 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+185 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.631 . Memory (MB): peak = 2904.059 ; gain = 17.746
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3019.199 ; gain = 20.199
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1/blockdesign_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command route_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
@@ -519,66 +614,70 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: 73f56038 ConstDB: 0 ShapeSum: dbeec12 RouteDB: 0
-Post Restoration Checksum: NetGraph: 39833b56 | NumContArr: e62e7782 | Constraints: 190a55ad | Timing: 0
-Phase 1 Build RT Design | Checksum: 138bc0885
+Checksum: PlaceDB: a42e8788 ConstDB: 0 ShapeSum: 35029d RouteDB: 0
+Post Restoration Checksum: NetGraph: 54a1e4ea | NumContArr: 48283768 | Constraints: 190a55ad | Timing: 0
+Phase 1 Build RT Design | Checksum: b5d471ff
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 3001.918 ; gain = 97.680
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 3118.723 ; gain = 97.352
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 138bc0885
+Phase 2.1 Fix Topology Constraints | Checksum: b5d471ff
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 3001.918 ; gain = 97.680
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 3118.723 ; gain = 97.352
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 138bc0885
+Phase 2.2 Pre Route Cleanup | Checksum: b5d471ff
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 3001.918 ; gain = 97.680
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:47 . Memory (MB): peak = 3118.723 ; gain = 97.352
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 1ada5a536
+Phase 2.3 Update Timing | Checksum: 1fc895e2b
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 3020.637 ; gain = 116.398
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.043  | TNS=0.000  | WHS=-2.327 | THS=-80.511|
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:51 . Memory (MB): peak = 3136.109 ; gain = 114.738
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.240 | TNS=-56.964| WHS=-2.301 | THS=-112.788|
 
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.00704152 %
-  Global Horizontal Routing Utilization  = 0.0161427 %
+  Global Vertical Routing Utilization    = 0.00698975 %
+  Global Horizontal Routing Utilization  = 0.0120014 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 4872
+  Number of Failed Nets               = 5788
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 4835
+  Number of Unrouted Nets             = 5751
   Number of Partially Routed Nets     = 37
-  Number of Node Overlaps             = 23
+  Number of Node Overlaps             = 21
 
-Phase 2 Router Initialization | Checksum: 2a59a3c64
+Phase 2 Router Initialization | Checksum: 136f0b55b
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 3156.355 ; gain = 134.984
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 2a59a3c64
+Phase 3.1 Global Routing | Checksum: 136f0b55b
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 3029.863 ; gain = 125.625
-Phase 3 Initial Routing | Checksum: a188c026
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 3156.355 ; gain = 134.984
+Phase 3 Initial Routing | Checksum: 1d5881e7f
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 3029.863 ; gain = 125.625
-INFO: [Route 35-580] Design has 1 pins with tight setup and hold constraints.
+Time (s): cpu = 00:01:43 ; elapsed = 00:02:05 . Memory (MB): peak = 3190.906 ; gain = 169.535
+INFO: [Route 35-580] Design has 14 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
-+====================================+====================================+=======================================================+
-| Launch Setup Clock                 | Launch Hold Clock                  | Pin                                                   |
-+====================================+====================================+=======================================================+
-| clk_hdmi_blockdesign_clk_wiz_0_0_1 | clk_hdmi_blockdesign_clk_wiz_0_0_1 | blockdesign_i/paint_centerline_0/U0/pxl_value_o_reg/D |
-+------------------------------------+------------------------------------+-------------------------------------------------------+
++================================+================================+===================================================================================+
+| Launch Setup Clock             | Launch Hold Clock              | Pin                                                                               |
++================================+================================+===================================================================================+
+| clk_out1_blockdesign_clk_wiz_0 | clk_out1_blockdesign_clk_wiz_0 | blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o_reg/D |
+| clk_out1_blockdesign_clk_wiz_0 | clk_out1_blockdesign_clk_wiz_0 | blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_3/U0/pxl_value_o_reg/D |
+| clk_out1_blockdesign_clk_wiz_0 | clk_out1_blockdesign_clk_wiz_0 | blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_6/U0/pxl_value_o_reg/D |
+| clk_out1_blockdesign_clk_wiz_0 | clk_out1_blockdesign_clk_wiz_0 | blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_3/U0/pxl_value_o_reg/D |
+| clk_out1_blockdesign_clk_wiz_0 | clk_out1_blockdesign_clk_wiz_0 | blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_2/U0/pxl_value_o_reg/D |
++--------------------------------+--------------------------------+-----------------------------------------------------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
 
@@ -586,78 +685,92 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 249
- Number of Nodes with overlaps = 17
- Number of Nodes with overlaps = 9
- Number of Nodes with overlaps = 7
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 267
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.095 | TNS=-0.095 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.802 | TNS=-100.027| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1d62e5175
+Phase 4.1 Global Iteration 0 | Checksum: 17a3d2324
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:24 ; elapsed = 00:03:00 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 14
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 44
+ Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.095 | TNS=-0.095 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-8.436 | TNS=-102.442| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 1289da7d0
+Phase 4.2 Global Iteration 1 | Checksum: 1618e51d0
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
-Phase 4 Rip-up And Reroute | Checksum: 1289da7d0
+Time (s): cpu = 00:02:38 ; elapsed = 00:03:22 . Memory (MB): peak = 3226.328 ; gain = 204.957
+Phase 4 Rip-up And Reroute | Checksum: 1618e51d0
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:38 ; elapsed = 00:03:22 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 16ec1313f
+Phase 5.1.1 Update Timing | Checksum: 10544e8fa
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.036  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:22 . Memory (MB): peak = 3226.328 ; gain = 204.957
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.802 | TNS=-99.896| WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 16ec1313f
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 233173e7a
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:23 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 16ec1313f
+Phase 5.2 Clock Skew Optimization | Checksum: 233173e7a
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
-Phase 5 Delay and Skew Optimization | Checksum: 16ec1313f
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:23 . Memory (MB): peak = 3226.328 ; gain = 204.957
+Phase 5 Delay and Skew Optimization | Checksum: 233173e7a
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:23 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1da1574bf
+Phase 6.1.1 Update Timing | Checksum: 19b518595
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.036  | TNS=0.000  | WHS=-0.171 | THS=-0.344 |
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:23 . Memory (MB): peak = 3226.328 ; gain = 204.957
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-7.802 | TNS=-99.728| WHS=-0.239 | THS=-0.482 |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1216f50af
+Phase 6.1 Hold Fix Iter | Checksum: 25c017dce
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
-Phase 6 Post Hold Fix | Checksum: 1a29452e2
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:23 . Memory (MB): peak = 3226.328 ; gain = 204.957
+WARNING: [Route 35-468] The router encountered 729 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_1/U0/pxl_value_o4__6_carry/DI[3]
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_1/U0/pxl_value_o4__6_carry_i_1/I0
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_1/U0/pxl_value_o4_carry_i_3/I2
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_2/U0/pxl_value_o4__6_carry/DI[3]
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_2/U0/pxl_value_o4__6_carry_i_1/I0
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_2/U0/pxl_value_o4_carry_i_3/I2
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_1/U0/pxl_value_o4__6_carry/DI[2]
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_1/U0/pxl_value_o4__6_carry/S[2]
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_2/U0/pxl_value_o4__6_carry/DI[2]
+	blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_2/U0/pxl_value_o4__6_carry/S[2]
+	.. and 719 more pins.
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Phase 6 Post Hold Fix | Checksum: 2500c4922
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:23 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.00047 %
-  Global Horizontal Routing Utilization  = 1.0453 %
+  Global Vertical Routing Utilization    = 1.52661 %
+  Global Horizontal Routing Utilization  = 1.58308 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -667,48 +780,78 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: d6288aed
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:35 . Memory (MB): peak = 3029.863 ; gain = 125.625
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 1x1 Area, Max Cong = 49.5495%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 68.4685%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 48.5294%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 50%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 2af5c893b
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:23 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: d6288aed
+Phase 8 Verifying routed nets | Checksum: 2af5c893b
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:35 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:23 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1688e155e
+Phase 9 Depositing Routes | Checksum: 2c58adb2a
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:35 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:24 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Phase 10 Post Router Timing
 
 Phase 10.1 Update Timing
-Phase 10.1 Update Timing | Checksum: 15526e2f6
+Phase 10.1 Update Timing | Checksum: 2aa4a4c38
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:35 . Memory (MB): peak = 3029.863 ; gain = 125.625
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.036  | TNS=0.000  | WHS=0.053  | THS=0.000  |
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:24 . Memory (MB): peak = 3226.328 ; gain = 204.957
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-7.802 | TNS=-99.728| WHS=0.053  | THS=0.000  |
 
-INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 15526e2f6
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 2aa4a4c38
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:35 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:39 ; elapsed = 00:03:24 . Memory (MB): peak = 3226.328 ; gain = 204.957
 INFO: [Route 35-16] Router Completed Successfully
 
 Phase 11 Post-Route Event Processing
-Phase 11 Post-Route Event Processing | Checksum: 107441fc2
+Phase 11 Post-Route Event Processing | Checksum: e8cab199
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:35 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:40 ; elapsed = 00:03:25 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:35 . Memory (MB): peak = 3029.863 ; gain = 125.625
+Time (s): cpu = 00:02:40 ; elapsed = 00:03:25 . Memory (MB): peak = 3226.328 ; gain = 204.957
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-129 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+204 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 3029.863 ; gain = 125.805
+route_design: Time (s): cpu = 00:02:42 ; elapsed = 00:03:27 . Memory (MB): peak = 3226.328 ; gain = 207.129
 INFO: [runtcl-4] Executing : report_drc -file blockdesign_wrapper_drc_routed.rpt -pb blockdesign_wrapper_drc_routed.pb -rpx blockdesign_wrapper_drc_routed.rpx
 Command: report_drc -file blockdesign_wrapper_drc_routed.rpt -pb blockdesign_wrapper_drc_routed.pb -rpx blockdesign_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -727,7 +870,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-139 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+214 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file blockdesign_wrapper_route_status.rpt -pb blockdesign_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file blockdesign_wrapper_timing_summary_routed.rpt -pb blockdesign_wrapper_timing_summary_routed.pb -rpx blockdesign_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -744,7 +887,7 @@ INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.771 . Memory (MB): peak = 3095.840 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3226.328 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1/blockdesign_wrapper_routed.dcp' has been generated.
 Command: write_bitstream -force blockdesign_wrapper.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -812,5 +955,5 @@ INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT dev
 INFO: [Common 17-83] Releasing license: Implementation
 14 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 3665.395 ; gain = 569.555
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 26 16:01:20 2024...
+write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 3777.695 ; gain = 551.367
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  1 18:21:51 2024...

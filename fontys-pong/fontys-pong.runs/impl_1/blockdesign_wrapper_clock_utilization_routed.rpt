@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Tue Mar 26 16:01:00 2024
+| Date         : Mon Apr  1 18:21:18 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file blockdesign_wrapper_clock_utilization_routed.rpt
 | Design       : blockdesign_wrapper
@@ -55,8 +55,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+------------------------------------+-----------------------------------------------------------------------------+----------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                              | Driver Pin                                                                  | Net                                                                  |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+------------------------------------+-----------------------------------------------------------------------------+----------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 2 |         416 |               0 |        6.734 | clk_hdmi_blockdesign_clk_wiz_0_0_1 | blockdesign_i/clk_wiz_0/inst/clkout1_buf/O                                  | blockdesign_i/clk_wiz_0/inst/clk_hdmi                                |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 5 |         227 |               0 |       10.000 | clk_out1_blockdesign_clk_wiz_0     | blockdesign_i/clk_wiz/inst/clkout1_buf/O                                    | blockdesign_i/clk_wiz/inst/clk_out1                                  |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 2 |         780 |               0 |        6.734 | clk_hdmi_blockdesign_clk_wiz_0_0_1 | blockdesign_i/clk_wiz_0/inst/clkout1_buf/O                                  | blockdesign_i/clk_wiz_0/inst/clk_hdmi                                |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 5 |         252 |               0 |       10.000 | clk_out1_blockdesign_clk_wiz_0     | blockdesign_i/clk_wiz/inst/clkout1_buf/O                                    | blockdesign_i/clk_wiz/inst/clk_out1                                  |
 | g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y4 | n/a          |                 2 |          70 |               1 |              |                                    | blockdesign_i/clk_divider_0/U0/clk_o_BUFG_inst/O                            | blockdesign_i/clk_divider_0/U0/clk_o_BUFG                            |
 | g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 1 |           8 |               0 |        6.734 | PixelClkIO_1                       | blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG_inst/O  | blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG  |
 | g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 1 |           8 |               0 |        1.347 | SerialClkIO_1                      | blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG_inst/O | blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG |
@@ -91,9 +91,9 @@ Table of Contents
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL           | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                                                 | Net                                                              |
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------+
-| 0        | FDRE/Q          | None       | SLICE_X86Y96/AFF   | X1Y1         |          18 |               1 |              |       | blockdesign_i/controllers/clk_divider_1/U0/clk_o_reg/Q                                     | blockdesign_i/controllers/clk_divider_1/U0/clk_o                 |
-| 1        | FDCE/Q          | None       | SLICE_X85Y74/A5FF  | X1Y1         |          18 |               5 |              |       | blockdesign_i/controllers/controller_ultrasonic_0/U0/FSM_sequential_current_state_reg[1]/Q | blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm |
-| 2        | FDCE/Q          | None       | SLICE_X108Y85/A5FF | X1Y1         |          18 |               5 |              |       | blockdesign_i/controllers/controller_ultrasonic_1/U0/FSM_sequential_current_state_reg[1]/Q | blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm |
+| 0        | FDRE/Q          | None       | SLICE_X108Y100/AFF | X1Y2         |          18 |               1 |              |       | blockdesign_i/controllers/clk_divider_1/U0/clk_o_reg/Q                                     | blockdesign_i/controllers/clk_divider_1/U0/clk_o                 |
+| 1        | FDCE/Q          | None       | SLICE_X109Y89/A5FF | X1Y1         |          18 |               5 |              |       | blockdesign_i/controllers/controller_ultrasonic_0/U0/FSM_sequential_current_state_reg[1]/Q | blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm |
+| 2        | FDCE/Q          | None       | SLICE_X87Y87/A5FF  | X1Y1         |          18 |               5 |              |       | blockdesign_i/controllers/controller_ultrasonic_1/U0/FSM_sequential_current_state_reg[1]/Q | blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm |
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+--------------------------------------------------------------------------------------------+------------------------------------------------------------------+
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -111,9 +111,9 @@ Table of Contents
 | X0Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   29 |  2500 |    2 |  1000 |    0 |    60 |    0 |    30 |    0 |    60 |
 | X1Y0              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    1 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    8 |  3200 |    6 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y1              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    4 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  203 |  2600 |   47 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X1Y1              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  186 |  2600 |   26 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 | X0Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  485 |  2600 |  170 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X1Y2              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |  891 |  2600 |  332 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -137,7 +137,7 @@ All Modules
 +-----------+-----------------+-------------------+------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                              | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                   |
 +-----------+-----------------+-------------------+------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_hdmi_blockdesign_clk_wiz_0_0_1 |       6.734 | {0.000 3.367} |         415 |        0 |              1 |        0 | blockdesign_i/clk_wiz_0/inst/clk_hdmi |
+| g0        | BUFG/O          | n/a               | clk_hdmi_blockdesign_clk_wiz_0_0_1 |       6.734 | {0.000 3.367} |         779 |        0 |              1 |        0 | blockdesign_i/clk_wiz_0/inst/clk_hdmi |
 +-----------+-----------------+-------------------+------------------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -148,7 +148,7 @@ All Modules
 +----+----+------+-----------------------+
 |    | X0 | X1   | HORIZONTAL PROG DELAY |
 +----+----+------+-----------------------+
-| Y2 |  0 |  407 |                     0 |
+| Y2 |  0 |  771 |                     0 |
 | Y1 |  0 |    0 |                     - |
 | Y0 |  0 |    9 |                     0 |
 +----+----+------+-----------------------+
@@ -160,7 +160,7 @@ All Modules
 +-----------+-----------------+-------------------+--------------------------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                          | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                 |
 +-----------+-----------------+-------------------+--------------------------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------+
-| g1        | BUFG/O          | n/a               | clk_out1_blockdesign_clk_wiz_0 |      10.000 | {0.000 5.000} |         226 |        0 |              1 |        0 | blockdesign_i/clk_wiz/inst/clk_out1 |
+| g1        | BUFG/O          | n/a               | clk_out1_blockdesign_clk_wiz_0 |      10.000 | {0.000 5.000} |         251 |        0 |              1 |        0 | blockdesign_i/clk_wiz/inst/clk_out1 |
 +-----------+-----------------+-------------------+--------------------------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -171,8 +171,8 @@ All Modules
 +----+-----+------+-----------------------+
 |    | X0  | X1   | HORIZONTAL PROG DELAY |
 +----+-----+------+-----------------------+
-| Y2 |   0 |    8 |                     0 |
-| Y1 |   4 |  185 |                     0 |
+| Y2 |   0 |   46 |                     0 |
+| Y1 |   4 |  172 |                     0 |
 | Y0 |  29 |    1 |                     0 |
 +----+-----+------+-----------------------+
 
@@ -341,7 +341,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------+
-| g1        | n/a   | BUFG/O          | None       |         185 |               0 | 185 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/clk_wiz/inst/clk_out1 |
+| g1        | n/a   | BUFG/O          | None       |         172 |               0 | 172 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/clk_wiz/inst/clk_out1 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+-------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -354,8 +354,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         407 |               0 | 407 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/clk_wiz_0/inst/clk_hdmi                                |
-| g1        | n/a   | BUFG/O          | None       |           8 |               0 |   8 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/clk_wiz/inst/clk_out1                                  |
+| g0        | n/a   | BUFG/O          | None       |         771 |               0 | 771 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/clk_wiz_0/inst/clk_hdmi                                |
+| g1        | n/a   | BUFG/O          | None       |          46 |               0 |  46 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/clk_wiz/inst/clk_out1                                  |
 | g2        | n/a   | BUFG/O          | None       |          70 |               0 |  70 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/clk_divider_0/U0/clk_o_BUFG                            |
 | g3        | n/a   | BUFG/O          | None       |           8 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG  |
 | g4        | n/a   | BUFG/O          | None       |           8 |               0 |   0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | blockdesign_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG |

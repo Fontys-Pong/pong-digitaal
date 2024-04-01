@@ -39,3 +39,5 @@ set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ
 set_property -dict {PACKAGE_PIN J18 IOSTANDARD TMDS_33} [get_ports {hdmi_out_data_p[2]}]
 set_property src_info {type:XDC file:1 line:39 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN R19 IOSTANDARD LVCMOS33} [get_ports {hdmi_out_hpd[0]}]
+set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y9 [get_ports ext_clk]

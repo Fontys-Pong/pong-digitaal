@@ -1,0 +1,121 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.718004",
+   "Default View_TopLeft":"-149,-384",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_pxlClk -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port port-id_video_enable_i -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port port-id_hsync_i -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_vsync_i -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_pxl_value_i -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port port-id_video_enable_o -pg 1 -lvl 9 -x 2970 -y 540 -defaultsOSRD
+preplace port port-id_hsync_o -pg 1 -lvl 9 -x 2970 -y 570 -defaultsOSRD
+preplace port port-id_vsync_o -pg 1 -lvl 9 -x 2970 -y 600 -defaultsOSRD
+preplace port port-id_pxl_value_o -pg 1 -lvl 9 -x 2970 -y 690 -defaultsOSRD
+preplace portBus value -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace portBus seg_pos_x -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace portBus seg_pos_y -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace portBus seg_size_x -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace portBus seg_size_y -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace portBus pxl_x_i -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace portBus pxl_y_i -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD
+preplace portBus pxl_x_o -pg 1 -lvl 9 -x 2970 -y 630 -defaultsOSRD
+preplace portBus pxl_y_o -pg 1 -lvl 9 -x 2970 -y 660 -defaultsOSRD
+preplace inst paint_rectangle_1 -pg 1 -lvl 3 -x 930 -y 200 -defaultsOSRD
+preplace inst paint_rectangle_2 -pg 1 -lvl 4 -x 1300 -y 230 -defaultsOSRD
+preplace inst paint_rectangle_3 -pg 1 -lvl 5 -x 1680 -y 250 -defaultsOSRD
+preplace inst paint_rectangle_4 -pg 1 -lvl 6 -x 2050 -y 330 -defaultsOSRD
+preplace inst paint_rectangle_5 -pg 1 -lvl 7 -x 2420 -y 420 -defaultsOSRD
+preplace inst paint_rectangle_6 -pg 1 -lvl 8 -x 2790 -y 620 -defaultsOSRD
+preplace inst seven_seg_display_co_0 -pg 1 -lvl 1 -x 190 -y 500 -defaultsOSRD
+preplace inst paint_rectangle_0 -pg 1 -lvl 2 -x 590 -y 180 -defaultsOSRD
+preplace netloc Net 1 0 8 NJ 20 360 10 740 30 1110 60 1450 80 1900 160 2270 250 2640
+preplace netloc seven_seg_display_co_0_seg_b 1 1 2 440 350 740J
+preplace netloc paint_rectangle_0_video_enable_o 1 2 1 N 130
+preplace netloc paint_rectangle_0_hsync_o 1 2 1 N 150
+preplace netloc paint_rectangle_0_vsync_o 1 2 1 N 170
+preplace netloc paint_rectangle_0_pxl_x_o 1 2 1 N 190
+preplace netloc paint_rectangle_0_pxl_y_o 1 2 1 N 210
+preplace netloc paint_rectangle_0_pxl_value_o 1 2 1 N 230
+preplace netloc seven_seg_display_co_0_seg_b_pos_x 1 1 2 NJ 520 750
+preplace netloc seven_seg_display_co_0_seg_b_pos_y 1 1 2 NJ 540 770
+preplace netloc seven_seg_display_co_0_seg_ver_size_x 1 1 6 370J 460 760 380 1140 420 1510J 430 1900 510 NJ
+preplace netloc seven_seg_display_co_0_seg_ver_size_y 1 1 6 350J 470 780 390 1150 430 1490J 440 1880 530 NJ
+preplace netloc paint_rectangle_1_video_enable_o 1 3 1 1150 150n
+preplace netloc paint_rectangle_1_hsync_o 1 3 1 1150 170n
+preplace netloc paint_rectangle_1_vsync_o 1 3 1 1150 190n
+preplace netloc paint_rectangle_1_pxl_x_o 1 3 1 1150 210n
+preplace netloc paint_rectangle_1_pxl_y_o 1 3 1 1150 230n
+preplace netloc paint_rectangle_1_pxl_value_o 1 3 1 1150 250n
+preplace netloc seven_seg_display_co_0_seg_c 1 1 3 430 370 NJ 370 1110J
+preplace netloc seven_seg_display_co_0_seg_c_pos_x 1 1 3 NJ 560 NJ 560 1120
+preplace netloc seven_seg_display_co_0_seg_c_pos_y 1 1 3 NJ 580 NJ 580 1130
+preplace netloc paint_rectangle_2_video_enable_o 1 4 1 N 180
+preplace netloc paint_rectangle_2_hsync_o 1 4 1 N 200
+preplace netloc paint_rectangle_2_vsync_o 1 4 1 N 220
+preplace netloc paint_rectangle_2_pxl_x_o 1 4 1 N 240
+preplace netloc paint_rectangle_2_pxl_y_o 1 4 1 N 260
+preplace netloc paint_rectangle_2_pxl_value_o 1 4 1 N 280
+preplace netloc seven_seg_display_co_0_seg_d 1 1 4 420 400 NJ 400 NJ 400 1470J
+preplace netloc seven_seg_display_co_0_seg_d_pos_x 1 1 4 NJ 600 NJ 600 NJ 600 1480
+preplace netloc seven_seg_display_co_0_seg_d_pos_y 1 1 4 NJ 620 NJ 620 NJ 620 1500
+preplace netloc seven_seg_display_co_0_seg_hor_size_x 1 1 7 410 440 NJ 440 1090J 460 1450 720 NJ 720 NJ 720 2640J
+preplace netloc seven_seg_display_co_0_seg_hor_size_y 1 1 7 360 450 NJ 450 1080J 470 1530 730 NJ 730 NJ 730 NJ
+preplace netloc paint_rectangle_3_video_enable_o 1 5 1 1890 200n
+preplace netloc paint_rectangle_3_hsync_o 1 5 1 1880 220n
+preplace netloc paint_rectangle_3_vsync_o 1 5 1 1840 240n
+preplace netloc paint_rectangle_3_pxl_x_o 1 5 1 1870 260n
+preplace netloc paint_rectangle_3_pxl_y_o 1 5 1 1860 280n
+preplace netloc paint_rectangle_3_pxl_value_o 1 5 1 1830 300n
+preplace netloc seven_seg_display_co_0_seg_e 1 1 5 390 410 NJ 410 NJ 410 1520J 420 1850J
+preplace netloc seven_seg_display_co_0_seg_e_pos_x 1 1 5 NJ 640 NJ 640 NJ 640 NJ 640 1870
+preplace netloc seven_seg_display_co_0_seg_e_pos_y 1 1 5 NJ 660 NJ 660 NJ 660 NJ 660 1890
+preplace netloc paint_rectangle_4_video_enable_o 1 6 1 2260 280n
+preplace netloc paint_rectangle_4_hsync_o 1 6 1 2250 300n
+preplace netloc paint_rectangle_4_vsync_o 1 6 1 2240 320n
+preplace netloc paint_rectangle_4_pxl_x_o 1 6 1 2230 340n
+preplace netloc paint_rectangle_4_pxl_y_o 1 6 1 2210 360n
+preplace netloc paint_rectangle_4_pxl_value_o 1 6 1 2200 380n
+preplace netloc seven_seg_display_co_0_seg_f 1 1 6 370 420 NJ 420 1110J 440 1470J 450 1850J 500 2220J
+preplace netloc seven_seg_display_co_0_seg_f_pos_x 1 1 6 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 2250
+preplace netloc seven_seg_display_co_0_seg_f_pos_y 1 1 6 360J 690 NJ 690 NJ 690 NJ 690 NJ 690 2270
+preplace netloc paint_rectangle_5_video_enable_o 1 7 1 2630 370n
+preplace netloc paint_rectangle_5_hsync_o 1 7 1 2620 390n
+preplace netloc paint_rectangle_5_vsync_o 1 7 1 2610 410n
+preplace netloc paint_rectangle_5_pxl_x_o 1 7 1 2600 430n
+preplace netloc paint_rectangle_5_pxl_y_o 1 7 1 2580 450n
+preplace netloc paint_rectangle_5_pxl_value_o 1 7 1 2570 470n
+preplace netloc seven_seg_display_co_0_seg_g 1 1 7 350J 430 NJ 430 1100J 450 1460J 460 1830J 540 2200J 590 2590
+preplace netloc seven_seg_display_co_0_seg_g_pos_x 1 1 7 400J 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 2570
+preplace netloc seven_seg_display_co_0_seg_g_pos_y 1 1 7 440J 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 2600
+preplace netloc seven_seg_display_co_0_seg_a 1 1 1 370 90n
+preplace netloc seven_seg_display_co_0_seg_a_pos_x 1 1 1 380 230n
+preplace netloc seven_seg_display_co_0_seg_a_pos_y 1 1 1 400 250n
+preplace netloc clk_1_1 1 0 1 30J 410n
+preplace netloc reset_0_1 1 0 1 20J 440n
+preplace netloc value_0_1 1 0 1 30J 470n
+preplace netloc seg_pos_x_0_1 1 0 1 NJ 500
+preplace netloc seg_pos_y_0_1 1 0 1 20J 520n
+preplace netloc seg_size_x_0_1 1 0 1 20J 540n
+preplace netloc seg_size_y_0_1 1 0 1 30J 560n
+preplace netloc video_enable_i_0_1 1 0 2 NJ 90 360J
+preplace netloc hsync_i_0_1 1 0 2 NJ 120 380J
+preplace netloc vsync_i_0_1 1 0 2 NJ 150 NJ
+preplace netloc pxl_x_i_0_1 1 0 2 NJ 180 380J
+preplace netloc pxl_y_i_0_1 1 0 2 20J 190 NJ
+preplace netloc pxl_value_i_0_1 1 0 2 30J 200 380J
+preplace netloc paint_rectangle_6_video_enable_o 1 8 1 2940J 540n
+preplace netloc paint_rectangle_6_hsync_o 1 8 1 2950J 570n
+preplace netloc paint_rectangle_6_vsync_o 1 8 1 2940J 600n
+preplace netloc paint_rectangle_6_pxl_x_o 1 8 1 NJ 630
+preplace netloc paint_rectangle_6_pxl_y_o 1 8 1 2950J 650n
+preplace netloc paint_rectangle_6_pxl_value_o 1 8 1 2940J 670n
+levelinfo -pg 1 0 190 590 930 1300 1680 2050 2420 2790 2970
+pagesize -pg 1 -db -bbox -sgen -150 0 3120 800
+"
+}
+

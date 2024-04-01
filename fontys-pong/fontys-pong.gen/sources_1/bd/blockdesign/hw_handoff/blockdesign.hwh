@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar 26 15:54:37 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr  1 17:28:26 2024" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="blockdesign" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -36,6 +36,8 @@
         <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op1"/>
         <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
         <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
+        <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="reset"/>
+        <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="controller_switch" SIGIS="undef" SIGNAME="External_Ports_controller_switch">
@@ -66,6 +68,9 @@
     <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
       <CONNECTIONS>
         <CONNECTION INSTANCE="position_ball_0" PORT="enable"/>
+        <CONNECTION INSTANCE="paint_paddle_r" PORT="enable"/>
+        <CONNECTION INSTANCE="paint_paddle_l" PORT="enable"/>
+        <CONNECTION INSTANCE="paint_ball" PORT="enable"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="hdmi_out_hpd" RIGHT="0" SIGIS="undef" SIGNAME="one_dout">
@@ -127,7 +132,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x3"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x9"/>
         <PARAMETER NAME="Component_Name" VALUE="blockdesign_xlconstant_0_6"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -169,9 +174,9 @@
         <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_paddle_size_x_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="collision_detection_0" PORT="paddle_size_x"/>
+            <CONNECTION INSTANCE="position_paddles_0" PORT="paddle_size_x"/>
             <CONNECTION INSTANCE="paint_paddle_l" PORT="rect_size_x"/>
             <CONNECTION INSTANCE="paint_paddle_r" PORT="rect_size_x"/>
-            <CONNECTION INSTANCE="position_paddles_0" PORT="paddle_size_x"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -189,9 +194,80 @@
         <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_paddle_size_y_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="collision_detection_0" PORT="paddle_size_y"/>
+            <CONNECTION INSTANCE="position_paddles_0" PORT="paddle_size_y"/>
             <CONNECTION INSTANCE="paint_paddle_l" PORT="rect_size_y"/>
             <CONNECTION INSTANCE="paint_paddle_r" PORT="rect_size_y"/>
-            <CONNECTION INSTANCE="position_paddles_0" PORT="paddle_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/Constants/score_seg_size_x" HWVERSION="1.1" INSTANCE="Constants_score_seg_size_x" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x032"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_screen_size_y_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_score_seg_size_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="seg_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/Constants/score_seg_size_y" HWVERSION="1.1" INSTANCE="Constants_score_seg_size_y" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x064"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_screen_size_y_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_score_seg_size_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/Constants/scoreboard_center_offset" HWVERSION="1.1" INSTANCE="Constants_scoreboard_center_offset" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x064"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_screen_size_y_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_scoreboard_center_offset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="seg_center_offset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/Constants/scoreboard_top_offset" HWVERSION="1.1" INSTANCE="Constants_scoreboard_top_offset" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x014"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_screen_size_y_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_scoreboard_top_offset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="seg_top_offset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -212,6 +288,7 @@
             <CONNECTION INSTANCE="position_ball_0" PORT="screen_size_x"/>
             <CONNECTION INSTANCE="position_paddles_0" PORT="screen_size_x"/>
             <CONNECTION INSTANCE="paint_centerline_0" PORT="screen_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="screen_size_x"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -861,6 +938,9 @@
             <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="clk_i"/>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
             <CONNECTION INSTANCE="clk_divider_0" PORT="clk_i"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1460,12 +1540,26 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="clk"/>
             <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
-            <CONNECTION INSTANCE="paint_ball" PORT="clk"/>
-            <CONNECTION INSTANCE="paint_paddle_l" PORT="clk"/>
-            <CONNECTION INSTANCE="paint_paddle_r" PORT="clk"/>
             <CONNECTION INSTANCE="pixel_counter_0" PORT="pxCLK_i"/>
             <CONNECTION INSTANCE="video_buffer_0" PORT="pixel_clk"/>
             <CONNECTION INSTANCE="paint_centerline_0" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_ball" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_paddle_l" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_paddle_r" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1570,9 +1664,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="enable_i" SIGIS="undef" SIGNAME="paint_centerline_0_pxl_value_o">
+        <PORT DIR="I" NAME="enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_6_pxl_value_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="paint_centerline_0" PORT="pxl_value_o"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="pxl_value_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="data_o" RIGHT="0" SIGIS="undef" SIGNAME="color_generator_0_data_o">
@@ -1866,6 +1960,11 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="pixel_counter_0_video_enable_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pixel_counter_0" PORT="video_enable_o"/>
@@ -2005,24 +2104,32 @@
         </PORT>
         <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_centerline_0_video_enable_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_buffer_0" PORT="Vdata_enable_i"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="video_enable_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_centerline_0_hsync_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_buffer_0" PORT="HSync_i"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="hsync_i"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_centerline_0_vsync_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_buffer_0" PORT="VSync_i"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="vsync_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_centerline_0_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_centerline_0_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_centerline_0_pxl_value_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="color_generator_0" PORT="enable_i"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="pxl_value_i"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2038,6 +2145,11 @@
         <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_ball_video_enable_o">
@@ -2135,6 +2247,11 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_paddle_l_video_enable_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="paint_paddle_l" PORT="video_enable_o"/>
@@ -2213,6 +2330,1813 @@
         <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_paddle_r_pxl_value_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="paint_centerline_0" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_l/paint_rectangle_0" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_centerline_0_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_centerline_0_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_centerline_0_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_centerline_0_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_centerline_0_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_centerline_0_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_a_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_a_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_a_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_a_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_hor_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_hor_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_hor_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_hor_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_l/paint_rectangle_1" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_0_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_b_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_b_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_b_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_b_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_ver_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_ver_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_l/paint_rectangle_2" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_c"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_1_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_c_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_c_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_c_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_c_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_ver_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_ver_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_l/paint_rectangle_3" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_0_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_d">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_2_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_d_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_d_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_d_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_d_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_hor_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_hor_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_hor_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_hor_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_l/paint_rectangle_4" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_0_5"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_e">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_e"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_3_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_e_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_e_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_e_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_e_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_ver_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_ver_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_l/paint_rectangle_5" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_0_6"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_f">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_f"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_4_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_f_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_f_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_f_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_f_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_ver_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_ver_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_l/paint_rectangle_6" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_0_7"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_g">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_g"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_5_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_g_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_g_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_g_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_g_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_hor_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_hor_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_hor_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_hor_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_l/seven_seg_display_co_0" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="seven_seg_display_controller" VLNV="xilinx.com:module_ref:seven_seg_display_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_seven_seg_display_co_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="value" RIGHT="0" SIGIS="undef" SIGNAME="score_counter_0_score_left">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="score_counter_0" PORT="score_left"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_scoreboard_controller_0_seg_l_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="seg_l_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_scoreboard_controller_0_seg_l_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="seg_l_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_size_x" RIGHT="0" SIGIS="undef" SIGNAME="Constants_score_seg_size_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Constants_score_seg_size_x" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_size_y" RIGHT="0" SIGIS="undef" SIGNAME="Constants_score_seg_size_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Constants_score_seg_size_y" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_a" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_b" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_c" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_d" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_d">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_e" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_e">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_f" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_f">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_g" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_g">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_hor_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_hor_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="rect_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_hor_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_hor_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="rect_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_ver_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="rect_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_ver_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="rect_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_a_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_a_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_a_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_a_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_b_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_b_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_b_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_b_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_c_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_c_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_c_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_c_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_d_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_d_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_d_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_d_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_3" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_e_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_e_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_e_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_e_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_4" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_f_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_f_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_f_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_f_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_5" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_g_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_g_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_g_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_seven_seg_display_co_0_seg_g_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_r/paint_rectangle_0" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_0_10"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_l_paint_rectangle_6_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_6" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_a_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_a_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_a_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_a_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_hor_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_hor_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_hor_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_hor_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_r/paint_rectangle_1" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_1_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_0_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_b_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_b_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_b_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_b_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_ver_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_ver_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_r/paint_rectangle_2" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_2_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_c"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_1_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_c_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_c_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_c_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_c_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_ver_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_ver_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_r/paint_rectangle_3" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_3_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_d">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_2_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_d_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_d_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_d_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_d_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_hor_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_hor_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_hor_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_hor_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_r/paint_rectangle_4" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_4_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_e">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_e"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_3_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_e_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_e_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_e_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_e_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_ver_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_ver_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_r/paint_rectangle_5" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_5_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_f">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_f"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_4_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_f_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_f_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_f_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_f_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_ver_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_ver_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="video_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="hsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="vsync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="pxl_x_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="pxl_y_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="pxl_value_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_r/paint_rectangle_6" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="paint_rectangle" VLNV="xilinx.com:module_ref:paint_rectangle:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_paint_rectangle_6_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_hdmi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_g">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_g"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="video_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="video_enable_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="hsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="hsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vsync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="vsync_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_x_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_pxl_x_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="pxl_x_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="pxl_y_i" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_pxl_y_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="pxl_y_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxl_value_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_5_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="pxl_value_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_g_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_g_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_g_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_g_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_hor_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_hor_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="rect_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_hor_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_hor_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="video_enable_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_6_video_enable_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_buffer_0" PORT="Vdata_enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_6_hsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_buffer_0" PORT="HSync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_6_vsync_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_buffer_0" PORT="VSync_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="pxl_x_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="10" NAME="pxl_y_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pxl_value_o" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_6_pxl_value_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="color_generator_0" PORT="enable_i"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/paint_seg_r/seven_seg_display_co_0" HWVERSION="1.0" INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="seven_seg_display_controller" VLNV="xilinx.com:module_ref:seven_seg_display_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_seven_seg_display_co_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="value" RIGHT="0" SIGIS="undef" SIGNAME="score_counter_0_score_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="score_counter_0" PORT="score_right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_scoreboard_controller_0_seg_r_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="seg_r_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_scoreboard_controller_0_seg_r_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="seg_r_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_size_x" RIGHT="0" SIGIS="undef" SIGNAME="Constants_score_seg_size_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Constants_score_seg_size_x" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_size_y" RIGHT="0" SIGIS="undef" SIGNAME="Constants_score_seg_size_y_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Constants_score_seg_size_y" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_a" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_b" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_c" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_d" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_d">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_e" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_e">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_f" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_f">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="seg_g" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_g">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_hor_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_hor_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="rect_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_hor_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_hor_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="rect_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_ver_size_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="rect_size_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_ver_size_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_ver_size_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="rect_size_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_a_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_a_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_a_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_a_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_0" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_b_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_b_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_b_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_b_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_1" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_c_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_c_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_c_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_c_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_2" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_d_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_d_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_d_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_d_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_3" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_e_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_e_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_e_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_e_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_f_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_f_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_f_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_f_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_g_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_g_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="rect_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_g_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_seven_seg_display_co_0_seg_g_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="rect_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/paint_scoreboard/scoreboard_controller_0" HWVERSION="1.0" INSTANCE="paint_scoreboard_scoreboard_controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="scoreboard_controller" VLNV="xilinx.com:module_ref:scoreboard_controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_scoreboard_controller_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="screen_size_x" RIGHT="0" SIGIS="undef" SIGNAME="Constants_screen_size_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Constants_screen_size_x" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_center_offset" RIGHT="0" SIGIS="undef" SIGNAME="Constants_scoreboard_center_offset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Constants_scoreboard_center_offset" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_top_offset" RIGHT="0" SIGIS="undef" SIGNAME="Constants_scoreboard_top_offset_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Constants_scoreboard_top_offset" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="10" NAME="seg_size_x" RIGHT="0" SIGIS="undef" SIGNAME="Constants_score_seg_size_x_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Constants_score_seg_size_x" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_l_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_scoreboard_controller_0_seg_l_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_l_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_scoreboard_controller_0_seg_l_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="seg_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_r_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_scoreboard_controller_0_seg_r_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="10" NAME="seg_r_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="paint_scoreboard_scoreboard_controller_0_seg_r_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="seg_pos_y"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2546,8 +4470,16 @@
             <CONNECTION INSTANCE="Constants_max_score" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="score_left" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="3" NAME="score_right" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="score_left" RIGHT="0" SIGIS="undef" SIGNAME="score_counter_0_score_left">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="value"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="score_right" RIGHT="0" SIGIS="undef" SIGNAME="score_counter_0_score_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="value"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="game_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="score_counter_0_game_reset">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op2"/>
@@ -2862,19 +4794,19 @@
             <CONNECTION INSTANCE="color_generator_0" PORT="data_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="HSync_i" SIGIS="undef" SIGNAME="paint_centerline_0_hsync_o">
+        <PORT DIR="I" NAME="HSync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_6_hsync_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="paint_centerline_0" PORT="hsync_o"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="hsync_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="VSync_i" SIGIS="undef" SIGNAME="paint_centerline_0_vsync_o">
+        <PORT DIR="I" NAME="VSync_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_6_vsync_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="paint_centerline_0" PORT="vsync_o"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="vsync_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="Vdata_enable_i" SIGIS="undef" SIGNAME="paint_centerline_0_video_enable_o">
+        <PORT DIR="I" NAME="Vdata_enable_i" SIGIS="undef" SIGNAME="paint_scoreboard_paint_seg_r_paint_rectangle_6_video_enable_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="paint_centerline_0" PORT="video_enable_o"/>
+            <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="video_enable_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="Vdata_o" RIGHT="0" SIGIS="undef" SIGNAME="video_buffer_0_Vdata_o">

@@ -57,7 +57,7 @@
 #include "systemc.h"
 class blockdesign_xlconstant_0_6 : public sc_module {
   public:
-xlconstant_v1_1_7<4,3> mod;
+xlconstant_v1_1_7<4,9> mod;
   sc_out< sc_bv<4> > dout;
 blockdesign_xlconstant_0_6 (sc_core::sc_module_name name);
   };

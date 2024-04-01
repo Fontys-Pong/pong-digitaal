@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Tue Mar 26 15:54:35 2024
+--Date        : Mon Apr  1 17:27:51 2024
 --Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 --Command     : generate_target blockdesign.bd
 --Design      : blockdesign
@@ -19,6 +19,10 @@ entity Constants_imp_15CBHTD is
     paddle_offset_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
     paddle_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
     paddle_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    score_seg_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    score_seg_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    scoreboard_center_offset : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    scoreboard_top_offset : out STD_LOGIC_VECTOR ( 10 downto 0 );
     screen_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
     screen_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
   );
@@ -60,11 +64,35 @@ architecture STRUCTURE of Constants_imp_15CBHTD is
     dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component blockdesign_xlconstant_0_6;
+  component blockdesign_screen_size_y_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component blockdesign_screen_size_y_0;
+  component blockdesign_screen_size_y_1 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component blockdesign_screen_size_y_1;
+  component blockdesign_screen_size_y_2 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component blockdesign_screen_size_y_2;
+  component blockdesign_screen_size_y_3 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component blockdesign_screen_size_y_3;
   signal Net5 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net6 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net7 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net8 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net9 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal score_seg_size_x_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal score_seg_size_y_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal scoreboard_center_offset_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal scoreboard_top_offset_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal xlconstant_5_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal xlconstant_6_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
 begin
@@ -73,6 +101,10 @@ begin
   paddle_offset_x(10 downto 0) <= xlconstant_5_dout(10 downto 0);
   paddle_size_x(10 downto 0) <= Net7(10 downto 0);
   paddle_size_y(10 downto 0) <= Net8(10 downto 0);
+  score_seg_size_x(10 downto 0) <= score_seg_size_x_dout(10 downto 0);
+  score_seg_size_y(10 downto 0) <= score_seg_size_y_dout(10 downto 0);
+  scoreboard_center_offset(10 downto 0) <= scoreboard_center_offset_dout(10 downto 0);
+  scoreboard_top_offset(10 downto 0) <= scoreboard_top_offset_dout(10 downto 0);
   screen_size_x(10 downto 0) <= Net5(10 downto 0);
   screen_size_y(10 downto 0) <= Net6(10 downto 0);
 ball_size_RnM: component blockdesign_xlconstant_0_4
@@ -94,6 +126,22 @@ paddle_size_x_RnM: component blockdesign_xlconstant_0_2
 paddle_size_y_RnM: component blockdesign_xlconstant_0_3
      port map (
       dout(10 downto 0) => Net8(10 downto 0)
+    );
+score_seg_size_x_RnM: component blockdesign_screen_size_y_0
+     port map (
+      dout(10 downto 0) => score_seg_size_x_dout(10 downto 0)
+    );
+score_seg_size_y_RnM: component blockdesign_screen_size_y_1
+     port map (
+      dout(10 downto 0) => score_seg_size_y_dout(10 downto 0)
+    );
+scoreboard_center_offset_RnM: component blockdesign_screen_size_y_2
+     port map (
+      dout(10 downto 0) => scoreboard_center_offset_dout(10 downto 0)
+    );
+scoreboard_top_offset_RnM: component blockdesign_screen_size_y_3
+     port map (
+      dout(10 downto 0) => scoreboard_top_offset_dout(10 downto 0)
     );
 screen_size_x_RnM: component blockdesign_xlconstant_0_0
      port map (
@@ -280,6 +328,1175 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity paint_seg_l_imp_1533V5U is
+  port (
+    clk : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    pxlClk : in STD_LOGIC;
+    pxl_value_i : in STD_LOGIC;
+    pxl_value_o : out STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    reset : in STD_LOGIC;
+    seg_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    value : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    video_enable_i : in STD_LOGIC;
+    video_enable_o : out STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    vsync_o : out STD_LOGIC
+  );
+end paint_seg_l_imp_1533V5U;
+
+architecture STRUCTURE of paint_seg_l_imp_1533V5U is
+  component blockdesign_paint_rectangle_0_2 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_2;
+  component blockdesign_paint_rectangle_0_3 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_3;
+  component blockdesign_paint_rectangle_0_4 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_4;
+  component blockdesign_paint_rectangle_0_5 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_5;
+  component blockdesign_paint_rectangle_0_6 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_6;
+  component blockdesign_paint_rectangle_0_7 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_7;
+  component blockdesign_paint_rectangle_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_1;
+  component blockdesign_seven_seg_display_co_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    value : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    seg_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a : out STD_LOGIC;
+    seg_b : out STD_LOGIC;
+    seg_c : out STD_LOGIC;
+    seg_d : out STD_LOGIC;
+    seg_e : out STD_LOGIC;
+    seg_f : out STD_LOGIC;
+    seg_g : out STD_LOGIC;
+    seg_hor_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_hor_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_ver_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_ver_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_b_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_b_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_c_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_c_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_d_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_d_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_e_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_e_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_f_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_f_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_g_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_g_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component blockdesign_seven_seg_display_co_0_0;
+  signal Net : STD_LOGIC;
+  signal clk_1_1 : STD_LOGIC;
+  signal hsync_i_0_1 : STD_LOGIC;
+  signal paint_rectangle_0_hsync_o : STD_LOGIC;
+  signal paint_rectangle_0_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_0_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_0_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_0_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_0_vsync_o : STD_LOGIC;
+  signal paint_rectangle_1_hsync_o : STD_LOGIC;
+  signal paint_rectangle_1_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_1_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_1_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_1_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_1_vsync_o : STD_LOGIC;
+  signal paint_rectangle_2_hsync_o : STD_LOGIC;
+  signal paint_rectangle_2_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_2_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_2_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_2_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_2_vsync_o : STD_LOGIC;
+  signal paint_rectangle_3_hsync_o : STD_LOGIC;
+  signal paint_rectangle_3_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_3_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_3_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_3_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_3_vsync_o : STD_LOGIC;
+  signal paint_rectangle_4_hsync_o : STD_LOGIC;
+  signal paint_rectangle_4_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_4_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_4_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_4_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_4_vsync_o : STD_LOGIC;
+  signal paint_rectangle_5_hsync_o : STD_LOGIC;
+  signal paint_rectangle_5_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_5_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_5_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_5_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_5_vsync_o : STD_LOGIC;
+  signal paint_rectangle_6_hsync_o : STD_LOGIC;
+  signal paint_rectangle_6_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_6_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_6_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_6_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_6_vsync_o : STD_LOGIC;
+  signal pxl_value_i_0_1 : STD_LOGIC;
+  signal pxl_x_i_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal pxl_y_i_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal reset_0_1 : STD_LOGIC;
+  signal seg_pos_x_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_pos_y_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_size_x_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_size_y_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_a : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_a_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_a_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_b : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_b_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_b_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_c : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_c_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_c_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_d : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_d_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_d_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_e : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_e_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_e_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_f : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_f_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_f_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_g : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_g_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_g_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_hor_size_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_hor_size_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_ver_size_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_ver_size_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal value_0_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal video_enable_i_0_1 : STD_LOGIC;
+  signal vsync_i_0_1 : STD_LOGIC;
+begin
+  Net <= pxlClk;
+  clk_1_1 <= clk;
+  hsync_i_0_1 <= hsync_i;
+  hsync_o <= paint_rectangle_6_hsync_o;
+  pxl_value_i_0_1 <= pxl_value_i;
+  pxl_value_o <= paint_rectangle_6_pxl_value_o;
+  pxl_x_i_0_1(10 downto 0) <= pxl_x_i(10 downto 0);
+  pxl_x_o(10 downto 0) <= paint_rectangle_6_pxl_x_o(10 downto 0);
+  pxl_y_i_0_1(10 downto 0) <= pxl_y_i(10 downto 0);
+  pxl_y_o(10 downto 0) <= paint_rectangle_6_pxl_y_o(10 downto 0);
+  reset_0_1 <= reset;
+  seg_pos_x_0_1(10 downto 0) <= seg_pos_x(10 downto 0);
+  seg_pos_y_0_1(10 downto 0) <= seg_pos_y(10 downto 0);
+  seg_size_x_0_1(10 downto 0) <= seg_size_x(10 downto 0);
+  seg_size_y_0_1(10 downto 0) <= seg_size_y(10 downto 0);
+  value_0_1(3 downto 0) <= value(3 downto 0);
+  video_enable_i_0_1 <= video_enable_i;
+  video_enable_o <= paint_rectangle_6_video_enable_o;
+  vsync_i_0_1 <= vsync_i;
+  vsync_o <= paint_rectangle_6_vsync_o;
+paint_rectangle_0: component blockdesign_paint_rectangle_0_1
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_a,
+      hsync_i => hsync_i_0_1,
+      hsync_o => paint_rectangle_0_hsync_o,
+      pxl_value_i => pxl_value_i_0_1,
+      pxl_value_o => paint_rectangle_0_pxl_value_o,
+      pxl_x_i(10 downto 0) => pxl_x_i_0_1(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_0_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => pxl_y_i_0_1(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_0_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_a_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_a_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_hor_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_hor_size_y(10 downto 0),
+      video_enable_i => video_enable_i_0_1,
+      video_enable_o => paint_rectangle_0_video_enable_o,
+      vsync_i => vsync_i_0_1,
+      vsync_o => paint_rectangle_0_vsync_o
+    );
+paint_rectangle_1: component blockdesign_paint_rectangle_0_2
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_b,
+      hsync_i => paint_rectangle_0_hsync_o,
+      hsync_o => paint_rectangle_1_hsync_o,
+      pxl_value_i => paint_rectangle_0_pxl_value_o,
+      pxl_value_o => paint_rectangle_1_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_0_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_1_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_0_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_1_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_b_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_b_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_0_video_enable_o,
+      video_enable_o => paint_rectangle_1_video_enable_o,
+      vsync_i => paint_rectangle_0_vsync_o,
+      vsync_o => paint_rectangle_1_vsync_o
+    );
+paint_rectangle_2: component blockdesign_paint_rectangle_0_3
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_c,
+      hsync_i => paint_rectangle_1_hsync_o,
+      hsync_o => paint_rectangle_2_hsync_o,
+      pxl_value_i => paint_rectangle_1_pxl_value_o,
+      pxl_value_o => paint_rectangle_2_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_1_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_2_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_1_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_2_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_c_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_c_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_1_video_enable_o,
+      video_enable_o => paint_rectangle_2_video_enable_o,
+      vsync_i => paint_rectangle_1_vsync_o,
+      vsync_o => paint_rectangle_2_vsync_o
+    );
+paint_rectangle_3: component blockdesign_paint_rectangle_0_4
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_d,
+      hsync_i => paint_rectangle_2_hsync_o,
+      hsync_o => paint_rectangle_3_hsync_o,
+      pxl_value_i => paint_rectangle_2_pxl_value_o,
+      pxl_value_o => paint_rectangle_3_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_2_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_3_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_2_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_3_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_d_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_d_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_hor_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_hor_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_2_video_enable_o,
+      video_enable_o => paint_rectangle_3_video_enable_o,
+      vsync_i => paint_rectangle_2_vsync_o,
+      vsync_o => paint_rectangle_3_vsync_o
+    );
+paint_rectangle_4: component blockdesign_paint_rectangle_0_5
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_e,
+      hsync_i => paint_rectangle_3_hsync_o,
+      hsync_o => paint_rectangle_4_hsync_o,
+      pxl_value_i => paint_rectangle_3_pxl_value_o,
+      pxl_value_o => paint_rectangle_4_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_3_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_4_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_3_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_4_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_e_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_e_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_3_video_enable_o,
+      video_enable_o => paint_rectangle_4_video_enable_o,
+      vsync_i => paint_rectangle_3_vsync_o,
+      vsync_o => paint_rectangle_4_vsync_o
+    );
+paint_rectangle_5: component blockdesign_paint_rectangle_0_6
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_f,
+      hsync_i => paint_rectangle_4_hsync_o,
+      hsync_o => paint_rectangle_5_hsync_o,
+      pxl_value_i => paint_rectangle_4_pxl_value_o,
+      pxl_value_o => paint_rectangle_5_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_4_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_5_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_4_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_5_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_f_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_f_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_4_video_enable_o,
+      video_enable_o => paint_rectangle_5_video_enable_o,
+      vsync_i => paint_rectangle_4_vsync_o,
+      vsync_o => paint_rectangle_5_vsync_o
+    );
+paint_rectangle_6: component blockdesign_paint_rectangle_0_7
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_g,
+      hsync_i => paint_rectangle_5_hsync_o,
+      hsync_o => paint_rectangle_6_hsync_o,
+      pxl_value_i => paint_rectangle_5_pxl_value_o,
+      pxl_value_o => paint_rectangle_6_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_5_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_6_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_5_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_6_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_g_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_g_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_hor_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_hor_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_5_video_enable_o,
+      video_enable_o => paint_rectangle_6_video_enable_o,
+      vsync_i => paint_rectangle_5_vsync_o,
+      vsync_o => paint_rectangle_6_vsync_o
+    );
+seven_seg_display_co_0: component blockdesign_seven_seg_display_co_0_0
+     port map (
+      clk => clk_1_1,
+      reset => reset_0_1,
+      seg_a => seven_seg_display_co_0_seg_a,
+      seg_a_pos_x(10 downto 0) => seven_seg_display_co_0_seg_a_pos_x(10 downto 0),
+      seg_a_pos_y(10 downto 0) => seven_seg_display_co_0_seg_a_pos_y(10 downto 0),
+      seg_b => seven_seg_display_co_0_seg_b,
+      seg_b_pos_x(10 downto 0) => seven_seg_display_co_0_seg_b_pos_x(10 downto 0),
+      seg_b_pos_y(10 downto 0) => seven_seg_display_co_0_seg_b_pos_y(10 downto 0),
+      seg_c => seven_seg_display_co_0_seg_c,
+      seg_c_pos_x(10 downto 0) => seven_seg_display_co_0_seg_c_pos_x(10 downto 0),
+      seg_c_pos_y(10 downto 0) => seven_seg_display_co_0_seg_c_pos_y(10 downto 0),
+      seg_d => seven_seg_display_co_0_seg_d,
+      seg_d_pos_x(10 downto 0) => seven_seg_display_co_0_seg_d_pos_x(10 downto 0),
+      seg_d_pos_y(10 downto 0) => seven_seg_display_co_0_seg_d_pos_y(10 downto 0),
+      seg_e => seven_seg_display_co_0_seg_e,
+      seg_e_pos_x(10 downto 0) => seven_seg_display_co_0_seg_e_pos_x(10 downto 0),
+      seg_e_pos_y(10 downto 0) => seven_seg_display_co_0_seg_e_pos_y(10 downto 0),
+      seg_f => seven_seg_display_co_0_seg_f,
+      seg_f_pos_x(10 downto 0) => seven_seg_display_co_0_seg_f_pos_x(10 downto 0),
+      seg_f_pos_y(10 downto 0) => seven_seg_display_co_0_seg_f_pos_y(10 downto 0),
+      seg_g => seven_seg_display_co_0_seg_g,
+      seg_g_pos_x(10 downto 0) => seven_seg_display_co_0_seg_g_pos_x(10 downto 0),
+      seg_g_pos_y(10 downto 0) => seven_seg_display_co_0_seg_g_pos_y(10 downto 0),
+      seg_hor_size_x(10 downto 0) => seven_seg_display_co_0_seg_hor_size_x(10 downto 0),
+      seg_hor_size_y(10 downto 0) => seven_seg_display_co_0_seg_hor_size_y(10 downto 0),
+      seg_pos_x(10 downto 0) => seg_pos_x_0_1(10 downto 0),
+      seg_pos_y(10 downto 0) => seg_pos_y_0_1(10 downto 0),
+      seg_size_x(10 downto 0) => seg_size_x_0_1(10 downto 0),
+      seg_size_y(10 downto 0) => seg_size_y_0_1(10 downto 0),
+      seg_ver_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      seg_ver_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      value(3 downto 0) => value_0_1(3 downto 0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity paint_seg_r_imp_VF0S4G is
+  port (
+    clk : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    pxlClk : in STD_LOGIC;
+    pxl_value_i : in STD_LOGIC;
+    pxl_value_o : out STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    reset : in STD_LOGIC;
+    seg_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    value : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    video_enable_i : in STD_LOGIC;
+    video_enable_o : out STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    vsync_o : out STD_LOGIC
+  );
+end paint_seg_r_imp_VF0S4G;
+
+architecture STRUCTURE of paint_seg_r_imp_VF0S4G is
+  component blockdesign_paint_rectangle_1_2 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_1_2;
+  component blockdesign_paint_rectangle_2_2 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_2_2;
+  component blockdesign_paint_rectangle_3_1 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_3_1;
+  component blockdesign_paint_rectangle_4_1 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_4_1;
+  component blockdesign_paint_rectangle_5_1 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_5_1;
+  component blockdesign_paint_rectangle_6_1 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_6_1;
+  component blockdesign_paint_rectangle_0_10 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_10;
+  component blockdesign_seven_seg_display_co_0_2 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    value : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    seg_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a : out STD_LOGIC;
+    seg_b : out STD_LOGIC;
+    seg_c : out STD_LOGIC;
+    seg_d : out STD_LOGIC;
+    seg_e : out STD_LOGIC;
+    seg_f : out STD_LOGIC;
+    seg_g : out STD_LOGIC;
+    seg_hor_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_hor_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_ver_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_ver_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_b_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_b_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_c_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_c_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_d_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_d_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_e_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_e_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_f_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_f_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_g_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_g_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component blockdesign_seven_seg_display_co_0_2;
+  signal Net : STD_LOGIC;
+  signal clk_1_1 : STD_LOGIC;
+  signal hsync_i_0_1 : STD_LOGIC;
+  signal paint_rectangle_0_hsync_o : STD_LOGIC;
+  signal paint_rectangle_0_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_0_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_0_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_0_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_0_vsync_o : STD_LOGIC;
+  signal paint_rectangle_1_hsync_o : STD_LOGIC;
+  signal paint_rectangle_1_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_1_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_1_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_1_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_1_vsync_o : STD_LOGIC;
+  signal paint_rectangle_2_hsync_o : STD_LOGIC;
+  signal paint_rectangle_2_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_2_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_2_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_2_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_2_vsync_o : STD_LOGIC;
+  signal paint_rectangle_3_hsync_o : STD_LOGIC;
+  signal paint_rectangle_3_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_3_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_3_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_3_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_3_vsync_o : STD_LOGIC;
+  signal paint_rectangle_4_hsync_o : STD_LOGIC;
+  signal paint_rectangle_4_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_4_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_4_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_4_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_4_vsync_o : STD_LOGIC;
+  signal paint_rectangle_5_hsync_o : STD_LOGIC;
+  signal paint_rectangle_5_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_5_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_5_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_5_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_5_vsync_o : STD_LOGIC;
+  signal paint_rectangle_6_hsync_o : STD_LOGIC;
+  signal paint_rectangle_6_pxl_value_o : STD_LOGIC;
+  signal paint_rectangle_6_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_6_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_rectangle_6_video_enable_o : STD_LOGIC;
+  signal paint_rectangle_6_vsync_o : STD_LOGIC;
+  signal pxl_value_i_0_1 : STD_LOGIC;
+  signal pxl_x_i_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal pxl_y_i_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal reset_0_1 : STD_LOGIC;
+  signal seg_pos_x_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_pos_y_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_size_x_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_size_y_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_a : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_a_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_a_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_b : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_b_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_b_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_c : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_c_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_c_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_d : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_d_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_d_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_e : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_e_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_e_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_f : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_f_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_f_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_g : STD_LOGIC;
+  signal seven_seg_display_co_0_seg_g_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_g_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_hor_size_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_hor_size_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_ver_size_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seven_seg_display_co_0_seg_ver_size_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal value_0_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal video_enable_i_0_1 : STD_LOGIC;
+  signal vsync_i_0_1 : STD_LOGIC;
+begin
+  Net <= pxlClk;
+  clk_1_1 <= clk;
+  hsync_i_0_1 <= hsync_i;
+  hsync_o <= paint_rectangle_6_hsync_o;
+  pxl_value_i_0_1 <= pxl_value_i;
+  pxl_value_o <= paint_rectangle_6_pxl_value_o;
+  pxl_x_i_0_1(10 downto 0) <= pxl_x_i(10 downto 0);
+  pxl_x_o(10 downto 0) <= paint_rectangle_6_pxl_x_o(10 downto 0);
+  pxl_y_i_0_1(10 downto 0) <= pxl_y_i(10 downto 0);
+  pxl_y_o(10 downto 0) <= paint_rectangle_6_pxl_y_o(10 downto 0);
+  reset_0_1 <= reset;
+  seg_pos_x_0_1(10 downto 0) <= seg_pos_x(10 downto 0);
+  seg_pos_y_0_1(10 downto 0) <= seg_pos_y(10 downto 0);
+  seg_size_x_0_1(10 downto 0) <= seg_size_x(10 downto 0);
+  seg_size_y_0_1(10 downto 0) <= seg_size_y(10 downto 0);
+  value_0_1(3 downto 0) <= value(3 downto 0);
+  video_enable_i_0_1 <= video_enable_i;
+  video_enable_o <= paint_rectangle_6_video_enable_o;
+  vsync_i_0_1 <= vsync_i;
+  vsync_o <= paint_rectangle_6_vsync_o;
+paint_rectangle_0: component blockdesign_paint_rectangle_0_10
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_a,
+      hsync_i => hsync_i_0_1,
+      hsync_o => paint_rectangle_0_hsync_o,
+      pxl_value_i => pxl_value_i_0_1,
+      pxl_value_o => paint_rectangle_0_pxl_value_o,
+      pxl_x_i(10 downto 0) => pxl_x_i_0_1(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_0_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => pxl_y_i_0_1(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_0_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_a_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_a_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_hor_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_hor_size_y(10 downto 0),
+      video_enable_i => video_enable_i_0_1,
+      video_enable_o => paint_rectangle_0_video_enable_o,
+      vsync_i => vsync_i_0_1,
+      vsync_o => paint_rectangle_0_vsync_o
+    );
+paint_rectangle_1: component blockdesign_paint_rectangle_1_2
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_b,
+      hsync_i => paint_rectangle_0_hsync_o,
+      hsync_o => paint_rectangle_1_hsync_o,
+      pxl_value_i => paint_rectangle_0_pxl_value_o,
+      pxl_value_o => paint_rectangle_1_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_0_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_1_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_0_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_1_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_b_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_b_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_0_video_enable_o,
+      video_enable_o => paint_rectangle_1_video_enable_o,
+      vsync_i => paint_rectangle_0_vsync_o,
+      vsync_o => paint_rectangle_1_vsync_o
+    );
+paint_rectangle_2: component blockdesign_paint_rectangle_2_2
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_c,
+      hsync_i => paint_rectangle_1_hsync_o,
+      hsync_o => paint_rectangle_2_hsync_o,
+      pxl_value_i => paint_rectangle_1_pxl_value_o,
+      pxl_value_o => paint_rectangle_2_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_1_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_2_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_1_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_2_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_c_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_c_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_1_video_enable_o,
+      video_enable_o => paint_rectangle_2_video_enable_o,
+      vsync_i => paint_rectangle_1_vsync_o,
+      vsync_o => paint_rectangle_2_vsync_o
+    );
+paint_rectangle_3: component blockdesign_paint_rectangle_3_1
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_d,
+      hsync_i => paint_rectangle_2_hsync_o,
+      hsync_o => paint_rectangle_3_hsync_o,
+      pxl_value_i => paint_rectangle_2_pxl_value_o,
+      pxl_value_o => paint_rectangle_3_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_2_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_3_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_2_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_3_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_d_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_d_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_hor_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_hor_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_2_video_enable_o,
+      video_enable_o => paint_rectangle_3_video_enable_o,
+      vsync_i => paint_rectangle_2_vsync_o,
+      vsync_o => paint_rectangle_3_vsync_o
+    );
+paint_rectangle_4: component blockdesign_paint_rectangle_4_1
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_e,
+      hsync_i => paint_rectangle_3_hsync_o,
+      hsync_o => paint_rectangle_4_hsync_o,
+      pxl_value_i => paint_rectangle_3_pxl_value_o,
+      pxl_value_o => paint_rectangle_4_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_3_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_4_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_3_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_4_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_e_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_e_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_3_video_enable_o,
+      video_enable_o => paint_rectangle_4_video_enable_o,
+      vsync_i => paint_rectangle_3_vsync_o,
+      vsync_o => paint_rectangle_4_vsync_o
+    );
+paint_rectangle_5: component blockdesign_paint_rectangle_5_1
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_f,
+      hsync_i => paint_rectangle_4_hsync_o,
+      hsync_o => paint_rectangle_5_hsync_o,
+      pxl_value_i => paint_rectangle_4_pxl_value_o,
+      pxl_value_o => paint_rectangle_5_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_4_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_5_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_4_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_5_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_f_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_f_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_4_video_enable_o,
+      video_enable_o => paint_rectangle_5_video_enable_o,
+      vsync_i => paint_rectangle_4_vsync_o,
+      vsync_o => paint_rectangle_5_vsync_o
+    );
+paint_rectangle_6: component blockdesign_paint_rectangle_6_1
+     port map (
+      clk => Net,
+      enable => seven_seg_display_co_0_seg_g,
+      hsync_i => paint_rectangle_5_hsync_o,
+      hsync_o => paint_rectangle_6_hsync_o,
+      pxl_value_i => paint_rectangle_5_pxl_value_o,
+      pxl_value_o => paint_rectangle_6_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_rectangle_5_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_rectangle_6_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_rectangle_5_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_rectangle_6_pxl_y_o(10 downto 0),
+      rect_pos_x(10 downto 0) => seven_seg_display_co_0_seg_g_pos_x(10 downto 0),
+      rect_pos_y(10 downto 0) => seven_seg_display_co_0_seg_g_pos_y(10 downto 0),
+      rect_size_x(10 downto 0) => seven_seg_display_co_0_seg_hor_size_x(10 downto 0),
+      rect_size_y(10 downto 0) => seven_seg_display_co_0_seg_hor_size_y(10 downto 0),
+      video_enable_i => paint_rectangle_5_video_enable_o,
+      video_enable_o => paint_rectangle_6_video_enable_o,
+      vsync_i => paint_rectangle_5_vsync_o,
+      vsync_o => paint_rectangle_6_vsync_o
+    );
+seven_seg_display_co_0: component blockdesign_seven_seg_display_co_0_2
+     port map (
+      clk => clk_1_1,
+      reset => reset_0_1,
+      seg_a => seven_seg_display_co_0_seg_a,
+      seg_a_pos_x(10 downto 0) => seven_seg_display_co_0_seg_a_pos_x(10 downto 0),
+      seg_a_pos_y(10 downto 0) => seven_seg_display_co_0_seg_a_pos_y(10 downto 0),
+      seg_b => seven_seg_display_co_0_seg_b,
+      seg_b_pos_x(10 downto 0) => seven_seg_display_co_0_seg_b_pos_x(10 downto 0),
+      seg_b_pos_y(10 downto 0) => seven_seg_display_co_0_seg_b_pos_y(10 downto 0),
+      seg_c => seven_seg_display_co_0_seg_c,
+      seg_c_pos_x(10 downto 0) => seven_seg_display_co_0_seg_c_pos_x(10 downto 0),
+      seg_c_pos_y(10 downto 0) => seven_seg_display_co_0_seg_c_pos_y(10 downto 0),
+      seg_d => seven_seg_display_co_0_seg_d,
+      seg_d_pos_x(10 downto 0) => seven_seg_display_co_0_seg_d_pos_x(10 downto 0),
+      seg_d_pos_y(10 downto 0) => seven_seg_display_co_0_seg_d_pos_y(10 downto 0),
+      seg_e => seven_seg_display_co_0_seg_e,
+      seg_e_pos_x(10 downto 0) => seven_seg_display_co_0_seg_e_pos_x(10 downto 0),
+      seg_e_pos_y(10 downto 0) => seven_seg_display_co_0_seg_e_pos_y(10 downto 0),
+      seg_f => seven_seg_display_co_0_seg_f,
+      seg_f_pos_x(10 downto 0) => seven_seg_display_co_0_seg_f_pos_x(10 downto 0),
+      seg_f_pos_y(10 downto 0) => seven_seg_display_co_0_seg_f_pos_y(10 downto 0),
+      seg_g => seven_seg_display_co_0_seg_g,
+      seg_g_pos_x(10 downto 0) => seven_seg_display_co_0_seg_g_pos_x(10 downto 0),
+      seg_g_pos_y(10 downto 0) => seven_seg_display_co_0_seg_g_pos_y(10 downto 0),
+      seg_hor_size_x(10 downto 0) => seven_seg_display_co_0_seg_hor_size_x(10 downto 0),
+      seg_hor_size_y(10 downto 0) => seven_seg_display_co_0_seg_hor_size_y(10 downto 0),
+      seg_pos_x(10 downto 0) => seg_pos_x_0_1(10 downto 0),
+      seg_pos_y(10 downto 0) => seg_pos_y_0_1(10 downto 0),
+      seg_size_x(10 downto 0) => seg_size_x_0_1(10 downto 0),
+      seg_size_y(10 downto 0) => seg_size_y_0_1(10 downto 0),
+      seg_ver_size_x(10 downto 0) => seven_seg_display_co_0_seg_ver_size_x(10 downto 0),
+      seg_ver_size_y(10 downto 0) => seven_seg_display_co_0_seg_ver_size_y(10 downto 0),
+      value(3 downto 0) => value_0_1(3 downto 0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity paint_scoreboard_imp_1HSEOW0 is
+  port (
+    clk : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    pxlClk : in STD_LOGIC;
+    pxl_value_i : in STD_LOGIC;
+    pxl_value_o : out STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    reset : in STD_LOGIC;
+    score_l : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_r : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    score_seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    scoreboard_center_offset : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    scoreboard_top_offset : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_i : in STD_LOGIC;
+    video_enable_o : out STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    vsync_o : out STD_LOGIC
+  );
+end paint_scoreboard_imp_1HSEOW0;
+
+architecture STRUCTURE of paint_scoreboard_imp_1HSEOW0 is
+  component blockdesign_scoreboard_controller_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_center_offset : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_top_offset : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_l_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_l_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_r_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_r_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component blockdesign_scoreboard_controller_0_0;
+  signal clk_1 : STD_LOGIC;
+  signal hsync_i_2 : STD_LOGIC;
+  signal paint_seg_l_hsync_o : STD_LOGIC;
+  signal paint_seg_l_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_seg_l_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_seg_l_video_enable_o : STD_LOGIC;
+  signal paint_seg_l_vsync_o : STD_LOGIC;
+  signal paint_seg_r_hsync_o : STD_LOGIC;
+  signal paint_seg_r_pxl_value_o : STD_LOGIC;
+  signal paint_seg_r_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_seg_r_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal paint_seg_r_video_enable_o : STD_LOGIC;
+  signal paint_seg_r_vsync_o : STD_LOGIC;
+  signal pxlClk_1 : STD_LOGIC;
+  signal pxl_value_i_1 : STD_LOGIC;
+  signal pxl_value_i_3 : STD_LOGIC;
+  signal pxl_x_i_2 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal pxl_y_i_2 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal reset_1 : STD_LOGIC;
+  signal scoreboard_controller_0_seg_l_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal scoreboard_controller_0_seg_l_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal scoreboard_controller_0_seg_r_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal scoreboard_controller_0_seg_r_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal screen_size_x_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_center_offset_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_size_x_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_size_y_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal seg_top_offset_0_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal value_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal value_2 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal video_enable_i_2 : STD_LOGIC;
+  signal vsync_i_2 : STD_LOGIC;
+begin
+  clk_1 <= clk;
+  hsync_i_2 <= hsync_i;
+  hsync_o <= paint_seg_r_hsync_o;
+  pxlClk_1 <= pxlClk;
+  pxl_value_i_3 <= pxl_value_i;
+  pxl_value_o <= paint_seg_r_pxl_value_o;
+  pxl_x_i_2(10 downto 0) <= pxl_x_i(10 downto 0);
+  pxl_x_o(10 downto 0) <= paint_seg_r_pxl_x_o(10 downto 0);
+  pxl_y_i_2(10 downto 0) <= pxl_y_i(10 downto 0);
+  pxl_y_o(10 downto 0) <= paint_seg_r_pxl_y_o(10 downto 0);
+  reset_1 <= reset;
+  screen_size_x_0_1(10 downto 0) <= screen_size_x(10 downto 0);
+  seg_center_offset_0_1(10 downto 0) <= scoreboard_center_offset(10 downto 0);
+  seg_size_x_1(10 downto 0) <= score_seg_size_x(10 downto 0);
+  seg_size_y_1(10 downto 0) <= score_seg_size_y(10 downto 0);
+  seg_top_offset_0_1(10 downto 0) <= scoreboard_top_offset(10 downto 0);
+  value_1(3 downto 0) <= score_r(3 downto 0);
+  value_2(3 downto 0) <= score_l(3 downto 0);
+  video_enable_i_2 <= video_enable_i;
+  video_enable_o <= paint_seg_r_video_enable_o;
+  vsync_i_2 <= vsync_i;
+  vsync_o <= paint_seg_r_vsync_o;
+paint_seg_l: entity work.paint_seg_l_imp_1533V5U
+     port map (
+      clk => clk_1,
+      hsync_i => hsync_i_2,
+      hsync_o => paint_seg_l_hsync_o,
+      pxlClk => pxlClk_1,
+      pxl_value_i => pxl_value_i_3,
+      pxl_value_o => pxl_value_i_1,
+      pxl_x_i(10 downto 0) => pxl_x_i_2(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_seg_l_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => pxl_y_i_2(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_seg_l_pxl_y_o(10 downto 0),
+      reset => reset_1,
+      seg_pos_x(10 downto 0) => scoreboard_controller_0_seg_l_pos_x(10 downto 0),
+      seg_pos_y(10 downto 0) => scoreboard_controller_0_seg_l_pos_y(10 downto 0),
+      seg_size_x(10 downto 0) => seg_size_x_1(10 downto 0),
+      seg_size_y(10 downto 0) => seg_size_y_1(10 downto 0),
+      value(3 downto 0) => value_2(3 downto 0),
+      video_enable_i => video_enable_i_2,
+      video_enable_o => paint_seg_l_video_enable_o,
+      vsync_i => vsync_i_2,
+      vsync_o => paint_seg_l_vsync_o
+    );
+paint_seg_r: entity work.paint_seg_r_imp_VF0S4G
+     port map (
+      clk => clk_1,
+      hsync_i => paint_seg_l_hsync_o,
+      hsync_o => paint_seg_r_hsync_o,
+      pxlClk => pxlClk_1,
+      pxl_value_i => pxl_value_i_1,
+      pxl_value_o => paint_seg_r_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_seg_l_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_seg_r_pxl_x_o(10 downto 0),
+      pxl_y_i(10 downto 0) => paint_seg_l_pxl_y_o(10 downto 0),
+      pxl_y_o(10 downto 0) => paint_seg_r_pxl_y_o(10 downto 0),
+      reset => reset_1,
+      seg_pos_x(10 downto 0) => scoreboard_controller_0_seg_r_pos_x(10 downto 0),
+      seg_pos_y(10 downto 0) => scoreboard_controller_0_seg_r_pos_y(10 downto 0),
+      seg_size_x(10 downto 0) => seg_size_x_1(10 downto 0),
+      seg_size_y(10 downto 0) => seg_size_y_1(10 downto 0),
+      value(3 downto 0) => value_1(3 downto 0),
+      video_enable_i => paint_seg_l_video_enable_o,
+      video_enable_o => paint_seg_r_video_enable_o,
+      vsync_i => paint_seg_l_vsync_o,
+      vsync_o => paint_seg_r_vsync_o
+    );
+scoreboard_controller_0: component blockdesign_scoreboard_controller_0_0
+     port map (
+      clk => clk_1,
+      screen_size_x(10 downto 0) => screen_size_x_0_1(10 downto 0),
+      seg_center_offset(10 downto 0) => seg_center_offset_0_1(10 downto 0),
+      seg_l_pos_x(10 downto 0) => scoreboard_controller_0_seg_l_pos_x(10 downto 0),
+      seg_l_pos_y(10 downto 0) => scoreboard_controller_0_seg_l_pos_y(10 downto 0),
+      seg_r_pos_x(10 downto 0) => scoreboard_controller_0_seg_r_pos_x(10 downto 0),
+      seg_r_pos_y(10 downto 0) => scoreboard_controller_0_seg_r_pos_y(10 downto 0),
+      seg_size_x(10 downto 0) => seg_size_x_1(10 downto 0),
+      seg_top_offset(10 downto 0) => seg_top_offset_0_1(10 downto 0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity blockdesign is
   port (
     btn_down_l : in STD_LOGIC;
@@ -301,7 +1518,7 @@ entity blockdesign is
     trigger_r : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=35,numReposBlks=33,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=18,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=2,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of blockdesign : entity is "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=59,numReposBlks=54,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=35,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=2,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of blockdesign : entity is "blockdesign.hwdef";
 end blockdesign;
@@ -429,69 +1646,6 @@ architecture STRUCTURE of blockdesign is
     clk_o : out STD_LOGIC
   );
   end component blockdesign_clk_divider_0_0;
-  component blockdesign_paint_rectangle_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    video_enable_i : in STD_LOGIC;
-    hsync_i : in STD_LOGIC;
-    vsync_i : in STD_LOGIC;
-    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_value_i : in STD_LOGIC;
-    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    video_enable_o : out STD_LOGIC;
-    hsync_o : out STD_LOGIC;
-    vsync_o : out STD_LOGIC;
-    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_value_o : out STD_LOGIC
-  );
-  end component blockdesign_paint_rectangle_0_0;
-  component blockdesign_paint_rectangle_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    video_enable_i : in STD_LOGIC;
-    hsync_i : in STD_LOGIC;
-    vsync_i : in STD_LOGIC;
-    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_value_i : in STD_LOGIC;
-    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    video_enable_o : out STD_LOGIC;
-    hsync_o : out STD_LOGIC;
-    vsync_o : out STD_LOGIC;
-    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_value_o : out STD_LOGIC
-  );
-  end component blockdesign_paint_rectangle_1_0;
-  component blockdesign_paint_rectangle_2_0 is
-  port (
-    clk : in STD_LOGIC;
-    video_enable_i : in STD_LOGIC;
-    hsync_i : in STD_LOGIC;
-    vsync_i : in STD_LOGIC;
-    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_value_i : in STD_LOGIC;
-    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    video_enable_o : out STD_LOGIC;
-    hsync_o : out STD_LOGIC;
-    vsync_o : out STD_LOGIC;
-    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_value_o : out STD_LOGIC
-  );
-  end component blockdesign_paint_rectangle_2_0;
   component blockdesign_pixel_counter_0_0 is
   port (
     pxCLK_i : in STD_LOGIC;
@@ -560,6 +1714,74 @@ architecture STRUCTURE of blockdesign is
     pxl_value_o : out STD_LOGIC
   );
   end component blockdesign_paint_centerline_0_0;
+  component blockdesign_paint_rectangle_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_0_0;
+  component blockdesign_paint_rectangle_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_1_0;
+  component blockdesign_paint_rectangle_2_0 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    rect_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    rect_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component blockdesign_paint_rectangle_2_0;
+  signal Constants_score_seg_size_x : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal Constants_scoreboard_center_offset : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net : STD_LOGIC;
   signal Net3 : STD_LOGIC;
   signal Net4 : STD_LOGIC;
@@ -589,8 +1811,7 @@ architecture STRUCTURE of blockdesign is
   signal paint_ball_video_enable_o : STD_LOGIC;
   signal paint_centerline_0_hsync_o : STD_LOGIC;
   signal paint_centerline_0_pxl_value_o : STD_LOGIC;
-  signal paint_centerline_0_video_enable_o : STD_LOGIC;
-  signal paint_centerline_0_vsync_o : STD_LOGIC;
+  signal paint_centerline_0_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal paint_paddle_l_video_enable_o : STD_LOGIC;
   signal paint_paddle_r_video_enable_o : STD_LOGIC;
   signal paint_rectangle_0_hsync_o : STD_LOGIC;
@@ -608,6 +1829,10 @@ architecture STRUCTURE of blockdesign is
   signal paint_rectangle_2_pxl_x_o : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal paint_rectangle_2_pxl_y_o : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal paint_rectangle_2_vsync_o : STD_LOGIC;
+  signal paint_scoreboard_hsync_o : STD_LOGIC;
+  signal paint_scoreboard_pxl_value_o : STD_LOGIC;
+  signal paint_scoreboard_video_enable_o : STD_LOGIC;
+  signal paint_scoreboard_vsync_o : STD_LOGIC;
   signal pixel_counter_0_hpx_o : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal pixel_counter_0_hsync_o : STD_LOGIC;
   signal pixel_counter_0_video_enable_o : STD_LOGIC;
@@ -619,11 +1844,16 @@ architecture STRUCTURE of blockdesign is
   signal position_paddles_0_paddle_l_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal position_paddles_0_paddle_r_pos_x : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal position_paddles_0_paddle_r_pos_y : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal pxl_y_i_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal rgb2dvi_0_TMDS_Clk_n : STD_LOGIC;
   signal rgb2dvi_0_TMDS_Clk_p : STD_LOGIC;
   signal rgb2dvi_0_TMDS_Data_n : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal rgb2dvi_0_TMDS_Data_p : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal score_counter_0_game_reset : STD_LOGIC;
+  signal score_counter_0_score_right : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal score_l_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal score_seg_size_y_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal scoreboard_top_offset_1 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal sensor_0_1 : STD_LOGIC;
   signal sensor_1_1 : STD_LOGIC;
   signal switch_0_1 : STD_LOGIC;
@@ -638,13 +1868,13 @@ architecture STRUCTURE of blockdesign is
   signal video_buffer_0_VSync_o : STD_LOGIC;
   signal video_buffer_0_Vdata_enable_o : STD_LOGIC;
   signal video_buffer_0_Vdata_o : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal video_enable_i_1 : STD_LOGIC;
+  signal vsync_i_1 : STD_LOGIC;
   signal xlconstant_5_dout : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal xlconstant_6_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal zero_dout : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_paint_centerline_0_pxl_x_o_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal NLW_paint_centerline_0_pxl_y_o_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal NLW_score_counter_0_score_left_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_score_counter_0_score_right_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_paint_scoreboard_pxl_x_o_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal NLW_paint_scoreboard_pxl_y_o_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal NLW_v_tc_0_fsync_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of ext_clk : signal is "xilinx.com:signal:clock:1.0 CLK.EXT_CLK CLK";
@@ -681,6 +1911,10 @@ Constants: entity work.Constants_imp_15CBHTD
       paddle_offset_x(10 downto 0) => xlconstant_5_dout(10 downto 0),
       paddle_size_x(10 downto 0) => Net7(10 downto 0),
       paddle_size_y(10 downto 0) => Net8(10 downto 0),
+      score_seg_size_x(10 downto 0) => Constants_score_seg_size_x(10 downto 0),
+      score_seg_size_y(10 downto 0) => score_seg_size_y_1(10 downto 0),
+      scoreboard_center_offset(10 downto 0) => Constants_scoreboard_center_offset(10 downto 0),
+      scoreboard_top_offset(10 downto 0) => scoreboard_top_offset_1(10 downto 0),
       screen_size_x(10 downto 0) => Net5(10 downto 0),
       screen_size_y(10 downto 0) => Net6(10 downto 0)
     );
@@ -724,7 +1958,7 @@ collision_detection_0: component blockdesign_collision_detection_0_0
 color_generator_0: component blockdesign_color_generator_0_0
      port map (
       data_o(23 downto 0) => color_generator_0_data_o(23 downto 0),
-      enable_i => paint_centerline_0_pxl_value_o
+      enable_i => paint_scoreboard_pxl_value_o
     );
 controllers: entity work.controllers_imp_Z9LQ6G
      port map (
@@ -749,6 +1983,7 @@ one: component blockdesign_xlconstant_0_8
 paint_ball: component blockdesign_paint_rectangle_0_0
      port map (
       clk => clk_wiz_0_clk_hdmi,
+      enable => enable_0_1,
       hsync_i => pixel_counter_0_hsync_o,
       hsync_o => paint_rectangle_0_hsync_o,
       pxl_value_i => zero_dout(0),
@@ -774,19 +2009,20 @@ paint_centerline_0: component blockdesign_paint_centerline_0_0
       pxl_value_i => paint_rectangle_2_pxl_value_o,
       pxl_value_o => paint_centerline_0_pxl_value_o,
       pxl_x_i(10 downto 0) => paint_rectangle_2_pxl_x_o(10 downto 0),
-      pxl_x_o(10 downto 0) => NLW_paint_centerline_0_pxl_x_o_UNCONNECTED(10 downto 0),
+      pxl_x_o(10 downto 0) => paint_centerline_0_pxl_x_o(10 downto 0),
       pxl_y_i(10 downto 0) => paint_rectangle_2_pxl_y_o(10 downto 0),
-      pxl_y_o(10 downto 0) => NLW_paint_centerline_0_pxl_y_o_UNCONNECTED(10 downto 0),
+      pxl_y_o(10 downto 0) => pxl_y_i_1(10 downto 0),
       screen_size_x(10 downto 0) => Net5(10 downto 0),
       screen_size_y(10 downto 0) => Net6(10 downto 0),
       video_enable_i => paint_paddle_r_video_enable_o,
-      video_enable_o => paint_centerline_0_video_enable_o,
+      video_enable_o => video_enable_i_1,
       vsync_i => paint_rectangle_2_vsync_o,
-      vsync_o => paint_centerline_0_vsync_o
+      vsync_o => vsync_i_1
     );
 paint_paddle_l: component blockdesign_paint_rectangle_1_0
      port map (
       clk => clk_wiz_0_clk_hdmi,
+      enable => enable_0_1,
       hsync_i => paint_rectangle_0_hsync_o,
       hsync_o => paint_rectangle_1_hsync_o,
       pxl_value_i => paint_rectangle_0_pxl_value_o,
@@ -807,6 +2043,7 @@ paint_paddle_l: component blockdesign_paint_rectangle_1_0
 paint_paddle_r: component blockdesign_paint_rectangle_2_0
      port map (
       clk => clk_wiz_0_clk_hdmi,
+      enable => enable_0_1,
       hsync_i => paint_rectangle_1_hsync_o,
       hsync_o => paint_rectangle_2_hsync_o,
       pxl_value_i => paint_rectangle_1_pxl_value_o,
@@ -823,6 +2060,31 @@ paint_paddle_r: component blockdesign_paint_rectangle_2_0
       video_enable_o => paint_paddle_r_video_enable_o,
       vsync_i => paint_rectangle_1_vsync_o,
       vsync_o => paint_rectangle_2_vsync_o
+    );
+paint_scoreboard: entity work.paint_scoreboard_imp_1HSEOW0
+     port map (
+      clk => Net,
+      hsync_i => paint_centerline_0_hsync_o,
+      hsync_o => paint_scoreboard_hsync_o,
+      pxlClk => clk_wiz_0_clk_hdmi,
+      pxl_value_i => paint_centerline_0_pxl_value_o,
+      pxl_value_o => paint_scoreboard_pxl_value_o,
+      pxl_x_i(10 downto 0) => paint_centerline_0_pxl_x_o(10 downto 0),
+      pxl_x_o(10 downto 0) => NLW_paint_scoreboard_pxl_x_o_UNCONNECTED(10 downto 0),
+      pxl_y_i(10 downto 0) => pxl_y_i_1(10 downto 0),
+      pxl_y_o(10 downto 0) => NLW_paint_scoreboard_pxl_y_o_UNCONNECTED(10 downto 0),
+      reset => Net3,
+      score_l(3 downto 0) => score_l_1(3 downto 0),
+      score_r(3 downto 0) => score_counter_0_score_right(3 downto 0),
+      score_seg_size_x(10 downto 0) => Constants_score_seg_size_x(10 downto 0),
+      score_seg_size_y(10 downto 0) => score_seg_size_y_1(10 downto 0),
+      scoreboard_center_offset(10 downto 0) => Constants_scoreboard_center_offset(10 downto 0),
+      scoreboard_top_offset(10 downto 0) => scoreboard_top_offset_1(10 downto 0),
+      screen_size_x(10 downto 0) => Net5(10 downto 0),
+      video_enable_i => video_enable_i_1,
+      video_enable_o => paint_scoreboard_video_enable_o,
+      vsync_i => vsync_i_1,
+      vsync_o => paint_scoreboard_vsync_o
     );
 pixel_counter_0: component blockdesign_pixel_counter_0_0
      port map (
@@ -888,8 +2150,8 @@ score_counter_0: component blockdesign_score_counter_0_0
       point_l => collision_detection_0_collision_ball_edge_r,
       point_r => collision_detection_0_collision_ball_edge_l,
       reset => Net3,
-      score_left(3 downto 0) => NLW_score_counter_0_score_left_UNCONNECTED(3 downto 0),
-      score_right(3 downto 0) => NLW_score_counter_0_score_right_UNCONNECTED(3 downto 0)
+      score_left(3 downto 0) => score_l_1(3 downto 0),
+      score_right(3 downto 0) => score_counter_0_score_right(3 downto 0)
     );
 util_vector_logic_1: component blockdesign_util_vector_logic_0_1
      port map (
@@ -919,11 +2181,11 @@ v_tc_0: component blockdesign_v_tc_0_0
     );
 video_buffer_0: component blockdesign_video_buffer_0_0
      port map (
-      HSync_i => paint_centerline_0_hsync_o,
+      HSync_i => paint_scoreboard_hsync_o,
       HSync_o => video_buffer_0_HSync_o,
-      VSync_i => paint_centerline_0_vsync_o,
+      VSync_i => paint_scoreboard_vsync_o,
       VSync_o => video_buffer_0_VSync_o,
-      Vdata_enable_i => paint_centerline_0_video_enable_o,
+      Vdata_enable_i => paint_scoreboard_video_enable_o,
       Vdata_enable_o => video_buffer_0_Vdata_enable_o,
       Vdata_i(23 downto 0) => color_generator_0_data_o(23 downto 0),
       Vdata_o(23 downto 0) => video_buffer_0_Vdata_o(23 downto 0),

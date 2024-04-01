@@ -37,6 +37,7 @@
     "boundary": {
       "ports": {
         "clk": [ { "direction": "in" } ],
+        "enable": [ { "direction": "in" } ],
         "video_enable_i": [ { "direction": "in" } ],
         "hsync_i": [ { "direction": "in" } ],
         "vsync_i": [ { "direction": "in" } ],

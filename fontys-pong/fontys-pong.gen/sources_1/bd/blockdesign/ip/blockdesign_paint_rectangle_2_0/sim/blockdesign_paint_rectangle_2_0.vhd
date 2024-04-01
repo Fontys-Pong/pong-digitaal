@@ -56,6 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY blockdesign_paint_rectangle_2_0 IS
   PORT (
     clk : IN STD_LOGIC;
+    enable : IN STD_LOGIC;
     video_enable_i : IN STD_LOGIC;
     hsync_i : IN STD_LOGIC;
     vsync_i : IN STD_LOGIC;
@@ -81,6 +82,7 @@ ARCHITECTURE blockdesign_paint_rectangle_2_0_arch OF blockdesign_paint_rectangle
   COMPONENT paint_rectangle IS
     PORT (
       clk : IN STD_LOGIC;
+      enable : IN STD_LOGIC;
       video_enable_i : IN STD_LOGIC;
       hsync_i : IN STD_LOGIC;
       vsync_i : IN STD_LOGIC;
@@ -107,6 +109,7 @@ BEGIN
   U0 : paint_rectangle
     PORT MAP (
       clk => clk,
+      enable => enable,
       video_enable_i => video_enable_i,
       hsync_i => hsync_i,
       vsync_i => vsync_i,

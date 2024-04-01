@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Tue Mar 26 16:00:59 2024
+| Date             : Mon Apr  1 18:21:17 2024
 | Host             : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command          : report_power -file blockdesign_wrapper_power_routed.rpt -pb blockdesign_wrapper_power_summary_routed.pb -rpx blockdesign_wrapper_power_routed.rpx
 | Design           : blockdesign_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.850        |
+| Total On-Chip Power (W)  | 0.867        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.732        |
+| Dynamic (W)              | 0.748        |
 | Device Static (W)        | 0.118        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 75.2         |
-| Junction Temperature (C) | 34.8         |
+| Max Ambient (C)          | 75.0         |
+| Junction Temperature (C) | 35.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.016 |       11 |       --- |             --- |
-| Slice Logic    |     0.107 |     5822 |       --- |             --- |
-|   LUT as Logic |     0.098 |     3015 |     53200 |            5.67 |
-|   CARRY4       |     0.008 |      753 |     13300 |            5.66 |
-|   Register     |    <0.001 |      784 |    106400 |            0.74 |
+| Clocks         |     0.020 |       11 |       --- |             --- |
+| Slice Logic    |     0.111 |     7278 |       --- |             --- |
+|   LUT as Logic |     0.102 |     3601 |     53200 |            6.77 |
+|   CARRY4       |     0.008 |     1005 |     13300 |            7.56 |
+|   Register     |    <0.001 |     1173 |    106400 |            1.10 |
 |   F7/F8 Muxes  |    <0.001 |        2 |     53200 |           <0.01 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |      105 |       --- |             --- |
-| Signals        |     0.089 |     4877 |       --- |             --- |
+|   Others       |     0.000 |      190 |       --- |             --- |
+| Signals        |     0.096 |     5793 |       --- |             --- |
 | MMCM           |     0.211 |        2 |         4 |           50.00 |
 | PLL            |     0.137 |        1 |         4 |           25.00 |
 | DSPs           |     0.021 |        8 |       220 |            3.64 |
-| I/O            |     0.151 |       21 |       125 |           16.80 |
+| I/O            |     0.152 |       21 |       125 |           16.80 |
 | Static Power   |     0.118 |          |           |                 |
-| Total          |     0.850 |          |           |                 |
+| Total          |     0.867 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.262 |       0.251 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.278 |       0.267 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.199 |       0.186 |      0.012 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.045 |       0.044 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -160,23 +160,26 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| blockdesign_wrapper           |     0.732 |
-|   blockdesign_i               |     0.730 |
+| blockdesign_wrapper           |     0.748 |
+|   blockdesign_i               |     0.746 |
 |     clk_wiz                   |     0.095 |
 |       inst                    |     0.095 |
 |     clk_wiz_0                 |     0.117 |
 |       inst                    |     0.117 |
 |     collision_detection_0     |     0.008 |
 |       U0                      |     0.008 |
-|     controllers               |     0.188 |
-|       controller_ultrasonic_0 |     0.094 |
-|       controller_ultrasonic_1 |     0.094 |
+|     controllers               |     0.194 |
+|       controller_ultrasonic_0 |     0.095 |
+|       controller_ultrasonic_1 |     0.098 |
+|     paint_scoreboard          |     0.006 |
+|       paint_seg_l             |     0.003 |
+|       paint_seg_r             |     0.003 |
 |     position_ball_0           |     0.004 |
 |       U0                      |     0.004 |
-|     position_paddles_0        |     0.012 |
-|       U0                      |     0.012 |
-|     rgb2dvi_0                 |     0.300 |
-|       U0                      |     0.300 |
+|     position_paddles_0        |     0.013 |
+|       U0                      |     0.013 |
+|     rgb2dvi_0                 |     0.302 |
+|       U0                      |     0.302 |
 |     v_tc_0                    |     0.002 |
 |       U0                      |     0.002 |
 +-------------------------------+-----------+

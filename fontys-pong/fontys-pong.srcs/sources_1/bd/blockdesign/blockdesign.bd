@@ -20,7 +20,11 @@
         "paddle_size_y": "",
         "ball_size": "",
         "paddle_offset_x": "",
-        "max_score": ""
+        "max_score": "",
+        "score_seg_size_x": "",
+        "score_seg_size_y": "",
+        "scoreboard_center_offset": "",
+        "scoreboard_top_offset": ""
       },
       "controllers": {
         "controller_ultrasonic_0": "",
@@ -40,14 +44,37 @@
       "collision_detection_0": "",
       "position_ball_0": "",
       "clk_divider_0": "",
-      "paint_ball": "",
-      "paint_paddle_l": "",
-      "paint_paddle_r": "",
       "pixel_counter_0": "",
       "color_generator_0": "",
       "video_buffer_0": "",
       "position_paddles_0": "",
-      "paint_centerline_0": ""
+      "paint_centerline_0": "",
+      "paint_scoreboard": {
+        "paint_seg_l": {
+          "paint_rectangle_1": "",
+          "paint_rectangle_2": "",
+          "paint_rectangle_3": "",
+          "paint_rectangle_4": "",
+          "paint_rectangle_5": "",
+          "paint_rectangle_6": "",
+          "paint_rectangle_0": "",
+          "seven_seg_display_co_0": ""
+        },
+        "paint_seg_r": {
+          "paint_rectangle_1": "",
+          "paint_rectangle_2": "",
+          "paint_rectangle_3": "",
+          "paint_rectangle_4": "",
+          "paint_rectangle_5": "",
+          "paint_rectangle_6": "",
+          "paint_rectangle_0": "",
+          "seven_seg_display_co_0": ""
+        },
+        "scoreboard_controller_0": ""
+      },
+      "paint_ball": "",
+      "paint_paddle_l": "",
+      "paint_paddle_r": ""
     },
     "ports": {
       "trigger_l": {
@@ -288,6 +315,26 @@
             "direction": "O",
             "left": "3",
             "right": "0"
+          },
+          "score_seg_size_x": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "score_seg_size_y": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "scoreboard_center_offset": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "scoreboard_top_offset": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
           }
         },
         "components": {
@@ -382,10 +429,66 @@
             "inst_hier_path": "Constants/max_score",
             "parameters": {
               "CONST_VAL": {
-                "value": "3"
+                "value": "9"
               },
               "CONST_WIDTH": {
                 "value": "4"
+              }
+            }
+          },
+          "score_seg_size_x": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_screen_size_y_0",
+            "xci_path": "ip\\blockdesign_screen_size_y_0\\blockdesign_screen_size_y_0.xci",
+            "inst_hier_path": "Constants/score_seg_size_x",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "50"
+              },
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "score_seg_size_y": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_screen_size_y_1",
+            "xci_path": "ip\\blockdesign_screen_size_y_1\\blockdesign_screen_size_y_1.xci",
+            "inst_hier_path": "Constants/score_seg_size_y",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "100"
+              },
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "scoreboard_center_offset": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_screen_size_y_2",
+            "xci_path": "ip\\blockdesign_screen_size_y_2\\blockdesign_screen_size_y_2.xci",
+            "inst_hier_path": "Constants/scoreboard_center_offset",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "100"
+              },
+              "CONST_WIDTH": {
+                "value": "11"
+              }
+            }
+          },
+          "scoreboard_top_offset": {
+            "vlnv": "xilinx.com:ip:xlconstant:1.1",
+            "xci_name": "blockdesign_screen_size_y_3",
+            "xci_path": "ip\\blockdesign_screen_size_y_3\\blockdesign_screen_size_y_3.xci",
+            "inst_hier_path": "Constants/scoreboard_top_offset",
+            "parameters": {
+              "CONST_VAL": {
+                "value": "20"
+              },
+              "CONST_WIDTH": {
+                "value": "11"
               }
             }
           }
@@ -419,6 +522,30 @@
             "ports": [
               "ball_size/dout",
               "ball_size"
+            ]
+          },
+          "score_seg_size_x_dout": {
+            "ports": [
+              "score_seg_size_x/dout",
+              "score_seg_size_x"
+            ]
+          },
+          "score_seg_size_y_dout": {
+            "ports": [
+              "score_seg_size_y/dout",
+              "score_seg_size_y"
+            ]
+          },
+          "scoreboard_center_offset_dout": {
+            "ports": [
+              "scoreboard_center_offset/dout",
+              "scoreboard_center_offset"
+            ]
+          },
+          "scoreboard_top_offset_dout": {
+            "ports": [
+              "scoreboard_top_offset/dout",
+              "scoreboard_top_offset"
             ]
           },
           "xlconstant_5_dout": {
@@ -1331,291 +1458,6 @@
           }
         }
       },
-      "paint_ball": {
-        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
-        "xci_name": "blockdesign_paint_rectangle_0_0",
-        "xci_path": "ip\\blockdesign_paint_rectangle_0_0\\blockdesign_paint_rectangle_0_0.xci",
-        "inst_hier_path": "paint_ball",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "paint_rectangle",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "148500000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "video_enable_i": {
-            "direction": "I"
-          },
-          "hsync_i": {
-            "direction": "I"
-          },
-          "vsync_i": {
-            "direction": "I"
-          },
-          "pxl_x_i": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_y_i": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_value_i": {
-            "direction": "I"
-          },
-          "rect_pos_x": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_pos_y": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_size_x": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_size_y": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "video_enable_o": {
-            "direction": "O"
-          },
-          "hsync_o": {
-            "direction": "O"
-          },
-          "vsync_o": {
-            "direction": "O"
-          },
-          "pxl_x_o": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_y_o": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_value_o": {
-            "direction": "O"
-          }
-        }
-      },
-      "paint_paddle_l": {
-        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
-        "xci_name": "blockdesign_paint_rectangle_1_0",
-        "xci_path": "ip\\blockdesign_paint_rectangle_1_0\\blockdesign_paint_rectangle_1_0.xci",
-        "inst_hier_path": "paint_paddle_l",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "paint_rectangle",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "148500000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "video_enable_i": {
-            "direction": "I"
-          },
-          "hsync_i": {
-            "direction": "I"
-          },
-          "vsync_i": {
-            "direction": "I"
-          },
-          "pxl_x_i": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_y_i": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_value_i": {
-            "direction": "I"
-          },
-          "rect_pos_x": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_pos_y": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_size_x": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_size_y": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "video_enable_o": {
-            "direction": "O"
-          },
-          "hsync_o": {
-            "direction": "O"
-          },
-          "vsync_o": {
-            "direction": "O"
-          },
-          "pxl_x_o": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_y_o": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_value_o": {
-            "direction": "O"
-          }
-        }
-      },
-      "paint_paddle_r": {
-        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
-        "xci_name": "blockdesign_paint_rectangle_2_0",
-        "xci_path": "ip\\blockdesign_paint_rectangle_2_0\\blockdesign_paint_rectangle_2_0.xci",
-        "inst_hier_path": "paint_paddle_r",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "paint_rectangle",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "148500000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "video_enable_i": {
-            "direction": "I"
-          },
-          "hsync_i": {
-            "direction": "I"
-          },
-          "vsync_i": {
-            "direction": "I"
-          },
-          "pxl_x_i": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_y_i": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_value_i": {
-            "direction": "I"
-          },
-          "rect_pos_x": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_pos_y": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_size_x": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "rect_size_y": {
-            "direction": "I",
-            "left": "10",
-            "right": "0"
-          },
-          "video_enable_o": {
-            "direction": "O"
-          },
-          "hsync_o": {
-            "direction": "O"
-          },
-          "vsync_o": {
-            "direction": "O"
-          },
-          "pxl_x_o": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_y_o": {
-            "direction": "O",
-            "left": "10",
-            "right": "0"
-          },
-          "pxl_value_o": {
-            "direction": "O"
-          }
-        }
-      },
       "pixel_counter_0": {
         "vlnv": "xilinx.com:module_ref:pixel_counter:1.0",
         "xci_name": "blockdesign_pixel_counter_0_0",
@@ -1912,15 +1754,3600 @@
             "direction": "O"
           }
         }
+      },
+      "paint_scoreboard": {
+        "ports": {
+          "video_enable_i": {
+            "direction": "I"
+          },
+          "hsync_i": {
+            "direction": "I"
+          },
+          "vsync_i": {
+            "direction": "I"
+          },
+          "pxl_x_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "video_enable_o": {
+            "direction": "O"
+          },
+          "hsync_o": {
+            "direction": "O"
+          },
+          "vsync_o": {
+            "direction": "O"
+          },
+          "pxl_x_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_o": {
+            "direction": "O"
+          },
+          "pxlClk": {
+            "direction": "I"
+          },
+          "clk": {
+            "direction": "I"
+          },
+          "reset": {
+            "direction": "I"
+          },
+          "score_l": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "score_r": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "score_seg_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "score_seg_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "screen_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "scoreboard_center_offset": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "scoreboard_top_offset": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          }
+        },
+        "components": {
+          "paint_seg_l": {
+            "ports": {
+              "pxlClk": {
+                "direction": "I"
+              },
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "value": {
+                "direction": "I",
+                "left": "3",
+                "right": "0"
+              },
+              "seg_pos_x": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_pos_y": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_size_x": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_size_y": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "video_enable_i": {
+                "direction": "I"
+              },
+              "hsync_i": {
+                "direction": "I"
+              },
+              "vsync_i": {
+                "direction": "I"
+              },
+              "pxl_x_i": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "pxl_y_i": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "pxl_value_i": {
+                "direction": "I"
+              },
+              "video_enable_o": {
+                "direction": "O"
+              },
+              "hsync_o": {
+                "direction": "O"
+              },
+              "vsync_o": {
+                "direction": "O"
+              },
+              "pxl_x_o": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              },
+              "pxl_y_o": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              },
+              "pxl_value_o": {
+                "direction": "O"
+              }
+            },
+            "components": {
+              "paint_rectangle_1": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_0_2",
+                "xci_path": "ip\\blockdesign_paint_rectangle_0_2\\blockdesign_paint_rectangle_0_2.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_l/paint_rectangle_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_2": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_0_3",
+                "xci_path": "ip\\blockdesign_paint_rectangle_0_3\\blockdesign_paint_rectangle_0_3.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_l/paint_rectangle_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_3": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_0_4",
+                "xci_path": "ip\\blockdesign_paint_rectangle_0_4\\blockdesign_paint_rectangle_0_4.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_l/paint_rectangle_3",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_4": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_0_5",
+                "xci_path": "ip\\blockdesign_paint_rectangle_0_5\\blockdesign_paint_rectangle_0_5.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_l/paint_rectangle_4",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_5": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_0_6",
+                "xci_path": "ip\\blockdesign_paint_rectangle_0_6\\blockdesign_paint_rectangle_0_6.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_l/paint_rectangle_5",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_6": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_0_7",
+                "xci_path": "ip\\blockdesign_paint_rectangle_0_7\\blockdesign_paint_rectangle_0_7.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_l/paint_rectangle_6",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_0": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_0_1",
+                "xci_path": "ip\\blockdesign_paint_rectangle_0_1\\blockdesign_paint_rectangle_0_1.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_l/paint_rectangle_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "seven_seg_display_co_0": {
+                "vlnv": "xilinx.com:module_ref:seven_seg_display_controller:1.0",
+                "xci_name": "blockdesign_seven_seg_display_co_0_0",
+                "xci_path": "ip\\blockdesign_seven_seg_display_co_0_0\\blockdesign_seven_seg_display_co_0_0.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_l/seven_seg_display_co_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "seven_seg_display_controller",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "ASSOCIATED_RESET": {
+                        "value": "reset",
+                        "value_src": "constant"
+                      },
+                      "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "reset": {
+                    "type": "rst",
+                    "direction": "I",
+                    "parameters": {
+                      "POLARITY": {
+                        "value": "ACTIVE_HIGH"
+                      }
+                    }
+                  },
+                  "value": {
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "seg_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_a": {
+                    "direction": "O"
+                  },
+                  "seg_b": {
+                    "direction": "O"
+                  },
+                  "seg_c": {
+                    "direction": "O"
+                  },
+                  "seg_d": {
+                    "direction": "O"
+                  },
+                  "seg_e": {
+                    "direction": "O"
+                  },
+                  "seg_f": {
+                    "direction": "O"
+                  },
+                  "seg_g": {
+                    "direction": "O"
+                  },
+                  "seg_hor_size_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_hor_size_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_ver_size_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_ver_size_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_a_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_a_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_b_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_b_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_c_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_c_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_d_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_d_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_e_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_e_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_f_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_f_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_g_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_g_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "Net": {
+                "ports": [
+                  "pxlClk",
+                  "paint_rectangle_6/clk",
+                  "paint_rectangle_5/clk",
+                  "paint_rectangle_4/clk",
+                  "paint_rectangle_3/clk",
+                  "paint_rectangle_2/clk",
+                  "paint_rectangle_1/clk",
+                  "paint_rectangle_0/clk"
+                ]
+              },
+              "clk_1_1": {
+                "ports": [
+                  "clk",
+                  "seven_seg_display_co_0/clk"
+                ]
+              },
+              "hsync_i_0_1": {
+                "ports": [
+                  "hsync_i",
+                  "paint_rectangle_0/hsync_i"
+                ]
+              },
+              "paint_rectangle_0_hsync_o": {
+                "ports": [
+                  "paint_rectangle_0/hsync_o",
+                  "paint_rectangle_1/hsync_i"
+                ]
+              },
+              "paint_rectangle_0_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_0/pxl_value_o",
+                  "paint_rectangle_1/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_0_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_0/pxl_x_o",
+                  "paint_rectangle_1/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_0_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_0/pxl_y_o",
+                  "paint_rectangle_1/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_0_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_0/video_enable_o",
+                  "paint_rectangle_1/video_enable_i"
+                ]
+              },
+              "paint_rectangle_0_vsync_o": {
+                "ports": [
+                  "paint_rectangle_0/vsync_o",
+                  "paint_rectangle_1/vsync_i"
+                ]
+              },
+              "paint_rectangle_1_hsync_o": {
+                "ports": [
+                  "paint_rectangle_1/hsync_o",
+                  "paint_rectangle_2/hsync_i"
+                ]
+              },
+              "paint_rectangle_1_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_1/pxl_value_o",
+                  "paint_rectangle_2/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_1_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_1/pxl_x_o",
+                  "paint_rectangle_2/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_1_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_1/pxl_y_o",
+                  "paint_rectangle_2/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_1_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_1/video_enable_o",
+                  "paint_rectangle_2/video_enable_i"
+                ]
+              },
+              "paint_rectangle_1_vsync_o": {
+                "ports": [
+                  "paint_rectangle_1/vsync_o",
+                  "paint_rectangle_2/vsync_i"
+                ]
+              },
+              "paint_rectangle_2_hsync_o": {
+                "ports": [
+                  "paint_rectangle_2/hsync_o",
+                  "paint_rectangle_3/hsync_i"
+                ]
+              },
+              "paint_rectangle_2_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_2/pxl_value_o",
+                  "paint_rectangle_3/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_2_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_2/pxl_x_o",
+                  "paint_rectangle_3/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_2_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_2/pxl_y_o",
+                  "paint_rectangle_3/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_2_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_2/video_enable_o",
+                  "paint_rectangle_3/video_enable_i"
+                ]
+              },
+              "paint_rectangle_2_vsync_o": {
+                "ports": [
+                  "paint_rectangle_2/vsync_o",
+                  "paint_rectangle_3/vsync_i"
+                ]
+              },
+              "paint_rectangle_3_hsync_o": {
+                "ports": [
+                  "paint_rectangle_3/hsync_o",
+                  "paint_rectangle_4/hsync_i"
+                ]
+              },
+              "paint_rectangle_3_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_3/pxl_value_o",
+                  "paint_rectangle_4/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_3_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_3/pxl_x_o",
+                  "paint_rectangle_4/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_3_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_3/pxl_y_o",
+                  "paint_rectangle_4/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_3_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_3/video_enable_o",
+                  "paint_rectangle_4/video_enable_i"
+                ]
+              },
+              "paint_rectangle_3_vsync_o": {
+                "ports": [
+                  "paint_rectangle_3/vsync_o",
+                  "paint_rectangle_4/vsync_i"
+                ]
+              },
+              "paint_rectangle_4_hsync_o": {
+                "ports": [
+                  "paint_rectangle_4/hsync_o",
+                  "paint_rectangle_5/hsync_i"
+                ]
+              },
+              "paint_rectangle_4_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_4/pxl_value_o",
+                  "paint_rectangle_5/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_4_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_4/pxl_x_o",
+                  "paint_rectangle_5/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_4_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_4/pxl_y_o",
+                  "paint_rectangle_5/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_4_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_4/video_enable_o",
+                  "paint_rectangle_5/video_enable_i"
+                ]
+              },
+              "paint_rectangle_4_vsync_o": {
+                "ports": [
+                  "paint_rectangle_4/vsync_o",
+                  "paint_rectangle_5/vsync_i"
+                ]
+              },
+              "paint_rectangle_5_hsync_o": {
+                "ports": [
+                  "paint_rectangle_5/hsync_o",
+                  "paint_rectangle_6/hsync_i"
+                ]
+              },
+              "paint_rectangle_5_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_5/pxl_value_o",
+                  "paint_rectangle_6/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_5_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_5/pxl_x_o",
+                  "paint_rectangle_6/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_5_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_5/pxl_y_o",
+                  "paint_rectangle_6/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_5_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_5/video_enable_o",
+                  "paint_rectangle_6/video_enable_i"
+                ]
+              },
+              "paint_rectangle_5_vsync_o": {
+                "ports": [
+                  "paint_rectangle_5/vsync_o",
+                  "paint_rectangle_6/vsync_i"
+                ]
+              },
+              "paint_rectangle_6_hsync_o": {
+                "ports": [
+                  "paint_rectangle_6/hsync_o",
+                  "hsync_o"
+                ]
+              },
+              "paint_rectangle_6_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_6/pxl_value_o",
+                  "pxl_value_o"
+                ]
+              },
+              "paint_rectangle_6_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_6/pxl_x_o",
+                  "pxl_x_o"
+                ]
+              },
+              "paint_rectangle_6_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_6/pxl_y_o",
+                  "pxl_y_o"
+                ]
+              },
+              "paint_rectangle_6_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_6/video_enable_o",
+                  "video_enable_o"
+                ]
+              },
+              "paint_rectangle_6_vsync_o": {
+                "ports": [
+                  "paint_rectangle_6/vsync_o",
+                  "vsync_o"
+                ]
+              },
+              "pxl_value_i_0_1": {
+                "ports": [
+                  "pxl_value_i",
+                  "paint_rectangle_0/pxl_value_i"
+                ]
+              },
+              "pxl_x_i_0_1": {
+                "ports": [
+                  "pxl_x_i",
+                  "paint_rectangle_0/pxl_x_i"
+                ]
+              },
+              "pxl_y_i_0_1": {
+                "ports": [
+                  "pxl_y_i",
+                  "paint_rectangle_0/pxl_y_i"
+                ]
+              },
+              "reset_0_1": {
+                "ports": [
+                  "reset",
+                  "seven_seg_display_co_0/reset"
+                ]
+              },
+              "seg_pos_x_0_1": {
+                "ports": [
+                  "seg_pos_x",
+                  "seven_seg_display_co_0/seg_pos_x"
+                ]
+              },
+              "seg_pos_y_0_1": {
+                "ports": [
+                  "seg_pos_y",
+                  "seven_seg_display_co_0/seg_pos_y"
+                ]
+              },
+              "seg_size_x_0_1": {
+                "ports": [
+                  "seg_size_x",
+                  "seven_seg_display_co_0/seg_size_x"
+                ]
+              },
+              "seg_size_y_0_1": {
+                "ports": [
+                  "seg_size_y",
+                  "seven_seg_display_co_0/seg_size_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_a": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_a",
+                  "paint_rectangle_0/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_a_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_a_pos_x",
+                  "paint_rectangle_0/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_a_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_a_pos_y",
+                  "paint_rectangle_0/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_b": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_b",
+                  "paint_rectangle_1/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_b_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_b_pos_x",
+                  "paint_rectangle_1/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_b_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_b_pos_y",
+                  "paint_rectangle_1/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_c": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_c",
+                  "paint_rectangle_2/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_c_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_c_pos_x",
+                  "paint_rectangle_2/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_c_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_c_pos_y",
+                  "paint_rectangle_2/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_d": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_d",
+                  "paint_rectangle_3/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_d_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_d_pos_x",
+                  "paint_rectangle_3/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_d_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_d_pos_y",
+                  "paint_rectangle_3/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_e": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_e",
+                  "paint_rectangle_4/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_e_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_e_pos_x",
+                  "paint_rectangle_4/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_e_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_e_pos_y",
+                  "paint_rectangle_4/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_f": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_f",
+                  "paint_rectangle_5/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_f_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_f_pos_x",
+                  "paint_rectangle_5/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_f_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_f_pos_y",
+                  "paint_rectangle_5/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_g": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_g",
+                  "paint_rectangle_6/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_g_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_g_pos_x",
+                  "paint_rectangle_6/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_g_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_g_pos_y",
+                  "paint_rectangle_6/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_hor_size_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_hor_size_x",
+                  "paint_rectangle_0/rect_size_x",
+                  "paint_rectangle_3/rect_size_x",
+                  "paint_rectangle_6/rect_size_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_hor_size_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_hor_size_y",
+                  "paint_rectangle_0/rect_size_y",
+                  "paint_rectangle_3/rect_size_y",
+                  "paint_rectangle_6/rect_size_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_ver_size_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_ver_size_x",
+                  "paint_rectangle_1/rect_size_x",
+                  "paint_rectangle_2/rect_size_x",
+                  "paint_rectangle_4/rect_size_x",
+                  "paint_rectangle_5/rect_size_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_ver_size_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_ver_size_y",
+                  "paint_rectangle_1/rect_size_y",
+                  "paint_rectangle_2/rect_size_y",
+                  "paint_rectangle_4/rect_size_y",
+                  "paint_rectangle_5/rect_size_y"
+                ]
+              },
+              "value_0_1": {
+                "ports": [
+                  "value",
+                  "seven_seg_display_co_0/value"
+                ]
+              },
+              "video_enable_i_0_1": {
+                "ports": [
+                  "video_enable_i",
+                  "paint_rectangle_0/video_enable_i"
+                ]
+              },
+              "vsync_i_0_1": {
+                "ports": [
+                  "vsync_i",
+                  "paint_rectangle_0/vsync_i"
+                ]
+              }
+            }
+          },
+          "paint_seg_r": {
+            "ports": {
+              "pxlClk": {
+                "direction": "I"
+              },
+              "clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "value": {
+                "direction": "I",
+                "left": "3",
+                "right": "0"
+              },
+              "seg_pos_x": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_pos_y": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_size_x": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_size_y": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "video_enable_i": {
+                "direction": "I"
+              },
+              "hsync_i": {
+                "direction": "I"
+              },
+              "vsync_i": {
+                "direction": "I"
+              },
+              "pxl_x_i": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "pxl_y_i": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "pxl_value_i": {
+                "direction": "I"
+              },
+              "video_enable_o": {
+                "direction": "O"
+              },
+              "hsync_o": {
+                "direction": "O"
+              },
+              "vsync_o": {
+                "direction": "O"
+              },
+              "pxl_x_o": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              },
+              "pxl_y_o": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              },
+              "pxl_value_o": {
+                "direction": "O"
+              }
+            },
+            "components": {
+              "paint_rectangle_1": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_1_2",
+                "xci_path": "ip\\blockdesign_paint_rectangle_1_2\\blockdesign_paint_rectangle_1_2.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_r/paint_rectangle_1",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_2": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_2_2",
+                "xci_path": "ip\\blockdesign_paint_rectangle_2_2\\blockdesign_paint_rectangle_2_2.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_r/paint_rectangle_2",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_3": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_3_1",
+                "xci_path": "ip\\blockdesign_paint_rectangle_3_1\\blockdesign_paint_rectangle_3_1.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_r/paint_rectangle_3",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_4": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_4_1",
+                "xci_path": "ip\\blockdesign_paint_rectangle_4_1\\blockdesign_paint_rectangle_4_1.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_r/paint_rectangle_4",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_5": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_5_1",
+                "xci_path": "ip\\blockdesign_paint_rectangle_5_1\\blockdesign_paint_rectangle_5_1.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_r/paint_rectangle_5",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_6": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_6_1",
+                "xci_path": "ip\\blockdesign_paint_rectangle_6_1\\blockdesign_paint_rectangle_6_1.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_r/paint_rectangle_6",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "paint_rectangle_0": {
+                "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+                "xci_name": "blockdesign_paint_rectangle_0_10",
+                "xci_path": "ip\\blockdesign_paint_rectangle_0_10\\blockdesign_paint_rectangle_0_10.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_r/paint_rectangle_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "paint_rectangle",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "FREQ_HZ": {
+                        "value": "148500000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_0_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "enable": {
+                    "direction": "I"
+                  },
+                  "video_enable_i": {
+                    "direction": "I"
+                  },
+                  "hsync_i": {
+                    "direction": "I"
+                  },
+                  "vsync_i": {
+                    "direction": "I"
+                  },
+                  "pxl_x_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_i": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_i": {
+                    "direction": "I"
+                  },
+                  "rect_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "rect_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "video_enable_o": {
+                    "direction": "O"
+                  },
+                  "hsync_o": {
+                    "direction": "O"
+                  },
+                  "vsync_o": {
+                    "direction": "O"
+                  },
+                  "pxl_x_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_y_o": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "pxl_value_o": {
+                    "direction": "O"
+                  }
+                }
+              },
+              "seven_seg_display_co_0": {
+                "vlnv": "xilinx.com:module_ref:seven_seg_display_controller:1.0",
+                "xci_name": "blockdesign_seven_seg_display_co_0_2",
+                "xci_path": "ip\\blockdesign_seven_seg_display_co_0_2\\blockdesign_seven_seg_display_co_0_2.xci",
+                "inst_hier_path": "paint_scoreboard/paint_seg_r/seven_seg_display_co_0",
+                "reference_info": {
+                  "ref_type": "hdl",
+                  "ref_name": "seven_seg_display_controller",
+                  "boundary_crc": "0x0"
+                },
+                "ports": {
+                  "clk": {
+                    "type": "clk",
+                    "direction": "I",
+                    "parameters": {
+                      "ASSOCIATED_RESET": {
+                        "value": "reset",
+                        "value_src": "constant"
+                      },
+                      "FREQ_HZ": {
+                        "value": "100000000",
+                        "value_src": "ip_prop"
+                      },
+                      "PHASE": {
+                        "value": "0.0",
+                        "value_src": "ip_prop"
+                      },
+                      "CLK_DOMAIN": {
+                        "value": "/clk_wiz_clk_out1",
+                        "value_src": "ip_prop"
+                      }
+                    }
+                  },
+                  "reset": {
+                    "type": "rst",
+                    "direction": "I",
+                    "parameters": {
+                      "POLARITY": {
+                        "value": "ACTIVE_HIGH"
+                      }
+                    }
+                  },
+                  "value": {
+                    "direction": "I",
+                    "left": "3",
+                    "right": "0"
+                  },
+                  "seg_pos_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_pos_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_size_x": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_size_y": {
+                    "direction": "I",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_a": {
+                    "direction": "O"
+                  },
+                  "seg_b": {
+                    "direction": "O"
+                  },
+                  "seg_c": {
+                    "direction": "O"
+                  },
+                  "seg_d": {
+                    "direction": "O"
+                  },
+                  "seg_e": {
+                    "direction": "O"
+                  },
+                  "seg_f": {
+                    "direction": "O"
+                  },
+                  "seg_g": {
+                    "direction": "O"
+                  },
+                  "seg_hor_size_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_hor_size_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_ver_size_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_ver_size_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_a_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_a_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_b_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_b_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_c_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_c_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_d_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_d_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_e_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_e_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_f_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_f_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_g_pos_x": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  },
+                  "seg_g_pos_y": {
+                    "direction": "O",
+                    "left": "10",
+                    "right": "0"
+                  }
+                }
+              }
+            },
+            "nets": {
+              "Net": {
+                "ports": [
+                  "pxlClk",
+                  "paint_rectangle_6/clk",
+                  "paint_rectangle_5/clk",
+                  "paint_rectangle_4/clk",
+                  "paint_rectangle_3/clk",
+                  "paint_rectangle_2/clk",
+                  "paint_rectangle_1/clk",
+                  "paint_rectangle_0/clk"
+                ]
+              },
+              "clk_1_1": {
+                "ports": [
+                  "clk",
+                  "seven_seg_display_co_0/clk"
+                ]
+              },
+              "hsync_i_0_1": {
+                "ports": [
+                  "hsync_i",
+                  "paint_rectangle_0/hsync_i"
+                ]
+              },
+              "paint_rectangle_0_hsync_o": {
+                "ports": [
+                  "paint_rectangle_0/hsync_o",
+                  "paint_rectangle_1/hsync_i"
+                ]
+              },
+              "paint_rectangle_0_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_0/pxl_value_o",
+                  "paint_rectangle_1/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_0_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_0/pxl_x_o",
+                  "paint_rectangle_1/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_0_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_0/pxl_y_o",
+                  "paint_rectangle_1/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_0_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_0/video_enable_o",
+                  "paint_rectangle_1/video_enable_i"
+                ]
+              },
+              "paint_rectangle_0_vsync_o": {
+                "ports": [
+                  "paint_rectangle_0/vsync_o",
+                  "paint_rectangle_1/vsync_i"
+                ]
+              },
+              "paint_rectangle_1_hsync_o": {
+                "ports": [
+                  "paint_rectangle_1/hsync_o",
+                  "paint_rectangle_2/hsync_i"
+                ]
+              },
+              "paint_rectangle_1_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_1/pxl_value_o",
+                  "paint_rectangle_2/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_1_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_1/pxl_x_o",
+                  "paint_rectangle_2/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_1_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_1/pxl_y_o",
+                  "paint_rectangle_2/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_1_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_1/video_enable_o",
+                  "paint_rectangle_2/video_enable_i"
+                ]
+              },
+              "paint_rectangle_1_vsync_o": {
+                "ports": [
+                  "paint_rectangle_1/vsync_o",
+                  "paint_rectangle_2/vsync_i"
+                ]
+              },
+              "paint_rectangle_2_hsync_o": {
+                "ports": [
+                  "paint_rectangle_2/hsync_o",
+                  "paint_rectangle_3/hsync_i"
+                ]
+              },
+              "paint_rectangle_2_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_2/pxl_value_o",
+                  "paint_rectangle_3/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_2_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_2/pxl_x_o",
+                  "paint_rectangle_3/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_2_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_2/pxl_y_o",
+                  "paint_rectangle_3/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_2_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_2/video_enable_o",
+                  "paint_rectangle_3/video_enable_i"
+                ]
+              },
+              "paint_rectangle_2_vsync_o": {
+                "ports": [
+                  "paint_rectangle_2/vsync_o",
+                  "paint_rectangle_3/vsync_i"
+                ]
+              },
+              "paint_rectangle_3_hsync_o": {
+                "ports": [
+                  "paint_rectangle_3/hsync_o",
+                  "paint_rectangle_4/hsync_i"
+                ]
+              },
+              "paint_rectangle_3_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_3/pxl_value_o",
+                  "paint_rectangle_4/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_3_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_3/pxl_x_o",
+                  "paint_rectangle_4/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_3_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_3/pxl_y_o",
+                  "paint_rectangle_4/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_3_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_3/video_enable_o",
+                  "paint_rectangle_4/video_enable_i"
+                ]
+              },
+              "paint_rectangle_3_vsync_o": {
+                "ports": [
+                  "paint_rectangle_3/vsync_o",
+                  "paint_rectangle_4/vsync_i"
+                ]
+              },
+              "paint_rectangle_4_hsync_o": {
+                "ports": [
+                  "paint_rectangle_4/hsync_o",
+                  "paint_rectangle_5/hsync_i"
+                ]
+              },
+              "paint_rectangle_4_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_4/pxl_value_o",
+                  "paint_rectangle_5/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_4_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_4/pxl_x_o",
+                  "paint_rectangle_5/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_4_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_4/pxl_y_o",
+                  "paint_rectangle_5/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_4_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_4/video_enable_o",
+                  "paint_rectangle_5/video_enable_i"
+                ]
+              },
+              "paint_rectangle_4_vsync_o": {
+                "ports": [
+                  "paint_rectangle_4/vsync_o",
+                  "paint_rectangle_5/vsync_i"
+                ]
+              },
+              "paint_rectangle_5_hsync_o": {
+                "ports": [
+                  "paint_rectangle_5/hsync_o",
+                  "paint_rectangle_6/hsync_i"
+                ]
+              },
+              "paint_rectangle_5_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_5/pxl_value_o",
+                  "paint_rectangle_6/pxl_value_i"
+                ]
+              },
+              "paint_rectangle_5_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_5/pxl_x_o",
+                  "paint_rectangle_6/pxl_x_i"
+                ]
+              },
+              "paint_rectangle_5_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_5/pxl_y_o",
+                  "paint_rectangle_6/pxl_y_i"
+                ]
+              },
+              "paint_rectangle_5_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_5/video_enable_o",
+                  "paint_rectangle_6/video_enable_i"
+                ]
+              },
+              "paint_rectangle_5_vsync_o": {
+                "ports": [
+                  "paint_rectangle_5/vsync_o",
+                  "paint_rectangle_6/vsync_i"
+                ]
+              },
+              "paint_rectangle_6_hsync_o": {
+                "ports": [
+                  "paint_rectangle_6/hsync_o",
+                  "hsync_o"
+                ]
+              },
+              "paint_rectangle_6_pxl_value_o": {
+                "ports": [
+                  "paint_rectangle_6/pxl_value_o",
+                  "pxl_value_o"
+                ]
+              },
+              "paint_rectangle_6_pxl_x_o": {
+                "ports": [
+                  "paint_rectangle_6/pxl_x_o",
+                  "pxl_x_o"
+                ]
+              },
+              "paint_rectangle_6_pxl_y_o": {
+                "ports": [
+                  "paint_rectangle_6/pxl_y_o",
+                  "pxl_y_o"
+                ]
+              },
+              "paint_rectangle_6_video_enable_o": {
+                "ports": [
+                  "paint_rectangle_6/video_enable_o",
+                  "video_enable_o"
+                ]
+              },
+              "paint_rectangle_6_vsync_o": {
+                "ports": [
+                  "paint_rectangle_6/vsync_o",
+                  "vsync_o"
+                ]
+              },
+              "pxl_value_i_0_1": {
+                "ports": [
+                  "pxl_value_i",
+                  "paint_rectangle_0/pxl_value_i"
+                ]
+              },
+              "pxl_x_i_0_1": {
+                "ports": [
+                  "pxl_x_i",
+                  "paint_rectangle_0/pxl_x_i"
+                ]
+              },
+              "pxl_y_i_0_1": {
+                "ports": [
+                  "pxl_y_i",
+                  "paint_rectangle_0/pxl_y_i"
+                ]
+              },
+              "reset_0_1": {
+                "ports": [
+                  "reset",
+                  "seven_seg_display_co_0/reset"
+                ]
+              },
+              "seg_pos_x_0_1": {
+                "ports": [
+                  "seg_pos_x",
+                  "seven_seg_display_co_0/seg_pos_x"
+                ]
+              },
+              "seg_pos_y_0_1": {
+                "ports": [
+                  "seg_pos_y",
+                  "seven_seg_display_co_0/seg_pos_y"
+                ]
+              },
+              "seg_size_x_0_1": {
+                "ports": [
+                  "seg_size_x",
+                  "seven_seg_display_co_0/seg_size_x"
+                ]
+              },
+              "seg_size_y_0_1": {
+                "ports": [
+                  "seg_size_y",
+                  "seven_seg_display_co_0/seg_size_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_a": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_a",
+                  "paint_rectangle_0/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_a_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_a_pos_x",
+                  "paint_rectangle_0/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_a_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_a_pos_y",
+                  "paint_rectangle_0/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_b": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_b",
+                  "paint_rectangle_1/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_b_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_b_pos_x",
+                  "paint_rectangle_1/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_b_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_b_pos_y",
+                  "paint_rectangle_1/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_c": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_c",
+                  "paint_rectangle_2/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_c_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_c_pos_x",
+                  "paint_rectangle_2/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_c_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_c_pos_y",
+                  "paint_rectangle_2/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_d": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_d",
+                  "paint_rectangle_3/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_d_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_d_pos_x",
+                  "paint_rectangle_3/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_d_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_d_pos_y",
+                  "paint_rectangle_3/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_e": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_e",
+                  "paint_rectangle_4/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_e_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_e_pos_x",
+                  "paint_rectangle_4/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_e_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_e_pos_y",
+                  "paint_rectangle_4/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_f": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_f",
+                  "paint_rectangle_5/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_f_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_f_pos_x",
+                  "paint_rectangle_5/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_f_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_f_pos_y",
+                  "paint_rectangle_5/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_g": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_g",
+                  "paint_rectangle_6/enable"
+                ]
+              },
+              "seven_seg_display_co_0_seg_g_pos_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_g_pos_x",
+                  "paint_rectangle_6/rect_pos_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_g_pos_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_g_pos_y",
+                  "paint_rectangle_6/rect_pos_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_hor_size_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_hor_size_x",
+                  "paint_rectangle_0/rect_size_x",
+                  "paint_rectangle_3/rect_size_x",
+                  "paint_rectangle_6/rect_size_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_hor_size_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_hor_size_y",
+                  "paint_rectangle_0/rect_size_y",
+                  "paint_rectangle_3/rect_size_y",
+                  "paint_rectangle_6/rect_size_y"
+                ]
+              },
+              "seven_seg_display_co_0_seg_ver_size_x": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_ver_size_x",
+                  "paint_rectangle_1/rect_size_x",
+                  "paint_rectangle_2/rect_size_x",
+                  "paint_rectangle_4/rect_size_x",
+                  "paint_rectangle_5/rect_size_x"
+                ]
+              },
+              "seven_seg_display_co_0_seg_ver_size_y": {
+                "ports": [
+                  "seven_seg_display_co_0/seg_ver_size_y",
+                  "paint_rectangle_1/rect_size_y",
+                  "paint_rectangle_2/rect_size_y",
+                  "paint_rectangle_4/rect_size_y",
+                  "paint_rectangle_5/rect_size_y"
+                ]
+              },
+              "value_0_1": {
+                "ports": [
+                  "value",
+                  "seven_seg_display_co_0/value"
+                ]
+              },
+              "video_enable_i_0_1": {
+                "ports": [
+                  "video_enable_i",
+                  "paint_rectangle_0/video_enable_i"
+                ]
+              },
+              "vsync_i_0_1": {
+                "ports": [
+                  "vsync_i",
+                  "paint_rectangle_0/vsync_i"
+                ]
+              }
+            }
+          },
+          "scoreboard_controller_0": {
+            "vlnv": "xilinx.com:module_ref:scoreboard_controller:1.0",
+            "xci_name": "blockdesign_scoreboard_controller_0_0",
+            "xci_path": "ip\\blockdesign_scoreboard_controller_0_0\\blockdesign_scoreboard_controller_0_0.xci",
+            "inst_hier_path": "paint_scoreboard/scoreboard_controller_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "scoreboard_controller",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "screen_size_x": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_center_offset": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_top_offset": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_size_x": {
+                "direction": "I",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_l_pos_x": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_l_pos_y": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_r_pos_x": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              },
+              "seg_r_pos_y": {
+                "direction": "O",
+                "left": "10",
+                "right": "0"
+              }
+            }
+          }
+        },
+        "nets": {
+          "clk_1": {
+            "ports": [
+              "clk",
+              "paint_seg_r/clk",
+              "paint_seg_l/clk",
+              "scoreboard_controller_0/clk"
+            ]
+          },
+          "hsync_i_2": {
+            "ports": [
+              "hsync_i",
+              "paint_seg_l/hsync_i"
+            ]
+          },
+          "paint_seg_l_hsync_o": {
+            "ports": [
+              "paint_seg_l/hsync_o",
+              "paint_seg_r/hsync_i"
+            ]
+          },
+          "paint_seg_l_pxl_x_o": {
+            "ports": [
+              "paint_seg_l/pxl_x_o",
+              "paint_seg_r/pxl_x_i"
+            ]
+          },
+          "paint_seg_l_pxl_y_o": {
+            "ports": [
+              "paint_seg_l/pxl_y_o",
+              "paint_seg_r/pxl_y_i"
+            ]
+          },
+          "paint_seg_l_video_enable_o": {
+            "ports": [
+              "paint_seg_l/video_enable_o",
+              "paint_seg_r/video_enable_i"
+            ]
+          },
+          "paint_seg_l_vsync_o": {
+            "ports": [
+              "paint_seg_l/vsync_o",
+              "paint_seg_r/vsync_i"
+            ]
+          },
+          "paint_seg_r_hsync_o": {
+            "ports": [
+              "paint_seg_r/hsync_o",
+              "hsync_o"
+            ]
+          },
+          "paint_seg_r_pxl_value_o": {
+            "ports": [
+              "paint_seg_r/pxl_value_o",
+              "pxl_value_o"
+            ]
+          },
+          "paint_seg_r_pxl_x_o": {
+            "ports": [
+              "paint_seg_r/pxl_x_o",
+              "pxl_x_o"
+            ]
+          },
+          "paint_seg_r_pxl_y_o": {
+            "ports": [
+              "paint_seg_r/pxl_y_o",
+              "pxl_y_o"
+            ]
+          },
+          "paint_seg_r_video_enable_o": {
+            "ports": [
+              "paint_seg_r/video_enable_o",
+              "video_enable_o"
+            ]
+          },
+          "paint_seg_r_vsync_o": {
+            "ports": [
+              "paint_seg_r/vsync_o",
+              "vsync_o"
+            ]
+          },
+          "pxlClk_1": {
+            "ports": [
+              "pxlClk",
+              "paint_seg_l/pxlClk",
+              "paint_seg_r/pxlClk"
+            ]
+          },
+          "pxl_value_i_1": {
+            "ports": [
+              "paint_seg_l/pxl_value_o",
+              "paint_seg_r/pxl_value_i"
+            ]
+          },
+          "pxl_value_i_3": {
+            "ports": [
+              "pxl_value_i",
+              "paint_seg_l/pxl_value_i"
+            ]
+          },
+          "pxl_x_i_2": {
+            "ports": [
+              "pxl_x_i",
+              "paint_seg_l/pxl_x_i"
+            ]
+          },
+          "pxl_y_i_2": {
+            "ports": [
+              "pxl_y_i",
+              "paint_seg_l/pxl_y_i"
+            ]
+          },
+          "reset_1": {
+            "ports": [
+              "reset",
+              "paint_seg_l/reset",
+              "paint_seg_r/reset"
+            ]
+          },
+          "scoreboard_controller_0_seg_l_pos_x": {
+            "ports": [
+              "scoreboard_controller_0/seg_l_pos_x",
+              "paint_seg_l/seg_pos_x"
+            ]
+          },
+          "scoreboard_controller_0_seg_l_pos_y": {
+            "ports": [
+              "scoreboard_controller_0/seg_l_pos_y",
+              "paint_seg_l/seg_pos_y"
+            ]
+          },
+          "scoreboard_controller_0_seg_r_pos_x": {
+            "ports": [
+              "scoreboard_controller_0/seg_r_pos_x",
+              "paint_seg_r/seg_pos_x"
+            ]
+          },
+          "scoreboard_controller_0_seg_r_pos_y": {
+            "ports": [
+              "scoreboard_controller_0/seg_r_pos_y",
+              "paint_seg_r/seg_pos_y"
+            ]
+          },
+          "screen_size_x_0_1": {
+            "ports": [
+              "screen_size_x",
+              "scoreboard_controller_0/screen_size_x"
+            ]
+          },
+          "seg_center_offset_0_1": {
+            "ports": [
+              "scoreboard_center_offset",
+              "scoreboard_controller_0/seg_center_offset"
+            ]
+          },
+          "seg_size_x_1": {
+            "ports": [
+              "score_seg_size_x",
+              "paint_seg_l/seg_size_x",
+              "paint_seg_r/seg_size_x",
+              "scoreboard_controller_0/seg_size_x"
+            ]
+          },
+          "seg_size_y_1": {
+            "ports": [
+              "score_seg_size_y",
+              "paint_seg_l/seg_size_y",
+              "paint_seg_r/seg_size_y"
+            ]
+          },
+          "seg_top_offset_0_1": {
+            "ports": [
+              "scoreboard_top_offset",
+              "scoreboard_controller_0/seg_top_offset"
+            ]
+          },
+          "value_1": {
+            "ports": [
+              "score_r",
+              "paint_seg_r/value"
+            ]
+          },
+          "value_2": {
+            "ports": [
+              "score_l",
+              "paint_seg_l/value"
+            ]
+          },
+          "video_enable_i_2": {
+            "ports": [
+              "video_enable_i",
+              "paint_seg_l/video_enable_i"
+            ]
+          },
+          "vsync_i_2": {
+            "ports": [
+              "vsync_i",
+              "paint_seg_l/vsync_i"
+            ]
+          }
+        }
+      },
+      "paint_ball": {
+        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+        "xci_name": "blockdesign_paint_rectangle_0_0",
+        "xci_path": "ip\\blockdesign_paint_rectangle_0_0\\blockdesign_paint_rectangle_0_0.xci",
+        "inst_hier_path": "paint_ball",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "paint_rectangle",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "video_enable_i": {
+            "direction": "I"
+          },
+          "hsync_i": {
+            "direction": "I"
+          },
+          "vsync_i": {
+            "direction": "I"
+          },
+          "pxl_x_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "rect_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "video_enable_o": {
+            "direction": "O"
+          },
+          "hsync_o": {
+            "direction": "O"
+          },
+          "vsync_o": {
+            "direction": "O"
+          },
+          "pxl_x_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "paint_paddle_l": {
+        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+        "xci_name": "blockdesign_paint_rectangle_1_0",
+        "xci_path": "ip\\blockdesign_paint_rectangle_1_0\\blockdesign_paint_rectangle_1_0.xci",
+        "inst_hier_path": "paint_paddle_l",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "paint_rectangle",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "video_enable_i": {
+            "direction": "I"
+          },
+          "hsync_i": {
+            "direction": "I"
+          },
+          "vsync_i": {
+            "direction": "I"
+          },
+          "pxl_x_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "rect_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "video_enable_o": {
+            "direction": "O"
+          },
+          "hsync_o": {
+            "direction": "O"
+          },
+          "vsync_o": {
+            "direction": "O"
+          },
+          "pxl_x_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "paint_paddle_r": {
+        "vlnv": "xilinx.com:module_ref:paint_rectangle:1.0",
+        "xci_name": "blockdesign_paint_rectangle_2_0",
+        "xci_path": "ip\\blockdesign_paint_rectangle_2_0\\blockdesign_paint_rectangle_2_0.xci",
+        "inst_hier_path": "paint_paddle_r",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "paint_rectangle",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "148500000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "video_enable_i": {
+            "direction": "I"
+          },
+          "hsync_i": {
+            "direction": "I"
+          },
+          "vsync_i": {
+            "direction": "I"
+          },
+          "pxl_x_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_i": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_i": {
+            "direction": "I"
+          },
+          "rect_pos_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_pos_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_x": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "rect_size_y": {
+            "direction": "I",
+            "left": "10",
+            "right": "0"
+          },
+          "video_enable_o": {
+            "direction": "O"
+          },
+          "hsync_o": {
+            "direction": "O"
+          },
+          "vsync_o": {
+            "direction": "O"
+          },
+          "pxl_x_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_y_o": {
+            "direction": "O",
+            "left": "10",
+            "right": "0"
+          },
+          "pxl_value_o": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
+      "Constants_score_seg_size_x": {
+        "ports": [
+          "Constants/score_seg_size_x",
+          "paint_scoreboard/score_seg_size_x"
+        ]
+      },
+      "Constants_scoreboard_center_offset": {
+        "ports": [
+          "Constants/scoreboard_center_offset",
+          "paint_scoreboard/scoreboard_center_offset"
+        ]
+      },
       "Net": {
         "ports": [
           "clk_wiz/clk_out1",
           "controllers/clk",
           "clk_wiz_0/clk_in1",
-          "clk_divider_0/clk_i"
+          "clk_divider_0/clk_i",
+          "paint_scoreboard/clk"
         ]
       },
       "Net3": {
@@ -1931,7 +5358,8 @@
           "clk_wiz_0/reset",
           "util_vector_logic_2/Op1",
           "score_counter_0/reset",
-          "clk_divider_0/reset"
+          "clk_divider_0/reset",
+          "paint_scoreboard/reset"
         ]
       },
       "Net4": {
@@ -1947,7 +5375,8 @@
           "collision_detection_0/screen_size_x",
           "position_ball_0/screen_size_x",
           "position_paddles_0/screen_size_x",
-          "paint_centerline_0/screen_size_x"
+          "paint_centerline_0/screen_size_x",
+          "paint_scoreboard/screen_size_x"
         ]
       },
       "Net6": {
@@ -1963,18 +5392,18 @@
         "ports": [
           "Constants/paddle_size_x",
           "collision_detection_0/paddle_size_x",
+          "position_paddles_0/paddle_size_x",
           "paint_paddle_l/rect_size_x",
-          "paint_paddle_r/rect_size_x",
-          "position_paddles_0/paddle_size_x"
+          "paint_paddle_r/rect_size_x"
         ]
       },
       "Net8": {
         "ports": [
           "Constants/paddle_size_y",
           "collision_detection_0/paddle_size_y",
+          "position_paddles_0/paddle_size_y",
           "paint_paddle_l/rect_size_y",
-          "paint_paddle_r/rect_size_y",
-          "position_paddles_0/paddle_size_y"
+          "paint_paddle_r/rect_size_y"
         ]
       },
       "Net9": {
@@ -2015,12 +5444,13 @@
           "clk_wiz_0/clk_hdmi",
           "v_tc_0/clk",
           "rgb2dvi_0/PixelClk",
+          "pixel_counter_0/pxCLK_i",
+          "video_buffer_0/pixel_clk",
+          "paint_centerline_0/clk",
           "paint_ball/clk",
           "paint_paddle_l/clk",
           "paint_paddle_r/clk",
-          "pixel_counter_0/pxCLK_i",
-          "video_buffer_0/pixel_clk",
-          "paint_centerline_0/clk"
+          "paint_scoreboard/pxlClk"
         ]
       },
       "collision_detection_0_collision_ball_edge_l": {
@@ -2088,7 +5518,10 @@
       "enable_0_1": {
         "ports": [
           "enable",
-          "position_ball_0/enable"
+          "position_ball_0/enable",
+          "paint_paddle_r/enable",
+          "paint_paddle_l/enable",
+          "paint_ball/enable"
         ]
       },
       "ext_clk_1": {
@@ -2112,25 +5545,19 @@
       "paint_centerline_0_hsync_o": {
         "ports": [
           "paint_centerline_0/hsync_o",
-          "video_buffer_0/HSync_i"
+          "paint_scoreboard/hsync_i"
         ]
       },
       "paint_centerline_0_pxl_value_o": {
         "ports": [
           "paint_centerline_0/pxl_value_o",
-          "color_generator_0/enable_i"
+          "paint_scoreboard/pxl_value_i"
         ]
       },
-      "paint_centerline_0_video_enable_o": {
+      "paint_centerline_0_pxl_x_o": {
         "ports": [
-          "paint_centerline_0/video_enable_o",
-          "video_buffer_0/Vdata_enable_i"
-        ]
-      },
-      "paint_centerline_0_vsync_o": {
-        "ports": [
-          "paint_centerline_0/vsync_o",
-          "video_buffer_0/VSync_i"
+          "paint_centerline_0/pxl_x_o",
+          "paint_scoreboard/pxl_x_i"
         ]
       },
       "paint_paddle_l_video_enable_o": {
@@ -2235,6 +5662,30 @@
           "paint_centerline_0/vsync_i"
         ]
       },
+      "paint_scoreboard_hsync_o": {
+        "ports": [
+          "paint_scoreboard/hsync_o",
+          "video_buffer_0/HSync_i"
+        ]
+      },
+      "paint_scoreboard_pxl_value_o": {
+        "ports": [
+          "paint_scoreboard/pxl_value_o",
+          "color_generator_0/enable_i"
+        ]
+      },
+      "paint_scoreboard_video_enable_o": {
+        "ports": [
+          "paint_scoreboard/video_enable_o",
+          "video_buffer_0/Vdata_enable_i"
+        ]
+      },
+      "paint_scoreboard_vsync_o": {
+        "ports": [
+          "paint_scoreboard/vsync_o",
+          "video_buffer_0/VSync_i"
+        ]
+      },
       "pixel_counter_0_hpx_o": {
         "ports": [
           "pixel_counter_0/hpx_o",
@@ -2307,6 +5758,12 @@
           "paint_paddle_r/rect_pos_y"
         ]
       },
+      "pxl_y_i_1": {
+        "ports": [
+          "paint_centerline_0/pxl_y_o",
+          "paint_scoreboard/pxl_y_i"
+        ]
+      },
       "rgb2dvi_0_TMDS_Clk_n": {
         "ports": [
           "rgb2dvi_0/TMDS_Clk_n",
@@ -2335,6 +5792,30 @@
         "ports": [
           "score_counter_0/game_reset",
           "util_vector_logic_2/Op2"
+        ]
+      },
+      "score_counter_0_score_right": {
+        "ports": [
+          "score_counter_0/score_right",
+          "paint_scoreboard/score_r"
+        ]
+      },
+      "score_l_1": {
+        "ports": [
+          "score_counter_0/score_left",
+          "paint_scoreboard/score_l"
+        ]
+      },
+      "score_seg_size_y_1": {
+        "ports": [
+          "Constants/score_seg_size_y",
+          "paint_scoreboard/score_seg_size_y"
+        ]
+      },
+      "scoreboard_top_offset_1": {
+        "ports": [
+          "Constants/scoreboard_top_offset",
+          "paint_scoreboard/scoreboard_top_offset"
         ]
       },
       "sensor_0_1": {
@@ -2419,6 +5900,18 @@
         "ports": [
           "video_buffer_0/Vdata_o",
           "rgb2dvi_0/vid_pData"
+        ]
+      },
+      "video_enable_i_1": {
+        "ports": [
+          "paint_centerline_0/video_enable_o",
+          "paint_scoreboard/video_enable_i"
+        ]
+      },
+      "vsync_i_1": {
+        "ports": [
+          "paint_centerline_0/vsync_o",
+          "paint_scoreboard/vsync_i"
         ]
       },
       "xlconstant_5_dout": {

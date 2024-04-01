@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Mon Mar 25 18:21:41 2024
+// Date        : Mon Mar 25 18:21:38 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top blockdesign_clk_wiz_0_0 -prefix
+//               blockdesign_clk_wiz_0_0_ blockdesign_clk_wiz_0_0_sim_netlist.v
 // Design      : blockdesign_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,13 +26,13 @@ module blockdesign_clk_wiz_0_0
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire reset;
 
-  blockdesign_clk_wiz_0_0_clk_wiz inst
+  blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz inst
        (.clk_hdmi(clk_hdmi),
         .clk_in1(clk_in1),
         .reset(reset));
 endmodule
 
-module blockdesign_clk_wiz_0_0_clk_wiz
+module blockdesign_clk_wiz_0_0_blockdesign_clk_wiz_0_0_clk_wiz
    (clk_hdmi,
     reset,
     clk_in1);

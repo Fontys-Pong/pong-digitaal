@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Tue Mar 26 15:57:02 2024
+| Date         : Mon Apr  1 18:14:40 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_utilization -file blockdesign_wrapper_utilization_synth.rpt -pb blockdesign_wrapper_utilization_synth.pb
 | Design       : blockdesign_wrapper
@@ -163,13 +163,30 @@ Warning! LUT value is adjusted to account for LUT combining.
 | blockdesign_v_tc_0_0                  |    1 |
 | blockdesign_util_vector_logic_1_2     |    1 |
 | blockdesign_util_vector_logic_0_1     |    1 |
+| blockdesign_seven_seg_display_co_0_2  |    1 |
+| blockdesign_seven_seg_display_co_0_0  |    1 |
+| blockdesign_scoreboard_controller_0_0 |    1 |
 | blockdesign_score_counter_0_0         |    1 |
 | blockdesign_rgb2dvi_0_0               |    1 |
 | blockdesign_position_paddles_0_0      |    1 |
 | blockdesign_position_ball_0_1         |    1 |
 | blockdesign_pixel_counter_0_0         |    1 |
+| blockdesign_paint_rectangle_6_1       |    1 |
+| blockdesign_paint_rectangle_5_1       |    1 |
+| blockdesign_paint_rectangle_4_1       |    1 |
+| blockdesign_paint_rectangle_3_1       |    1 |
+| blockdesign_paint_rectangle_2_2       |    1 |
 | blockdesign_paint_rectangle_2_0       |    1 |
+| blockdesign_paint_rectangle_1_2       |    1 |
 | blockdesign_paint_rectangle_1_0       |    1 |
+| blockdesign_paint_rectangle_0_7       |    1 |
+| blockdesign_paint_rectangle_0_6       |    1 |
+| blockdesign_paint_rectangle_0_5       |    1 |
+| blockdesign_paint_rectangle_0_4       |    1 |
+| blockdesign_paint_rectangle_0_3       |    1 |
+| blockdesign_paint_rectangle_0_2       |    1 |
+| blockdesign_paint_rectangle_0_10      |    1 |
+| blockdesign_paint_rectangle_0_1       |    1 |
 | blockdesign_paint_rectangle_0_0       |    1 |
 | blockdesign_paint_centerline_0_0      |    1 |
 | blockdesign_controller_ultrasonic_1_0 |    1 |

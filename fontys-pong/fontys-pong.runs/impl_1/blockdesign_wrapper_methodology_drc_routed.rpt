@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Tue Mar 26 16:00:57 2024
+| Date         : Mon Apr  1 18:21:13 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_methodology -file blockdesign_wrapper_methodology_drc_routed.rpt -pb blockdesign_wrapper_methodology_drc_routed.pb -rpx blockdesign_wrapper_methodology_drc_routed.rpx
 | Design       : blockdesign_wrapper
@@ -20,28 +20,42 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_blockdesign_wrapper
+          Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 246
-+-----------+------------------+----------------------------------------------------+------------+
-| Rule      | Severity         | Description                                        | Violations |
-+-----------+------------------+----------------------------------------------------+------------+
-| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 88         |
-| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
-| DPIR-1    | Warning          | Asynchronous driver check                          | 64         |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 35         |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 55         |
-| XDCB-5    | Warning          | Runtime inefficient way to find pin objects        | 1          |
-| LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
-+-----------+------------------+----------------------------------------------------+------------+
+             Violations found: 264
++-----------+------------------+-----------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                               | Violations |
++-----------+------------------+-----------------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree        | 1          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks            | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks                     | 1          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                               | 88         |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                 | 1          |
+| TIMING-51 | Critical Warning | No common phase between related clocks from parallel CMBs | 1          |
+| DPIR-1    | Warning          | Asynchronous driver check                                 | 64         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                              | 35         |
+| TIMING-16 | Warning          | Large setup violation                                     | 15         |
+| TIMING-20 | Warning          | Non-clocked latch                                         | 55         |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects               | 1          |
+| LATCH-1   | Advisory         | Existing latches in the design                            | 1          |
++-----------+------------------+-----------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-4#1 Critical Warning
 Invalid primary clock redefinition on a clock tree  
 Invalid clock redefinition on a clock tree. The primary clock blockdesign_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_out1_blockdesign_clk_wiz_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_blockdesign_clk_wiz_0 and clk_hdmi_blockdesign_clk_wiz_0_0_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_blockdesign_clk_wiz_0] -to [get_clocks clk_hdmi_blockdesign_clk_wiz_0_0_1]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_out1_blockdesign_clk_wiz_0 and clk_hdmi_blockdesign_clk_wiz_0_0_1 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_blockdesign_clk_wiz_0] -to [get_clocks clk_hdmi_blockdesign_clk_wiz_0_0_1]
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -487,6 +501,11 @@ Related violations: <none>
 TIMING-27#1 Critical Warning
 Invalid primary clock on hierarchical pin  
 A primary clock blockdesign_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin blockdesign_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-51#1 Critical Warning
+No common phase between related clocks from parallel CMBs  
+The clocks clk_out1_blockdesign_clk_wiz_0 and clk_hdmi_blockdesign_clk_wiz_0_0_1 are timed together but have no phase relationship. The design could fail in hardware. The clocks originate from two parallel Clock Modifying Blocks and at least one of the MMCM or PLLs clock dividers is not set to 1. To be safely timed, all MMCMs or PLLs involved in parallel clocking must have the clock divider set to 1.
 Related violations: <none>
 
 DPIR-1#1 Warning
@@ -1074,6 +1093,81 @@ blockdesign_i/position_ball_0/U0/y_pos_reg[5]_C/CLR
  (the first 15 of 23 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.637 ns between blockdesign_i/paint_paddle_r/U0/pxl_y_o_reg[7]/C (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1) and blockdesign_i/paint_centerline_0/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -5.971 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_x_reg[1]/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_5/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -6.063 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_x_reg[1]/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_0/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -6.095 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_x_reg[5]/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_5/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -6.180 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_x_reg[5]/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_0/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -6.466 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_y_reg[2]_replica/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_4/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -6.687 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_y_reg[2]_replica/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_4/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -7.091 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_x_reg[1]/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_1/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -7.300 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_r_pos_x_reg[1]/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_2/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -7.452 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_y_reg[2]_replica/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_3/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -7.645 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_y_reg[2]_replica/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_3/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -7.743 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_x_reg[1]/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_1/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -7.794 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_y_reg[2]_replica/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_6/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -7.798 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_y_reg[2]_replica/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_r/paint_rectangle_6/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -7.803 ns between blockdesign_i/paint_scoreboard/scoreboard_controller_0/U0/seg_l_pos_x_reg[1]/C (clocked by clk_out1_blockdesign_clk_wiz_0) and blockdesign_i/paint_scoreboard/paint_seg_l/paint_rectangle_2/U0/pxl_value_o_reg/D (clocked by clk_hdmi_blockdesign_clk_wiz_0_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
 TIMING-20#1 Warning
 Non-clocked latch  
 The latch blockdesign_i/controllers/controller_ultrasonic_0/U0/counter_reset_reg cannot be properly analyzed as its control pin blockdesign_i/controllers/controller_ultrasonic_0/U0/counter_reset_reg/G is not reached by a timing clock
@@ -1352,7 +1446,7 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '6' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0/src/rgb2dvi.xdc (Line: 5)
+Current XDC: c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0/src/rgb2dvi.xdc (Line: 5)
 Related violations: <none>
 
 LATCH-1#1 Advisory
