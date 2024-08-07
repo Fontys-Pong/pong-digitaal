@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.948353",
+   "Default View_TopLeft":"-100,-4",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_ext_clk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace port port-id_sensor_l -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_trigger_l -pg 1 -lvl 4 -x 840 -y 60 -defaultsOSRD
+preplace portBus seven_seg_select -pg 1 -lvl 4 -x 840 -y 280 -defaultsOSRD
+preplace portBus seven_seg_value -pg 1 -lvl 4 -x 840 -y 310 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 60 -defaultsOSRD
+preplace inst clk_divider_0 -pg 1 -lvl 2 -x 360 -y 280 -defaultsOSRD
+preplace inst seven_segment_contro_0 -pg 1 -lvl 3 -x 670 -y 300 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 3 -x 670 -y 140 -defaultsOSRD
+preplace inst controller_ultrasoni_0 -pg 1 -lvl 2 -x 360 -y 140 -defaultsOSRD
+preplace netloc clk_divider_0_clk_o 1 2 1 N 280
+preplace netloc clk_in1_0_1 1 0 1 NJ 60
+preplace netloc clk_wiz_0_clk_out1 1 1 2 250 50 480
+preplace netloc controller_ultrasoni_0_data 1 2 1 520 140n
+preplace netloc controller_ultrasoni_0_trigger 1 2 2 470J 60 NJ
+preplace netloc echo_0_1 1 0 2 NJ 180 240J
+preplace netloc enable_0_1 1 0 2 NJ 150 NJ
+preplace netloc reset_0_1 1 0 2 NJ 120 230
+preplace netloc seven_segment_contro_0_seven_seg_select 1 3 1 820J 280n
+preplace netloc seven_segment_contro_0_seven_seg_value 1 3 1 NJ 310
+preplace netloc controller_ultrasoni_0_distance_mm_o 1 2 1 N 160
+levelinfo -pg 1 0 110 360 670 840
+pagesize -pg 1 -db -bbox -sgen -100 0 1030 380
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

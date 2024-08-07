@@ -122,7 +122,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
@@ -134,10 +136,7 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.cache/wt [current_project]
   set_property parent.project_path C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.xpr [current_project]
-  set_property ip_repo_paths {
-  D:/Vivado/vivado-library-zmod-v1-2019.1-2
-  C:/Vivado/vivado-library-zmod-v1-2019.1-2
-} [current_project]
+  set_property ip_repo_paths C:/Users/Jochem/projects/Vivado/vivado-library-zmod-v1-2019.1-2 [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Tue Mar 26 15:55:44 2024
+// Date        : Wed Jun 26 12:51:31 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top blockdesign_clk_wiz_0 -prefix
-//               blockdesign_clk_wiz_0_ blockdesign_clk_wiz_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0_sim_netlist.v
 // Design      : blockdesign_clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,13 +26,13 @@ module blockdesign_clk_wiz_0
   wire clk_out1;
   wire reset;
 
-  blockdesign_clk_wiz_0_blockdesign_clk_wiz_0_clk_wiz inst
+  blockdesign_clk_wiz_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .reset(reset));
 endmodule
 
-module blockdesign_clk_wiz_0_blockdesign_clk_wiz_0_clk_wiz
+module blockdesign_clk_wiz_0_clk_wiz
    (clk_out1,
     reset,
     clk_in1);
@@ -85,12 +85,12 @@ module blockdesign_clk_wiz_0_blockdesign_clk_wiz_0_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(64.000000),
+    .CLKFBOUT_MULT_F(62.500000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
-    .CLKIN1_PERIOD(80.000000),
+    .CLKIN1_PERIOD(83.333000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(8.000000),
+    .CLKOUT0_DIVIDE_F(7.500000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),

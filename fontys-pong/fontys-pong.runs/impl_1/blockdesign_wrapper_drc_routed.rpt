@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Mon Apr  1 18:21:08 2024
+| Date         : Wed Aug  7 21:23:59 2024
 | Host         : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command      : report_drc -file blockdesign_wrapper_drc_routed.rpt -pb blockdesign_wrapper_drc_routed.pb -rpx blockdesign_wrapper_drc_routed.rpx
 | Design       : blockdesign_wrapper
@@ -24,14 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 45
+             Violations found: 25
 +----------+----------+------------------------+------------+
 | Rule     | Severity | Description            | Violations |
 +----------+----------+------------------------+------------+
-| DPIP-1   | Warning  | Input pipelining       | 10         |
-| DPOP-1   | Warning  | PREG Output pipelining | 8          |
-| DPOP-2   | Warning  | MREG Output pipelining | 8          |
-| PDRC-153 | Warning  | Gated clock check      | 18         |
+| DPIP-1   | Warning  | Input pipelining       | 4          |
+| DPOP-1   | Warning  | PREG Output pipelining | 2          |
+| DPOP-2   | Warning  | MREG Output pipelining | 2          |
+| PDRC-153 | Warning  | Gated clock check      | 16         |
 | ZPS7-1   | Warning  | PS7 block required     | 1          |
 +----------+----------+------------------------+------------+
 
@@ -39,220 +39,120 @@ Table of Contents
 -----------------
 DPIP-1#1 Warning
 Input pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1 input blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0 input blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1__0 input blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0 input blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/value1 input blockdesign_i/controllers/controller_ultrasonic_0/U0/value1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#4 Warning
-Input pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1 input blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#5 Warning
-Input pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1__0 input blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#6 Warning
-Input pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/value1 input blockdesign_i/controllers/controller_ultrasonic_1/U0/value1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#7 Warning
-Input pipelining  
-DSP blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0 input blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#8 Warning
-Input pipelining  
-DSP blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0 input blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#9 Warning
-Input pipelining  
 DSP blockdesign_i/position_paddles_0/U0/paddle_r_pos_y0 input blockdesign_i/position_paddles_0/U0/paddle_r_pos_y0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
-DPIP-1#10 Warning
+DPIP-1#4 Warning
 Input pipelining  
 DSP blockdesign_i/position_paddles_0/U0/paddle_r_pos_y0 input blockdesign_i/position_paddles_0/U0/paddle_r_pos_y0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
 PREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1 output blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#2 Warning
-PREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1__0 output blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#3 Warning
-PREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/value1 output blockdesign_i/controllers/controller_ultrasonic_0/U0/value1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#4 Warning
-PREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1 output blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#5 Warning
-PREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1__0 output blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#6 Warning
-PREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/value1 output blockdesign_i/controllers/controller_ultrasonic_1/U0/value1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#7 Warning
-PREG Output pipelining  
 DSP blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0 output blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
-DPOP-1#8 Warning
+DPOP-1#2 Warning
 PREG Output pipelining  
 DSP blockdesign_i/position_paddles_0/U0/paddle_r_pos_y0 output blockdesign_i/position_paddles_0/U0/paddle_r_pos_y0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning
 MREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1 multiplier stage blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#2 Warning
-MREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1__0 multiplier stage blockdesign_i/controllers/controller_ultrasonic_0/U0/distance_mm1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#3 Warning
-MREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_0/U0/value1 multiplier stage blockdesign_i/controllers/controller_ultrasonic_0/U0/value1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#4 Warning
-MREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1 multiplier stage blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#5 Warning
-MREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1__0 multiplier stage blockdesign_i/controllers/controller_ultrasonic_1/U0/distance_mm1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#6 Warning
-MREG Output pipelining  
-DSP blockdesign_i/controllers/controller_ultrasonic_1/U0/value1 multiplier stage blockdesign_i/controllers/controller_ultrasonic_1/U0/value1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#7 Warning
-MREG Output pipelining  
 DSP blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0 multiplier stage blockdesign_i/position_paddles_0/U0/paddle_l_pos_y0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
-DPOP-2#8 Warning
+DPOP-2#2 Warning
 MREG Output pipelining  
 DSP blockdesign_i/position_paddles_0/U0/paddle_r_pos_y0 multiplier stage blockdesign_i/position_paddles_0/U0/paddle_r_pos_y0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net blockdesign_i/controllers/controller_ultrasonic_0/U0/go_to_next__0 is a gated clock net sourced by a combinational pin blockdesign_i/controllers/controller_ultrasonic_0/U0/go_to_next_reg_i_1/O, cell blockdesign_i/controllers/controller_ultrasonic_0/U0/go_to_next_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/x_pos_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[0]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net blockdesign_i/controllers/controller_ultrasonic_1/U0/go_to_next__0 is a gated clock net sourced by a combinational pin blockdesign_i/controllers/controller_ultrasonic_1/U0/go_to_next_reg_i_1/O, cell blockdesign_i/controllers/controller_ultrasonic_1/U0/go_to_next_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/x_pos_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[2]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/x_pos_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[0]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/x_pos_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[4]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/x_pos_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[2]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/x_pos_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[5]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/x_pos_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[4]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/x_pos_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[6]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/x_pos_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[5]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/x_pos_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[8]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/x_pos_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[6]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/x_pos_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[9]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/x_pos_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[8]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/y_pos_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[1]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/x_pos_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/x_pos_reg[9]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/x_pos_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/y_pos_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[2]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/y_pos_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[1]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/y_pos_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[3]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/y_pos_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[2]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/y_pos_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[4]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/y_pos_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[3]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/y_pos_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[6]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/y_pos_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[4]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/y_pos_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[7]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/y_pos_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[6]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net blockdesign_i/position_ball_0/U0/y_pos_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[8]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net blockdesign_i/position_ball_0/U0/y_pos_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[7]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#16 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/U0/y_pos_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[8]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#17 Warning
-Gated clock check  
 Net blockdesign_i/position_ball_0/U0/y_pos_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/U0/y_pos_reg[9]_LDC_i_1/O, cell blockdesign_i/position_ball_0/U0/y_pos_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-PDRC-153#18 Warning
+PDRC-153#16 Warning
 Gated clock check  
 Net blockdesign_i/util_vector_logic_2/Res[0] is a gated clock net sourced by a combinational pin blockdesign_i/util_vector_logic_2/Res[0]_INST_0/O, cell blockdesign_i/util_vector_logic_2/Res[0]_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

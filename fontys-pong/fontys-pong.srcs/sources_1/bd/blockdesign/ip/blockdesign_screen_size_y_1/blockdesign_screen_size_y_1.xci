@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_screen_size_y_1",
-    "cell_name": "score_seg_size_y",
+    "cell_name": "Constants/score_seg_size_y",
     "component_reference": "xilinx.com:ip:xlconstant:1.1",
     "ip_revision": "7",
     "gen_directory": "../../../../../../fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_screen_size_y_1",

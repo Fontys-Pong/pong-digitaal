@@ -45,12 +45,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 # IP: bd/blockdesign/ip/blockdesign_screen_size_y_3/blockdesign_screen_size_y_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_screen_size_y_3 || ORIG_REF_NAME==blockdesign_screen_size_y_3} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_controller_ultrasonic_0_0/blockdesign_controller_ultrasonic_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_ultrasonic_0_0 || ORIG_REF_NAME==blockdesign_controller_ultrasonic_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_controller_ultrasonic_1_0/blockdesign_controller_ultrasonic_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_ultrasonic_1_0 || ORIG_REF_NAME==blockdesign_controller_ultrasonic_1_0} -quiet] -quiet
-
 # IP: bd/blockdesign/ip/blockdesign_controller_buttons_0_0/blockdesign_controller_buttons_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_buttons_0_0 || ORIG_REF_NAME==blockdesign_controller_buttons_0_0} -quiet] -quiet
 
@@ -62,6 +56,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign
 
 # IP: bd/blockdesign/ip/blockdesign_controller_interconn_0_0/blockdesign_controller_interconn_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_interconn_0_0 || ORIG_REF_NAME==blockdesign_controller_interconn_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_controller_ultrasoni_0_0/blockdesign_controller_ultrasoni_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_ultrasoni_0_0 || ORIG_REF_NAME==blockdesign_controller_ultrasoni_0_0} -quiet] -quiet
+
+# IP: bd/blockdesign/ip/blockdesign_controller_ultrasoni_0_1/blockdesign_controller_ultrasoni_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_ultrasoni_0_1 || ORIG_REF_NAME==blockdesign_controller_ultrasoni_0_1} -quiet] -quiet
 
 # IP: bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_clk_wiz_0_0 || ORIG_REF_NAME==blockdesign_clk_wiz_0_0} -quiet] -quiet

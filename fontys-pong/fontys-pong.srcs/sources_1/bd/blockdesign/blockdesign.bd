@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x581764ADD2F193F7",
+      "boundary_crc": "0x581764AD7BABD757",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../fontys-pong.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
@@ -27,12 +27,12 @@
         "scoreboard_top_offset": ""
       },
       "controllers": {
-        "controller_ultrasonic_0": "",
-        "controller_ultrasonic_1": "",
         "controller_buttons_0": "",
         "controller_buttons_1": "",
         "clk_divider_1": "",
-        "controller_interconn_0": ""
+        "controller_interconn_0": "",
+        "controller_ultrasoni_0": "",
+        "controller_ultrasoni_1": ""
       },
       "clk_wiz_0": "",
       "v_tc_0": "",
@@ -188,7 +188,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "12500000"
+            "value": "12000000"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -227,13 +227,13 @@
         "inst_hier_path": "clk_wiz",
         "parameters": {
           "CLKIN1_JITTER_PS": {
-            "value": "800.0"
+            "value": "833.33"
           },
           "CLKOUT1_JITTER": {
-            "value": "444.844"
+            "value": "479.872"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "651.718"
+            "value": "668.310"
           },
           "CLKOUT2_JITTER": {
             "value": "124.615"
@@ -251,16 +251,16 @@
             "value": "Custom"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "64.000"
+            "value": "62.500"
           },
           "MMCM_CLKIN1_PERIOD": {
-            "value": "80.000"
+            "value": "83.333"
           },
           "MMCM_CLKIN2_PERIOD": {
             "value": "10.0"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "8.000"
+            "value": "7.500"
           },
           "MMCM_CLKOUT1_DIVIDE": {
             "value": "1"
@@ -269,7 +269,7 @@
             "value": "1"
           },
           "PRIM_IN_FREQ": {
-            "value": "12.5"
+            "value": "12"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
@@ -611,122 +611,6 @@
           }
         },
         "components": {
-          "controller_ultrasonic_0": {
-            "vlnv": "xilinx.com:module_ref:controller_ultrasonic:1.0",
-            "xci_name": "blockdesign_controller_ultrasonic_0_0",
-            "xci_path": "ip\\blockdesign_controller_ultrasonic_0_0\\blockdesign_controller_ultrasonic_0_0.xci",
-            "inst_hier_path": "controllers/controller_ultrasonic_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "controller_ultrasonic",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_RESET": {
-                    "value": "reset",
-                    "value_src": "constant"
-                  },
-                  "FREQ_HZ": {
-                    "value": "100000000",
-                    "value_src": "ip_prop"
-                  },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "ip_prop"
-                  },
-                  "CLK_DOMAIN": {
-                    "value": "/clk_wiz_clk_out1",
-                    "value_src": "ip_prop"
-                  }
-                }
-              },
-              "reset": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_HIGH"
-                  }
-                }
-              },
-              "enable": {
-                "direction": "I"
-              },
-              "sensor": {
-                "direction": "I"
-              },
-              "trigger": {
-                "direction": "O"
-              },
-              "value": {
-                "direction": "O",
-                "left": "8",
-                "right": "0"
-              }
-            }
-          },
-          "controller_ultrasonic_1": {
-            "vlnv": "xilinx.com:module_ref:controller_ultrasonic:1.0",
-            "xci_name": "blockdesign_controller_ultrasonic_1_0",
-            "xci_path": "ip\\blockdesign_controller_ultrasonic_1_0\\blockdesign_controller_ultrasonic_1_0.xci",
-            "inst_hier_path": "controllers/controller_ultrasonic_1",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "controller_ultrasonic",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_RESET": {
-                    "value": "reset",
-                    "value_src": "constant"
-                  },
-                  "FREQ_HZ": {
-                    "value": "100000000",
-                    "value_src": "ip_prop"
-                  },
-                  "PHASE": {
-                    "value": "0.0",
-                    "value_src": "ip_prop"
-                  },
-                  "CLK_DOMAIN": {
-                    "value": "/clk_wiz_clk_out1",
-                    "value_src": "ip_prop"
-                  }
-                }
-              },
-              "reset": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_HIGH"
-                  }
-                }
-              },
-              "enable": {
-                "direction": "I"
-              },
-              "sensor": {
-                "direction": "I"
-              },
-              "trigger": {
-                "direction": "O"
-              },
-              "value": {
-                "direction": "O",
-                "left": "8",
-                "right": "0"
-              }
-            }
-          },
           "controller_buttons_0": {
             "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
             "xci_name": "blockdesign_controller_buttons_0_0",
@@ -917,32 +801,156 @@
                 "right": "0"
               }
             }
+          },
+          "controller_ultrasoni_0": {
+            "vlnv": "xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0",
+            "xci_name": "blockdesign_controller_ultrasoni_0_0",
+            "xci_path": "ip\\blockdesign_controller_ultrasoni_0_0\\blockdesign_controller_ultrasoni_0_0.xci",
+            "inst_hier_path": "controllers/controller_ultrasoni_0",
+            "parameters": {
+              "MaxDistance_mm": {
+                "value": "300"
+              },
+              "MinDistance_mm": {
+                "value": "50"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_ultrasonic_hcsr04",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "reset_i": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "echo": {
+                "direction": "I"
+              },
+              "trigger": {
+                "direction": "O"
+              },
+              "data": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "controller_ultrasoni_1": {
+            "vlnv": "xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0",
+            "xci_name": "blockdesign_controller_ultrasoni_0_1",
+            "xci_path": "ip\\blockdesign_controller_ultrasoni_0_1\\blockdesign_controller_ultrasoni_0_1.xci",
+            "inst_hier_path": "controllers/controller_ultrasoni_1",
+            "parameters": {
+              "MaxDistance_mm": {
+                "value": "300"
+              },
+              "MinDistance_mm": {
+                "value": "50"
+              }
+            },
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_ultrasonic_hcsr04",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "FREQ_HZ": {
+                    "value": "100000000",
+                    "value_src": "ip_prop"
+                  },
+                  "PHASE": {
+                    "value": "0.0",
+                    "value_src": "ip_prop"
+                  },
+                  "CLK_DOMAIN": {
+                    "value": "/clk_wiz_clk_out1",
+                    "value_src": "ip_prop"
+                  }
+                }
+              },
+              "reset_i": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "echo": {
+                "direction": "I"
+              },
+              "trigger": {
+                "direction": "O"
+              },
+              "data": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
           }
         },
         "nets": {
           "Net": {
             "ports": [
               "clk",
-              "controller_ultrasonic_0/clk",
-              "controller_ultrasonic_1/clk",
-              "clk_divider_1/clk_i"
+              "clk_divider_1/clk_i",
+              "controller_ultrasoni_0/clk",
+              "controller_ultrasoni_1/clk"
             ]
           },
           "Net2": {
             "ports": [
               "controller_interconn_0/enable_2",
-              "controller_ultrasonic_0/enable",
-              "controller_ultrasonic_1/enable"
+              "controller_ultrasoni_0/enable",
+              "controller_ultrasoni_1/enable"
             ]
           },
           "Net3": {
             "ports": [
               "reset",
-              "controller_ultrasonic_0/reset",
-              "controller_ultrasonic_1/reset",
               "controller_buttons_0/reset",
               "controller_buttons_1/reset",
-              "clk_divider_1/reset"
+              "clk_divider_1/reset",
+              "controller_ultrasoni_0/reset_i",
+              "controller_ultrasoni_1/reset_i"
             ]
           },
           "btn_down_0_1": {
@@ -1007,40 +1015,40 @@
               "value_r_o"
             ]
           },
-          "controller_ultrasonic_0_trigger": {
+          "controller_ultrasoni_0_data": {
             "ports": [
-              "controller_ultrasonic_0/trigger",
-              "trigger_0"
-            ]
-          },
-          "controller_ultrasonic_0_value": {
-            "ports": [
-              "controller_ultrasonic_0/value",
+              "controller_ultrasoni_0/data",
               "controller_interconn_0/value_l_2"
             ]
           },
-          "controller_ultrasonic_1_trigger": {
+          "controller_ultrasoni_0_trigger": {
             "ports": [
-              "controller_ultrasonic_1/trigger",
-              "trigger_1"
+              "controller_ultrasoni_0/trigger",
+              "trigger_0"
             ]
           },
-          "controller_ultrasonic_1_value": {
+          "controller_ultrasoni_1_data": {
             "ports": [
-              "controller_ultrasonic_1/value",
+              "controller_ultrasoni_1/data",
               "controller_interconn_0/value_r_2"
+            ]
+          },
+          "controller_ultrasoni_1_trigger": {
+            "ports": [
+              "controller_ultrasoni_1/trigger",
+              "trigger_1"
             ]
           },
           "sensor_0_1": {
             "ports": [
               "sensor_0",
-              "controller_ultrasonic_0/sensor"
+              "controller_ultrasoni_0/echo"
             ]
           },
           "sensor_1_1": {
             "ports": [
               "sensor_1",
-              "controller_ultrasonic_1/sensor"
+              "controller_ultrasoni_1/echo"
             ]
           },
           "switch_0_1": {

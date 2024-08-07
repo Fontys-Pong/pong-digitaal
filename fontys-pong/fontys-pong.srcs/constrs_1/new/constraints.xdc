@@ -40,3 +40,21 @@ set_property -dict {PACKAGE_PIN R19 IOSTANDARD LVCMOS33} [get_ports {hdmi_out_hp
 
 set_property IOSTANDARD LVCMOS33 [get_ports ext_clk]
 set_property PACKAGE_PIN Y9 [get_ports ext_clk]
+
+# Seven segment display - values
+# A - B - C - D - E - F - G - DP, Active low
+set_property -dict {PACKAGE_PIN Y16 IOSTANDARD LVCMOS33} [get_ports {seven_seg_value[7]}]
+set_property -dict {PACKAGE_PIN Y17 IOSTANDARD LVCMOS33} [get_ports {seven_seg_value[6]}]
+set_property -dict {PACKAGE_PIN W18 IOSTANDARD LVCMOS33} [get_ports {seven_seg_value[5]}]
+set_property -dict {PACKAGE_PIN W19 IOSTANDARD LVCMOS33} [get_ports {seven_seg_value[4]}]
+set_property -dict {PACKAGE_PIN Y18 IOSTANDARD LVCMOS33} [get_ports {seven_seg_value[3]}]
+set_property -dict {PACKAGE_PIN Y19 IOSTANDARD LVCMOS33} [get_ports {seven_seg_value[2]}]
+set_property -dict {PACKAGE_PIN U18 IOSTANDARD LVCMOS33} [get_ports {seven_seg_value[1]}]
+set_property -dict {PACKAGE_PIN U19 IOSTANDARD LVCMOS33} [get_ports {seven_seg_value[0]}]
+
+# Seven segment display - select
+# Left to right, Active low
+set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports {seven_seg_select[3]}]
+set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports {seven_seg_select[2]}]
+set_property -dict {PACKAGE_PIN V10 IOSTANDARD LVCMOS33} [get_ports {seven_seg_select[1]}]
+set_property -dict {PACKAGE_PIN F19 IOSTANDARD LVCMOS33} [get_ports {seven_seg_select[0]}]

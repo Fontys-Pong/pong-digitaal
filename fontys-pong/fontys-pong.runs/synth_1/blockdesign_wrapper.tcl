@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -84,10 +87,7 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/Jochem/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_repo_paths {
-  d:/Vivado/vivado-library-zmod-v1-2019.1-2
-  c:/Vivado/vivado-library-zmod-v1-2019.1-2
-} [current_project]
+set_property ip_repo_paths c:/Users/Jochem/projects/Vivado/vivado-library-zmod-v1-2019.1-2 [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
