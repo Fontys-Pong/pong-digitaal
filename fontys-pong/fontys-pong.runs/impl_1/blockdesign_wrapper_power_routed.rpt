@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Wed Aug  7 21:24:04 2024
+| Date             : Tue Aug 27 17:12:35 2024
 | Host             : Lenovo-Jochem running 64-bit major release  (build 9200)
 | Command          : report_power -file blockdesign_wrapper_power_routed.rpt -pb blockdesign_wrapper_power_summary_routed.pb -rpx blockdesign_wrapper_power_routed.rpx
 | Design           : blockdesign_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.745        |
+| Total On-Chip Power (W)  | 0.749        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.629        |
+| Dynamic (W)              | 0.633        |
 | Device Static (W)        | 0.116        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 76.4         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.022 |       11 |       --- |             --- |
-| Slice Logic    |     0.045 |     7382 |       --- |             --- |
-|   LUT as Logic |     0.041 |     3869 |     53200 |            7.27 |
-|   CARRY4       |     0.004 |     1013 |     13300 |            7.62 |
-|   Register     |    <0.001 |     1228 |    106400 |            1.15 |
+| Slice Logic    |     0.046 |     7516 |       --- |             --- |
+|   LUT as Logic |     0.042 |     3922 |     53200 |            7.37 |
+|   CARRY4       |     0.004 |     1029 |     13300 |            7.74 |
+|   Register     |    <0.001 |     1288 |    106400 |            1.21 |
 |   F7/F8 Muxes  |    <0.001 |        2 |     53200 |           <0.01 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |      186 |       --- |             --- |
-| Signals        |     0.052 |     5594 |       --- |             --- |
+| Signals        |     0.056 |     5721 |       --- |             --- |
 | MMCM           |     0.221 |        2 |         4 |           50.00 |
 | PLL            |     0.137 |        1 |         4 |           25.00 |
 | DSPs           |    <0.001 |        2 |       220 |            0.91 |
-| I/O            |     0.151 |       21 |       125 |           16.80 |
+| I/O            |     0.150 |       21 |       125 |           16.80 |
 | Static Power   |     0.116 |          |           |                 |
-| Total          |     0.745 |          |           |                 |
+| Total          |     0.749 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.148 |       0.138 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.153 |       0.143 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.204 |       0.192 |      0.012 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.045 |       0.044 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -160,17 +160,17 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| blockdesign_wrapper          |     0.629 |
-|   blockdesign_i              |     0.627 |
+| blockdesign_wrapper          |     0.633 |
+|   blockdesign_i              |     0.632 |
 |     clk_wiz                  |     0.104 |
 |       inst                   |     0.104 |
 |     clk_wiz_0                |     0.117 |
 |       inst                   |     0.117 |
 |     collision_detection_0    |     0.006 |
 |       U0                     |     0.006 |
-|     controllers              |     0.074 |
-|       controller_ultrasoni_0 |     0.036 |
-|       controller_ultrasoni_1 |     0.036 |
+|     controllers              |     0.079 |
+|       controller_ultrasoni_0 |     0.039 |
+|       controller_ultrasoni_1 |     0.038 |
 |     paint_scoreboard         |     0.007 |
 |       paint_seg_l            |     0.003 |
 |       paint_seg_r            |     0.003 |

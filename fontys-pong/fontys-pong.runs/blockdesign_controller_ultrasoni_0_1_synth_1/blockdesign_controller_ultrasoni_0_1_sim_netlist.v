@@ -2,18 +2,18 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-// Date        : Wed Aug  7 21:18:50 2024
+// Date        : Tue Aug 27 17:06:53 2024
 // Host        : Lenovo-Jochem running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
-//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ blockdesign_controller_ultrasoni_0_0_sim_netlist.v
-// Design      : blockdesign_controller_ultrasoni_0_0
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ blockdesign_controller_ultrasoni_0_1_sim_netlist.v
+// Design      : blockdesign_controller_ultrasoni_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "blockdesign_controller_ultrasoni_0_0,controller_ultrasonic_hcsr04,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* CHECK_LICENSE_TYPE = "blockdesign_controller_ultrasoni_0_1,controller_ultrasonic_hcsr04,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
 (* x_core_info = "controller_ultrasonic_hcsr04,Vivado 2023.1" *) 
 (* NotValidForBitStream *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
@@ -49,15 +49,15 @@ endmodule
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
    (trigger,
     data,
-    reset_i,
-    echo,
     clk,
+    echo,
+    reset_i,
     enable);
   output trigger;
   output [8:0]data;
-  input reset_i;
-  input echo;
   input clk;
+  input echo;
+  input reset_i;
   input enable;
 
   wire clk;
@@ -669,6 +669,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
   wire \data[8]_INST_0_i_7_n_0 ;
   wire \data[8]_INST_0_i_8_n_0 ;
   wire \data[8]_INST_0_i_9_n_0 ;
+  wire [9:9]distance_mm;
   wire [27:0]distance_mm1;
   wire \distance_mm[10]_i_10_n_0 ;
   wire \distance_mm[10]_i_14_n_0 ;
@@ -878,7 +879,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
   wire \distance_mm[22]_i_198_n_0 ;
   wire \distance_mm[22]_i_199_n_0 ;
   wire \distance_mm[22]_i_19_n_0 ;
-  wire \distance_mm[22]_i_1_n_0 ;
   wire \distance_mm[22]_i_200_n_0 ;
   wire \distance_mm[22]_i_201_n_0 ;
   wire \distance_mm[22]_i_202_n_0 ;
@@ -2810,12 +2810,25 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
   wire \next_state[0]_i_8_n_0 ;
   wire \next_state[0]_i_9_n_0 ;
   wire \next_state[1]_i_2_n_0 ;
+  wire \next_state[1]_i_3_n_0 ;
+  wire \next_state[1]_i_4_n_0 ;
+  wire \next_state[2]_i_10_n_0 ;
+  wire \next_state[2]_i_11_n_0 ;
+  wire \next_state[2]_i_12_n_0 ;
+  wire \next_state[2]_i_13_n_0 ;
+  wire \next_state[2]_i_14_n_0 ;
+  wire \next_state[2]_i_15_n_0 ;
+  wire \next_state[2]_i_16_n_0 ;
+  wire \next_state[2]_i_17_n_0 ;
+  wire \next_state[2]_i_18_n_0 ;
   wire \next_state[2]_i_2_n_0 ;
   wire \next_state[2]_i_3_n_0 ;
   wire \next_state[2]_i_4_n_0 ;
   wire \next_state[2]_i_5_n_0 ;
   wire \next_state[2]_i_6_n_0 ;
   wire \next_state[2]_i_7_n_0 ;
+  wire \next_state[2]_i_8_n_0 ;
+  wire \next_state[2]_i_9_n_0 ;
   wire \next_state_reg_n_0_[0] ;
   wire \next_state_reg_n_0_[1] ;
   wire \next_state_reg_n_0_[2] ;
@@ -2962,6 +2975,71 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
   wire \wait_counter_reg_n_0_[3] ;
   wire \wait_counter_reg_n_0_[4] ;
   wire \wait_counter_reg_n_0_[5] ;
+  wire \wait_echo_start_counter[0]_i_1_n_0 ;
+  wire \wait_echo_start_counter[0]_i_3_n_0 ;
+  wire [30:1]wait_echo_start_counter_reg;
+  wire \wait_echo_start_counter_reg[0]_i_2_n_0 ;
+  wire \wait_echo_start_counter_reg[0]_i_2_n_1 ;
+  wire \wait_echo_start_counter_reg[0]_i_2_n_2 ;
+  wire \wait_echo_start_counter_reg[0]_i_2_n_3 ;
+  wire \wait_echo_start_counter_reg[0]_i_2_n_4 ;
+  wire \wait_echo_start_counter_reg[0]_i_2_n_5 ;
+  wire \wait_echo_start_counter_reg[0]_i_2_n_6 ;
+  wire \wait_echo_start_counter_reg[0]_i_2_n_7 ;
+  wire \wait_echo_start_counter_reg[12]_i_1_n_0 ;
+  wire \wait_echo_start_counter_reg[12]_i_1_n_1 ;
+  wire \wait_echo_start_counter_reg[12]_i_1_n_2 ;
+  wire \wait_echo_start_counter_reg[12]_i_1_n_3 ;
+  wire \wait_echo_start_counter_reg[12]_i_1_n_4 ;
+  wire \wait_echo_start_counter_reg[12]_i_1_n_5 ;
+  wire \wait_echo_start_counter_reg[12]_i_1_n_6 ;
+  wire \wait_echo_start_counter_reg[12]_i_1_n_7 ;
+  wire \wait_echo_start_counter_reg[16]_i_1_n_0 ;
+  wire \wait_echo_start_counter_reg[16]_i_1_n_1 ;
+  wire \wait_echo_start_counter_reg[16]_i_1_n_2 ;
+  wire \wait_echo_start_counter_reg[16]_i_1_n_3 ;
+  wire \wait_echo_start_counter_reg[16]_i_1_n_4 ;
+  wire \wait_echo_start_counter_reg[16]_i_1_n_5 ;
+  wire \wait_echo_start_counter_reg[16]_i_1_n_6 ;
+  wire \wait_echo_start_counter_reg[16]_i_1_n_7 ;
+  wire \wait_echo_start_counter_reg[20]_i_1_n_0 ;
+  wire \wait_echo_start_counter_reg[20]_i_1_n_1 ;
+  wire \wait_echo_start_counter_reg[20]_i_1_n_2 ;
+  wire \wait_echo_start_counter_reg[20]_i_1_n_3 ;
+  wire \wait_echo_start_counter_reg[20]_i_1_n_4 ;
+  wire \wait_echo_start_counter_reg[20]_i_1_n_5 ;
+  wire \wait_echo_start_counter_reg[20]_i_1_n_6 ;
+  wire \wait_echo_start_counter_reg[20]_i_1_n_7 ;
+  wire \wait_echo_start_counter_reg[24]_i_1_n_0 ;
+  wire \wait_echo_start_counter_reg[24]_i_1_n_1 ;
+  wire \wait_echo_start_counter_reg[24]_i_1_n_2 ;
+  wire \wait_echo_start_counter_reg[24]_i_1_n_3 ;
+  wire \wait_echo_start_counter_reg[24]_i_1_n_4 ;
+  wire \wait_echo_start_counter_reg[24]_i_1_n_5 ;
+  wire \wait_echo_start_counter_reg[24]_i_1_n_6 ;
+  wire \wait_echo_start_counter_reg[24]_i_1_n_7 ;
+  wire \wait_echo_start_counter_reg[28]_i_1_n_2 ;
+  wire \wait_echo_start_counter_reg[28]_i_1_n_3 ;
+  wire \wait_echo_start_counter_reg[28]_i_1_n_5 ;
+  wire \wait_echo_start_counter_reg[28]_i_1_n_6 ;
+  wire \wait_echo_start_counter_reg[28]_i_1_n_7 ;
+  wire \wait_echo_start_counter_reg[4]_i_1_n_0 ;
+  wire \wait_echo_start_counter_reg[4]_i_1_n_1 ;
+  wire \wait_echo_start_counter_reg[4]_i_1_n_2 ;
+  wire \wait_echo_start_counter_reg[4]_i_1_n_3 ;
+  wire \wait_echo_start_counter_reg[4]_i_1_n_4 ;
+  wire \wait_echo_start_counter_reg[4]_i_1_n_5 ;
+  wire \wait_echo_start_counter_reg[4]_i_1_n_6 ;
+  wire \wait_echo_start_counter_reg[4]_i_1_n_7 ;
+  wire \wait_echo_start_counter_reg[8]_i_1_n_0 ;
+  wire \wait_echo_start_counter_reg[8]_i_1_n_1 ;
+  wire \wait_echo_start_counter_reg[8]_i_1_n_2 ;
+  wire \wait_echo_start_counter_reg[8]_i_1_n_3 ;
+  wire \wait_echo_start_counter_reg[8]_i_1_n_4 ;
+  wire \wait_echo_start_counter_reg[8]_i_1_n_5 ;
+  wire \wait_echo_start_counter_reg[8]_i_1_n_6 ;
+  wire \wait_echo_start_counter_reg[8]_i_1_n_7 ;
+  wire \wait_echo_start_counter_reg_n_0_[0] ;
   wire [3:0]NLW_data2__110_carry_O_UNCONNECTED;
   wire [3:0]NLW_data2__110_carry__0_O_UNCONNECTED;
   wire [3:0]NLW_data2__110_carry__1_O_UNCONNECTED;
@@ -3060,6 +3138,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
   wire [3:3]\NLW_trigger_counter_reg[28]_i_1_O_UNCONNECTED ;
   wire [3:2]\NLW_wait_counter_reg[28]_i_1_CO_UNCONNECTED ;
   wire [3:3]\NLW_wait_counter_reg[28]_i_1_O_UNCONNECTED ;
+  wire [3:2]\NLW_wait_echo_start_counter_reg[28]_i_1_CO_UNCONNECTED ;
+  wire [3:3]\NLW_wait_echo_start_counter_reg[28]_i_1_O_UNCONNECTED ;
 
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 data2__110_carry
@@ -5526,7 +5606,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I4(\data[8]_INST_0_i_2_n_0 ),
         .I5(\distance_mm_reg_n_0_[4] ),
         .O(data2_carry__0_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hA6)) 
     data2_carry__0_i_9
@@ -5546,7 +5626,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
     data2_carry__1_i_1
        (.I0(data2_carry__1_i_9_n_0),
         .O(data2_carry__1_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h5556AAAA)) 
     data2_carry__1_i_10
@@ -5670,7 +5750,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I1(\distance_mm_reg_n_0_[0] ),
         .I2(\data[8]_INST_0_i_2_n_0 ),
         .O(data2_carry_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h333CCC93)) 
     data2_carry_i_4
@@ -5680,7 +5760,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I3(\distance_mm_reg_n_0_[2] ),
         .I4(\data[8]_INST_0_i_2_n_0 ),
         .O(data2_carry_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h0000FE02)) 
     \data[0]_INST_0 
@@ -5700,7 +5780,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I4(\data[8]_INST_0_i_2_n_0 ),
         .I5(\data[8]_INST_0_i_5_n_0 ),
         .O(data[1]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h5457)) 
     \data[1]_INST_0_i_1 
@@ -5819,7 +5899,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I4(\data[8]_INST_0_i_1_n_0 ),
         .I5(\data[8]_INST_0_i_5_n_0 ),
         .O(data[7]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \data[7]_INST_0_i_1 
@@ -5863,7 +5943,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I2(data2__366_carry__5_n_0),
         .I3(data2__417_carry_n_4),
         .O(\data[8]_INST_0_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'hAAA80000)) 
     \data[8]_INST_0_i_12 
@@ -5928,7 +6008,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I3(\distance_mm_reg_n_0_[7] ),
         .I4(\distance_mm_reg_n_0_[8] ),
         .O(\data[8]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h5556AAA6)) 
     \data[8]_INST_0_i_3 
@@ -7253,10 +7333,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
   LUT3 #(
     .INIT(8'h01)) 
     \distance_mm[22]_i_1 
-       (.I0(state[1]),
-        .I1(state[0]),
-        .I2(state[2]),
-        .O(\distance_mm[22]_i_1_n_0 ));
+       (.I0(state[2]),
+        .I1(state[1]),
+        .I2(state[0]),
+        .O(distance_mm));
   (* HLUTNM = "lutpair116" *) 
   LUT3 #(
     .INIT(8'h8E)) 
@@ -7659,7 +7739,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I4(\distance_mm_reg[22]_i_120_n_1 ),
         .I5(\distance_mm[22]_i_218_n_0 ),
         .O(\distance_mm[22]_i_152_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \distance_mm[22]_i_155 
@@ -7667,7 +7747,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I1(\distance_mm_reg[22]_i_118_n_3 ),
         .I2(\distance_mm_reg[22]_i_119_n_6 ),
         .O(\distance_mm[22]_i_155_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \distance_mm[22]_i_156 
@@ -7675,7 +7755,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I1(\distance_mm_reg[22]_i_118_n_3 ),
         .I2(\distance_mm_reg[22]_i_119_n_7 ),
         .O(\distance_mm[22]_i_156_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \distance_mm[22]_i_157 
@@ -7683,7 +7763,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I1(\distance_mm_reg[22]_i_118_n_3 ),
         .I2(\distance_mm_reg[22]_i_153_n_4 ),
         .O(\distance_mm[22]_i_157_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \distance_mm[22]_i_158 
@@ -7984,11 +8064,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I5(\distance_mm_reg[6]_i_44_n_4 ),
         .O(\distance_mm[22]_i_199_n_0 ));
   LUT3 #(
-    .INIT(8'h08)) 
+    .INIT(8'h40)) 
     \distance_mm[22]_i_2 
-       (.I0(state[2]),
-        .I1(state[0]),
-        .I2(state[1]),
+       (.I0(state[1]),
+        .I1(state[2]),
+        .I2(state[0]),
         .O(\distance_mm[22]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hB44BB4B4B44B4B4B)) 
@@ -8132,7 +8212,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I4(\distance_mm_reg[22]_i_120_n_1 ),
         .I5(\distance_mm[22]_i_290_n_0 ),
         .O(\distance_mm[22]_i_213_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \distance_mm[22]_i_216 
@@ -8161,7 +8241,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I1(\distance_mm_reg[22]_i_181_n_6 ),
         .I2(\distance_mm_reg[22]_i_215_n_6 ),
         .O(\distance_mm[22]_i_219_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \distance_mm[22]_i_220 
@@ -13109,7 +13189,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I4(\distance_mm_reg[2]_i_437_n_6 ),
         .I5(\distance_mm_reg[2]_i_438_n_6 ),
         .O(\distance_mm[2]_i_402_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \distance_mm[2]_i_403 
@@ -13132,7 +13212,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .I1(\distance_mm_reg[2]_i_404_n_5 ),
         .I2(echo_counter_reg[1]),
         .O(\distance_mm[2]_i_407_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'hF660)) 
     \distance_mm[2]_i_408 
@@ -14673,7 +14753,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[0]),
         .Q(\distance_mm_reg_n_0_[0] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[10] 
@@ -14681,7 +14761,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[10]),
         .Q(\distance_mm_reg_n_0_[10] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[10]_i_11 
        (.CI(\distance_mm_reg[6]_i_11_n_0 ),
@@ -14756,7 +14836,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[11]),
         .Q(\distance_mm_reg_n_0_[11] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[11]_i_2 
        (.CI(\distance_mm_reg[7]_i_2_n_0 ),
@@ -14772,7 +14852,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[12]),
         .Q(\distance_mm_reg_n_0_[12] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[13] 
@@ -14780,7 +14860,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[13]),
         .Q(\distance_mm_reg_n_0_[13] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[14] 
@@ -14788,7 +14868,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[14]),
         .Q(\distance_mm_reg_n_0_[14] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[14]_i_11 
        (.CI(\distance_mm_reg[10]_i_11_n_0 ),
@@ -14826,7 +14906,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[15]),
         .Q(\distance_mm_reg_n_0_[15] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[15]_i_2 
        (.CI(\distance_mm_reg[11]_i_2_n_0 ),
@@ -14842,7 +14922,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[16]),
         .Q(\distance_mm_reg_n_0_[16] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[17] 
@@ -14850,7 +14930,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[17]),
         .Q(\distance_mm_reg_n_0_[17] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[18] 
@@ -14858,7 +14938,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[18]),
         .Q(\distance_mm_reg_n_0_[18] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[18]_i_11 
        (.CI(\distance_mm_reg[14]_i_11_n_0 ),
@@ -14889,7 +14969,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[19]),
         .Q(\distance_mm_reg_n_0_[19] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[19]_i_2 
        (.CI(\distance_mm_reg[15]_i_2_n_0 ),
@@ -14905,7 +14985,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[1]),
         .Q(\distance_mm_reg_n_0_[1] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[20] 
@@ -14913,7 +14993,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[20]),
         .Q(\distance_mm_reg_n_0_[20] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[21] 
@@ -14921,7 +15001,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[21]),
         .Q(\distance_mm_reg_n_0_[21] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[22] 
@@ -14929,7 +15009,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[22]),
         .Q(\distance_mm_reg_n_0_[22] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[22]_i_104 
        (.CI(\distance_mm_reg[22]_i_159_n_0 ),
@@ -15481,7 +15561,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[2]),
         .Q(\distance_mm_reg_n_0_[2] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[2]_i_108 
        (.CI(\distance_mm_reg[2]_i_168_n_0 ),
@@ -15933,7 +16013,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[3]),
         .Q(\distance_mm_reg_n_0_[3] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[3]_i_2 
        (.CI(1'b0),
@@ -15949,7 +16029,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[4]),
         .Q(\distance_mm_reg_n_0_[4] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[5] 
@@ -15957,7 +16037,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[5]),
         .Q(\distance_mm_reg_n_0_[5] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[6] 
@@ -15965,7 +16045,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[6]),
         .Q(\distance_mm_reg_n_0_[6] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[6]_i_11 
        (.CI(\distance_mm_reg[2]_i_21_n_0 ),
@@ -16025,7 +16105,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[7]),
         .Q(\distance_mm_reg_n_0_[7] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 \distance_mm_reg[7]_i_2 
        (.CI(\distance_mm_reg[3]_i_2_n_0 ),
@@ -16041,7 +16121,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[8]),
         .Q(\distance_mm_reg_n_0_[8] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   FDRE #(
     .INIT(1'b0)) 
     \distance_mm_reg[9] 
@@ -16049,13 +16129,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\distance_mm[22]_i_2_n_0 ),
         .D(p_1_in[9]),
         .Q(\distance_mm_reg_n_0_[9] ),
-        .R(\distance_mm[22]_i_1_n_0 ));
+        .R(distance_mm));
   LUT3 #(
     .INIT(8'h04)) 
     \echo_counter[0]_i_1 
-       (.I0(state[1]),
+       (.I0(state[0]),
         .I1(state[2]),
-        .I2(state[0]),
+        .I2(state[1]),
         .O(\echo_counter[0]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -16375,187 +16455,292 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .Q(echo_counter_reg[9]),
         .R(\trigger_counter[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAABBABAAAAAAAB)) 
+    .INIT(64'hFFFFFFFF22222E22)) 
     \next_state[0]_i_1 
        (.I0(\next_state[0]_i_2_n_0 ),
-        .I1(\next_state[0]_i_3_n_0 ),
+        .I1(state[2]),
         .I2(echo),
-        .I3(state[1]),
-        .I4(reset_i),
-        .I5(\next_state[2]_i_2_n_0 ),
+        .I3(\next_state[0]_i_3_n_0 ),
+        .I4(state[0]),
+        .I5(\next_state[0]_i_4_n_0 ),
         .O(next_state[0]));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \next_state[0]_i_10 
-       (.I0(trigger_counter_reg[12]),
-        .I1(trigger_counter_reg[25]),
-        .I2(trigger_counter_reg[16]),
-        .I3(trigger_counter_reg[20]),
+       (.I0(trigger_counter_reg[25]),
+        .I1(trigger_counter_reg[24]),
+        .I2(trigger_counter_reg[23]),
+        .I3(trigger_counter_reg[22]),
         .O(\next_state[0]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT6 #(
+    .INIT(64'hFFFCFEFCFEFCFEFC)) 
     \next_state[0]_i_11 
-       (.I0(trigger_counter_reg[18]),
-        .I1(trigger_counter_reg[27]),
-        .I2(trigger_counter_reg[14]),
-        .I3(trigger_counter_reg[21]),
+       (.I0(trigger_counter_reg[6]),
+        .I1(trigger_counter_reg[8]),
+        .I2(trigger_counter_reg[9]),
+        .I3(trigger_counter_reg[7]),
+        .I4(trigger_counter_reg[4]),
+        .I5(trigger_counter_reg[5]),
         .O(\next_state[0]_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'h4440404055555555)) 
+    .INIT(64'h000F005500CC00FF)) 
     \next_state[0]_i_2 
-       (.I0(state[2]),
-        .I1(\next_state[0]_i_4_n_0 ),
-        .I2(\next_state[0]_i_5_n_0 ),
-        .I3(trigger_counter_reg[10]),
-        .I4(\next_state[0]_i_6_n_0 ),
-        .I5(\next_state[0]_i_7_n_0 ),
-        .O(\next_state[0]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \next_state[0]_i_3 
-       (.I0(state[0]),
-        .I1(state[2]),
-        .O(\next_state[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h04)) 
-    \next_state[0]_i_4 
-       (.I0(reset_i),
-        .I1(state[1]),
-        .I2(state[0]),
-        .O(\next_state[0]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \next_state[0]_i_5 
-       (.I0(\next_state[0]_i_8_n_0 ),
-        .I1(trigger_counter_reg[28]),
-        .I2(trigger_counter_reg[29]),
-        .I3(trigger_counter_reg[15]),
-        .I4(trigger_counter_reg[26]),
-        .I5(\next_state[0]_i_9_n_0 ),
-        .O(\next_state[0]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFEFEFEEEEEEEEE)) 
-    \next_state[0]_i_6 
-       (.I0(trigger_counter_reg[8]),
-        .I1(trigger_counter_reg[9]),
-        .I2(trigger_counter_reg[6]),
-        .I3(trigger_counter_reg[4]),
-        .I4(trigger_counter_reg[5]),
-        .I5(trigger_counter_reg[7]),
-        .O(\next_state[0]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT5 #(
-    .INIT(32'hFFBBFFC0)) 
-    \next_state[0]_i_7 
-       (.I0(echo),
-        .I1(state[0]),
-        .I2(enable),
+       (.I0(enable),
+        .I1(\next_state[0]_i_5_n_0 ),
+        .I2(\next_state[2]_i_4_n_0 ),
         .I3(reset_i),
         .I4(state[1]),
+        .I5(state[0]),
+        .O(\next_state[0]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \next_state[0]_i_3 
+       (.I0(reset_i),
+        .I1(state[1]),
+        .O(\next_state[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'h00200000)) 
+    \next_state[0]_i_4 
+       (.I0(state[1]),
+        .I1(reset_i),
+        .I2(state[2]),
+        .I3(state[0]),
+        .I4(\next_state[2]_i_5_n_0 ),
+        .O(\next_state[0]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \next_state[0]_i_5 
+       (.I0(\next_state[0]_i_6_n_0 ),
+        .I1(trigger_counter_reg[19]),
+        .I2(trigger_counter_reg[18]),
+        .I3(\next_state[0]_i_7_n_0 ),
+        .I4(\next_state[0]_i_8_n_0 ),
+        .O(\next_state[0]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFEEE)) 
+    \next_state[0]_i_6 
+       (.I0(\next_state[0]_i_9_n_0 ),
+        .I1(\next_state[0]_i_10_n_0 ),
+        .I2(trigger_counter_reg[10]),
+        .I3(\next_state[0]_i_11_n_0 ),
+        .I4(trigger_counter_reg[20]),
+        .I5(trigger_counter_reg[21]),
+        .O(\next_state[0]_i_6_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \next_state[0]_i_7 
+       (.I0(trigger_counter_reg[11]),
+        .I1(trigger_counter_reg[12]),
+        .I2(trigger_counter_reg[13]),
+        .I3(trigger_counter_reg[15]),
+        .I4(trigger_counter_reg[14]),
         .O(\next_state[0]_i_7_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \next_state[0]_i_8 
-       (.I0(trigger_counter_reg[13]),
-        .I1(trigger_counter_reg[23]),
-        .I2(trigger_counter_reg[11]),
-        .I3(trigger_counter_reg[17]),
+       (.I0(trigger_counter_reg[29]),
+        .I1(trigger_counter_reg[28]),
+        .I2(trigger_counter_reg[27]),
+        .I3(trigger_counter_reg[26]),
         .O(\next_state[0]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     \next_state[0]_i_9 
-       (.I0(trigger_counter_reg[30]),
-        .I1(trigger_counter_reg[19]),
-        .I2(trigger_counter_reg[24]),
-        .I3(trigger_counter_reg[22]),
-        .I4(\next_state[0]_i_10_n_0 ),
-        .I5(\next_state[0]_i_11_n_0 ),
+       (.I0(trigger_counter_reg[17]),
+        .I1(trigger_counter_reg[16]),
+        .I2(trigger_counter_reg[30]),
         .O(\next_state[0]_i_9_n_0 ));
   LUT6 #(
-    .INIT(64'h000000000206FFFF)) 
+    .INIT(64'hFFFFFFFFFFFF00EA)) 
     \next_state[1]_i_1 
-       (.I0(state[0]),
-        .I1(state[1]),
-        .I2(reset_i),
-        .I3(\next_state[2]_i_2_n_0 ),
-        .I4(state[2]),
-        .I5(\next_state[1]_i_2_n_0 ),
+       (.I0(\next_state[1]_i_2_n_0 ),
+        .I1(\next_state[2]_i_2_n_0 ),
+        .I2(\next_state[1]_i_3_n_0 ),
+        .I3(state[2]),
+        .I4(\next_state[1]_i_4_n_0 ),
+        .I5(\next_state[2]_i_3_n_0 ),
         .O(next_state[1]));
-  LUT6 #(
-    .INIT(64'h00000000F8FBF3F3)) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT4 #(
+    .INIT(16'h1000)) 
     \next_state[1]_i_2 
-       (.I0(echo),
-        .I1(state[1]),
-        .I2(reset_i),
+       (.I0(state[1]),
+        .I1(reset_i),
+        .I2(state[0]),
         .I3(enable),
-        .I4(state[0]),
-        .I5(state[2]),
         .O(\next_state[1]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0307030708080000)) 
-    \next_state[2]_i_1 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \next_state[1]_i_3 
+       (.I0(state[1]),
+        .I1(reset_i),
+        .O(\next_state[1]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT4 #(
+    .INIT(16'h0008)) 
+    \next_state[1]_i_4 
        (.I0(state[0]),
-        .I1(state[1]),
-        .I2(reset_i),
+        .I1(state[2]),
+        .I2(state[1]),
+        .I3(reset_i),
+        .O(\next_state[1]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'hFFFF1012)) 
+    \next_state[2]_i_1 
+       (.I0(state[1]),
+        .I1(reset_i),
+        .I2(state[2]),
         .I3(\next_state[2]_i_2_n_0 ),
-        .I4(echo),
-        .I5(state[2]),
+        .I4(\next_state[2]_i_3_n_0 ),
         .O(next_state[2]));
   LUT6 #(
-    .INIT(64'hEEEEEEEEEAAAAAAA)) 
-    \next_state[2]_i_2 
-       (.I0(\next_state[2]_i_3_n_0 ),
-        .I1(wait_counter_reg[21]),
-        .I2(\next_state[2]_i_4_n_0 ),
-        .I3(wait_counter_reg[19]),
-        .I4(wait_counter_reg[18]),
-        .I5(wait_counter_reg[20]),
-        .O(\next_state[2]_i_2_n_0 ));
+    .INIT(64'h8880888088808080)) 
+    \next_state[2]_i_10 
+       (.I0(wait_counter_reg[19]),
+        .I1(wait_counter_reg[18]),
+        .I2(wait_counter_reg[17]),
+        .I3(\next_state[2]_i_16_n_0 ),
+        .I4(\next_state[2]_i_17_n_0 ),
+        .I5(\next_state[2]_i_18_n_0 ),
+        .O(\next_state[2]_i_10_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \next_state[2]_i_3 
+    \next_state[2]_i_11 
+       (.I0(wait_echo_start_counter_reg[23]),
+        .I1(wait_echo_start_counter_reg[22]),
+        .I2(wait_echo_start_counter_reg[21]),
+        .I3(wait_echo_start_counter_reg[20]),
+        .O(\next_state[2]_i_11_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFEA)) 
+    \next_state[2]_i_12 
+       (.I0(wait_echo_start_counter_reg[30]),
+        .I1(wait_echo_start_counter_reg[3]),
+        .I2(wait_echo_start_counter_reg[1]),
+        .I3(wait_echo_start_counter_reg[29]),
+        .I4(wait_echo_start_counter_reg[28]),
+        .O(\next_state[2]_i_12_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \next_state[2]_i_13 
+       (.I0(wait_echo_start_counter_reg[7]),
+        .I1(wait_echo_start_counter_reg[6]),
+        .I2(wait_echo_start_counter_reg[5]),
+        .I3(wait_echo_start_counter_reg[4]),
+        .O(\next_state[2]_i_13_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \next_state[2]_i_14 
+       (.I0(wait_echo_start_counter_reg[15]),
+        .I1(wait_echo_start_counter_reg[14]),
+        .I2(wait_echo_start_counter_reg[13]),
+        .I3(wait_echo_start_counter_reg[12]),
+        .O(\next_state[2]_i_14_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \next_state[2]_i_15 
        (.I0(wait_counter_reg[29]),
-        .I1(wait_counter_reg[23]),
-        .I2(wait_counter_reg[22]),
-        .I3(\next_state[2]_i_5_n_0 ),
+        .I1(wait_counter_reg[28]),
+        .I2(wait_counter_reg[27]),
+        .I3(wait_counter_reg[26]),
+        .O(\next_state[2]_i_15_n_0 ));
+  LUT3 #(
+    .INIT(8'h80)) 
+    \next_state[2]_i_16 
+       (.I0(wait_counter_reg[16]),
+        .I1(wait_counter_reg[15]),
+        .I2(wait_counter_reg[14]),
+        .O(\next_state[2]_i_16_n_0 ));
+  LUT5 #(
+    .INIT(32'h88808080)) 
+    \next_state[2]_i_17 
+       (.I0(wait_counter_reg[10]),
+        .I1(wait_counter_reg[9]),
+        .I2(wait_counter_reg[8]),
+        .I3(wait_counter_reg[6]),
+        .I4(wait_counter_reg[7]),
+        .O(\next_state[2]_i_17_n_0 ));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \next_state[2]_i_18 
+       (.I0(wait_counter_reg[12]),
+        .I1(wait_counter_reg[11]),
+        .I2(wait_counter_reg[13]),
+        .O(\next_state[2]_i_18_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \next_state[2]_i_2 
+       (.I0(\next_state[2]_i_4_n_0 ),
+        .I1(state[0]),
+        .O(\next_state[2]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'h00000008)) 
+    \next_state[2]_i_3 
+       (.I0(state[1]),
+        .I1(state[2]),
+        .I2(\next_state[2]_i_5_n_0 ),
+        .I3(state[0]),
+        .I4(reset_i),
         .O(\next_state[2]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBBBBBBBBBBBBBBA)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFEA)) 
     \next_state[2]_i_4 
-       (.I0(wait_counter_reg[17]),
-        .I1(\next_state[2]_i_6_n_0 ),
-        .I2(\next_state[2]_i_7_n_0 ),
-        .I3(wait_counter_reg[12]),
-        .I4(wait_counter_reg[11]),
-        .I5(wait_counter_reg[13]),
+       (.I0(\next_state[2]_i_6_n_0 ),
+        .I1(wait_echo_start_counter_reg[2]),
+        .I2(wait_echo_start_counter_reg[3]),
+        .I3(\next_state[2]_i_7_n_0 ),
+        .I4(\next_state[2]_i_8_n_0 ),
         .O(\next_state[2]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    .INIT(64'hFFFFFFFFFFFFEEEA)) 
     \next_state[2]_i_5 
-       (.I0(wait_counter_reg[25]),
-        .I1(wait_counter_reg[26]),
-        .I2(wait_counter_reg[27]),
-        .I3(wait_counter_reg[24]),
-        .I4(wait_counter_reg[30]),
-        .I5(wait_counter_reg[28]),
+       (.I0(\next_state[2]_i_9_n_0 ),
+        .I1(wait_counter_reg[21]),
+        .I2(wait_counter_reg[20]),
+        .I3(\next_state[2]_i_10_n_0 ),
+        .I4(wait_counter_reg[24]),
+        .I5(wait_counter_reg[25]),
         .O(\next_state[2]_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'h7F)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \next_state[2]_i_6 
-       (.I0(wait_counter_reg[14]),
-        .I1(wait_counter_reg[15]),
-        .I2(wait_counter_reg[16]),
+       (.I0(\next_state[2]_i_11_n_0 ),
+        .I1(wait_echo_start_counter_reg[27]),
+        .I2(wait_echo_start_counter_reg[26]),
+        .I3(wait_echo_start_counter_reg[25]),
+        .I4(wait_echo_start_counter_reg[24]),
+        .I5(\next_state[2]_i_12_n_0 ),
         .O(\next_state[2]_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'hF8000000)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \next_state[2]_i_7 
-       (.I0(wait_counter_reg[7]),
-        .I1(wait_counter_reg[6]),
-        .I2(wait_counter_reg[8]),
-        .I3(wait_counter_reg[9]),
-        .I4(wait_counter_reg[10]),
+       (.I0(\next_state[2]_i_13_n_0 ),
+        .I1(wait_echo_start_counter_reg[11]),
+        .I2(wait_echo_start_counter_reg[10]),
+        .I3(wait_echo_start_counter_reg[9]),
+        .I4(wait_echo_start_counter_reg[8]),
+        .I5(\next_state[2]_i_14_n_0 ),
         .O(\next_state[2]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \next_state[2]_i_8 
+       (.I0(wait_echo_start_counter_reg[19]),
+        .I1(wait_echo_start_counter_reg[18]),
+        .I2(wait_echo_start_counter_reg[17]),
+        .I3(wait_echo_start_counter_reg[16]),
+        .O(\next_state[2]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \next_state[2]_i_9 
+       (.I0(\next_state[2]_i_15_n_0 ),
+        .I1(wait_counter_reg[30]),
+        .I2(wait_counter_reg[22]),
+        .I3(wait_counter_reg[23]),
+        .O(\next_state[2]_i_9_n_0 ));
   FDRE #(
     .INIT(1'b1)) 
     \next_state_reg[0] 
@@ -16605,11 +16790,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .Q(state[2]),
         .R(1'b0));
   LUT3 #(
-    .INIT(8'h04)) 
+    .INIT(8'h10)) 
     \trigger_counter[0]_i_1 
        (.I0(state[2]),
-        .I1(state[0]),
-        .I2(state[1]),
+        .I1(state[1]),
+        .I2(state[0]),
         .O(\trigger_counter[0]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -16929,11 +17114,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .Q(trigger_counter_reg[9]),
         .R(\trigger_counter[0]_i_1_n_0 ));
   LUT3 #(
-    .INIT(8'h02)) 
+    .INIT(8'h04)) 
     trigger_i_1
-       (.I0(state[1]),
-        .I1(state[0]),
-        .I2(state[2]),
+       (.I0(state[2]),
+        .I1(state[1]),
+        .I2(state[0]),
         .O(trigger_i_1_n_0));
   FDRE trigger_reg
        (.C(clk),
@@ -16942,11 +17127,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .Q(trigger),
         .R(1'b0));
   LUT3 #(
-    .INIT(8'h08)) 
+    .INIT(8'h40)) 
     \wait_counter[0]_i_1 
-       (.I0(state[1]),
+       (.I0(state[0]),
         .I1(state[2]),
-        .I2(state[0]),
+        .I2(state[1]),
         .O(\wait_counter[0]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -17264,6 +17449,331 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_controller_ultrasonic_hcsr04
         .CE(\wait_counter[0]_i_1_n_0 ),
         .D(\wait_counter_reg[8]_i_1_n_6 ),
         .Q(wait_counter_reg[9]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h0800)) 
+    \wait_echo_start_counter[0]_i_1 
+       (.I0(state[0]),
+        .I1(echo),
+        .I2(state[2]),
+        .I3(state[1]),
+        .O(\wait_echo_start_counter[0]_i_1_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \wait_echo_start_counter[0]_i_3 
+       (.I0(\wait_echo_start_counter_reg_n_0_[0] ),
+        .O(\wait_echo_start_counter[0]_i_3_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[0] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[0]_i_2_n_7 ),
+        .Q(\wait_echo_start_counter_reg_n_0_[0] ),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \wait_echo_start_counter_reg[0]_i_2 
+       (.CI(1'b0),
+        .CO({\wait_echo_start_counter_reg[0]_i_2_n_0 ,\wait_echo_start_counter_reg[0]_i_2_n_1 ,\wait_echo_start_counter_reg[0]_i_2_n_2 ,\wait_echo_start_counter_reg[0]_i_2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b1}),
+        .O({\wait_echo_start_counter_reg[0]_i_2_n_4 ,\wait_echo_start_counter_reg[0]_i_2_n_5 ,\wait_echo_start_counter_reg[0]_i_2_n_6 ,\wait_echo_start_counter_reg[0]_i_2_n_7 }),
+        .S({wait_echo_start_counter_reg[3:1],\wait_echo_start_counter[0]_i_3_n_0 }));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[10] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[8]_i_1_n_5 ),
+        .Q(wait_echo_start_counter_reg[10]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[11] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[8]_i_1_n_4 ),
+        .Q(wait_echo_start_counter_reg[11]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[12] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[12]_i_1_n_7 ),
+        .Q(wait_echo_start_counter_reg[12]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \wait_echo_start_counter_reg[12]_i_1 
+       (.CI(\wait_echo_start_counter_reg[8]_i_1_n_0 ),
+        .CO({\wait_echo_start_counter_reg[12]_i_1_n_0 ,\wait_echo_start_counter_reg[12]_i_1_n_1 ,\wait_echo_start_counter_reg[12]_i_1_n_2 ,\wait_echo_start_counter_reg[12]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\wait_echo_start_counter_reg[12]_i_1_n_4 ,\wait_echo_start_counter_reg[12]_i_1_n_5 ,\wait_echo_start_counter_reg[12]_i_1_n_6 ,\wait_echo_start_counter_reg[12]_i_1_n_7 }),
+        .S(wait_echo_start_counter_reg[15:12]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[13] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[12]_i_1_n_6 ),
+        .Q(wait_echo_start_counter_reg[13]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[14] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[12]_i_1_n_5 ),
+        .Q(wait_echo_start_counter_reg[14]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[15] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[12]_i_1_n_4 ),
+        .Q(wait_echo_start_counter_reg[15]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[16] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[16]_i_1_n_7 ),
+        .Q(wait_echo_start_counter_reg[16]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \wait_echo_start_counter_reg[16]_i_1 
+       (.CI(\wait_echo_start_counter_reg[12]_i_1_n_0 ),
+        .CO({\wait_echo_start_counter_reg[16]_i_1_n_0 ,\wait_echo_start_counter_reg[16]_i_1_n_1 ,\wait_echo_start_counter_reg[16]_i_1_n_2 ,\wait_echo_start_counter_reg[16]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\wait_echo_start_counter_reg[16]_i_1_n_4 ,\wait_echo_start_counter_reg[16]_i_1_n_5 ,\wait_echo_start_counter_reg[16]_i_1_n_6 ,\wait_echo_start_counter_reg[16]_i_1_n_7 }),
+        .S(wait_echo_start_counter_reg[19:16]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[17] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[16]_i_1_n_6 ),
+        .Q(wait_echo_start_counter_reg[17]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[18] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[16]_i_1_n_5 ),
+        .Q(wait_echo_start_counter_reg[18]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[19] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[16]_i_1_n_4 ),
+        .Q(wait_echo_start_counter_reg[19]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[1] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[0]_i_2_n_6 ),
+        .Q(wait_echo_start_counter_reg[1]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[20] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[20]_i_1_n_7 ),
+        .Q(wait_echo_start_counter_reg[20]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \wait_echo_start_counter_reg[20]_i_1 
+       (.CI(\wait_echo_start_counter_reg[16]_i_1_n_0 ),
+        .CO({\wait_echo_start_counter_reg[20]_i_1_n_0 ,\wait_echo_start_counter_reg[20]_i_1_n_1 ,\wait_echo_start_counter_reg[20]_i_1_n_2 ,\wait_echo_start_counter_reg[20]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\wait_echo_start_counter_reg[20]_i_1_n_4 ,\wait_echo_start_counter_reg[20]_i_1_n_5 ,\wait_echo_start_counter_reg[20]_i_1_n_6 ,\wait_echo_start_counter_reg[20]_i_1_n_7 }),
+        .S(wait_echo_start_counter_reg[23:20]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[21] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[20]_i_1_n_6 ),
+        .Q(wait_echo_start_counter_reg[21]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[22] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[20]_i_1_n_5 ),
+        .Q(wait_echo_start_counter_reg[22]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[23] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[20]_i_1_n_4 ),
+        .Q(wait_echo_start_counter_reg[23]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[24] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[24]_i_1_n_7 ),
+        .Q(wait_echo_start_counter_reg[24]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \wait_echo_start_counter_reg[24]_i_1 
+       (.CI(\wait_echo_start_counter_reg[20]_i_1_n_0 ),
+        .CO({\wait_echo_start_counter_reg[24]_i_1_n_0 ,\wait_echo_start_counter_reg[24]_i_1_n_1 ,\wait_echo_start_counter_reg[24]_i_1_n_2 ,\wait_echo_start_counter_reg[24]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\wait_echo_start_counter_reg[24]_i_1_n_4 ,\wait_echo_start_counter_reg[24]_i_1_n_5 ,\wait_echo_start_counter_reg[24]_i_1_n_6 ,\wait_echo_start_counter_reg[24]_i_1_n_7 }),
+        .S(wait_echo_start_counter_reg[27:24]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[25] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[24]_i_1_n_6 ),
+        .Q(wait_echo_start_counter_reg[25]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[26] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[24]_i_1_n_5 ),
+        .Q(wait_echo_start_counter_reg[26]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[27] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[24]_i_1_n_4 ),
+        .Q(wait_echo_start_counter_reg[27]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[28] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[28]_i_1_n_7 ),
+        .Q(wait_echo_start_counter_reg[28]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \wait_echo_start_counter_reg[28]_i_1 
+       (.CI(\wait_echo_start_counter_reg[24]_i_1_n_0 ),
+        .CO({\NLW_wait_echo_start_counter_reg[28]_i_1_CO_UNCONNECTED [3:2],\wait_echo_start_counter_reg[28]_i_1_n_2 ,\wait_echo_start_counter_reg[28]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_wait_echo_start_counter_reg[28]_i_1_O_UNCONNECTED [3],\wait_echo_start_counter_reg[28]_i_1_n_5 ,\wait_echo_start_counter_reg[28]_i_1_n_6 ,\wait_echo_start_counter_reg[28]_i_1_n_7 }),
+        .S({1'b0,wait_echo_start_counter_reg[30:28]}));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[29] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[28]_i_1_n_6 ),
+        .Q(wait_echo_start_counter_reg[29]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[2] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[0]_i_2_n_5 ),
+        .Q(wait_echo_start_counter_reg[2]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[30] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[28]_i_1_n_5 ),
+        .Q(wait_echo_start_counter_reg[30]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[3] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[0]_i_2_n_4 ),
+        .Q(wait_echo_start_counter_reg[3]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[4] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[4]_i_1_n_7 ),
+        .Q(wait_echo_start_counter_reg[4]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \wait_echo_start_counter_reg[4]_i_1 
+       (.CI(\wait_echo_start_counter_reg[0]_i_2_n_0 ),
+        .CO({\wait_echo_start_counter_reg[4]_i_1_n_0 ,\wait_echo_start_counter_reg[4]_i_1_n_1 ,\wait_echo_start_counter_reg[4]_i_1_n_2 ,\wait_echo_start_counter_reg[4]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\wait_echo_start_counter_reg[4]_i_1_n_4 ,\wait_echo_start_counter_reg[4]_i_1_n_5 ,\wait_echo_start_counter_reg[4]_i_1_n_6 ,\wait_echo_start_counter_reg[4]_i_1_n_7 }),
+        .S(wait_echo_start_counter_reg[7:4]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[5] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[4]_i_1_n_6 ),
+        .Q(wait_echo_start_counter_reg[5]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[6] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[4]_i_1_n_5 ),
+        .Q(wait_echo_start_counter_reg[6]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[7] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[4]_i_1_n_4 ),
+        .Q(wait_echo_start_counter_reg[7]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[8] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[8]_i_1_n_7 ),
+        .Q(wait_echo_start_counter_reg[8]),
+        .R(\trigger_counter[0]_i_1_n_0 ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \wait_echo_start_counter_reg[8]_i_1 
+       (.CI(\wait_echo_start_counter_reg[4]_i_1_n_0 ),
+        .CO({\wait_echo_start_counter_reg[8]_i_1_n_0 ,\wait_echo_start_counter_reg[8]_i_1_n_1 ,\wait_echo_start_counter_reg[8]_i_1_n_2 ,\wait_echo_start_counter_reg[8]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\wait_echo_start_counter_reg[8]_i_1_n_4 ,\wait_echo_start_counter_reg[8]_i_1_n_5 ,\wait_echo_start_counter_reg[8]_i_1_n_6 ,\wait_echo_start_counter_reg[8]_i_1_n_7 }),
+        .S(wait_echo_start_counter_reg[11:8]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \wait_echo_start_counter_reg[9] 
+       (.C(clk),
+        .CE(\wait_echo_start_counter[0]_i_1_n_0 ),
+        .D(\wait_echo_start_counter_reg[8]_i_1_n_6 ),
+        .Q(wait_echo_start_counter_reg[9]),
         .R(\trigger_counter[0]_i_1_n_0 ));
 endmodule
 `ifndef GLBL

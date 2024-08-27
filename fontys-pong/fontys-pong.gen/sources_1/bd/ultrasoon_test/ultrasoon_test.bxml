@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="ultrasoon_test" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1723058004"/>
-    <Generation Name="SIMULATION" State="RESET" Timestamp="1723058004"/>
-    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1723058004"/>
-    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1723058004"/>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1724771063"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1724771063"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1724771063"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1724771063"/>
     <FileCollection Name="SOURCES" Type="SOURCES"/>
   </CompositeFile>
 </Root>

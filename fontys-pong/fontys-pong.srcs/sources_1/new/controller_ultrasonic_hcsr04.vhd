@@ -24,6 +24,7 @@ architecture Behavioral of controller_ultrasonic_hcsr04 is
     signal state, next_state : state_type := idle;
 
     signal trigger_counter : natural := 0;
+    signal wait_echo_start_counter : natural := 0;
     signal echo_counter : natural := 0;
     signal wait_counter : natural := 0;
 
@@ -63,7 +64,7 @@ begin
                 when wait_echo_start =>
                     if reset_i = '1' then
                         next_state <= reset;
-                    elsif echo = '1' then
+                    elsif wait_echo_start_counter >= 10 then
                         next_state <= wait_echo_stop;
                     else
                         next_state <= wait_echo_start;
@@ -113,12 +114,17 @@ begin
         if rising_edge(clk) then
             if state = send_trigger then
                 trigger_counter <= trigger_counter + 1;
+            elsif state = wait_echo_start then
+                if echo = '1' then
+                    wait_echo_start_counter <= wait_echo_start_counter + 1;
+                end if;
             elsif state = wait_echo_stop then
                 echo_counter <= echo_counter + 1;
             elsif state = cooldown then
                 wait_counter <= wait_counter + 1;
             elsif state = idle then
                 trigger_counter <= 0;
+                wait_echo_start_counter <= 0;
                 echo_counter <= 0;
                 wait_counter <= 0;
             end if;
@@ -145,6 +151,7 @@ begin
             std_logic_vector(to_unsigned(0, 9)) when distance_mm > MaxDistance_mm else 
             std_logic_vector(to_unsigned(512, 9));
 
+
     output_decoder: process(clk)
     begin
         if rising_edge(clk) then
@@ -165,6 +172,9 @@ begin
                     trigger <= '0';
 
                 when calc_data =>
+                    trigger <= '0';
+
+                when cooldown =>
                     trigger <= '0';
 
                 when others =>
