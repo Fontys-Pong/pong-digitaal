@@ -1,0 +1,50 @@
+vhdl xil_defaultlib  \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_controller_buttons_0_0/sim/blockdesign_inst_0_controller_buttons_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_controller_buttons_1_0/sim/blockdesign_inst_0_controller_buttons_1_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_divider_1_0/sim/blockdesign_inst_0_clk_divider_1_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_controller_interconn_0_0/sim/blockdesign_inst_0_controller_interconn_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_controller_ultrasoni_0_0/sim/blockdesign_inst_0_controller_ultrasoni_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_controller_ultrasoni_1_0/sim/blockdesign_inst_0_controller_ultrasoni_1_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_v_tc_0_0/sim/blockdesign_inst_0_v_tc_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ipshared/20df/src/ClockGen.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ipshared/20df/src/SyncAsync.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ipshared/20df/src/SyncAsyncReset.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ipshared/20df/src/DVI_Constants.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ipshared/20df/src/OutputSERDES.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ipshared/20df/src/TMDS_Encoder.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ipshared/20df/src/rgb2dvi.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_rgb2dvi_0_0/sim/blockdesign_inst_0_rgb2dvi_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_pixel_counter_0_0/sim/blockdesign_inst_0_pixel_counter_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_color_generator_0_0/sim/blockdesign_inst_0_color_generator_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_video_buffer_0_0/sim/blockdesign_inst_0_video_buffer_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_0_0/sim/blockdesign_inst_0_paint_rectangle_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_1_0/sim/blockdesign_inst_0_paint_rectangle_1_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_2_0/sim/blockdesign_inst_0_paint_rectangle_2_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_3_0/sim/blockdesign_inst_0_paint_rectangle_3_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_4_0/sim/blockdesign_inst_0_paint_rectangle_4_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_5_0/sim/blockdesign_inst_0_paint_rectangle_5_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_6_0/sim/blockdesign_inst_0_paint_rectangle_6_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_seven_seg_display_co_0_0/sim/blockdesign_inst_0_seven_seg_display_co_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_0_1/sim/blockdesign_inst_0_paint_rectangle_0_1.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_1_1/sim/blockdesign_inst_0_paint_rectangle_1_1.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_2_1/sim/blockdesign_inst_0_paint_rectangle_2_1.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_3_1/sim/blockdesign_inst_0_paint_rectangle_3_1.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_4_1/sim/blockdesign_inst_0_paint_rectangle_4_1.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_5_1/sim/blockdesign_inst_0_paint_rectangle_5_1.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_6_1/sim/blockdesign_inst_0_paint_rectangle_6_1.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_seven_seg_display_co_0_1/sim/blockdesign_inst_0_seven_seg_display_co_0_1.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_scoreboard_controller_0_0/sim/blockdesign_inst_0_scoreboard_controller_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_score_counter_0_0/sim/blockdesign_inst_0_score_counter_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_collision_detection_0_0/sim/blockdesign_inst_0_collision_detection_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_position_ball_0_0/sim/blockdesign_inst_0_position_ball_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_divider_0_0/sim/blockdesign_inst_0_clk_divider_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_position_paddles_0_0/sim/blockdesign_inst_0_position_paddles_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_centerline_0_0/sim/blockdesign_inst_0_paint_centerline_0_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_ball_0/sim/blockdesign_inst_0_paint_ball_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_paddle_l_0/sim/blockdesign_inst_0_paint_paddle_l_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_paddle_r_0/sim/blockdesign_inst_0_paint_paddle_r_0.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/sim/blockdesign_inst_0.vhd" \
+"../../../bd/ZYNQ/sim/ZYNQ.vhd" \
+
+# Do not sort compile order
+nosort

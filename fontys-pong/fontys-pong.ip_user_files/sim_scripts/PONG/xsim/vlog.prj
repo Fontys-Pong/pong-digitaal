@@ -1,0 +1,23 @@
+verilog xil_defaultlib --include "../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/30ef" \
+"../../../bd/PONG/ip/PONG_util_vector_logic_1_0/sim/PONG_util_vector_logic_1_0.v" \
+"../../../bd/PONG/ip/PONG_screen_size_x_0/sim/PONG_screen_size_x_0.v" \
+"../../../bd/PONG/ip/PONG_screen_size_y_0_1/sim/PONG_screen_size_y_0.v" \
+"../../../bd/PONG/ip/PONG_paddle_size_x_0/sim/PONG_paddle_size_x_0.v" \
+"../../../bd/PONG/ip/PONG_paddle_size_y_0/sim/PONG_paddle_size_y_0.v" \
+"../../../bd/PONG/ip/PONG_ball_size_0/sim/PONG_ball_size_0.v" \
+"../../../bd/PONG/ip/PONG_paddle_offset_x_0/sim/PONG_paddle_offset_x_0.v" \
+"../../../bd/PONG/ip/PONG_max_score_0/sim/PONG_max_score_0.v" \
+"../../../bd/PONG/ip/PONG_score_seg_size_x_0/sim/PONG_score_seg_size_x_0.v" \
+"../../../bd/PONG/ip/PONG_score_seg_size_y_0/sim/PONG_score_seg_size_y_0.v" \
+"../../../bd/PONG/ip/PONG_scoreboard_center_offset_0/sim/PONG_scoreboard_center_offset_0.v" \
+"../../../bd/PONG/ip/PONG_scoreboard_top_offset_0/sim/PONG_scoreboard_top_offset_0.v" \
+"../../../bd/PONG/ip/PONG_clk_wiz_0_0_1/PONG_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/PONG/ip/PONG_clk_wiz_0_0_1/PONG_clk_wiz_0_0.v" \
+"../../../bd/PONG/ip/PONG_zero_0/sim/PONG_zero_0.v" \
+"../../../bd/PONG/ip/PONG_one_0/sim/PONG_one_0.v" \
+"../../../bd/PONG/ip/PONG_util_vector_logic_2_0/sim/PONG_util_vector_logic_2_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

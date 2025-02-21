@@ -6,6 +6,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity paint_rectangle is
     Port ( clk : in STD_LOGIC;
+           enable : in STD_LOGIC;
            video_enable_i : in STD_LOGIC;
            hsync_i : in STD_LOGIC;
            vsync_i : in STD_LOGIC;
@@ -39,7 +40,8 @@ begin
             pxl_y_o <= pxl_y_i;
 
             -- output pixel value
-            if (unsigned(pxl_x_i) >= unsigned(rect_pos_x) 
+            if ( enable = '1'
+                AND unsigned(pxl_x_i) >= unsigned(rect_pos_x) 
                 AND unsigned(pxl_x_i) < unsigned(rect_pos_x) + unsigned(rect_size_x) 
                 AND unsigned(pxl_y_i) >= unsigned(rect_pos_y) 
                 AND unsigned(pxl_y_i) < unsigned(rect_pos_y) + unsigned(rect_size_y)

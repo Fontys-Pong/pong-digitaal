@@ -1,0 +1,316 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xC15B6DEEAE3D8687",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../fontys-pong.gen/sources_1/bd/ultrasoon_test",
+      "name": "ultrasoon_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "system_ila_0": "",
+      "clk_divider_0": "",
+      "seven_segment_contro_0": "",
+      "controller_ultrasoni_0": ""
+    },
+    "ports": {
+      "ext_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "12000000"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "enable": {
+        "direction": "I"
+      },
+      "sensor_l": {
+        "direction": "I"
+      },
+      "trigger_l": {
+        "direction": "O"
+      },
+      "seven_seg_select": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "seven_seg_value": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "ultrasoon_test_clk_wiz_0_0",
+        "xci_path": "ip\\ultrasoon_test_clk_wiz_0_0\\ultrasoon_test_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "833.33"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "479.872"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "668.310"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "62.500"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "83.333"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "7.500"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "12.000"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "ultrasoon_test_system_ila_0_1",
+        "xci_path": "ip\\ultrasoon_test_system_ila_0_1\\ultrasoon_test_system_ila_0_1.xci",
+        "inst_hier_path": "system_ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "131072"
+          },
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "2"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          }
+        }
+      },
+      "clk_divider_0": {
+        "vlnv": "xilinx.com:module_ref:clk_divider:1.0",
+        "xci_name": "ultrasoon_test_clk_divider_0_0",
+        "xci_path": "ip\\ultrasoon_test_clk_divider_0_0\\ultrasoon_test_clk_divider_0_0.xci",
+        "inst_hier_path": "clk_divider_0",
+        "parameters": {
+          "division": {
+            "value": "1000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_i": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "seven_segment_contro_0": {
+        "vlnv": "xilinx.com:module_ref:seven_segment_controller:1.0",
+        "xci_name": "ultrasoon_test_seven_segment_contro_0_0",
+        "xci_path": "ip\\ultrasoon_test_seven_segment_contro_0_0\\ultrasoon_test_seven_segment_contro_0_0.xci",
+        "inst_hier_path": "seven_segment_contro_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "seven_segment_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "value_a": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "value_b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "seven_seg_select": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "seven_seg_value": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "controller_ultrasoni_0": {
+        "vlnv": "xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0",
+        "xci_name": "ultrasoon_test_controller_ultrasoni_0_0",
+        "xci_path": "ip\\ultrasoon_test_controller_ultrasoni_0_0\\ultrasoon_test_controller_ultrasoni_0_0.xci",
+        "inst_hier_path": "controller_ultrasoni_0",
+        "parameters": {
+          "MaxDistance_mm": {
+            "value": "200"
+          },
+          "MinDistance_mm": {
+            "value": "0"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controller_ultrasonic_hcsr04",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "reset_i": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "echo": {
+            "direction": "I"
+          },
+          "trigger": {
+            "direction": "O"
+          },
+          "data": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_divider_0_clk_o": {
+        "ports": [
+          "clk_divider_0/clk_o",
+          "seven_segment_contro_0/clk"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "ext_clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "system_ila_0/clk",
+          "clk_divider_0/clk_i",
+          "controller_ultrasoni_0/clk"
+        ]
+      },
+      "controller_ultrasoni_0_data": {
+        "ports": [
+          "controller_ultrasoni_0/data",
+          "system_ila_0/probe0",
+          "seven_segment_contro_0/value_a"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
+      },
+      "controller_ultrasoni_0_distance_mm_o": {
+        "ports": [
+          "system_ila_0/probe1"
+        ]
+      },
+      "controller_ultrasoni_0_trigger": {
+        "ports": [
+          "controller_ultrasoni_0/trigger",
+          "trigger_l"
+        ]
+      },
+      "echo_0_1": {
+        "ports": [
+          "sensor_l",
+          "controller_ultrasoni_0/echo"
+        ]
+      },
+      "enable_0_1": {
+        "ports": [
+          "enable",
+          "controller_ultrasoni_0/enable"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset",
+          "clk_divider_0/reset",
+          "controller_ultrasoni_0/reset_i"
+        ]
+      },
+      "seven_segment_contro_0_seven_seg_select": {
+        "ports": [
+          "seven_segment_contro_0/seven_seg_select",
+          "seven_seg_select"
+        ]
+      },
+      "seven_segment_contro_0_seven_seg_value": {
+        "ports": [
+          "seven_segment_contro_0/seven_seg_value",
+          "seven_seg_value"
+        ]
+      }
+    }
+  }
+}
