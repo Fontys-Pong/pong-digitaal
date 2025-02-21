@@ -1,0 +1,13 @@
+vhdl xil_defaultlib  \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/ClockGen.vhd" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/SyncAsync.vhd" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/SyncAsyncReset.vhd" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/DVI_Constants.vhd" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/OutputSERDES.vhd" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/TMDS_Encoder.vhd" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/rgb2dvi.vhd" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_rgb2dvi_0_0_1/sim/PONG_rgb2dvi_0_0.vhd" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_v_tc_0_0_1/sim/PONG_v_tc_0_0.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,363 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x581764AD7BABD757",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../fontys-pong.gen/sources_1/bd/ZYNQ",
+      "name": "ZYNQ",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2023.1"
+    },
+    "design_tree": {
+      "clk_wiz": "",
+      "blockdesign_0": ""
+    },
+    "ports": {
+      "ext_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "blockdesign_ext_clk"
+          },
+          "FREQ_HZ": {
+            "value": "12000000"
+          }
+        }
+      },
+      "enable": {
+        "direction": "I"
+      },
+      "btn_down_r": {
+        "direction": "I"
+      },
+      "btn_up_r": {
+        "direction": "I"
+      },
+      "btn_down_l": {
+        "direction": "I"
+      },
+      "btn_up_l": {
+        "direction": "I"
+      },
+      "controller_switch": {
+        "direction": "I"
+      },
+      "sensor_r": {
+        "direction": "I"
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "sensor_l": {
+        "direction": "I"
+      },
+      "trigger_l": {
+        "direction": "O"
+      },
+      "trigger_r": {
+        "direction": "O"
+      },
+      "hdmi_out_hpd": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "hdmi_out_clk_p": {
+        "type": "clk",
+        "direction": "O"
+      },
+      "hdmi_out_clk_n": {
+        "type": "clk",
+        "direction": "O"
+      },
+      "hdmi_out_data_p": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "hdmi_out_data_n": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      }
+    },
+    "components": {
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "ZYNQ_clk_wiz_0",
+        "xci_path": "ip\\ZYNQ_clk_wiz_0\\ZYNQ_clk_wiz_0.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "833.33"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "479.872"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "668.310"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "124.615"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "100.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "false"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "62.500"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "83.333"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "7.500"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "1"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "1"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "12"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          }
+        }
+      },
+      "blockdesign_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "PONG.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "PONG.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "PONG.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "PONG.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "trigger_l": {
+            "direction": "O"
+          },
+          "trigger_r": {
+            "direction": "O"
+          },
+          "sensor_l": {
+            "direction": "I"
+          },
+          "sensor_r": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "controller_switch": {
+            "direction": "I"
+          },
+          "btn_up_l": {
+            "direction": "I"
+          },
+          "btn_down_l": {
+            "direction": "I"
+          },
+          "btn_up_r": {
+            "direction": "I"
+          },
+          "btn_down_r": {
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "hdmi_out_hpd": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "hdmi_out_clk_p": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "hdmi_out_clk_n": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "hdmi_out_data_p": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "hdmi_out_data_n": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "clk_100MHz": {
+            "type": "clk",
+            "direction": "I"
+          }
+        },
+        "post_compiled_compname": "blockdesign_inst_0",
+        "architecture": "zynq",
+        "variant_info": {
+          "PONG.bd": {
+            "scoped_diagram": "blockdesign_inst_0.bd",
+            "design_checksum": "0x7DA37C07",
+            "ref_name": "blockdesign",
+            "ref_subinst_path": "ZYNQ_blockdesign_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      }
+    },
+    "nets": {
+      "blockdesign_0_hdmi_out_clk_n": {
+        "ports": [
+          "blockdesign_0/hdmi_out_clk_n",
+          "hdmi_out_clk_n"
+        ]
+      },
+      "blockdesign_0_hdmi_out_clk_p": {
+        "ports": [
+          "blockdesign_0/hdmi_out_clk_p",
+          "hdmi_out_clk_p"
+        ]
+      },
+      "blockdesign_0_hdmi_out_data_n": {
+        "ports": [
+          "blockdesign_0/hdmi_out_data_n",
+          "hdmi_out_data_n"
+        ]
+      },
+      "blockdesign_0_hdmi_out_data_p": {
+        "ports": [
+          "blockdesign_0/hdmi_out_data_p",
+          "hdmi_out_data_p"
+        ]
+      },
+      "blockdesign_0_hdmi_out_hpd": {
+        "ports": [
+          "blockdesign_0/hdmi_out_hpd",
+          "hdmi_out_hpd"
+        ]
+      },
+      "blockdesign_0_trigger_l": {
+        "ports": [
+          "blockdesign_0/trigger_l",
+          "trigger_l"
+        ]
+      },
+      "blockdesign_0_trigger_r": {
+        "ports": [
+          "blockdesign_0/trigger_r",
+          "trigger_r"
+        ]
+      },
+      "btn_down_l_1": {
+        "ports": [
+          "btn_down_l",
+          "blockdesign_0/btn_down_l"
+        ]
+      },
+      "btn_down_r_1": {
+        "ports": [
+          "btn_down_r",
+          "blockdesign_0/btn_down_r"
+        ]
+      },
+      "btn_up_l_1": {
+        "ports": [
+          "btn_up_l",
+          "blockdesign_0/btn_up_l"
+        ]
+      },
+      "btn_up_r_1": {
+        "ports": [
+          "btn_up_r",
+          "blockdesign_0/btn_up_r"
+        ]
+      },
+      "clk_100MHz_1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "blockdesign_0/clk_100MHz"
+        ]
+      },
+      "clk_in_1": {
+        "ports": [
+          "ext_clk",
+          "clk_wiz/clk_in1"
+        ]
+      },
+      "controller_switch_1": {
+        "ports": [
+          "controller_switch",
+          "blockdesign_0/controller_switch"
+        ]
+      },
+      "enable_1": {
+        "ports": [
+          "enable",
+          "blockdesign_0/enable"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "clk_wiz/reset",
+          "blockdesign_0/reset"
+        ]
+      },
+      "sensor_l_1": {
+        "ports": [
+          "sensor_l",
+          "blockdesign_0/sensor_l"
+        ]
+      },
+      "sensor_r_1": {
+        "ports": [
+          "sensor_r",
+          "blockdesign_0/sensor_r"
+        ]
+      }
+    }
+  }
+}

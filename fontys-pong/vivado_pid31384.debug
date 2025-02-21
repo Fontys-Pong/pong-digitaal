@@ -1,0 +1,51 @@
+#--------------------------------------------------------------------------
+# AMD Vivado v2023.1 (64-bit)
+# SW Build: 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build: 3865790 on Sun May 07 13:33:03 MDT 2023
+# Current time: Fri Feb 21 14:43:31 CET 2025
+# Process ID (PID): 31384
+# User: tommy
+# OS: Windows 11
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with AMD.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+Fri Feb 21 14:43:31 CET 2025
+ui.utils.k: ui.frmwork.cmd.CommandFailedException: Unknown exception occurred ui.frmwork.cmd.CommandFailedException: Unknown exception occurred
+	at ui.data.designgraph.designgraphi.DesignGraph_isGraphStale(Native Method)
+	at ui.data.design.e.aWY(SourceFile:31)
+	at ui.views.z.b.a.GJ(SourceFile:200)
+	at ui.views.z.b.a.GI(SourceFile:134)
+	at ui.views.z.b.b.timerActionPerformed(SourceFile:169)
+	at ui.utils.q.b.actionPerformed(SourceFile:137)
+	at java.desktop/javax.swing.Timer.fireActionPerformed(Timer.java:311)
+	at ui.utils.q.a.fireActionPerformed(SourceFile:78)
+	at java.desktop/javax.swing.Timer$DoPostEvent.run(Timer.java:243)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:771)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:716)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:741)
+	at ui.frmwork.a.d.dispatchEvent(SourceFile:92)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+	at ui.utils.d.c._debug(SourceFile:1003)
+	at ui.utils.d.c.debug(SourceFile:231)
+	at ui.utils.q.debug(SourceFile:256)
+	at ui.frmwork.a.d.dispatchEvent(SourceFile:99)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+

@@ -1,0 +1,1686 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Feb 21 15:18:06 2025
+# Process ID: 2808
+# Current directory: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15440 D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong_Artix7\fontys-pong_Artix7.xpr
+# Log file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/vivado.log
+# Journal file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 2512.594 ; gain = 223.137
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+Reading block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd>...
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - ball_size
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_offset_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - max_score
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_1
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_0
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_1
+Adding component instance block -- xilinx.com:module_ref:controller_interconnect:1.0 - controller_interconn_0
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic:1.0 - controller_ultrasonic_0
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic:1.0 - controller_ultrasonic_1
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:module_ref:collision_detection:1.0 - collision_detection_0
+Adding component instance block -- xilinx.com:module_ref:color_generator:1.0 - color_generator_0
+Adding component instance block -- xilinx.com:module_ref:paint_centerline:1.0 - paint_centerline_0
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_ball
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_l
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_r
+Adding component instance block -- xilinx.com:module_ref:pixel_counter:1.0 - pixel_counter_0
+Adding component instance block -- xilinx.com:module_ref:position_ball:1.0 - position_ball_0
+Adding component instance block -- xilinx.com:module_ref:position_paddles:1.0 - position_paddles_0
+Adding component instance block -- xilinx.com:module_ref:score_counter:1.0 - score_counter_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - v_tc_0
+Adding component instance block -- xilinx.com:module_ref:video_buffer:1.0 - video_buffer_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - zero
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - one
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Successfully read diagram <blockdesign> from block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd>
+update_compile_order -fileset sources_1
+create_bd_design "CMOD_A7_35T"
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong_Artix7\fontys-pong_Artix7.srcs\sources_1\bd\CMOD_A7_35T\CMOD_A7_35T.bd> 
+update_compile_order -fileset sources_1
+current_bd_design [get_bd_designs blockdesign]
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign
+file delete -force d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd] -no_script -reset -force -quiet
+remove_files  {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd}
+update_compile_order -fileset sources_1
+add_files {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic_hcsr04.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd}
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'ultrasoon_test.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+ultrasoon_test_clk_wiz_0_0
+ultrasoon_test_system_ila_0_1
+
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/blockdesign.vhd' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/blockdesign.vhd' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/hw_handoff/blockdesign.hwh' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/blockdesign.bda' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/blockdesign.hwdef' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/blockdesign.protoinst' referenced by design 'PONG' could not be found.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'PONG.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+PONG_paddle_offset_x_0
+PONG_ball_size_0
+PONG_util_vector_logic_1_0
+PONG_screen_size_x_0
+PONG_screen_size_y_0
+PONG_score_seg_size_x_0
+PONG_max_score_0
+PONG_paddle_size_x_0
+PONG_paddle_size_y_0
+PONG_scoreboard_center_offset_0
+PONG_score_seg_size_y_0
+PONG_scoreboard_top_offset_0
+PONG_controller_buttons_1_0
+PONG_controller_interconn_0_0
+PONG_clk_wiz_0_0
+PONG_v_tc_0_0
+PONG_zero_0
+PONG_one_0
+PONG_rgb2dvi_0_0
+PONG_util_vector_logic_2_0
+PONG_seven_seg_display_co_0_0
+PONG_seven_seg_display_co_0_1
+PONG_scoreboard_controller_0_0
+
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'blockdesign_inst_0.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+blockdesign_inst_0_score_seg_size_x_0
+blockdesign_inst_0_paddle_offset_x_0
+blockdesign_inst_0_ball_size_0
+blockdesign_inst_0_util_vector_logic_1_0
+blockdesign_inst_0_screen_size_x_0
+blockdesign_inst_0_screen_size_y_0
+blockdesign_inst_0_max_score_0
+blockdesign_inst_0_paddle_size_x_0
+blockdesign_inst_0_paddle_size_y_0
+blockdesign_inst_0_scoreboard_center_offset_0
+blockdesign_inst_0_score_seg_size_y_0
+blockdesign_inst_0_scoreboard_top_offset_0
+blockdesign_inst_0_clk_wiz_0_0
+blockdesign_inst_0_v_tc_0_0
+blockdesign_inst_0_zero_0
+blockdesign_inst_0_one_0
+blockdesign_inst_0_rgb2dvi_0_0
+blockdesign_inst_0_util_vector_logic_2_0
+
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'ZYNQ.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+ZYNQ_clk_wiz_0
+
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 2676.828 ; gain = 44.547
+INFO: [Common 17-344] 'add_files' was cancelled
+add_files -norecurse D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+CRITICAL WARNING: [Vivado 12-1462] The source file is already part of the fileset 'sources_1'. Requested source 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd' will not be added.
+export_ip_user_files -of_objects  [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/blockdesign_inst_0.bd] -no_script -reset -force -quiet
+WARNING: [Vivado 12-818] No files matched 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/blockdesign_inst_0.bd'
+remove_files  {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+add_files -norecurse D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/blockdesign.vhd' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/blockdesign.vhd' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/hw_handoff/blockdesign.hwh' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/blockdesign.bda' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/blockdesign.hwdef' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/blockdesign.protoinst' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'PONG.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+PONG_paddle_offset_x_0
+PONG_ball_size_0
+PONG_util_vector_logic_1_0
+PONG_screen_size_x_0
+PONG_screen_size_y_0
+PONG_score_seg_size_x_0
+PONG_max_score_0
+PONG_paddle_size_x_0
+PONG_paddle_size_y_0
+PONG_scoreboard_center_offset_0
+PONG_score_seg_size_y_0
+PONG_scoreboard_top_offset_0
+PONG_clk_wiz_0_0
+PONG_v_tc_0_0
+PONG_zero_0
+PONG_one_0
+PONG_rgb2dvi_0_0
+PONG_util_vector_logic_2_0
+
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2700.840 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+create_bd_cell -type container -reference blockdesign blockdesign_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_0'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_1'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/clk_divider_1'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_interconn_0'.
+Given inputs for module-source, Top-module name : controller_interconnect, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_0'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_1'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/pixel_counter_0'.
+Given inputs for module-source, Top-module name : pixel_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/color_generator_0'.
+Given inputs for module-source, Top-module name : color_generator, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/video_buffer_0'.
+Given inputs for module-source, Top-module name : video_buffer, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/scoreboard_controller_0'.
+Given inputs for module-source, Top-module name : scoreboard_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/score_counter_0'.
+Given inputs for module-source, Top-module name : score_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/collision_detection_0'.
+Given inputs for module-source, Top-module name : collision_detection, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_ball_0'.
+Given inputs for module-source, Top-module name : position_ball, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/clk_divider_0'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_paddles_0'.
+Given inputs for module-source, Top-module name : position_paddles, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_centerline_0'.
+Given inputs for module-source, Top-module name : paint_centerline, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_ball'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_l'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_r'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+ERROR: [BD 41-2174] 'PONG.bd' has been locked and cannot be added to the design. Locked reason:
+
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+PONG_paddle_offset_x_0
+PONG_ball_size_0
+PONG_util_vector_logic_1_0
+PONG_screen_size_x_0
+PONG_screen_size_y_0
+PONG_score_seg_size_x_0
+PONG_max_score_0
+PONG_paddle_size_x_0
+PONG_paddle_size_y_0
+PONG_scoreboard_center_offset_0
+PONG_score_seg_size_y_0
+PONG_scoreboard_top_offset_0
+PONG_clk_wiz_0_0
+PONG_v_tc_0_0
+PONG_zero_0
+PONG_one_0
+PONG_rgb2dvi_0_0
+PONG_util_vector_logic_2_0
+
+Please open the design for more details.
+ERROR: [BD 5-7] Error: running create_bd_cell  -type container -reference blockdesign -name blockdesign_0 .
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd}
+Reading block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd>...
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - ball_size
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_offset_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - max_score
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - score_seg_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - score_seg_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - scoreboard_center_offset
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - scoreboard_top_offset
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_0'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_1'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/clk_divider_1'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_interconnect:1.0 - controller_interconn_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_interconn_0'.
+Given inputs for module-source, Top-module name : controller_interconnect, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_0'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_1'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - v_tc_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - zero
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - one
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:module_ref:pixel_counter:1.0 - pixel_counter_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/pixel_counter_0'.
+Given inputs for module-source, Top-module name : pixel_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:color_generator:1.0 - color_generator_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/color_generator_0'.
+Given inputs for module-source, Top-module name : color_generator, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:video_buffer:1.0 - video_buffer_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/video_buffer_0'.
+Given inputs for module-source, Top-module name : video_buffer, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_2
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_3
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_4
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_5
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_6
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:seven_seg_display_controller:1.0 - seven_seg_display_co_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_2
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_3
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_4
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_5
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_6
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:seven_seg_display_controller:1.0 - seven_seg_display_co_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:scoreboard_controller:1.0 - scoreboard_controller_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/scoreboard_controller_0'.
+Given inputs for module-source, Top-module name : scoreboard_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:score_counter:1.0 - score_counter_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/score_counter_0'.
+Given inputs for module-source, Top-module name : score_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:collision_detection:1.0 - collision_detection_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/collision_detection_0'.
+Given inputs for module-source, Top-module name : collision_detection, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:position_ball:1.0 - position_ball_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_ball_0'.
+Given inputs for module-source, Top-module name : position_ball, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/clk_divider_0'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:position_paddles:1.0 - position_paddles_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_paddles_0'.
+Given inputs for module-source, Top-module name : position_paddles, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_centerline:1.0 - paint_centerline_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_centerline_0'.
+Given inputs for module-source, Top-module name : paint_centerline, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_ball
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_ball'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_l
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_l'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_r
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_r'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Successfully read diagram <PONG> from block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd>
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {PONG_clk_wiz_0_0 PONG_paddle_offset_x_0 PONG_ball_size_0 PONG_util_vector_logic_2_0 PONG_paddle_size_x_0 PONG_rgb2dvi_0_0 PONG_screen_size_y_0 PONG_scoreboard_top_offset_0 PONG_score_seg_size_x_0 PONG_max_score_0 PONG_one_0 PONG_util_vector_logic_1_0 PONG_zero_0 PONG_paddle_size_y_0 PONG_screen_size_x_0 PONG_score_seg_size_y_0 PONG_v_tc_0_0 PONG_scoreboard_center_offset_0}] -log ip_upgrade.log
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd'
+INFO: [IP_Flow 19-3420] Updated PONG_ball_size_0 to use current project options
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [IP_Flow 19-3420] Updated PONG_clk_wiz_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_max_score_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_one_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_paddle_offset_x_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_paddle_size_x_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_paddle_size_y_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_rgb2dvi_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_score_seg_size_x_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_score_seg_size_y_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_scoreboard_center_offset_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_scoreboard_top_offset_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_screen_size_x_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_screen_size_y_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_util_vector_logic_1_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_util_vector_logic_2_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_v_tc_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_zero_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/ui/bd_3408a7b8.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 3130.801 ; gain = 404.254
+export_ip_user_files -of_objects [get_ips {PONG_clk_wiz_0_0 PONG_paddle_offset_x_0 PONG_ball_size_0 PONG_util_vector_logic_2_0 PONG_paddle_size_x_0 PONG_rgb2dvi_0_0 PONG_screen_size_y_0 PONG_scoreboard_top_offset_0 PONG_score_seg_size_x_0 PONG_max_score_0 PONG_one_0 PONG_util_vector_logic_1_0 PONG_zero_0 PONG_paddle_size_y_0 PONG_screen_size_x_0 PONG_score_seg_size_y_0 PONG_v_tc_0_0 PONG_scoreboard_center_offset_0}] -no_script -sync -force -quiet
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd]
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd> 
+Verilog Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/PONG.v
+Verilog Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/PONG.v
+Verilog Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/hdl/PONG_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/screen_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/screen_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/ball_size .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_offset_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/max_score .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/score_seg_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/score_seg_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/scoreboard_center_offset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/scoreboard_top_offset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_buttons_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_buttons_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/clk_divider_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_interconn_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zero .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block one .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pixel_counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block color_generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block score_counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block collision_detection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block position_ball_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_divider_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block position_paddles_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_centerline_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_ball .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_paddle_l .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_paddle_r .
+Exporting to file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/hw_handoff/PONG.hwh
+Generated Hardware Definition File d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/PONG.hwdef
+generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 3130.801 ; gain = 0.000
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -directory D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+validate_bd_design -force
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd}
+create_bd_cell -type container -reference blockdesign blockdesign_0
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/ui/bd_3408a7b8.ui> 
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong_Artix7\fontys-pong_Artix7.gen\sources_1\bd\CMOD_A7_35T\bd\blockdesign_inst_0\blockdesign_inst_0.bd> 
+ERROR: [BD 41-274] blockdesign_inst_0_controller_ultrasoni_0_0 (xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_0_controller_ultrasoni_1_0 (xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_0_seven_seg_display_co_0_0 (xilinx.com:module_ref:seven_seg_display_controller:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_0_seven_seg_display_co_0_0 (xilinx.com:module_ref:seven_seg_display_controller:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_0_scoreboard_controller_0_0 (xilinx.com:module_ref:scoreboard_controller:1.0) could not be created.
+ERROR: [BD 41-2320] Could not instantiate PONG into <CMOD_A7_35T> because of the following reason:
+* 
+ERROR: [BD 41-6] paint_ball does not have a port called enable
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins blockdesign_0/clk_100MHz]
+connect_bd_net [get_bd_pins clk_wiz/reset] [get_bd_pins blockdesign_0/reset]
+connect_bd_net [get_bd_pins rst_clk_wiz_100M/ext_reset_in] [get_bd_pins clk_wiz/reset]
+set_property location {1 142 255} [get_bd_cells clk_wiz]
+set_property location {2 517 290} [get_bd_cells rst_clk_wiz_100M]
+startgroup
+create_bd_port -dir I -type clk -freq_hz 12000000 sys_clk
+connect_bd_net [get_bd_pins /clk_wiz/clk_in1] [get_bd_ports sys_clk]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.CLKIN1_JITTER_PS {833.33} \
+  CONFIG.CLKOUT1_JITTER {479.872} \
+  CONFIG.CLKOUT1_PHASE_ERROR {668.310} \
+  CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {62.500} \
+  CONFIG.MMCM_CLKIN1_PERIOD {83.333} \
+  CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {7.500} \
+] [get_bd_cells clk_wiz]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '10.000' to '62.500' has been ignored for IP 'clk_wiz'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN1_PERIOD' from '10.000' to '83.333' has been ignored for IP 'clk_wiz'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN2_PERIOD' from '10.000' to '10.0' has been ignored for IP 'clk_wiz'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '10.000' to '7.500' has been ignored for IP 'clk_wiz'
+endgroup
+set_property location {-44 290} [get_bd_ports sys_clk]
+set_property location {-42 263} [get_bd_ports sys_clk]
+startgroup
+create_bd_port -dir I -type rst reset
+set_property CONFIG.POLARITY [get_property CONFIG.POLARITY [get_bd_pins clk_wiz/reset]] [get_bd_ports reset]
+connect_bd_net [get_bd_pins /clk_wiz/reset] [get_bd_ports reset]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {1 58 80} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins blockdesign_0/enable] [get_bd_pins xlconstant_0/dout]
+set_property location {1 83 93} [get_bd_cells xlconstant_0]
+set_property location {1 76 119} [get_bd_cells xlconstant_0]
+set_property location {1 76 111} [get_bd_cells xlconstant_0]
+set_property location {1 64 64} [get_bd_cells xlconstant_0]
+set_property location {1 80 70} [get_bd_cells xlconstant_0]
+set_property name Enable [get_bd_cells xlconstant_0]
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_n
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_n] [get_bd_ports hdmi_out_data_n]
+endgroup
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p]
+endgroup
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p_1
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p_1]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p_1]'
+INFO: [Common 17-17] undo 'create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p_1'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p]'
+INFO: [Common 17-17] undo 'create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p]
+endgroup
+startgroup
+create_bd_port -dir O -type clk hdmi_out_clk_n
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_clk_n] [get_bd_ports hdmi_out_clk_n]
+endgroup
+startgroup
+create_bd_port -dir O -type clk hdmi_out_clk_p
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_clk_p] [get_bd_ports hdmi_out_clk_p]
+endgroup
+startgroup
+create_bd_port -dir O -from 0 -to 0 hdmi_out_hpd
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_hpd] [get_bd_ports hdmi_out_hpd]
+endgroup
+startgroup
+create_bd_port -dir O trigger_r
+connect_bd_net [get_bd_pins /blockdesign_0/trigger_r] [get_bd_ports trigger_r]
+endgroup
+startgroup
+create_bd_port -dir O trigger_l
+connect_bd_net [get_bd_pins /blockdesign_0/trigger_l] [get_bd_ports trigger_l]
+endgroup
+startgroup
+create_bd_port -dir I btn_down_r
+connect_bd_net [get_bd_pins /blockdesign_0/btn_down_r] [get_bd_ports btn_down_r]
+endgroup
+startgroup
+create_bd_port -dir I btn_up_r
+connect_bd_net [get_bd_pins /blockdesign_0/btn_up_r] [get_bd_ports btn_up_r]
+endgroup
+startgroup
+create_bd_port -dir I btn_down_l
+connect_bd_net [get_bd_pins /blockdesign_0/btn_down_l] [get_bd_ports btn_down_l]
+endgroup
+startgroup
+create_bd_port -dir I btn_up_l
+connect_bd_net [get_bd_pins /blockdesign_0/btn_up_l] [get_bd_ports btn_up_l]
+endgroup
+startgroup
+create_bd_port -dir I controller_switch
+connect_bd_net [get_bd_pins /blockdesign_0/controller_switch] [get_bd_ports controller_switch]
+endgroup
+startgroup
+create_bd_port -dir I sensor_r
+connect_bd_net [get_bd_pins /blockdesign_0/sensor_r] [get_bd_ports sensor_r]
+endgroup
+startgroup
+create_bd_port -dir I sensor_l
+connect_bd_net [get_bd_pins /blockdesign_0/sensor_l] [get_bd_ports sensor_l]
+endgroup
+set_property location {-64 214} [get_bd_ports reset]
+set_property location {1 72 163} [get_bd_cells Enable]
+set_property location {1 88 153} [get_bd_cells Enable]
+set_property location {-41 -137} [get_bd_ports sensor_l]
+set_property location {-36 -107} [get_bd_ports controller_switch]
+set_property location {-33 -101} [get_bd_ports controller_switch]
+set_property location {-40 -47} [get_bd_ports btn_up_l]
+set_property location {-38 -63} [get_bd_ports btn_up_l]
+set_property location {-47 -32} [get_bd_ports btn_down_l]
+set_property location {-39 2} [get_bd_ports btn_up_r]
+set_property location {-44 24} [get_bd_ports btn_down_r]
+set_property location {-30 63} [get_bd_ports btn_down_r]
+set_property location {-38 27} [get_bd_ports btn_up_r]
+set_property location {-37 -58} [get_bd_ports btn_up_l]
+set_property location {-32 -41} [get_bd_ports btn_up_l]
+set_property location {-35 -5} [get_bd_ports btn_down_l]
+set_property location {-32 -18} [get_bd_ports btn_up_l]
+set_property location {-36 -76} [get_bd_ports controller_switch]
+create_bd_port -dir O enable_state
+create_bd_port -dir O controller_state
+create_bd_port -dir O controller_state_2
+set_property name controller_state_1 [get_bd_ports controller_state]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+endgroup
+set_property location {3 2279 -53} [get_bd_cells util_vector_logic_0]
+set_property -dict [list \
+  CONFIG.C_OPERATION {not} \
+  CONFIG.C_SIZE {1} \
+] [get_bd_cells util_vector_logic_0]
+delete_bd_objs [get_bd_ports controller_state_2]
+startgroup
+create_bd_port -dir O -from 0 -to 0 contoller_state_2
+connect_bd_net [get_bd_pins /util_vector_logic_0/Res] [get_bd_ports contoller_state_2]
+endgroup
+delete_bd_objs [get_bd_ports controller_state_1]
+create_bd_port -dir O -from 0 -to 0 controller_state_1
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+add_files -scan_for_includes D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/PONG.v' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-2576] File 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/PONG.v' referenced by design 'PONG' could not be found.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'PONG.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+PONG_paddle_offset_x_0
+PONG_ball_size_0
+PONG_score_seg_size_x_0
+PONG_paddle_size_x_0
+PONG_max_score_0
+PONG_scoreboard_top_offset_0
+PONG_score_seg_size_y_0
+PONG_scoreboard_center_offset_0
+PONG_paddle_size_y_0
+PONG_screen_size_x_0
+PONG_screen_size_y_0
+PONG_clk_wiz_0_0
+PONG_one_0
+PONG_rgb2dvi_0_0
+PONG_util_vector_logic_1_0
+PONG_util_vector_logic_2_0
+PONG_v_tc_0_0
+PONG_zero_0
+
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 3268.324 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+open_bd_design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd
+upgrade_bd_cells [get_bd_cells blockdesign_0]
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_0'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_1'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/clk_divider_1'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_0'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_1'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_interconn_0'.
+Given inputs for module-source, Top-module name : controller_interconnect, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/scoreboard_controller_0'.
+Given inputs for module-source, Top-module name : scoreboard_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/clk_divider_0'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/collision_detection_0'.
+Given inputs for module-source, Top-module name : collision_detection, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/color_generator_0'.
+Given inputs for module-source, Top-module name : color_generator, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_ball'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_centerline_0'.
+Given inputs for module-source, Top-module name : paint_centerline, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_l'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_r'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/pixel_counter_0'.
+Given inputs for module-source, Top-module name : pixel_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_ball_0'.
+Given inputs for module-source, Top-module name : position_ball, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_paddles_0'.
+Given inputs for module-source, Top-module name : position_paddles, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/score_counter_0'.
+Given inputs for module-source, Top-module name : score_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/video_buffer_0'.
+Given inputs for module-source, Top-module name : video_buffer, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+INFO: [BD 41-1794] Referenced block design(PONG.bd) is not validated, the design will be opening in background if not open and then validating...
+ERROR: [BD 41-1179] The following IPs in this design are locked. This command cannot be run until these IPs are unlocked. Please run report_ip_status for more details and a recommendation on how to fix this issue. 
+/Constants/ball_size
+/Constants/max_score
+/Constants/paddle_offset_x
+/Constants/paddle_size_x
+/Constants/paddle_size_y
+/Constants/score_seg_size_x
+/Constants/score_seg_size_y
+/Constants/scoreboard_center_offset
+/Constants/scoreboard_top_offset
+/Constants/screen_size_x
+/Constants/screen_size_y
+/clk_wiz_0
+/one
+/rgb2dvi_0
+/util_vector_logic_1
+/util_vector_logic_2
+/v_tc_0
+/zero
+
+ERROR: [BD 41-1869] Failed to validate referenced block design PONG.bd, please fix the reported error(s)
+INFO: [BD 41-1162] The cell '/blockdesign_0' is already at its latest version.
+ERROR: [Common 17-39] 'upgrade_bd_cells' failed due to earlier errors.
+update_compile_order -fileset sources_1
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd}
+Reading block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd>...
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - ball_size
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - max_score
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_offset_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - score_seg_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - score_seg_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - scoreboard_center_offset
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - scoreboard_top_offset
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_y
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_0'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_1'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/clk_divider_1'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_0'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_1'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_interconnect:1.0 - controller_interconn_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_interconn_0'.
+Given inputs for module-source, Top-module name : controller_interconnect, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:seven_seg_display_controller:1.0 - seven_seg_display_co_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_2
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_3
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_4
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_5
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_6
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:seven_seg_display_controller:1.0 - seven_seg_display_co_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_2
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_3
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_4
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_5
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_6
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:scoreboard_controller:1.0 - scoreboard_controller_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/scoreboard_controller_0'.
+Given inputs for module-source, Top-module name : scoreboard_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/clk_divider_0'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:module_ref:collision_detection:1.0 - collision_detection_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/collision_detection_0'.
+Given inputs for module-source, Top-module name : collision_detection, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:color_generator:1.0 - color_generator_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/color_generator_0'.
+Given inputs for module-source, Top-module name : color_generator, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - one
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_ball
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_ball'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_centerline:1.0 - paint_centerline_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_centerline_0'.
+Given inputs for module-source, Top-module name : paint_centerline, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_l
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_l'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_r
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_r'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:pixel_counter:1.0 - pixel_counter_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/pixel_counter_0'.
+Given inputs for module-source, Top-module name : pixel_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:position_ball:1.0 - position_ball_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_ball_0'.
+Given inputs for module-source, Top-module name : position_ball, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:position_paddles:1.0 - position_paddles_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_paddles_0'.
+Given inputs for module-source, Top-module name : position_paddles, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi_0
+Adding component instance block -- xilinx.com:module_ref:score_counter:1.0 - score_counter_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/score_counter_0'.
+Given inputs for module-source, Top-module name : score_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - v_tc_0
+Adding component instance block -- xilinx.com:module_ref:video_buffer:1.0 - video_buffer_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/video_buffer_0'.
+Given inputs for module-source, Top-module name : video_buffer, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - zero
+Successfully read diagram <PONG> from block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd>
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {PONG_max_score_0 PONG_util_vector_logic_1_0 PONG_zero_0 PONG_score_seg_size_y_0 PONG_scoreboard_top_offset_0 PONG_clk_wiz_0_0 PONG_paddle_offset_x_0 PONG_ball_size_0 PONG_util_vector_logic_2_0 PONG_paddle_size_y_0 PONG_paddle_size_x_0 PONG_rgb2dvi_0_0 PONG_screen_size_y_0 PONG_score_seg_size_x_0 PONG_one_0 PONG_screen_size_x_0 PONG_v_tc_0_0 PONG_scoreboard_center_offset_0}] -log ip_upgrade.log
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd'
+INFO: [IP_Flow 19-3420] Updated PONG_ball_size_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_clk_wiz_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_max_score_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_one_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_paddle_offset_x_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_paddle_size_x_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_paddle_size_y_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_rgb2dvi_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_score_seg_size_x_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_score_seg_size_y_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_scoreboard_center_offset_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_scoreboard_top_offset_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_screen_size_x_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_screen_size_y_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_util_vector_logic_1_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_util_vector_logic_2_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_v_tc_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated PONG_zero_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/ui/bd_3408a7b8.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 3279.625 ; gain = 0.000
+export_ip_user_files -of_objects [get_ips {PONG_max_score_0 PONG_util_vector_logic_1_0 PONG_zero_0 PONG_score_seg_size_y_0 PONG_scoreboard_top_offset_0 PONG_clk_wiz_0_0 PONG_paddle_offset_x_0 PONG_ball_size_0 PONG_util_vector_logic_2_0 PONG_paddle_size_y_0 PONG_paddle_size_x_0 PONG_rgb2dvi_0_0 PONG_screen_size_y_0 PONG_score_seg_size_x_0 PONG_one_0 PONG_screen_size_x_0 PONG_v_tc_0_0 PONG_scoreboard_center_offset_0}] -no_script -sync -force -quiet
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd]
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd> 
+Verilog Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/PONG.v
+Verilog Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/PONG.v
+Verilog Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/hdl/PONG_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/ball_size .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/max_score .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_offset_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/score_seg_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/score_seg_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/scoreboard_center_offset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/scoreboard_top_offset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/screen_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/screen_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/clk_divider_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_buttons_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_buttons_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_interconn_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_divider_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block collision_detection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block color_generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block one .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_ball .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_centerline_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_paddle_l .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_paddle_r .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pixel_counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block position_ball_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block position_paddles_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block score_counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zero .
+Exporting to file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/hw_handoff/PONG.hwh
+Generated Hardware Definition File d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/synth/PONG.hwdef
+generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 3279.625 ; gain = 0.000
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -directory D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd
+upgrade_bd_cells [get_bd_cells blockdesign_0]
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong_Artix7\fontys-pong_Artix7.gen\sources_1\bd\CMOD_A7_35T\bd\blockdesign_inst_0\blockdesign_inst_0.bd> 
+ERROR: [BD 41-274] blockdesign_inst_0_controller_ultrasoni_0_0 (xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_0_controller_ultrasoni_1_0 (xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_0_seven_seg_display_co_0_0 (xilinx.com:module_ref:seven_seg_display_controller:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_0_seven_seg_display_co_0_0 (xilinx.com:module_ref:seven_seg_display_controller:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_0_scoreboard_controller_0_0 (xilinx.com:module_ref:scoreboard_controller:1.0) could not be created.
+ERROR: [BD 41-2320] Could not instantiate PONG into <CMOD_A7_35T> because of the following reason:
+* 
+ERROR: [BD 41-6] paint_ball does not have a port called enable
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong_Artix7\fontys-pong_Artix7.gen\sources_1\bd\CMOD_A7_35T\bd\blockdesign_inst_0\blockdesign_inst_0.bd> 
+ERROR: [Common 17-39] 'upgrade_bd_cells' failed due to earlier errors.
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets blockdesign_0_hdmi_out_data_n] [get_bd_nets btn_up_l_1] [get_bd_nets controller_switch_1] [get_bd_nets sensor_r_1] [get_bd_nets sensor_l_1] [get_bd_nets blockdesign_0_hdmi_out_hpd] [get_bd_nets blockdesign_0_hdmi_out_clk_n] [get_bd_nets btn_down_r_1] [get_bd_nets enable_1] [get_bd_nets btn_down_l_1] [get_bd_nets blockdesign_0_hdmi_out_data_p] [get_bd_nets blockdesign_0_trigger_l] [get_bd_nets blockdesign_0_trigger_r] [get_bd_nets btn_up_r_1] [get_bd_nets blockdesign_0_hdmi_out_clk_p] [get_bd_cells blockdesign_0]
+delete_bd_objs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 3281.039 ; gain = 0.000
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd}
+report_ip_status -name ip_status 
+validate_bd_design -force
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+current_bd_design [get_bd_designs CMOD_A7_35T]
+create_bd_cell -type container -reference blockdesign blockdesign_0
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/ui/bd_3408a7b8.ui> 
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong_Artix7\fontys-pong_Artix7.gen\sources_1\bd\CMOD_A7_35T\bd\blockdesign_inst_1\blockdesign_inst_1.bd> 
+ERROR: [BD 41-274] blockdesign_inst_1_controller_ultrasoni_0_0 (xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_1_controller_ultrasoni_1_0 (xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_1_seven_seg_display_co_0_0 (xilinx.com:module_ref:seven_seg_display_controller:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_1_seven_seg_display_co_0_0 (xilinx.com:module_ref:seven_seg_display_controller:1.0) could not be created.
+ERROR: [BD 41-274] blockdesign_inst_1_scoreboard_controller_0_0 (xilinx.com:module_ref:scoreboard_controller:1.0) could not be created.
+ERROR: [BD 41-2320] Could not instantiate PONG into <CMOD_A7_35T> because of the following reason:
+* 
+ERROR: [BD 41-6] paint_ball does not have a port called enable
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+delete_bd_objs [get_bd_cells blockdesign_0]
+delete_bd_objs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3281.039 ; gain = 0.000
+report_ip_status -name ip_status 
+import_files -force -norecurse D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+INFO: [Project 1-1727] Source BDs should be added before importing the top BD D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd with BDC
+WARNING: [IP_Flow 19-3571] IP 'PONG_controller_ultrasoni_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_controller_ultrasoni_1_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_clk_divider_1_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_controller_buttons_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_controller_buttons_1_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_controller_interconn_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_seven_seg_display_co_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_1_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_2_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_3_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_4_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_5_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_6_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_seven_seg_display_co_0_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_0_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_1_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_2_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_3_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_4_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_5_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_rectangle_6_1' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_scoreboard_controller_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_clk_divider_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_collision_detection_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_color_generator_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_ball_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_centerline_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_paddle_l_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_paint_paddle_r_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_pixel_counter_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_position_ball_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_position_paddles_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_score_counter_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+WARNING: [IP_Flow 19-3571] IP 'PONG_video_buffer_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+import_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 3281.039 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd}
+Reading block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd>...
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - ball_size
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - max_score
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_offset_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - score_seg_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - score_seg_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - scoreboard_center_offset
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - scoreboard_top_offset
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_y
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_0'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_ultrasoni_1'.
+Given inputs for module-source, Top-module name : controller_ultrasonic_hcsr04, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/clk_divider_1'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_0'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_buttons_1'.
+Given inputs for module-source, Top-module name : controller_buttons, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:controller_interconnect:1.0 - controller_interconn_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/controllers/controller_interconn_0'.
+Given inputs for module-source, Top-module name : controller_interconnect, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:seven_seg_display_controller:1.0 - seven_seg_display_co_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_2
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_3
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_4
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_5
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_6
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_l/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:seven_seg_display_controller:1.0 - seven_seg_display_co_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/seven_seg_display_co_0'.
+Given inputs for module-source, Top-module name : seven_seg_display_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_0'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_1
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_1'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_2
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_2'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_3
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_3'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_4
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_4'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_5
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_5'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_6
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/paint_seg_r/paint_rectangle_6'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:scoreboard_controller:1.0 - scoreboard_controller_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_scoreboard/scoreboard_controller_0'.
+Given inputs for module-source, Top-module name : scoreboard_controller, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/clk_divider_0'.
+Given inputs for module-source, Top-module name : clk_divider, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:collision_detection:1.0 - collision_detection_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/collision_detection_0'.
+Given inputs for module-source, Top-module name : collision_detection, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:color_generator:1.0 - color_generator_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/color_generator_0'.
+Given inputs for module-source, Top-module name : color_generator, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_ball
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_ball'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_centerline:1.0 - paint_centerline_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_centerline_0'.
+Given inputs for module-source, Top-module name : paint_centerline, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_l
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_l'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_r
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/paint_paddle_r'.
+Given inputs for module-source, Top-module name : paint_rectangle, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:pixel_counter:1.0 - pixel_counter_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/pixel_counter_0'.
+Given inputs for module-source, Top-module name : pixel_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:position_ball:1.0 - position_ball_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_ball_0'.
+Given inputs for module-source, Top-module name : position_ball, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:position_paddles:1.0 - position_paddles_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/position_paddles_0'.
+Given inputs for module-source, Top-module name : position_paddles, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:score_counter:1.0 - score_counter_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/score_counter_0'.
+Given inputs for module-source, Top-module name : score_counter, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:module_ref:video_buffer:1.0 - video_buffer_0
+CRITICAL WARNING: [BD 41-1726] Unable to resolve module-source for block '/video_buffer_0'.
+Given inputs for module-source, Top-module name : video_buffer, Module Type : RTL.
+Please review and update or add design-sources to this project to resolve this module-reference.
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - one
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - v_tc_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - zero
+Successfully read diagram <PONG> from block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd>
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/ui/bd_3408a7b8.ui> 
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/PONG
+report_ip_status -name ip_status 
+set_property synth_checkpoint_mode None [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd]
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd]
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong_Artix7\fontys-pong_Artix7.srcs\sources_1\bd\CMOD_A7_35T\CMOD_A7_35T.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/ui/bd_8c66fd09.ui> 
+Verilog Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v
+Verilog Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/sim/CMOD_A7_35T.v
+Verilog Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/hdl/CMOD_A7_35T_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Enable .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+Exporting to file D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/hw_handoff/CMOD_A7_35T.hwh
+Generated Hardware Definition File D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.hwdef
+generate_target: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 3281.039 ; gain = 0.000
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd] -directory D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+add_files -scan_for_includes {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic_hcsr04.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd}
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_7s_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_7s_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_us_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_us_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_us_plus_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_us_plus_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_7s_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_7s_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_us_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_us_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_us_plus_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ultrasoon_test_clk_wiz_0_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef/mmcm_pll_drp_func_us_plus_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/1b7e/hdl/verilog/ltlib_v1_0_0_ver.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/1b7e/hdl/verilog/ltlib_v1_0_0_lib_fn.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/1b7e/hdl/ltlib_v1_0_vl_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/122e/hdl/verilog/xsdbs_v1_0_2_i2x.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/122e/hdl/verilog/xsdbs_v1_0_2_in.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/122e/hdl/xsdbs_v1_0_vl_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/2751/hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/e6d5/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_i2x.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_in.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_icn.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bs.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bs_ext.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bs_core.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bs_ports.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bsid_ports.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bsid_vec_ports.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bs_vec.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_sl_prt_map.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_id_map.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog/xsdbm_v3_0_0_id_vec_map.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/xsdbm_v3_0_vl_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/bb55/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/20d0/hdl/verilog/ila_v6_2_13_ila_ver.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/20d0/hdl/ila_v6_2_syn_rfs.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/20d0/hdl/verilog/ila_v6_2_13_ila_in.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/20d0/hdl/verilog/ila_v6_2_13_ila_param.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/20d0/hdl/verilog/ila_v6_2_13_ila_lparam.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_d804_ila_lib_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/20d0/hdl/verilog/ila_v6_2_13_ila_lib_fn.vh'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'ultrasoon_test.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+ultrasoon_test_clk_wiz_0_0
+ultrasoon_test_system_ila_0_1
+
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'PONG.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+PONG_seven_seg_display_co_0_0
+PONG_seven_seg_display_co_0_1
+PONG_scoreboard_controller_0_0
+
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'blockdesign_inst_0.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+blockdesign_inst_0_score_seg_size_x_0
+blockdesign_inst_0_paddle_offset_x_0
+blockdesign_inst_0_ball_size_0
+blockdesign_inst_0_paddle_size_x_0
+blockdesign_inst_0_max_score_0
+blockdesign_inst_0_scoreboard_top_offset_0
+blockdesign_inst_0_paddle_size_y_0
+blockdesign_inst_0_score_seg_size_y_0
+blockdesign_inst_0_scoreboard_center_offset_0
+blockdesign_inst_0_screen_size_x_0
+blockdesign_inst_0_screen_size_y_0
+blockdesign_inst_0_clk_wiz_0_0
+blockdesign_inst_0_one_0
+blockdesign_inst_0_rgb2dvi_0_0
+blockdesign_inst_0_util_vector_logic_1_0
+blockdesign_inst_0_util_vector_logic_2_0
+blockdesign_inst_0_v_tc_0_0
+blockdesign_inst_0_zero_0
+
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_7s_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_7s_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_us_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_us_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_us_plus_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_us_plus_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_7s_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_7s_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_us_mmcm.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_us_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_us_plus_pll.vh'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'ZYNQ_clk_wiz_0' generated file not found 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ipshared/30ef/mmcm_pll_drp_func_us_plus_mmcm.vh'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'ZYNQ.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+ZYNQ_clk_wiz_0
+
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 3284.965 ; gain = 3.926
+export_ip_user_files -of_objects  [get_files  {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/blockdesign_inst_0.bd] -no_script -reset -force -quiet
+WARNING: [Vivado 12-818] No files matched 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/blockdesign_inst_0.bd'
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd
+ERROR: [Common 17-49] Internal Data Exception: Cannot locate file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_collision_detection_0_0/blockdesign_inst_0_collision_detection_0_0.xml.
+
+update_module_reference {PONG_paint_rectangle_0_0 PONG_paint_rectangle_1_0 PONG_paint_rectangle_2_0 PONG_paint_rectangle_3_0 PONG_paint_rectangle_4_0 PONG_paint_rectangle_5_0 PONG_paint_rectangle_6_0 PONG_paint_rectangle_0_1 PONG_paint_rectangle_1_1 PONG_paint_rectangle_2_1 PONG_paint_rectangle_3_1 PONG_paint_rectangle_4_1 PONG_paint_rectangle_5_1 PONG_paint_rectangle_6_1}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+ERROR: [Common 17-49] Internal Data Exception: Cannot locate file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_collision_detection_0_0/blockdesign_inst_0_collision_detection_0_0.xml.
+
+report_ip_status -name ip_status 
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd
+WARNING: [Vivado 12-818] No files matched 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd'
+upgrade_ip [get_ips  {PONG_controller_ultrasoni_1_0 PONG_seven_seg_display_co_0_1 PONG_scoreboard_controller_0_0 PONG_seven_seg_display_co_0_0 PONG_controller_ultrasoni_0_0 ultrasoon_test_clk_divider_0_0 ultrasoon_test_system_ila_0_1 ultrasoon_test_controller_ultrasoni_0_0 ultrasoon_test_seven_segment_contro_0_0 ultrasoon_test_clk_wiz_0_0}] -log ip_upgrade.log
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.

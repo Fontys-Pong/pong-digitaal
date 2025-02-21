@@ -1,0 +1,53 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "PONG_pixel_counter_0_0",
+    "cell_name": "pixel_counter_0",
+    "component_reference": "xilinx.com:module_ref:pixel_counter:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../fontys-pong.gen/sources_1/bd/PONG/ip/PONG_pixel_counter_0_0_1",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "PONG_pixel_counter_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:cmod_a7-35t:part0:1.2" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a35t" } ],
+        "PACKAGE": [ { "value": "cpg236" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../fontys-pong.gen/sources_1/bd/PONG/ip/PONG_pixel_counter_0_0_1" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "pxCLK_i": [ { "direction": "in" } ],
+        "video_enable_i": [ { "direction": "in" } ],
+        "hblank_i": [ { "direction": "in" } ],
+        "hsync_i": [ { "direction": "in" } ],
+        "vblank_i": [ { "direction": "in" } ],
+        "vsync_i": [ { "direction": "in" } ],
+        "hpx_o": [ { "direction": "out", "size_left": "10", "size_right": "0" } ],
+        "vpx_o": [ { "direction": "out", "size_left": "10", "size_right": "0" } ],
+        "hsync_o": [ { "direction": "out" } ],
+        "vsync_o": [ { "direction": "out" } ],
+        "video_enable_o": [ { "direction": "out" } ]
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "blockdesign_inst_0_position_ball_0_0",
+    "cell_name": "blockdesign_0/position_ball_0",
+    "component_reference": "xilinx.com:module_ref:position_ball:1.0",
+    "ip_revision": "1",
+    "gen_directory": ".",
+    "parameters": {
+      "component_parameters": {
+        "step_x": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "step_y": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "angle_1": [ { "value": "2", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "angle_2": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "angle_3": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "start_angle": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "blockdesign_inst_0_position_ball_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "step_x": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "step_y": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "angle_1": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "angle_2": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "angle_3": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "start_angle": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:cmod_a7-35t:part0:1.2" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a35t" } ],
+        "PACKAGE": [ { "value": "cpg236" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "." } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.1" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "clk": [ { "direction": "in" } ],
+        "enable": [ { "direction": "in" } ],
+        "reset": [ { "direction": "in" } ],
+        "screen_size_x": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
+        "screen_size_y": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
+        "ball_size": [ { "direction": "in", "size_left": "10", "size_right": "0" } ],
+        "collision_ball_paddle": [ { "direction": "in" } ],
+        "collision_ball_paddle_index": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
+        "collision_ball_topbottom": [ { "direction": "in" } ],
+        "collision_ball_edge": [ { "direction": "in" } ],
+        "ball_pos_x": [ { "direction": "out", "size_left": "10", "size_right": "0" } ],
+        "ball_pox_y": [ { "direction": "out", "size_left": "10", "size_right": "0" } ]
+      },
+      "interfaces": {
+        "reset": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_HIGH", "value_src": "user", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "reset" } ]
+          }
+        },
+        "clk": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_RESET": [ { "value": "reset", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_BUSIF": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "clk" } ]
+          }
+        }
+      }
+    }
+  }
+}

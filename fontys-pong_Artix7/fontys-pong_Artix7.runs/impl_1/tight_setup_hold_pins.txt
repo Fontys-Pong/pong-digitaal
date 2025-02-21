@@ -1,0 +1,19 @@
++================================+================================+===================================================================================================+
+| Launch Setup Clock             | Launch Hold Clock              | Pin                                                                                               |
++================================+================================+===================================================================================================+
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_paddle_r/inst/pxl_value_o_reg/D                                 |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_r/paint_rectangle_5/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_r/paint_rectangle_3/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_6/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_3/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_r/paint_rectangle_0/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_4/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_r/paint_rectangle_4/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_r/paint_rectangle_1/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_1/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_0/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_5/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_2/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_r/paint_rectangle_6/inst/pxl_value_o_reg/D |
+| clk_out1_CMOD_A7_35T_clk_wiz_0 | clk_out1_CMOD_A7_35T_clk_wiz_0 | CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_r/paint_rectangle_2/inst/pxl_value_o_reg/D |
++--------------------------------+--------------------------------+---------------------------------------------------------------------------------------------------+
