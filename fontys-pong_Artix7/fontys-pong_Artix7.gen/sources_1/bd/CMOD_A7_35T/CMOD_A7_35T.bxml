@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="40">
+  <CompositeFile CompositeFileTopName="CMOD_A7_35T" CanBeSetAsTop="true" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1740150056"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1740150056"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1740150056"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1740150056"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth\CMOD_A7_35T.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\CMOD_A7_35T.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="CMOD_A7_35T_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="hw_handoff\CMOD_A7_35T.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="CMOD_A7_35T.bda">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="synth\CMOD_A7_35T.hwdef">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\CMOD_A7_35T.protoinst">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+    </FileCollection>
+    <BlockContainerCollection>
+      <BlockContainer InstPath="/blockdesign_0" IsPR="false" State="Generated">
+        <ActiveVariantSynth FileName="bd\blockdesign_inst_0\blockdesign_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd\blockdesign_inst_0\blockdesign_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd\blockdesign_inst_0\blockdesign_inst_0.bd" BDFileset="blockdesign_inst_0" BDSourceFile="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
+    </BlockContainerCollection>
+    <ReferenceCollection>
+      <ModuleReference TargetName="blockdesign" Type="Block Design" SubInstancePath="CMOD_A7_35T_blockdesign_0">
+        <TopFile Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd"/>
+        <FileCollection>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\controller_ultrasonic_hcsr04.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\clk_divider.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\controller_buttons.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\controller_interconnect.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\seven_seg_display_controller.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\paint_rectangle.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\scoreboard_controller.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\collision_detection.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\color_generator.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\paint_centerline.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\pixel_counter.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\position_ball.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\position_paddles.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\score_counter.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\new\video_buffer.vhd"/>
+          <File Name="..\..\..\..\..\fontys-pong\fontys-pong.srcs\sources_1\bd\PONG\PONG.bd"/>
+        </FileCollection>
+      </ModuleReference>
+    </ReferenceCollection>
+  </CompositeFile>
+</Root>

@@ -1,0 +1,58 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.67751",
+   "Default View_TopLeft":"-315,-428",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x -80 -y 140 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -80 -y 60 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_n -pg 1 -lvl 3 -x 780 -y -220 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_p -pg 1 -lvl 3 -x 780 -y -250 -defaultsOSRD
+preplace port port-id_trigger_r -pg 1 -lvl 3 -x 780 -y -370 -defaultsOSRD
+preplace port port-id_trigger_l -pg 1 -lvl 3 -x 780 -y -400 -defaultsOSRD
+preplace port port-id_btn_down_r -pg 1 -lvl 0 -x -80 -y -140 -defaultsOSRD
+preplace port port-id_btn_up_r -pg 1 -lvl 0 -x -80 -y -170 -defaultsOSRD
+preplace port port-id_btn_down_l -pg 1 -lvl 0 -x -80 -y -210 -defaultsOSRD
+preplace port port-id_btn_up_l -pg 1 -lvl 0 -x -80 -y -240 -defaultsOSRD
+preplace port port-id_controller_switch -pg 1 -lvl 0 -x -80 -y -310 -defaultsOSRD
+preplace port port-id_sensor_r -pg 1 -lvl 0 -x -80 -y -370 -defaultsOSRD
+preplace port port-id_sensor_l -pg 1 -lvl 0 -x -80 -y -410 -defaultsOSRD
+preplace portBus hdmi_out_data_n -pg 1 -lvl 3 -x 780 -y -150 -defaultsOSRD
+preplace portBus hdmi_out_data_p -pg 1 -lvl 3 -x 780 -y -180 -defaultsOSRD
+preplace portBus hdmi_out_hpd -pg 1 -lvl 3 -x 780 -y -280 -defaultsOSRD
+preplace portBus enable_state -pg 1 -lvl 3 -x 780 -y -60 -defaultsOSRD
+preplace portBus controller_state_2 -pg 1 -lvl 3 -x 780 -y 240 -defaultsOSRD
+preplace portBus controller_state_1 -pg 1 -lvl 3 -x 780 -y 210 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 110 -y 130 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x 550 -y 100 -defaultsOSRD
+preplace inst Enable -pg 1 -lvl 1 -x 110 -y 0 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 2 -x 550 -y 240 -defaultsOSRD
+preplace inst blockdesign_0 -pg 1 -lvl 2 -x 550 -y -210 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 1 1 380 -120n
+preplace netloc clk_wiz_locked 1 1 1 N 140
+preplace netloc reset_1 1 0 2 20 60 360
+preplace netloc sys_clk_1 1 0 1 NJ 140
+preplace netloc util_vector_logic_0_Res 1 2 1 NJ 240
+preplace netloc controller_switch_1 1 0 3 NJ -310 340 300 760
+preplace netloc btn_up_r_1 1 0 2 NJ -170 350
+preplace netloc btn_down_r_1 1 0 2 NJ -140 350
+preplace netloc btn_down_l_1 1 0 2 NJ -210 200
+preplace netloc btn_up_l_1 1 0 2 NJ -240 200
+preplace netloc sensor_r_1 1 0 2 NJ -370 360
+preplace netloc sensor_l_1 1 0 2 NJ -410 370
+preplace netloc Enable_dout 1 1 2 370 -60 N
+preplace netloc blockdesign_0_trigger_l 1 2 1 720 -400n
+preplace netloc blockdesign_0_trigger_r 1 2 1 730 -370n
+preplace netloc blockdesign_0_hdmi_out_hpd 1 2 1 740 -280n
+preplace netloc blockdesign_0_hdmi_out_clk_p 1 2 1 750 -250n
+preplace netloc blockdesign_0_hdmi_out_clk_n 1 2 1 760 -220n
+preplace netloc blockdesign_0_hdmi_out_data_p 1 2 1 720 -180n
+preplace netloc blockdesign_0_hdmi_out_data_n 1 2 1 N -150
+levelinfo -pg 1 -80 110 550 780
+pagesize -pg 1 -db -bbox -sgen -240 -450 6100 1540
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

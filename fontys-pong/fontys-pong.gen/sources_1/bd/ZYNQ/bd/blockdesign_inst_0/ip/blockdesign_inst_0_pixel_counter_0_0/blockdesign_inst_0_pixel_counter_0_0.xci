@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_inst_0_pixel_counter_0_0",
-    "cell_name": "pixel_counter_0",
+    "cell_name": "blockdesign_0/pixel_counter_0",
     "component_reference": "xilinx.com:module_ref:pixel_counter:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

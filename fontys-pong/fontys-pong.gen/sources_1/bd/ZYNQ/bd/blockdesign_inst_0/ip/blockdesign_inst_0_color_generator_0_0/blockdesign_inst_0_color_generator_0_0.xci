@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_inst_0_color_generator_0_0",
-    "cell_name": "color_generator_0",
+    "cell_name": "blockdesign_0/color_generator_0",
     "component_reference": "xilinx.com:module_ref:color_generator:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

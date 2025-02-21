@@ -1,0 +1,280 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Feb 21 15:18:06 2025
+# Process ID: 2808
+# Current directory: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15440 D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong_Artix7\fontys-pong_Artix7.xpr
+# Log file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/vivado.log
+# Journal file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.xpr
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+update_compile_order -fileset sources_1
+create_bd_design "CMOD_A7_35T"
+update_compile_order -fileset sources_1
+current_bd_design [get_bd_designs blockdesign]
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign
+file delete -force d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd] -no_script -reset -force -quiet
+remove_files  {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd}
+update_compile_order -fileset sources_1
+add_files {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic_hcsr04.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd}
+add_files -norecurse D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+export_ip_user_files -of_objects  [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/blockdesign_inst_0.bd] -no_script -reset -force -quiet
+remove_files  {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd}
+add_files -norecurse D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+export_ip_user_files -of_objects  [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+create_bd_cell -type container -reference blockdesign blockdesign_0
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd}
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {PONG_clk_wiz_0_0 PONG_paddle_offset_x_0 PONG_ball_size_0 PONG_util_vector_logic_2_0 PONG_paddle_size_x_0 PONG_rgb2dvi_0_0 PONG_screen_size_y_0 PONG_scoreboard_top_offset_0 PONG_score_seg_size_x_0 PONG_max_score_0 PONG_one_0 PONG_util_vector_logic_1_0 PONG_zero_0 PONG_paddle_size_y_0 PONG_screen_size_x_0 PONG_score_seg_size_y_0 PONG_v_tc_0_0 PONG_scoreboard_center_offset_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {PONG_clk_wiz_0_0 PONG_paddle_offset_x_0 PONG_ball_size_0 PONG_util_vector_logic_2_0 PONG_paddle_size_x_0 PONG_rgb2dvi_0_0 PONG_screen_size_y_0 PONG_scoreboard_top_offset_0 PONG_score_seg_size_x_0 PONG_max_score_0 PONG_one_0 PONG_util_vector_logic_1_0 PONG_zero_0 PONG_paddle_size_y_0 PONG_screen_size_x_0 PONG_score_seg_size_y_0 PONG_v_tc_0_0 PONG_scoreboard_center_offset_0}] -no_script -sync -force -quiet
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd]
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -directory D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+validate_bd_design -force
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd}
+create_bd_cell -type container -reference blockdesign blockdesign_0
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins blockdesign_0/clk_100MHz]
+connect_bd_net [get_bd_pins clk_wiz/reset] [get_bd_pins blockdesign_0/reset]
+connect_bd_net [get_bd_pins rst_clk_wiz_100M/ext_reset_in] [get_bd_pins clk_wiz/reset]
+set_property location {1 142 255} [get_bd_cells clk_wiz]
+set_property location {2 517 290} [get_bd_cells rst_clk_wiz_100M]
+startgroup
+create_bd_port -dir I -type clk -freq_hz 12000000 sys_clk
+connect_bd_net [get_bd_pins /clk_wiz/clk_in1] [get_bd_ports sys_clk]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.CLKIN1_JITTER_PS {833.33} \
+  CONFIG.CLKOUT1_JITTER {479.872} \
+  CONFIG.CLKOUT1_PHASE_ERROR {668.310} \
+  CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {62.500} \
+  CONFIG.MMCM_CLKIN1_PERIOD {83.333} \
+  CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {7.500} \
+] [get_bd_cells clk_wiz]
+endgroup
+set_property location {-44 290} [get_bd_ports sys_clk]
+set_property location {-42 263} [get_bd_ports sys_clk]
+startgroup
+create_bd_port -dir I -type rst reset
+set_property CONFIG.POLARITY [get_property CONFIG.POLARITY [get_bd_pins clk_wiz/reset]] [get_bd_ports reset]
+connect_bd_net [get_bd_pins /clk_wiz/reset] [get_bd_ports reset]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {1 58 80} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins blockdesign_0/enable] [get_bd_pins xlconstant_0/dout]
+set_property location {1 83 93} [get_bd_cells xlconstant_0]
+set_property location {1 76 119} [get_bd_cells xlconstant_0]
+set_property location {1 76 111} [get_bd_cells xlconstant_0]
+set_property location {1 64 64} [get_bd_cells xlconstant_0]
+set_property location {1 80 70} [get_bd_cells xlconstant_0]
+set_property name Enable [get_bd_cells xlconstant_0]
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_n
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_n] [get_bd_ports hdmi_out_data_n]
+endgroup
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p]
+endgroup
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p_1
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p_1]
+endgroup
+undo
+undo
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p]
+endgroup
+startgroup
+create_bd_port -dir O -type clk hdmi_out_clk_n
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_clk_n] [get_bd_ports hdmi_out_clk_n]
+endgroup
+startgroup
+create_bd_port -dir O -type clk hdmi_out_clk_p
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_clk_p] [get_bd_ports hdmi_out_clk_p]
+endgroup
+startgroup
+create_bd_port -dir O -from 0 -to 0 hdmi_out_hpd
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_hpd] [get_bd_ports hdmi_out_hpd]
+endgroup
+startgroup
+create_bd_port -dir O trigger_r
+connect_bd_net [get_bd_pins /blockdesign_0/trigger_r] [get_bd_ports trigger_r]
+endgroup
+startgroup
+create_bd_port -dir O trigger_l
+connect_bd_net [get_bd_pins /blockdesign_0/trigger_l] [get_bd_ports trigger_l]
+endgroup
+startgroup
+create_bd_port -dir I btn_down_r
+connect_bd_net [get_bd_pins /blockdesign_0/btn_down_r] [get_bd_ports btn_down_r]
+endgroup
+startgroup
+create_bd_port -dir I btn_up_r
+connect_bd_net [get_bd_pins /blockdesign_0/btn_up_r] [get_bd_ports btn_up_r]
+endgroup
+startgroup
+create_bd_port -dir I btn_down_l
+connect_bd_net [get_bd_pins /blockdesign_0/btn_down_l] [get_bd_ports btn_down_l]
+endgroup
+startgroup
+create_bd_port -dir I btn_up_l
+connect_bd_net [get_bd_pins /blockdesign_0/btn_up_l] [get_bd_ports btn_up_l]
+endgroup
+startgroup
+create_bd_port -dir I controller_switch
+connect_bd_net [get_bd_pins /blockdesign_0/controller_switch] [get_bd_ports controller_switch]
+endgroup
+startgroup
+create_bd_port -dir I sensor_r
+connect_bd_net [get_bd_pins /blockdesign_0/sensor_r] [get_bd_ports sensor_r]
+endgroup
+startgroup
+create_bd_port -dir I sensor_l
+connect_bd_net [get_bd_pins /blockdesign_0/sensor_l] [get_bd_ports sensor_l]
+endgroup
+set_property location {-64 214} [get_bd_ports reset]
+set_property location {1 72 163} [get_bd_cells Enable]
+set_property location {1 88 153} [get_bd_cells Enable]
+set_property location {-41 -137} [get_bd_ports sensor_l]
+set_property location {-36 -107} [get_bd_ports controller_switch]
+set_property location {-33 -101} [get_bd_ports controller_switch]
+set_property location {-40 -47} [get_bd_ports btn_up_l]
+set_property location {-38 -63} [get_bd_ports btn_up_l]
+set_property location {-47 -32} [get_bd_ports btn_down_l]
+set_property location {-39 2} [get_bd_ports btn_up_r]
+set_property location {-44 24} [get_bd_ports btn_down_r]
+set_property location {-30 63} [get_bd_ports btn_down_r]
+set_property location {-38 27} [get_bd_ports btn_up_r]
+set_property location {-37 -58} [get_bd_ports btn_up_l]
+set_property location {-32 -41} [get_bd_ports btn_up_l]
+set_property location {-35 -5} [get_bd_ports btn_down_l]
+set_property location {-32 -18} [get_bd_ports btn_up_l]
+set_property location {-36 -76} [get_bd_ports controller_switch]
+create_bd_port -dir O enable_state
+create_bd_port -dir O controller_state
+create_bd_port -dir O controller_state_2
+set_property name controller_state_1 [get_bd_ports controller_state]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+endgroup
+set_property location {3 2279 -53} [get_bd_cells util_vector_logic_0]
+set_property -dict [list \
+  CONFIG.C_OPERATION {not} \
+  CONFIG.C_SIZE {1} \
+] [get_bd_cells util_vector_logic_0]
+delete_bd_objs [get_bd_ports controller_state_2]
+startgroup
+create_bd_port -dir O -from 0 -to 0 contoller_state_2
+connect_bd_net [get_bd_pins /util_vector_logic_0/Res] [get_bd_ports contoller_state_2]
+endgroup
+delete_bd_objs [get_bd_ports controller_state_1]
+create_bd_port -dir O -from 0 -to 0 controller_state_1
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+add_files -scan_for_includes D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+export_ip_user_files -of_objects  [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+open_bd_design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd
+upgrade_bd_cells [get_bd_cells blockdesign_0]
+update_compile_order -fileset sources_1
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd}
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {PONG_max_score_0 PONG_util_vector_logic_1_0 PONG_zero_0 PONG_score_seg_size_y_0 PONG_scoreboard_top_offset_0 PONG_clk_wiz_0_0 PONG_paddle_offset_x_0 PONG_ball_size_0 PONG_util_vector_logic_2_0 PONG_paddle_size_y_0 PONG_paddle_size_x_0 PONG_rgb2dvi_0_0 PONG_screen_size_y_0 PONG_score_seg_size_x_0 PONG_one_0 PONG_screen_size_x_0 PONG_v_tc_0_0 PONG_scoreboard_center_offset_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {PONG_max_score_0 PONG_util_vector_logic_1_0 PONG_zero_0 PONG_score_seg_size_y_0 PONG_scoreboard_top_offset_0 PONG_clk_wiz_0_0 PONG_paddle_offset_x_0 PONG_ball_size_0 PONG_util_vector_logic_2_0 PONG_paddle_size_y_0 PONG_paddle_size_x_0 PONG_rgb2dvi_0_0 PONG_screen_size_y_0 PONG_score_seg_size_x_0 PONG_one_0 PONG_screen_size_x_0 PONG_v_tc_0_0 PONG_scoreboard_center_offset_0}] -no_script -sync -force -quiet
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd]
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -directory D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd
+upgrade_bd_cells [get_bd_cells blockdesign_0]
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets blockdesign_0_hdmi_out_data_n] [get_bd_nets btn_up_l_1] [get_bd_nets controller_switch_1] [get_bd_nets sensor_r_1] [get_bd_nets sensor_l_1] [get_bd_nets blockdesign_0_hdmi_out_hpd] [get_bd_nets blockdesign_0_hdmi_out_clk_n] [get_bd_nets btn_down_r_1] [get_bd_nets enable_1] [get_bd_nets btn_down_l_1] [get_bd_nets blockdesign_0_hdmi_out_data_p] [get_bd_nets blockdesign_0_trigger_l] [get_bd_nets blockdesign_0_trigger_r] [get_bd_nets btn_up_r_1] [get_bd_nets blockdesign_0_hdmi_out_clk_p] [get_bd_cells blockdesign_0]
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd}
+report_ip_status -name ip_status 
+validate_bd_design -force
+current_bd_design [get_bd_designs CMOD_A7_35T]
+create_bd_cell -type container -reference blockdesign blockdesign_0
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+delete_bd_objs [get_bd_cells blockdesign_0]
+report_ip_status -name ip_status 
+import_files -force -norecurse D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd
+export_ip_user_files -of_objects  [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd}
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG/PONG.bd
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/PONG
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/PONG
+report_ip_status -name ip_status 
+set_property synth_checkpoint_mode None [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd]
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd]
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd] -directory D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+add_files -scan_for_includes {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic_hcsr04.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd}
+export_ip_user_files -of_objects  [get_files  {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}] -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/compile_simlib/activehdl}] -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/blockdesign_inst_0.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd
+update_module_reference {PONG_paint_rectangle_0_0 PONG_paint_rectangle_1_0 PONG_paint_rectangle_2_0 PONG_paint_rectangle_3_0 PONG_paint_rectangle_4_0 PONG_paint_rectangle_5_0 PONG_paint_rectangle_6_0 PONG_paint_rectangle_0_1 PONG_paint_rectangle_1_1 PONG_paint_rectangle_2_1 PONG_paint_rectangle_3_1 PONG_paint_rectangle_4_1 PONG_paint_rectangle_5_1 PONG_paint_rectangle_6_1}
+report_ip_status -name ip_status 
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd
+upgrade_ip [get_ips  {PONG_controller_ultrasoni_1_0 PONG_seven_seg_display_co_0_1 PONG_scoreboard_controller_0_0 PONG_seven_seg_display_co_0_0 PONG_controller_ultrasoni_0_0 ultrasoon_test_clk_divider_0_0 ultrasoon_test_system_ila_0_1 ultrasoon_test_controller_ultrasoni_0_0 ultrasoon_test_seven_segment_contro_0_0 ultrasoon_test_clk_wiz_0_0}] -log ip_upgrade.log

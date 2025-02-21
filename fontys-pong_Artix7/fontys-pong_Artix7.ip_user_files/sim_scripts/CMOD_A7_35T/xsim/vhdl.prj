@@ -1,0 +1,14 @@
+vhdl xil_defaultlib  \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/20df/src/ClockGen.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/20df/src/SyncAsync.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/20df/src/SyncAsyncReset.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/20df/src/DVI_Constants.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/20df/src/OutputSERDES.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/20df/src/TMDS_Encoder.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/20df/src/rgb2dvi.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_rgb2dvi_0_0/sim/blockdesign_inst_0_rgb2dvi_0_0.vhd" \
+"../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_v_tc_0_0/sim/blockdesign_inst_0_v_tc_0_0.vhd" \
+"../../../bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/sim/CMOD_A7_35T_rst_clk_wiz_100M_0.vhd" \
+
+# Do not sort compile order
+nosort

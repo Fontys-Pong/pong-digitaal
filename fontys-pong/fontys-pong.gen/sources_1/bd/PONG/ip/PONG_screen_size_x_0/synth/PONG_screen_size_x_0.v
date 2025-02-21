@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "xlconstant_v1_1_7_xlconstant,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "PONG_screen_size_x_0,xlconstant_v1_1_7_xlconstant,{}" *)
-(* CORE_GENERATION_INFO = "PONG_screen_size_x_0,xlconstant_v1_1_7_xlconstant,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=7,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,CONST_WIDTH=11,CONST_VAL=0x780}" *)
+(* CORE_GENERATION_INFO = "PONG_screen_size_x_0,xlconstant_v1_1_7_xlconstant,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,CONST_WIDTH=11,CONST_VAL=0x780}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module PONG_screen_size_x_0 (
   dout

@@ -5,15 +5,6 @@ vhdl xil_defaultlib  \
 "../../../bd/PONG/ip/PONG_controller_interconn_0_0_1/sim/PONG_controller_interconn_0_0.vhd" \
 "../../../bd/PONG/ip/PONG_controller_ultrasoni_0_0_1/sim/PONG_controller_ultrasoni_0_0.vhd" \
 "../../../bd/PONG/ip/PONG_controller_ultrasoni_1_0/sim/PONG_controller_ultrasoni_1_0.vhd" \
-"../../../bd/PONG/ip/PONG_v_tc_0_0_1/sim/PONG_v_tc_0_0.vhd" \
-"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/ClockGen.vhd" \
-"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/SyncAsync.vhd" \
-"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/SyncAsyncReset.vhd" \
-"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/DVI_Constants.vhd" \
-"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/OutputSERDES.vhd" \
-"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/TMDS_Encoder.vhd" \
-"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/rgb2dvi.vhd" \
-"../../../bd/PONG/ip/PONG_rgb2dvi_0_0_1/sim/PONG_rgb2dvi_0_0.vhd" \
 "../../../bd/PONG/ip/PONG_pixel_counter_0_0_1/sim/PONG_pixel_counter_0_0.vhd" \
 "../../../bd/PONG/ip/PONG_color_generator_0_0_1/sim/PONG_color_generator_0_0.vhd" \
 "../../../bd/PONG/ip/PONG_video_buffer_0_0_1/sim/PONG_video_buffer_0_0.vhd" \
@@ -43,7 +34,15 @@ vhdl xil_defaultlib  \
 "../../../bd/PONG/ip/PONG_paint_ball_0/sim/PONG_paint_ball_0.vhd" \
 "../../../bd/PONG/ip/PONG_paint_paddle_l_0/sim/PONG_paint_paddle_l_0.vhd" \
 "../../../bd/PONG/ip/PONG_paint_paddle_r_0/sim/PONG_paint_paddle_r_0.vhd" \
-"d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/blockdesign.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/ClockGen.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/SyncAsync.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/SyncAsyncReset.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/DVI_Constants.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/OutputSERDES.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/TMDS_Encoder.vhd" \
+"../../../../fontys-pong.gen/sources_1/bd/PONG/ipshared/20df/src/rgb2dvi.vhd" \
+"../../../bd/PONG/ip/PONG_rgb2dvi_0_0_1/sim/PONG_rgb2dvi_0_0.vhd" \
+"../../../bd/PONG/ip/PONG_v_tc_0_0_1/sim/PONG_v_tc_0_0.vhd" \
 "../../../bd/PONG/sim/PONG.vhd" \
 
 # Do not sort compile order

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 21 15:07:05 2025" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 21 15:52:32 2025" VIVADOVERSION="2023.1">
 
-  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="PONG" PACKAGE="clg400" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:cmod_a7-35t:part0:1.2" DEVICE="7a35t" NAME="PONG" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="O" NAME="trigger_l" SIGIS="undef" SIGNAME="controllers_controller_ultrasoni_0_trigger">
@@ -26,17 +26,17 @@
     </PORT>
     <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_buttons_0" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_buttons_1" PORT="reset"/>
-        <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_ultrasoni_0" PORT="reset_i"/>
         <CONNECTION INSTANCE="controllers_controller_ultrasoni_1" PORT="reset_i"/>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
-        <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op1"/>
         <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="reset"/>
         <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="reset"/>
-        <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
         <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
+        <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
+        <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="controller_switch" SIGIS="undef" SIGNAME="External_Ports_controller_switch">
@@ -66,10 +66,10 @@
     </PORT>
     <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="position_ball_0" PORT="enable"/>
         <CONNECTION INSTANCE="paint_ball" PORT="enable"/>
         <CONNECTION INSTANCE="paint_paddle_l" PORT="enable"/>
         <CONNECTION INSTANCE="paint_paddle_r" PORT="enable"/>
+        <CONNECTION INSTANCE="position_ball_0" PORT="enable"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="hdmi_out_hpd" RIGHT="0" SIGIS="undef" SIGNAME="one_dout">
@@ -102,11 +102,11 @@
         <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="clk_i"/>
         <CONNECTION INSTANCE="controllers_controller_ultrasoni_0" PORT="clk"/>
         <CONNECTION INSTANCE="controllers_controller_ultrasoni_1" PORT="clk"/>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
         <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="clk"/>
         <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="clk"/>
         <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="clk"/>
         <CONNECTION INSTANCE="clk_divider_0" PORT="clk_i"/>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -126,9 +126,9 @@
         <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_ball_size_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="collision_detection_0" PORT="ball_size"/>
-            <CONNECTION INSTANCE="position_ball_0" PORT="ball_size"/>
             <CONNECTION INSTANCE="paint_ball" PORT="rect_size_x"/>
             <CONNECTION INSTANCE="paint_ball" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="position_ball_0" PORT="ball_size"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -180,9 +180,9 @@
         <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_paddle_size_x_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="collision_detection_0" PORT="paddle_size_x"/>
-            <CONNECTION INSTANCE="position_paddles_0" PORT="paddle_size_x"/>
             <CONNECTION INSTANCE="paint_paddle_l" PORT="rect_size_x"/>
             <CONNECTION INSTANCE="paint_paddle_r" PORT="rect_size_x"/>
+            <CONNECTION INSTANCE="position_paddles_0" PORT="paddle_size_x"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -200,9 +200,9 @@
         <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_paddle_size_y_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="collision_detection_0" PORT="paddle_size_y"/>
-            <CONNECTION INSTANCE="position_paddles_0" PORT="paddle_size_y"/>
             <CONNECTION INSTANCE="paint_paddle_l" PORT="rect_size_y"/>
             <CONNECTION INSTANCE="paint_paddle_r" PORT="rect_size_y"/>
+            <CONNECTION INSTANCE="position_paddles_0" PORT="paddle_size_y"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -292,9 +292,9 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="screen_size_x"/>
             <CONNECTION INSTANCE="collision_detection_0" PORT="screen_size_x"/>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="screen_size_x"/>
             <CONNECTION INSTANCE="position_ball_0" PORT="screen_size_x"/>
             <CONNECTION INSTANCE="position_paddles_0" PORT="screen_size_x"/>
-            <CONNECTION INSTANCE="paint_centerline_0" PORT="screen_size_x"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -312,9 +312,9 @@
         <PORT DIR="O" LEFT="10" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Constants_screen_size_y_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="collision_detection_0" PORT="screen_size_y"/>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="screen_size_y"/>
             <CONNECTION INSTANCE="position_ball_0" PORT="screen_size_y"/>
             <CONNECTION INSTANCE="position_paddles_0" PORT="screen_size_y"/>
-            <CONNECTION INSTANCE="paint_centerline_0" PORT="screen_size_y"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -340,8 +340,8 @@
         </PORT>
         <PORT DIR="O" NAME="clk_o" SIGIS="undef" SIGNAME="clk_divider_0_clk_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="score_counter_0" PORT="clk"/>
             <CONNECTION INSTANCE="position_ball_0" PORT="clk"/>
+            <CONNECTION INSTANCE="score_counter_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -939,10 +939,6 @@
         </PORT>
         <PORT CLKFREQUENCY="148500000" DIR="O" NAME="clk_hdmi" SIGIS="clk" SIGNAME="clk_wiz_0_clk_hdmi">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="v_tc_0" PORT="clk"/>
-            <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
-            <CONNECTION INSTANCE="pixel_counter_0" PORT="pxCLK_i"/>
-            <CONNECTION INSTANCE="video_buffer_0" PORT="pixel_clk"/>
             <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_0" PORT="clk"/>
             <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_1" PORT="clk"/>
             <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_paint_rectangle_2" PORT="clk"/>
@@ -957,10 +953,14 @@
             <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_4" PORT="clk"/>
             <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_5" PORT="clk"/>
             <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_paint_rectangle_6" PORT="clk"/>
-            <CONNECTION INSTANCE="paint_centerline_0" PORT="clk"/>
             <CONNECTION INSTANCE="paint_ball" PORT="clk"/>
+            <CONNECTION INSTANCE="paint_centerline_0" PORT="clk"/>
             <CONNECTION INSTANCE="paint_paddle_l" PORT="clk"/>
             <CONNECTION INSTANCE="paint_paddle_r" PORT="clk"/>
+            <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
+            <CONNECTION INSTANCE="v_tc_0" PORT="clk"/>
+            <CONNECTION INSTANCE="pixel_counter_0" PORT="pxCLK_i"/>
+            <CONNECTION INSTANCE="video_buffer_0" PORT="pixel_clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1040,14 +1040,14 @@
         </PORT>
         <PORT DIR="O" NAME="collision_ball_edge_l" SIGIS="undef" SIGNAME="collision_detection_0_collision_ball_edge_l">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
             <CONNECTION INSTANCE="score_counter_0" PORT="point_r"/>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="collision_ball_edge_r" SIGIS="undef" SIGNAME="collision_detection_0_collision_ball_edge_r">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op2"/>
             <CONNECTION INSTANCE="score_counter_0" PORT="point_l"/>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="collision_ball_topbottom" SIGIS="undef" SIGNAME="collision_detection_0_collision_ball_topbottom">

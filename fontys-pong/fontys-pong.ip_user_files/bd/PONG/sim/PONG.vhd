@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
---Date        : Fri Feb 21 15:07:01 2025
+--Date        : Fri Feb 21 15:35:15 2025
 --Host        : XPS-Tommy running 64-bit major release  (build 9200)
 --Command     : generate_target PONG.bd
 --Design      : PONG
@@ -29,16 +29,21 @@ entity Constants_imp_YX2WQJ is
 end Constants_imp_YX2WQJ;
 
 architecture STRUCTURE of Constants_imp_YX2WQJ is
-  component PONG_screen_size_x_0 is
+  component PONG_ball_size_0 is
   port (
     dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
   );
-  end component PONG_screen_size_x_0;
-  component PONG_screen_size_y_0 is
+  end component PONG_ball_size_0;
+  component PONG_max_score_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component PONG_max_score_0;
+  component PONG_paddle_offset_x_0 is
   port (
     dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
   );
-  end component PONG_screen_size_y_0;
+  end component PONG_paddle_offset_x_0;
   component PONG_paddle_size_x_0 is
   port (
     dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
@@ -49,21 +54,6 @@ architecture STRUCTURE of Constants_imp_YX2WQJ is
     dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
   );
   end component PONG_paddle_size_y_0;
-  component PONG_ball_size_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
-  );
-  end component PONG_ball_size_0;
-  component PONG_paddle_offset_x_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
-  );
-  end component PONG_paddle_offset_x_0;
-  component PONG_max_score_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component PONG_max_score_0;
   component PONG_score_seg_size_x_0 is
   port (
     dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
@@ -84,6 +74,16 @@ architecture STRUCTURE of Constants_imp_YX2WQJ is
     dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
   );
   end component PONG_scoreboard_top_offset_0;
+  component PONG_screen_size_x_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component PONG_screen_size_x_0;
+  component PONG_screen_size_y_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component PONG_screen_size_y_0;
   signal Net5 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net6 : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net7 : STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -175,46 +175,6 @@ entity controllers_imp_10DA66H is
 end controllers_imp_10DA66H;
 
 architecture STRUCTURE of controllers_imp_10DA66H is
-  component PONG_controller_buttons_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    btn_up : in STD_LOGIC;
-    btn_down : in STD_LOGIC;
-    value : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component PONG_controller_buttons_0_0;
-  component PONG_controller_buttons_1_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    btn_up : in STD_LOGIC;
-    btn_down : in STD_LOGIC;
-    value : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component PONG_controller_buttons_1_0;
-  component PONG_clk_divider_1_0 is
-  port (
-    clk_i : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    clk_o : out STD_LOGIC
-  );
-  end component PONG_clk_divider_1_0;
-  component PONG_controller_interconn_0_0 is
-  port (
-    switch : in STD_LOGIC;
-    value_l_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_l_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_r_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_r_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    enable_1 : out STD_LOGIC;
-    enable_2 : out STD_LOGIC;
-    value_l_o : out STD_LOGIC_VECTOR ( 8 downto 0 );
-    value_r_o : out STD_LOGIC_VECTOR ( 8 downto 0 )
-  );
-  end component PONG_controller_interconn_0_0;
   component PONG_controller_ultrasoni_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -235,6 +195,46 @@ architecture STRUCTURE of controllers_imp_10DA66H is
     data : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component PONG_controller_ultrasoni_1_0;
+  component PONG_clk_divider_1_0 is
+  port (
+    clk_i : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    clk_o : out STD_LOGIC
+  );
+  end component PONG_clk_divider_1_0;
+  component PONG_controller_buttons_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    btn_up : in STD_LOGIC;
+    btn_down : in STD_LOGIC;
+    value : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component PONG_controller_buttons_0_0;
+  component PONG_controller_buttons_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    btn_up : in STD_LOGIC;
+    btn_down : in STD_LOGIC;
+    value : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component PONG_controller_buttons_1_0;
+  component PONG_controller_interconn_0_0 is
+  port (
+    switch : in STD_LOGIC;
+    value_l_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_l_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_r_1 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_r_2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    enable_1 : out STD_LOGIC;
+    enable_2 : out STD_LOGIC;
+    value_l_o : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    value_r_o : out STD_LOGIC_VECTOR ( 8 downto 0 )
+  );
+  end component PONG_controller_interconn_0_0;
   signal Net : STD_LOGIC;
   signal Net2 : STD_LOGIC;
   signal Net3 : STD_LOGIC;
@@ -354,6 +354,42 @@ entity paint_seg_l_imp_XXHWUM is
 end paint_seg_l_imp_XXHWUM;
 
 architecture STRUCTURE of paint_seg_l_imp_XXHWUM is
+  component PONG_seven_seg_display_co_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    value : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    seg_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a : out STD_LOGIC;
+    seg_b : out STD_LOGIC;
+    seg_c : out STD_LOGIC;
+    seg_d : out STD_LOGIC;
+    seg_e : out STD_LOGIC;
+    seg_f : out STD_LOGIC;
+    seg_g : out STD_LOGIC;
+    seg_hor_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_hor_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_ver_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_ver_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_b_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_b_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_c_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_c_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_d_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_d_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_e_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_e_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_f_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_f_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_g_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_g_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component PONG_seven_seg_display_co_0_0;
   component PONG_paint_rectangle_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -508,42 +544,6 @@ architecture STRUCTURE of paint_seg_l_imp_XXHWUM is
     pxl_value_o : out STD_LOGIC
   );
   end component PONG_paint_rectangle_6_0;
-  component PONG_seven_seg_display_co_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    value : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    seg_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_a : out STD_LOGIC;
-    seg_b : out STD_LOGIC;
-    seg_c : out STD_LOGIC;
-    seg_d : out STD_LOGIC;
-    seg_e : out STD_LOGIC;
-    seg_f : out STD_LOGIC;
-    seg_g : out STD_LOGIC;
-    seg_hor_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_hor_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_ver_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_ver_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_a_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_a_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_b_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_b_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_c_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_c_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_d_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_d_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_e_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_e_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_f_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_f_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_g_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_g_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
-  );
-  end component PONG_seven_seg_display_co_0_0;
   signal Net : STD_LOGIC;
   signal clk_1_1 : STD_LOGIC;
   signal hsync_i_0_1 : STD_LOGIC;
@@ -859,6 +859,42 @@ entity paint_seg_r_imp_19Y4ORX is
 end paint_seg_r_imp_19Y4ORX;
 
 architecture STRUCTURE of paint_seg_r_imp_19Y4ORX is
+  component PONG_seven_seg_display_co_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    value : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    seg_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a : out STD_LOGIC;
+    seg_b : out STD_LOGIC;
+    seg_c : out STD_LOGIC;
+    seg_d : out STD_LOGIC;
+    seg_e : out STD_LOGIC;
+    seg_f : out STD_LOGIC;
+    seg_g : out STD_LOGIC;
+    seg_hor_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_hor_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_ver_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_ver_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_a_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_b_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_b_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_c_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_c_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_d_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_d_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_e_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_e_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_f_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_f_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_g_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    seg_g_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component PONG_seven_seg_display_co_0_1;
   component PONG_paint_rectangle_0_1 is
   port (
     clk : in STD_LOGIC;
@@ -1013,42 +1049,6 @@ architecture STRUCTURE of paint_seg_r_imp_19Y4ORX is
     pxl_value_o : out STD_LOGIC
   );
   end component PONG_paint_rectangle_6_1;
-  component PONG_seven_seg_display_co_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    value : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    seg_pos_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_pos_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_a : out STD_LOGIC;
-    seg_b : out STD_LOGIC;
-    seg_c : out STD_LOGIC;
-    seg_d : out STD_LOGIC;
-    seg_e : out STD_LOGIC;
-    seg_f : out STD_LOGIC;
-    seg_g : out STD_LOGIC;
-    seg_hor_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_hor_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_ver_size_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_ver_size_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_a_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_a_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_b_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_b_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_c_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_c_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_d_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_d_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_e_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_e_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_f_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_f_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_g_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    seg_g_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
-  );
-  end component PONG_seven_seg_display_co_0_1;
   signal Net : STD_LOGIC;
   signal clk_1_1 : STD_LOGIC;
   signal hsync_i_0_1 : STD_LOGIC;
@@ -1524,13 +1524,13 @@ entity PONG is
 end PONG;
 
 architecture STRUCTURE of PONG is
-  component PONG_util_vector_logic_1_0 is
+  component PONG_clk_divider_0_0 is
   port (
-    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Op2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
+    clk_i : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    clk_o : out STD_LOGIC
   );
-  end component PONG_util_vector_logic_1_0;
+  end component PONG_clk_divider_0_0;
   component PONG_clk_wiz_0_0 is
   port (
     reset : in STD_LOGIC;
@@ -1538,98 +1538,6 @@ architecture STRUCTURE of PONG is
     clk_hdmi : out STD_LOGIC
   );
   end component PONG_clk_wiz_0_0;
-  component PONG_v_tc_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    clken : in STD_LOGIC;
-    gen_clken : in STD_LOGIC;
-    sof_state : in STD_LOGIC;
-    hsync_out : out STD_LOGIC;
-    hblank_out : out STD_LOGIC;
-    vsync_out : out STD_LOGIC;
-    vblank_out : out STD_LOGIC;
-    active_video_out : out STD_LOGIC;
-    resetn : in STD_LOGIC;
-    fsync_out : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component PONG_v_tc_0_0;
-  component PONG_zero_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component PONG_zero_0;
-  component PONG_one_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component PONG_one_0;
-  component PONG_rgb2dvi_0_0 is
-  port (
-    TMDS_Clk_p : out STD_LOGIC;
-    TMDS_Clk_n : out STD_LOGIC;
-    TMDS_Data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    TMDS_Data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    aRst : in STD_LOGIC;
-    vid_pData : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    vid_pVDE : in STD_LOGIC;
-    vid_pHSync : in STD_LOGIC;
-    vid_pVSync : in STD_LOGIC;
-    PixelClk : in STD_LOGIC
-  );
-  end component PONG_rgb2dvi_0_0;
-  component PONG_util_vector_logic_2_0 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Op2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component PONG_util_vector_logic_2_0;
-  component PONG_pixel_counter_0_0 is
-  port (
-    pxCLK_i : in STD_LOGIC;
-    video_enable_i : in STD_LOGIC;
-    hblank_i : in STD_LOGIC;
-    hsync_i : in STD_LOGIC;
-    vblank_i : in STD_LOGIC;
-    vsync_i : in STD_LOGIC;
-    hpx_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    vpx_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    hsync_o : out STD_LOGIC;
-    vsync_o : out STD_LOGIC;
-    video_enable_o : out STD_LOGIC
-  );
-  end component PONG_pixel_counter_0_0;
-  component PONG_color_generator_0_0 is
-  port (
-    enable_i : in STD_LOGIC;
-    data_o : out STD_LOGIC_VECTOR ( 23 downto 0 )
-  );
-  end component PONG_color_generator_0_0;
-  component PONG_video_buffer_0_0 is
-  port (
-    pixel_clk : in STD_LOGIC;
-    Vdata_i : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    HSync_i : in STD_LOGIC;
-    VSync_i : in STD_LOGIC;
-    Vdata_enable_i : in STD_LOGIC;
-    Vdata_o : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    HSync_o : out STD_LOGIC;
-    VSync_o : out STD_LOGIC;
-    Vdata_enable_o : out STD_LOGIC
-  );
-  end component PONG_video_buffer_0_0;
-  component PONG_score_counter_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    point_l : in STD_LOGIC;
-    point_r : in STD_LOGIC;
-    max_score : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    score_left : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    score_right : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    game_reset : out STD_LOGIC
-  );
-  end component PONG_score_counter_0_0;
   component PONG_collision_detection_0_0 is
   port (
     screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -1650,63 +1558,17 @@ architecture STRUCTURE of PONG is
     collision_ball_topbottom : out STD_LOGIC
   );
   end component PONG_collision_detection_0_0;
-  component PONG_position_ball_0_0 is
+  component PONG_color_generator_0_0 is
   port (
-    clk : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    screen_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    ball_size : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    collision_ball_paddle : in STD_LOGIC;
-    collision_ball_paddle_index : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    collision_ball_topbottom : in STD_LOGIC;
-    collision_ball_edge : in STD_LOGIC;
-    ball_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    ball_pox_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
+    enable_i : in STD_LOGIC;
+    data_o : out STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  end component PONG_position_ball_0_0;
-  component PONG_clk_divider_0_0 is
+  end component PONG_color_generator_0_0;
+  component PONG_one_0 is
   port (
-    clk_i : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    clk_o : out STD_LOGIC
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  end component PONG_clk_divider_0_0;
-  component PONG_position_paddles_0_0 is
-  port (
-    paddle_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    paddle_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    paddle_offset_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    screen_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    controller_value_l : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    controller_value_r : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    paddle_l_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    paddle_l_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    paddle_r_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    paddle_r_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
-  );
-  end component PONG_position_paddles_0_0;
-  component PONG_paint_centerline_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    video_enable_i : in STD_LOGIC;
-    hsync_i : in STD_LOGIC;
-    vsync_i : in STD_LOGIC;
-    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_value_i : in STD_LOGIC;
-    screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    screen_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    video_enable_o : out STD_LOGIC;
-    hsync_o : out STD_LOGIC;
-    vsync_o : out STD_LOGIC;
-    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    pxl_value_o : out STD_LOGIC
-  );
-  end component PONG_paint_centerline_0_0;
+  end component PONG_one_0;
   component PONG_paint_ball_0 is
   port (
     clk : in STD_LOGIC;
@@ -1729,6 +1591,25 @@ architecture STRUCTURE of PONG is
     pxl_value_o : out STD_LOGIC
   );
   end component PONG_paint_ball_0;
+  component PONG_paint_centerline_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    pxl_x_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_i : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_i : in STD_LOGIC;
+    screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    screen_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    video_enable_o : out STD_LOGIC;
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    pxl_x_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_y_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pxl_value_o : out STD_LOGIC
+  );
+  end component PONG_paint_centerline_0_0;
   component PONG_paint_paddle_l_0 is
   port (
     clk : in STD_LOGIC;
@@ -1773,6 +1654,125 @@ architecture STRUCTURE of PONG is
     pxl_value_o : out STD_LOGIC
   );
   end component PONG_paint_paddle_r_0;
+  component PONG_pixel_counter_0_0 is
+  port (
+    pxCLK_i : in STD_LOGIC;
+    video_enable_i : in STD_LOGIC;
+    hblank_i : in STD_LOGIC;
+    hsync_i : in STD_LOGIC;
+    vblank_i : in STD_LOGIC;
+    vsync_i : in STD_LOGIC;
+    hpx_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    vpx_o : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    hsync_o : out STD_LOGIC;
+    vsync_o : out STD_LOGIC;
+    video_enable_o : out STD_LOGIC
+  );
+  end component PONG_pixel_counter_0_0;
+  component PONG_position_ball_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    screen_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    ball_size : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    collision_ball_paddle : in STD_LOGIC;
+    collision_ball_paddle_index : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    collision_ball_topbottom : in STD_LOGIC;
+    collision_ball_edge : in STD_LOGIC;
+    ball_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    ball_pox_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component PONG_position_ball_0_0;
+  component PONG_position_paddles_0_0 is
+  port (
+    paddle_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    paddle_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    paddle_offset_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    screen_size_x : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    screen_size_y : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    controller_value_l : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    controller_value_r : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    paddle_l_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    paddle_l_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    paddle_r_pos_x : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    paddle_r_pos_y : out STD_LOGIC_VECTOR ( 10 downto 0 )
+  );
+  end component PONG_position_paddles_0_0;
+  component PONG_rgb2dvi_0_0 is
+  port (
+    TMDS_Clk_p : out STD_LOGIC;
+    TMDS_Clk_n : out STD_LOGIC;
+    TMDS_Data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    TMDS_Data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    aRst : in STD_LOGIC;
+    vid_pData : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    vid_pVDE : in STD_LOGIC;
+    vid_pHSync : in STD_LOGIC;
+    vid_pVSync : in STD_LOGIC;
+    PixelClk : in STD_LOGIC
+  );
+  end component PONG_rgb2dvi_0_0;
+  component PONG_score_counter_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    point_l : in STD_LOGIC;
+    point_r : in STD_LOGIC;
+    max_score : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_left : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    score_right : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    game_reset : out STD_LOGIC
+  );
+  end component PONG_score_counter_0_0;
+  component PONG_util_vector_logic_1_0 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Op2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component PONG_util_vector_logic_1_0;
+  component PONG_util_vector_logic_2_0 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Op2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    Res : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component PONG_util_vector_logic_2_0;
+  component PONG_v_tc_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    clken : in STD_LOGIC;
+    gen_clken : in STD_LOGIC;
+    sof_state : in STD_LOGIC;
+    hsync_out : out STD_LOGIC;
+    hblank_out : out STD_LOGIC;
+    vsync_out : out STD_LOGIC;
+    vblank_out : out STD_LOGIC;
+    active_video_out : out STD_LOGIC;
+    resetn : in STD_LOGIC;
+    fsync_out : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component PONG_v_tc_0_0;
+  component PONG_video_buffer_0_0 is
+  port (
+    pixel_clk : in STD_LOGIC;
+    Vdata_i : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    HSync_i : in STD_LOGIC;
+    VSync_i : in STD_LOGIC;
+    Vdata_enable_i : in STD_LOGIC;
+    Vdata_o : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    HSync_o : out STD_LOGIC;
+    VSync_o : out STD_LOGIC;
+    Vdata_enable_o : out STD_LOGIC
+  );
+  end component PONG_video_buffer_0_0;
+  component PONG_zero_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component PONG_zero_0;
   signal Constants_score_seg_size_x : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Constants_scoreboard_center_offset : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal Net : STD_LOGIC;

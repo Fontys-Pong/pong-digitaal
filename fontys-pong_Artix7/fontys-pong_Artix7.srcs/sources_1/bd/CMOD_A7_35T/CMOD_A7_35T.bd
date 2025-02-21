@@ -1,0 +1,560 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5B9EE93ACD4C1A85",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T",
+      "name": "CMOD_A7_35T",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz": "",
+      "rst_clk_wiz_100M": "",
+      "Enable": "",
+      "util_vector_logic_0": "",
+      "blockdesign_0": ""
+    },
+    "ports": {
+      "sys_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "CMOD_A7_35T_sys_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "12000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "hdmi_out_data_n": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "hdmi_out_data_p": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "hdmi_out_clk_n": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "hdmi_out_clk_p": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "hdmi_out_hpd": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "trigger_r": {
+        "direction": "O"
+      },
+      "trigger_l": {
+        "direction": "O"
+      },
+      "btn_down_r": {
+        "direction": "I"
+      },
+      "btn_up_r": {
+        "direction": "I"
+      },
+      "btn_down_l": {
+        "direction": "I"
+      },
+      "btn_up_l": {
+        "direction": "I"
+      },
+      "controller_switch": {
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "sensor_r": {
+        "direction": "I"
+      },
+      "sensor_l": {
+        "direction": "I"
+      },
+      "enable_state": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "controller_state_2": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "controller_state_1": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      }
+    },
+    "components": {
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "CMOD_A7_35T_clk_wiz_0",
+        "xci_path": "ip\\CMOD_A7_35T_clk_wiz_0\\CMOD_A7_35T_clk_wiz_0.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "833.33"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "479.872"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "668.310"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "62.500"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "83.333"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "7.500"
+          }
+        }
+      },
+      "rst_clk_wiz_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "CMOD_A7_35T_rst_clk_wiz_100M_0",
+        "xci_path": "ip\\CMOD_A7_35T_rst_clk_wiz_100M_0\\CMOD_A7_35T_rst_clk_wiz_100M_0.xci",
+        "inst_hier_path": "rst_clk_wiz_100M"
+      },
+      "Enable": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "CMOD_A7_35T_xlconstant_0_0",
+        "xci_path": "ip\\CMOD_A7_35T_xlconstant_0_0\\CMOD_A7_35T_xlconstant_0_0.xci",
+        "inst_hier_path": "Enable"
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "CMOD_A7_35T_util_vector_logic_0_0",
+        "xci_path": "ip\\CMOD_A7_35T_util_vector_logic_0_0\\CMOD_A7_35T_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "blockdesign_0": {
+        "parameters": {
+          "ACTIVE_SIM_BD": {
+            "value": "PONG.bd"
+          },
+          "ACTIVE_SYNTH_BD": {
+            "value": "PONG.bd"
+          },
+          "ENABLE_DFX": {
+            "value": "0"
+          },
+          "LIST_SIM_BD": {
+            "value": "PONG.bd"
+          },
+          "LIST_SYNTH_BD": {
+            "value": "PONG.bd"
+          },
+          "LOCK_PROPAGATE": {
+            "value": "0"
+          }
+        },
+        "ports": {
+          "trigger_l": {
+            "direction": "O"
+          },
+          "trigger_r": {
+            "direction": "O"
+          },
+          "sensor_l": {
+            "direction": "I"
+          },
+          "sensor_r": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "controller_switch": {
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "btn_up_l": {
+            "direction": "I"
+          },
+          "btn_down_l": {
+            "direction": "I"
+          },
+          "btn_up_r": {
+            "direction": "I"
+          },
+          "btn_down_r": {
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "hdmi_out_hpd": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "hdmi_out_clk_p": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default"
+              },
+              "FREQ_TOLERANCE_HZ": {
+                "value": "0",
+                "value_src": "default"
+              },
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "default"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default"
+              }
+            }
+          },
+          "hdmi_out_clk_n": {
+            "type": "clk",
+            "direction": "O",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default"
+              },
+              "FREQ_TOLERANCE_HZ": {
+                "value": "0",
+                "value_src": "default"
+              },
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "default"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default"
+              }
+            }
+          },
+          "hdmi_out_data_p": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "hdmi_out_data_n": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "clk_100MHz": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "strong"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "FREQ_TOLERANCE_HZ": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "INSERT_VIP": {
+                "value": "0",
+                "value_src": "strong"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        },
+        "post_compiled_compname": "blockdesign_inst_0",
+        "architecture": "artix7",
+        "variant_info": {
+          "PONG.bd": {
+            "scoped_diagram": "blockdesign_inst_0.bd",
+            "design_checksum": "0x230D33F3",
+            "ref_name": "blockdesign",
+            "ref_subinst_path": "CMOD_A7_35T_blockdesign_0",
+            "ref_type": "Block Design",
+            "source_type": "all",
+            "active": "all"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Enable_dout": {
+        "ports": [
+          "Enable/dout",
+          "blockdesign_0/enable",
+          "enable_state"
+        ]
+      },
+      "blockdesign_0_hdmi_out_clk_n": {
+        "ports": [
+          "blockdesign_0/hdmi_out_clk_n",
+          "hdmi_out_clk_n"
+        ]
+      },
+      "blockdesign_0_hdmi_out_clk_p": {
+        "ports": [
+          "blockdesign_0/hdmi_out_clk_p",
+          "hdmi_out_clk_p"
+        ]
+      },
+      "blockdesign_0_hdmi_out_data_n": {
+        "ports": [
+          "blockdesign_0/hdmi_out_data_n",
+          "hdmi_out_data_n"
+        ]
+      },
+      "blockdesign_0_hdmi_out_data_p": {
+        "ports": [
+          "blockdesign_0/hdmi_out_data_p",
+          "hdmi_out_data_p"
+        ]
+      },
+      "blockdesign_0_hdmi_out_hpd": {
+        "ports": [
+          "blockdesign_0/hdmi_out_hpd",
+          "hdmi_out_hpd"
+        ]
+      },
+      "blockdesign_0_trigger_l": {
+        "ports": [
+          "blockdesign_0/trigger_l",
+          "trigger_l"
+        ]
+      },
+      "blockdesign_0_trigger_r": {
+        "ports": [
+          "blockdesign_0/trigger_r",
+          "trigger_r"
+        ]
+      },
+      "btn_down_l_1": {
+        "ports": [
+          "btn_down_l",
+          "blockdesign_0/btn_down_l"
+        ]
+      },
+      "btn_down_r_1": {
+        "ports": [
+          "btn_down_r",
+          "blockdesign_0/btn_down_r"
+        ]
+      },
+      "btn_up_l_1": {
+        "ports": [
+          "btn_up_l",
+          "blockdesign_0/btn_up_l"
+        ]
+      },
+      "btn_up_r_1": {
+        "ports": [
+          "btn_up_r",
+          "blockdesign_0/btn_up_r"
+        ]
+      },
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "rst_clk_wiz_100M/slowest_sync_clk",
+          "blockdesign_0/clk_100MHz"
+        ]
+      },
+      "clk_wiz_locked": {
+        "ports": [
+          "clk_wiz/locked",
+          "rst_clk_wiz_100M/dcm_locked"
+        ]
+      },
+      "controller_switch_1": {
+        "ports": [
+          "controller_switch",
+          "util_vector_logic_0/Op1",
+          "blockdesign_0/controller_switch",
+          "controller_state_1"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "clk_wiz/reset",
+          "rst_clk_wiz_100M/ext_reset_in",
+          "blockdesign_0/reset"
+        ]
+      },
+      "sensor_l_1": {
+        "ports": [
+          "sensor_l",
+          "blockdesign_0/sensor_l"
+        ]
+      },
+      "sensor_r_1": {
+        "ports": [
+          "sensor_r",
+          "blockdesign_0/sensor_r"
+        ]
+      },
+      "sys_clk_1": {
+        "ports": [
+          "sys_clk",
+          "clk_wiz/clk_in1"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "controller_state_2"
+        ]
+      }
+    }
+  }
+}

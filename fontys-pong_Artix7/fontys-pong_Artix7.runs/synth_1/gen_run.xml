@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1740141555" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/clk_divider.dcp">
-  <File Type="PA-TCL" Name="blockdesign_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="blockdesign_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="blockdesign_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="blockdesign_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="blockdesign_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="blockdesign_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="blockdesign_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="blockdesign_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="blockdesign_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1740150058" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/clk_divider.dcp">
+  <File Type="PA-TCL" Name="CMOD_A7_35T_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="CMOD_A7_35T_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="CMOD_A7_35T_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="CMOD_A7_35T_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="CMOD_A7_35T_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="CMOD_A7_35T_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="CMOD_A7_35T_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CMOD_A7_35T_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="CMOD_A7_35T_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd">
@@ -29,25 +29,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd">
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic_hcsr04.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -59,7 +41,25 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd">
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -83,32 +83,63 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/blockdesign/blockdesign.bd">
+    <File Path="$PSRCDIR/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T.bd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd"/>
-        <Attr Name="ImportTime" Val="1711978367"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PGENDIR/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v">
+    <File Path="$PGENDIR/sources_1/bd/CMOD_A7_35T/hdl/CMOD_A7_35T_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/seven_segment_controller.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="blockdesign_wrapper"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="CMOD_A7_35T_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -144,4 +175,5 @@
     </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="blockdesign_inst_0"/>
 </GenRun>
