@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Fri Feb 21 16:03:52 2025
+| Date             : Fri Feb 21 16:47:02 2025
 | Host             : XPS-Tommy running 64-bit major release  (build 9200)
 | Command          : report_power -file CMOD_A7_35T_wrapper_power_routed.rpt -pb CMOD_A7_35T_wrapper_power_summary_routed.pb -rpx CMOD_A7_35T_wrapper_power_routed.rpx
 | Design           : CMOD_A7_35T_wrapper
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.018 |       14 |       --- |             --- |
-| Slice Logic    |     0.046 |     6837 |       --- |             --- |
-|   LUT as Logic |     0.041 |     3659 |     20800 |           17.59 |
+| Clocks         |     0.017 |       14 |       --- |             --- |
+| Slice Logic    |     0.046 |     6835 |       --- |             --- |
+|   LUT as Logic |     0.042 |     3663 |     20800 |           17.61 |
 |   CARRY4       |     0.004 |      891 |      8150 |           10.93 |
-|   Register     |    <0.001 |     1238 |     41600 |            2.98 |
+|   Register     |    <0.001 |     1233 |     41600 |            2.96 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |      107 |       --- |             --- |
-| Signals        |     0.058 |     5081 |       --- |             --- |
+| Signals        |     0.058 |     5084 |       --- |             --- |
 | MMCM           |     0.221 |        2 |         5 |           40.00 |
 | PLL            |     0.137 |        1 |         5 |           20.00 |
 | DSPs           |    <0.001 |        2 |        90 |            2.22 |
-| I/O            |     0.153 |       23 |       106 |           21.70 |
+| I/O            |     0.153 |       25 |       106 |           23.58 |
 | Static Power   |     0.073 |          |           |                 |
 | Total          |     0.706 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -160,9 +160,8 @@ Table of Contents
 |   CMOD_A7_35T_i             |     0.629 |
 |     blockdesign_0           |     0.525 |
 |       clk_wiz_0             |     0.117 |
-|       collision_detection_0 |     0.006 |
+|       collision_detection_0 |     0.007 |
 |       controllers           |     0.079 |
-|       paint_ball            |     0.001 |
 |       paint_scoreboard      |     0.006 |
 |       position_ball_0       |     0.004 |
 |       position_paddles_0    |     0.007 |

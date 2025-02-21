@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Feb 21 15:57:15 2025
+//Date        : Fri Feb 21 16:27:29 2025
 //Host        : XPS-Tommy running 64-bit major release  (build 9200)
 //Command     : generate_target CMOD_A7_35T.bd
 //Design      : CMOD_A7_35T
@@ -10,16 +10,18 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "CMOD_A7_35T,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CMOD_A7_35T,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=63,numReposBlks=57,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=35,numPkgbdBlks=1,bdsource=USER,da_clkrst_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "CMOD_A7_35T.hwdef" *) 
+(* CORE_GENERATION_INFO = "CMOD_A7_35T,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CMOD_A7_35T,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=65,numReposBlks=59,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=35,numPkgbdBlks=1,bdsource=USER,da_clkrst_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "CMOD_A7_35T.hwdef" *) 
 module CMOD_A7_35T
    (btn_down_l,
     btn_down_r,
     btn_up_l,
     btn_up_r,
-    contoller_state_2,
     controller_state_1,
+    controller_state_2,
     controller_switch,
-    enable_state,
+    enable_state_active,
+    enable_state_inactive,
+    game_reset,
     hdmi_out_clk_n,
     hdmi_out_clk_p,
     hdmi_out_data_n,
@@ -35,10 +37,12 @@ module CMOD_A7_35T
   input btn_down_r;
   input btn_up_l;
   input btn_up_r;
-  output [0:0]contoller_state_2;
   output [0:0]controller_state_1;
+  output [0:0]controller_state_2;
   input controller_switch;
-  output [0:0]enable_state;
+  output [0:0]enable_state_active;
+  output enable_state_inactive;
+  input game_reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_out_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_out_clk_p;
   output [2:0]hdmi_out_data_n;
@@ -66,6 +70,7 @@ module CMOD_A7_35T
   wire clk_wiz_clk_out1;
   wire clk_wiz_locked;
   wire controller_switch_1;
+  wire game_reset_1;
   wire reset_1;
   wire sensor_l_1;
   wire sensor_r_1;
@@ -76,10 +81,12 @@ module CMOD_A7_35T
   assign btn_down_r_1 = btn_down_r;
   assign btn_up_l_1 = btn_up_l;
   assign btn_up_r_1 = btn_up_r;
-  assign contoller_state_2[0] = util_vector_logic_0_Res;
   assign controller_state_1[0] = controller_switch_1;
+  assign controller_state_2[0] = util_vector_logic_0_Res;
   assign controller_switch_1 = controller_switch;
-  assign enable_state[0] = Enable_dout;
+  assign enable_state_active[0] = Enable_dout;
+  assign enable_state_inactive = game_reset_1;
+  assign game_reset_1 = game_reset;
   assign hdmi_out_clk_n = blockdesign_0_hdmi_out_clk_n;
   assign hdmi_out_clk_p = blockdesign_0_hdmi_out_clk_p;
   assign hdmi_out_data_n[2:0] = blockdesign_0_hdmi_out_data_n;
@@ -91,8 +98,6 @@ module CMOD_A7_35T
   assign sys_clk_1 = sys_clk;
   assign trigger_l = blockdesign_0_trigger_l;
   assign trigger_r = blockdesign_0_trigger_r;
-  CMOD_A7_35T_xlconstant_0_0 Enable
-       (.dout(Enable_dout));
   blockdesign_inst_0 blockdesign_0
        (.btn_down_l(btn_down_l_1),
         .btn_down_r(btn_down_r_1),
@@ -101,6 +106,7 @@ module CMOD_A7_35T
         .clk_100MHz(clk_wiz_clk_out1),
         .controller_switch(controller_switch_1),
         .enable(Enable_dout),
+        .game_reset(game_reset_1),
         .hdmi_out_clk_n(blockdesign_0_hdmi_out_clk_n),
         .hdmi_out_clk_p(blockdesign_0_hdmi_out_clk_p),
         .hdmi_out_data_n(blockdesign_0_hdmi_out_data_n),
@@ -125,4 +131,7 @@ module CMOD_A7_35T
   CMOD_A7_35T_util_vector_logic_0_0 util_vector_logic_0
        (.Op1(controller_switch_1),
         .Res(util_vector_logic_0_Res));
+  CMOD_A7_35T_util_vector_logic_1_1 util_vector_logic_1
+       (.Op1(game_reset_1),
+        .Res(Enable_dout));
 endmodule

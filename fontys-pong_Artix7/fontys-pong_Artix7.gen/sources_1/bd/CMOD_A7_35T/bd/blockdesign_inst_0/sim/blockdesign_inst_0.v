@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Feb 21 16:00:55 2025
+//Date        : Fri Feb 21 16:44:14 2025
 //Host        : XPS-Tommy running 64-bit major release  (build 9200)
 //Command     : generate_target blockdesign_inst_0.bd
 //Design      : blockdesign_inst_0
@@ -81,7 +81,7 @@ module Constants_imp_S4A0X8
        (.dout(Net6));
 endmodule
 
-(* CORE_GENERATION_INFO = "blockdesign_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=58,numReposBlks=53,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=35,numPkgbdBlks=0,bdsource=D_/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd,synth_mode=Global}" *) (* HW_HANDOFF = "blockdesign_inst_0.hwdef" *) 
+(* CORE_GENERATION_INFO = "blockdesign_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=59,numReposBlks=54,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=35,numPkgbdBlks=0,bdsource=D_/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd,synth_mode=Global}" *) (* HW_HANDOFF = "blockdesign_inst_0.hwdef" *) 
 module blockdesign_inst_0
    (btn_down_l,
     btn_down_r,
@@ -90,6 +90,7 @@ module blockdesign_inst_0
     clk_100MHz,
     controller_switch,
     enable,
+    game_reset,
     hdmi_out_clk_n,
     hdmi_out_clk_p,
     hdmi_out_data_n,
@@ -107,6 +108,7 @@ module blockdesign_inst_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, ASSOCIATED_RESET reset, CLK_DOMAIN /clk_wiz_clk_out1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
   input controller_switch;
   input enable;
+  input game_reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_out_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_out_clk_p;
   output [2:0]hdmi_out_data_n;
@@ -144,6 +146,7 @@ module blockdesign_inst_0
   wire controller_ultrasonic_0_trigger;
   wire controller_ultrasonic_1_trigger;
   wire enable_0_1;
+  wire game_reset_1;
   wire [0:0]one_dout;
   wire paint_ball_video_enable_o;
   wire paint_centerline_0_hsync_o;
@@ -194,6 +197,7 @@ module blockdesign_inst_0
   wire sensor_0_1;
   wire sensor_1_1;
   wire switch_0_1;
+  wire [0:0]util_vector_logic_0_Res;
   wire [0:0]util_vector_logic_1_Res;
   wire [0:0]util_vector_logic_2_Res;
   wire v_tc_0_active_video_out;
@@ -218,6 +222,7 @@ module blockdesign_inst_0
   assign btn_up_0_1 = btn_up_l;
   assign btn_up_1_1 = btn_up_r;
   assign enable_0_1 = enable;
+  assign game_reset_1 = game_reset;
   assign hdmi_out_clk_n = rgb2dvi_0_TMDS_Clk_n;
   assign hdmi_out_clk_p = rgb2dvi_0_TMDS_Clk_p;
   assign hdmi_out_data_n[2:0] = rgb2dvi_0_TMDS_Data_n;
@@ -432,9 +437,13 @@ module blockdesign_inst_0
         .max_score(xlconstant_6_dout),
         .point_l(collision_detection_0_collision_ball_edge_r),
         .point_r(collision_detection_0_collision_ball_edge_l),
-        .reset(Net3),
+        .reset(util_vector_logic_0_Res),
         .score_left(score_l_1),
         .score_right(score_counter_0_score_right));
+  blockdesign_inst_0_util_vector_logic_0_0 util_vector_logic_0
+       (.Op1(Net3),
+        .Op2(game_reset_1),
+        .Res(util_vector_logic_0_Res));
   blockdesign_inst_0_util_vector_logic_1_0 util_vector_logic_1
        (.Op1(collision_detection_0_collision_ball_edge_l),
         .Op2(collision_detection_0_collision_ball_edge_r),

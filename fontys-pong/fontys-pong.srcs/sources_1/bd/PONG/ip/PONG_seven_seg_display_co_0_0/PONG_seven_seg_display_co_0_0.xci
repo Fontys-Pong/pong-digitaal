@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "PONG_seven_seg_display_co_0_0",
-    "cell_name": "seven_seg_display_co_0",
+    "cell_name": "paint_scoreboard/paint_seg_l/seven_seg_display_co_0",
     "component_reference": "xilinx.com:module_ref:seven_seg_display_controller:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../fontys-pong.gen/sources_1/bd/PONG/ip/PONG_seven_seg_display_co_0_0_1",

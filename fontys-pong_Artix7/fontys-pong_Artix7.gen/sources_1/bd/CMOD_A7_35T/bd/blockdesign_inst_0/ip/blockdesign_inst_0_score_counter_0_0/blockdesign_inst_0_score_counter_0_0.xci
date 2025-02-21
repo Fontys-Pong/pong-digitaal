@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_inst_0_score_counter_0_0",
-    "cell_name": "score_counter_0",
+    "cell_name": "blockdesign_0/score_counter_0",
     "component_reference": "xilinx.com:module_ref:score_counter:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

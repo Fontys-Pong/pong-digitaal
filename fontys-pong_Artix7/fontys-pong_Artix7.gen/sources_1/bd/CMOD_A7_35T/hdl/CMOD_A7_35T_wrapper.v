@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Feb 21 16:00:55 2025
+//Date        : Fri Feb 21 16:44:13 2025
 //Host        : XPS-Tommy running 64-bit major release  (build 9200)
 //Command     : generate_target CMOD_A7_35T_wrapper.bd
 //Design      : CMOD_A7_35T_wrapper
@@ -18,7 +18,9 @@ module CMOD_A7_35T_wrapper
     controller_state_1,
     controller_state_2,
     controller_switch,
-    enable_state,
+    enable_state_active,
+    enable_state_inactive,
+    game_reset,
     hdmi_out_clk_n,
     hdmi_out_clk_p,
     hdmi_out_data_n,
@@ -37,7 +39,9 @@ module CMOD_A7_35T_wrapper
   output [0:0]controller_state_1;
   output [0:0]controller_state_2;
   input controller_switch;
-  output [0:0]enable_state;
+  output [0:0]enable_state_active;
+  output enable_state_inactive;
+  input game_reset;
   output hdmi_out_clk_n;
   output hdmi_out_clk_p;
   output [2:0]hdmi_out_data_n;
@@ -57,7 +61,9 @@ module CMOD_A7_35T_wrapper
   wire [0:0]controller_state_1;
   wire [0:0]controller_state_2;
   wire controller_switch;
-  wire [0:0]enable_state;
+  wire [0:0]enable_state_active;
+  wire enable_state_inactive;
+  wire game_reset;
   wire hdmi_out_clk_n;
   wire hdmi_out_clk_p;
   wire [2:0]hdmi_out_data_n;
@@ -78,7 +84,9 @@ module CMOD_A7_35T_wrapper
         .controller_state_1(controller_state_1),
         .controller_state_2(controller_state_2),
         .controller_switch(controller_switch),
-        .enable_state(enable_state),
+        .enable_state_active(enable_state_active),
+        .enable_state_inactive(enable_state_inactive),
+        .game_reset(game_reset),
         .hdmi_out_clk_n(hdmi_out_clk_n),
         .hdmi_out_clk_p(hdmi_out_clk_p),
         .hdmi_out_data_n(hdmi_out_data_n),

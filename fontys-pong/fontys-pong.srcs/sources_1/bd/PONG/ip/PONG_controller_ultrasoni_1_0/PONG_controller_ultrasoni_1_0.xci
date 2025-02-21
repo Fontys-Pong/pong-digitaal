@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "PONG_controller_ultrasoni_1_0",
-    "cell_name": "controller_ultrasoni_1",
+    "cell_name": "controllers/controller_ultrasoni_1",
     "component_reference": "xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../fontys-pong.gen/sources_1/bd/PONG/ip/PONG_controller_ultrasoni_1_0",

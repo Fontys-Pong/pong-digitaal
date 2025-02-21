@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 21 16:00:56 2025" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 21 16:44:14 2025" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:cmod_a7-35t:part0:1.2" DEVICE="7a35t" NAME="CMOD_A7_35T" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -73,9 +73,7 @@
     </PORT>
     <PORT DIR="I" NAME="controller_switch" SIGIS="undef" SIGNAME="External_Ports_controller_switch">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
-        <CONNECTION INSTANCE="blockdesign_0" PORT="controller_switch"/>
-        <CONNECTION INSTANCE="External_Ports" PORT="controller_state_1"/>
+        <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="sensor_r" SIGIS="undef" SIGNAME="External_Ports_sensor_r">
@@ -88,9 +86,9 @@
         <CONNECTION INSTANCE="blockdesign_0" PORT="sensor_l"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="enable_state" RIGHT="0" SIGIS="undef" SIGNAME="Enable_dout">
+    <PORT DIR="O" LEFT="0" NAME="enable_state_active" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Enable" PORT="dout"/>
+        <CONNECTION INSTANCE="util_vector_logic_1" PORT="Res"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="controller_state_2" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
@@ -98,9 +96,21 @@
         <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="controller_state_1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_controller_switch">
+    <PORT DIR="O" LEFT="0" NAME="controller_state_1" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_2_Res">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="External_Ports" PORT="controller_switch"/>
+        <CONNECTION INSTANCE="util_vector_logic_2" PORT="Res"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="game_reset" SIGIS="undef" SIGNAME="External_Ports_game_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blockdesign_0" PORT="game_reset"/>
+        <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
+        <CONNECTION INSTANCE="External_Ports" PORT="enable_state_inactive"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="enable_state_inactive" SIGIS="undef" SIGNAME="External_Ports_game_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="game_reset"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -108,24 +118,6 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="7" FULLNAME="/Enable" HWVERSION="1.1" INSTANCE="Enable" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
-        <PARAMETER NAME="Component_Name" VALUE="CMOD_A7_35T_xlconstant_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Enable_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="blockdesign_0" PORT="enable"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="enable_state"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE BD="blockdesign_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/blockdesign_0" INSTANCE="blockdesign_0" IS_ENABLE="1">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -162,9 +154,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="controller_switch" SIGIS="undef" SIGNAME="External_Ports_controller_switch">
+        <PORT DIR="I" NAME="controller_switch" SIGIS="undef" SIGNAME="util_vector_logic_2_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="controller_switch"/>
+            <CONNECTION INSTANCE="util_vector_logic_2" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="btn_up_l" SIGIS="undef" SIGNAME="External_Ports_btn_up_l">
@@ -187,9 +179,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="btn_down_r"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="Enable_dout">
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Enable" PORT="dout"/>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="hdmi_out_hpd" RIGHT="0" SIGIS="undef" SIGNAME="blockdesign_0_hdmi_out_hpd">
@@ -220,6 +212,11 @@
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_100MHz" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="game_reset" SIGIS="undef" SIGNAME="External_Ports_game_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="game_reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -884,14 +881,63 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_controller_switch">
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_2_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="controller_switch"/>
+            <CONNECTION INSTANCE="util_vector_logic_2" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="controller_state_2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/util_vector_logic_1" HWVERSION="2.0" INSTANCE="util_vector_logic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="CMOD_A7_35T_util_vector_logic_1_1"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_game_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="game_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="blockdesign_0" PORT="enable"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable_state_active"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/util_vector_logic_2" HWVERSION="2.0" INSTANCE="util_vector_logic_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="CMOD_A7_35T_util_vector_logic_1_2"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_controller_switch">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="controller_switch"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_2_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="blockdesign_0" PORT="controller_switch"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="controller_state_1"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 21 16:00:55 2025" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 21 16:44:14 2025" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:cmod_a7-35t:part0:1.2" DEVICE="7a35t" NAME="blockdesign_inst_0" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -27,16 +27,16 @@
     <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
         <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="reset"/>
-        <CONNECTION INSTANCE="controllers_controller_buttons_0" PORT="reset"/>
-        <CONNECTION INSTANCE="controllers_controller_buttons_1" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_ultrasoni_0" PORT="reset_i"/>
         <CONNECTION INSTANCE="controllers_controller_ultrasoni_1" PORT="reset_i"/>
+        <CONNECTION INSTANCE="controllers_controller_buttons_0" PORT="reset"/>
+        <CONNECTION INSTANCE="controllers_controller_buttons_1" PORT="reset"/>
         <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="reset"/>
         <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="reset"/>
         <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
-        <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
         <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op1"/>
+        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="controller_switch" SIGIS="undef" SIGNAME="External_Ports_controller_switch">
@@ -107,6 +107,11 @@
         <CONNECTION INSTANCE="paint_scoreboard_scoreboard_controller_0" PORT="clk"/>
         <CONNECTION INSTANCE="clk_divider_0" PORT="clk_i"/>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="game_reset" SIGIS="undef" SIGNAME="External_Ports_game_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op2"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -3845,9 +3850,9 @@
             <CONNECTION INSTANCE="clk_divider_0" PORT="clk_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="point_l" SIGIS="undef" SIGNAME="collision_detection_0_collision_ball_edge_r">
@@ -3878,6 +3883,34 @@
         <PORT DIR="O" NAME="game_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="score_counter_0_game_reset">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/util_vector_logic_0" HWVERSION="2.0" INSTANCE="util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="or"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_inst_0_util_vector_logic_0_0"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_orgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_game_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="game_reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="score_counter_0" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

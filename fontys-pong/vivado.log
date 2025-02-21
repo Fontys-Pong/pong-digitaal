@@ -464,3 +464,5 @@ current_bd_design [get_bd_designs PONG]
 open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd}
 open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
 current_bd_design [get_bd_designs PONG]
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 21 17:05:00 2025...

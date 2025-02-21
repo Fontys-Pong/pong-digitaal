@@ -8,13 +8,13 @@ set_property CONFIG_MODE SPIx4 [current_design]
 
 
 ## LEDs
-set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { enable_state[0] }];       #IO_L12N_T1_MRCC_16     Sch=led[1]
-#set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { led[1] }];               #IO_L13P_T2_MRCC_16     Sch=led[2]
+set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { controller_state_1[0] }]; #IO_L12N_T1_MRCC_16     Sch=led[1]
+set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { controller_state_2[0] }]; #IO_L13P_T2_MRCC_16     Sch=led[2]
 
 ## RGB LED
-set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33 } [get_ports { controller_state_1[0] }]; #IO_L14N_T2_SRCC_16     Sch=led0_b
-set_property -dict { PACKAGE_PIN B16   IOSTANDARD LVCMOS33 } [get_ports { controller_state_2[0] }]; #IO_L13N_T2_MRCC_16     Sch=led0_g
-#set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { led0_r }];               #IO_L14P_T2_SRCC_16     Sch=led0_r
+#set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33 } [get_ports {  }];                     #IO_L14N_T2_SRCC_16     Sch=led0_b
+set_property -dict { PACKAGE_PIN B16   IOSTANDARD LVCMOS33 } [get_ports { enable_state_inactive }]; #IO_L13N_T2_MRCC_16     Sch=led0_g
+set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { enable_state_active[0] }];#IO_L14P_T2_SRCC_16     Sch=led0_r
 
 ## Buttons
 # reset button
@@ -23,7 +23,7 @@ set_property -dict { PACKAGE_PIN A18    IOSTANDARD LVCMOS33 } [get_ports reset];
 
 ## Control
 # enable
-set_property -dict { PACKAGE_PIN M3     IOSTANDARD LVCMOS33 } [get_ports enable];                   #IO_L8N_T1_AD14N_35     Sch=pio[01]
+set_property -dict { PACKAGE_PIN M3     IOSTANDARD LVCMOS33 } [get_ports game_reset];               #IO_L8N_T1_AD14N_35     Sch=pio[01]
 # controller switch
 set_property -dict { PACKAGE_PIN L3     IOSTANDARD LVCMOS33 } [get_ports controller_switch];        #IO_L8P_T1_AD14P_35     Sch=pio[02]
 

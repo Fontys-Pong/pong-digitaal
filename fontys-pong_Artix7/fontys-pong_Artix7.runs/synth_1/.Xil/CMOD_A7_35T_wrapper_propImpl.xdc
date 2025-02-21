@@ -12,15 +12,17 @@ current_instance
 set_property src_info {type:XDC file:3 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports { sys_clk }];               #IO_L12P_T1_MRCC_14 Sch=gclk
 set_property src_info {type:XDC file:3 line:11 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { enable_state[0] }];       #IO_L12N_T1_MRCC_16     Sch=led[1]
-set_property src_info {type:XDC file:3 line:15 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33 } [get_ports { controller_state_1[0] }]; #IO_L14N_T2_SRCC_16     Sch=led0_b
+set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { controller_state_1[0] }]; #IO_L12N_T1_MRCC_16     Sch=led[1]
+set_property src_info {type:XDC file:3 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { controller_state_2[0] }]; #IO_L13P_T2_MRCC_16     Sch=led[2]
 set_property src_info {type:XDC file:3 line:16 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN B16   IOSTANDARD LVCMOS33 } [get_ports { controller_state_2[0] }]; #IO_L13N_T2_MRCC_16     Sch=led0_g
+set_property -dict { PACKAGE_PIN B16   IOSTANDARD LVCMOS33 } [get_ports { enable_state_inactive }]; #IO_L13N_T2_MRCC_16     Sch=led0_g
+set_property src_info {type:XDC file:3 line:17 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { enable_state_active[0] }];#IO_L14P_T2_SRCC_16     Sch=led0_r
 set_property src_info {type:XDC file:3 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN A18    IOSTANDARD LVCMOS33 } [get_ports reset];                    #IO_L19N_T3_VREF_16     Sch=btn[0]
 set_property src_info {type:XDC file:3 line:26 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN M3     IOSTANDARD LVCMOS33 } [get_ports enable];                   #IO_L8N_T1_AD14N_35     Sch=pio[01]
+set_property -dict { PACKAGE_PIN M3     IOSTANDARD LVCMOS33 } [get_ports game_reset];               #IO_L8N_T1_AD14N_35     Sch=pio[01]
 set_property src_info {type:XDC file:3 line:28 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN L3     IOSTANDARD LVCMOS33 } [get_ports controller_switch];        #IO_L8P_T1_AD14P_35     Sch=pio[02]
 set_property src_info {type:XDC file:3 line:32 export:INPUT save:INPUT read:READ} [current_design]

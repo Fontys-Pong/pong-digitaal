@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_inst_0_paint_rectangle_0_0",
-    "cell_name": "paint_scoreboard/paint_seg_l/paint_rectangle_0",
+    "cell_name": "blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_0",
     "component_reference": "xilinx.com:module_ref:paint_rectangle:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

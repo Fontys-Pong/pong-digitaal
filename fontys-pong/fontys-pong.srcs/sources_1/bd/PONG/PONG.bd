@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA53B544B4ADC0C54",
+      "boundary_crc": "0xF68EF54A4579CD2D",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../fontys-pong.gen/sources_1/bd/PONG",
       "name": "PONG",
@@ -26,11 +26,11 @@
       },
       "controllers": {
         "clk_divider_1": "",
-        "controller_buttons_0": "",
-        "controller_buttons_1": "",
         "controller_interconn_0": "",
         "controller_ultrasoni_0": "",
-        "controller_ultrasoni_1": ""
+        "controller_ultrasoni_1": "",
+        "controller_buttons_0": "",
+        "controller_buttons_1": ""
       },
       "paint_scoreboard": {
         "paint_seg_l": {
@@ -73,7 +73,8 @@
       "zero": "",
       "color_generator_0": "",
       "pixel_counter_0": "",
-      "video_buffer_0": ""
+      "video_buffer_0": "",
+      "util_vector_logic_0": ""
     },
     "ports": {
       "trigger_l": {
@@ -204,6 +205,19 @@
           "PHASE": {
             "value": "0.0",
             "value_src": "default"
+          }
+        }
+      },
+      "game_reset": {
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
           }
         }
       }
@@ -588,98 +602,6 @@
               }
             }
           },
-          "controller_buttons_0": {
-            "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
-            "xci_name": "PONG_controller_buttons_0_0",
-            "xci_path": "ip\\PONG_controller_buttons_0_0\\PONG_controller_buttons_0_0.xci",
-            "inst_hier_path": "controllers/controller_buttons_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "controller_buttons",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_RESET": {
-                    "value": "reset",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "reset": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_HIGH"
-                  }
-                }
-              },
-              "enable": {
-                "direction": "I"
-              },
-              "btn_up": {
-                "direction": "I"
-              },
-              "btn_down": {
-                "direction": "I"
-              },
-              "value": {
-                "direction": "O",
-                "left": "8",
-                "right": "0"
-              }
-            }
-          },
-          "controller_buttons_1": {
-            "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
-            "xci_name": "PONG_controller_buttons_1_0",
-            "xci_path": "ip\\PONG_controller_buttons_1_0\\PONG_controller_buttons_1_0.xci",
-            "inst_hier_path": "controllers/controller_buttons_1",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "controller_buttons",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_RESET": {
-                    "value": "reset",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "reset": {
-                "type": "rst",
-                "direction": "I",
-                "parameters": {
-                  "POLARITY": {
-                    "value": "ACTIVE_HIGH"
-                  }
-                }
-              },
-              "enable": {
-                "direction": "I"
-              },
-              "btn_up": {
-                "direction": "I"
-              },
-              "btn_down": {
-                "direction": "I"
-              },
-              "value": {
-                "direction": "O",
-                "left": "8",
-                "right": "0"
-              }
-            }
-          },
           "controller_interconn_0": {
             "vlnv": "xilinx.com:module_ref:controller_interconnect:1.0",
             "xci_name": "PONG_controller_interconn_0_0",
@@ -847,6 +769,98 @@
                 "right": "0"
               }
             }
+          },
+          "controller_buttons_0": {
+            "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
+            "xci_name": "PONG_controller_buttons_0_0",
+            "xci_path": "ip\\PONG_controller_buttons_0_0\\PONG_controller_buttons_0_0.xci",
+            "inst_hier_path": "controllers/controller_buttons_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_buttons",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "btn_up": {
+                "direction": "I"
+              },
+              "btn_down": {
+                "direction": "I"
+              },
+              "value": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "controller_buttons_1": {
+            "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
+            "xci_name": "PONG_controller_buttons_1_0",
+            "xci_path": "ip\\PONG_controller_buttons_1_0\\PONG_controller_buttons_1_0.xci",
+            "inst_hier_path": "controllers/controller_buttons_1",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_buttons",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "btn_up": {
+                "direction": "I"
+              },
+              "btn_down": {
+                "direction": "I"
+              },
+              "value": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
           }
         },
         "nets": {
@@ -869,10 +883,10 @@
             "ports": [
               "reset",
               "clk_divider_1/reset",
-              "controller_buttons_0/reset",
-              "controller_buttons_1/reset",
               "controller_ultrasoni_0/reset_i",
-              "controller_ultrasoni_1/reset_i"
+              "controller_ultrasoni_1/reset_i",
+              "controller_buttons_0/reset",
+              "controller_buttons_1/reset"
             ]
           },
           "btn_down_0_1": {
@@ -5258,6 +5272,20 @@
             "direction": "O"
           }
         }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "PONG_util_vector_logic_0_0",
+        "xci_path": "ip\\PONG_util_vector_logic_0_0\\PONG_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "or"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
       }
     },
     "nets": {
@@ -5288,9 +5316,9 @@
           "controllers/reset",
           "paint_scoreboard/reset",
           "clk_divider_0/reset",
-          "score_counter_0/reset",
           "clk_wiz_0/reset",
-          "util_vector_logic_2/Op1"
+          "util_vector_logic_2/Op1",
+          "util_vector_logic_0/Op1"
         ]
       },
       "Net4": {
@@ -5453,6 +5481,12 @@
           "paint_paddle_l/enable",
           "paint_paddle_r/enable",
           "position_ball_0/enable"
+        ]
+      },
+      "game_reset_1": {
+        "ports": [
+          "game_reset",
+          "util_vector_logic_0/Op2"
         ]
       },
       "one_dout": {
@@ -5759,6 +5793,12 @@
         "ports": [
           "controller_switch",
           "controllers/switch_0"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "score_counter_0/reset"
         ]
       },
       "util_vector_logic_1_Res": {

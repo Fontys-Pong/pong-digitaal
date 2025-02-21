@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "PONG_scoreboard_controller_0_0",
-    "cell_name": "scoreboard_controller_0",
+    "cell_name": "paint_scoreboard/scoreboard_controller_0",
     "component_reference": "xilinx.com:module_ref:scoreboard_controller:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../fontys-pong.gen/sources_1/bd/PONG/ip/PONG_scoreboard_controller_0_0_1",

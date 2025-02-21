@@ -25,9 +25,9 @@ begin
             if reset = '1' OR enable = '0' then
                 current_value <= "010000000";
             elsif enable = '1' then
-                if (btn_up = '1') AND NOT (current_value = "111111111") then
+                if (btn_up = '0') AND NOT (current_value = "111111111") then
                     current_value <= current_value + 1;
-                elsif (btn_down = '1') AND NOT (current_value = "000000000") then
+                elsif (btn_down = '0') AND NOT (current_value = "000000000") then
                     current_value <= current_value - 1;
                 end if;
             end if;

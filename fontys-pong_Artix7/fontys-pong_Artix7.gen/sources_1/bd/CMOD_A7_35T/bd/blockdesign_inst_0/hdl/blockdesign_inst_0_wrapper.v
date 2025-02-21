@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Feb 21 16:00:55 2025
+//Date        : Fri Feb 21 16:44:14 2025
 //Host        : XPS-Tommy running 64-bit major release  (build 9200)
 //Command     : generate_target blockdesign_inst_0_wrapper.bd
 //Design      : blockdesign_inst_0_wrapper
@@ -18,6 +18,7 @@ module blockdesign_inst_0_wrapper
     clk_100MHz,
     controller_switch,
     enable,
+    game_reset,
     hdmi_out_clk_n,
     hdmi_out_clk_p,
     hdmi_out_data_n,
@@ -35,6 +36,7 @@ module blockdesign_inst_0_wrapper
   input clk_100MHz;
   input controller_switch;
   input enable;
+  input game_reset;
   output hdmi_out_clk_n;
   output hdmi_out_clk_p;
   output [2:0]hdmi_out_data_n;
@@ -53,6 +55,7 @@ module blockdesign_inst_0_wrapper
   wire clk_100MHz;
   wire controller_switch;
   wire enable;
+  wire game_reset;
   wire hdmi_out_clk_n;
   wire hdmi_out_clk_p;
   wire [2:0]hdmi_out_data_n;
@@ -72,6 +75,7 @@ module blockdesign_inst_0_wrapper
         .clk_100MHz(clk_100MHz),
         .controller_switch(controller_switch),
         .enable(enable),
+        .game_reset(game_reset),
         .hdmi_out_clk_n(hdmi_out_clk_n),
         .hdmi_out_clk_p(hdmi_out_clk_p),
         .hdmi_out_data_n(hdmi_out_data_n),
