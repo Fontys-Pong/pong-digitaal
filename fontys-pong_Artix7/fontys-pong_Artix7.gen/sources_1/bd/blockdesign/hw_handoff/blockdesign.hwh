@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr  1 15:48:20 2024" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 21 12:46:10 2025" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:cmod_a7-35t:part0:1.2" DEVICE="7a35t" NAME="blockdesign" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -65,7 +65,7 @@
     </PORT>
     <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="position_ball_0" PORT="enable"/>
+        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Op1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="hdmi_out_hpd" RIGHT="0" SIGIS="undef" SIGNAME="one_dout">
@@ -96,6 +96,16 @@
     <PORT CLKFREQUENCY="12000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz" PORT="clk_in1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="enable_state" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="test" RIGHT="0" SIGIS="undef" SIGNAME="one_dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="one" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1849,6 +1859,7 @@
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="one_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="hdmi_out_hpd"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="test"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2301,9 +2312,9 @@
             <CONNECTION INSTANCE="clk_divider_0" PORT="clk_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="util_vector_logic_2_Res">
@@ -2551,6 +2562,30 @@
         <PORT DIR="O" NAME="game_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="score_counter_0_game_reset">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_vector_logic_2" PORT="Op2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/util_vector_logic_0" HWVERSION="2.0" INSTANCE="util_vector_logic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="not"/>
+        <PARAMETER NAME="C_SIZE" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_util_vector_logic_0_2"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_notgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="position_ball_0" PORT="enable"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable_state"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

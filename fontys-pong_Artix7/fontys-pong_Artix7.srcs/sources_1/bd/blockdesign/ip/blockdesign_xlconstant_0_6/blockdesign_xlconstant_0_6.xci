@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_xlconstant_0_6",
-    "cell_name": "max_score",
+    "cell_name": "Constants/max_score",
     "component_reference": "xilinx.com:ip:xlconstant:1.1",
     "ip_revision": "7",
     "gen_directory": "../../../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_xlconstant_0_6",

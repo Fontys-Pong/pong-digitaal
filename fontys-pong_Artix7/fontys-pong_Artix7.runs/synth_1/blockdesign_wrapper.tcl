@@ -72,6 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 5
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -95,6 +96,21 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.v
+read_vhdl -library xil_defaultlib {
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_centerline.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_ball.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/position_paddles.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/score_counter.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/video_buffer.vhd
+}
 add_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/bd/blockdesign/blockdesign.bd
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0.xdc]
@@ -103,11 +119,10 @@ set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CS
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/src/rgb2dvi.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/src/rgb2dvi_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_1/src/rgb2dvi_clocks.xdc]
-set_property used_in_implementation false [get_files -all D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/blockdesign_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/blockdesign/blockdesign_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

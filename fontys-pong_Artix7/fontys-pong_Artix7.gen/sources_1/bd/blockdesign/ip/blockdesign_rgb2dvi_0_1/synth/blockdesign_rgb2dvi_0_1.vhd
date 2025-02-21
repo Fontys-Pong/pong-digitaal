@@ -1,5 +1,5 @@
 -- (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- (c) Copyright 2022-2024 Advanced Micro Devices, Inc. All rights reserved.
+-- (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of AMD and is protected under U.S. and international copyright
@@ -108,7 +108,7 @@ ARCHITECTURE blockdesign_rgb2dvi_0_1_arch OF blockdesign_rgb2dvi_0_1 IS
   ATTRIBUTE X_INTERFACE_PARAMETER OF TMDS_Clk_n: SIGNAL IS "XIL_INTERFACENAME TMDS_Clk_n, ASSOCIATED_RESET aRst_n, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_n: SIGNAL IS "xilinx.com:signal:clock:1.0 TMDS_Clk_n CLK, digilentinc.com:interface:tmds:1.0 TMDS CLK_N";
   ATTRIBUTE X_INTERFACE_PARAMETER OF TMDS_Clk_p: SIGNAL IS "XIL_INTERFACENAME TMDS, BOARD.ASSOCIATED_PARAM TMDS_BOARD_INTERFACE, XIL_INTERFACENAME TMDS_Clk_p, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS CLK_P, xilinx.com:signal:clock:1.0 TMDS_Clk_p CLK";
+  ATTRIBUTE X_INTERFACE_INFO OF TMDS_Clk_p: SIGNAL IS "xilinx.com:signal:clock:1.0 TMDS_Clk_p CLK, digilentinc.com:interface:tmds:1.0 TMDS CLK_P";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_n: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_N";
   ATTRIBUTE X_INTERFACE_INFO OF TMDS_Data_p: SIGNAL IS "digilentinc.com:interface:tmds:1.0 TMDS DATA_P";
   ATTRIBUTE X_INTERFACE_PARAMETER OF aRst: SIGNAL IS "XIL_INTERFACENAME AsyncRst, POLARITY ACTIVE_HIGH, INSERT_VIP 0";

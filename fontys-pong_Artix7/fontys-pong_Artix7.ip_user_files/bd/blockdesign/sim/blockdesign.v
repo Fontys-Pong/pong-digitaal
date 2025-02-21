@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Mon Apr  1 15:48:18 2024
+//Date        : Fri Feb 21 12:46:10 2025
 //Host        : XPS-Tommy running 64-bit major release  (build 9200)
 //Command     : generate_target blockdesign.bd
 //Design      : blockdesign
@@ -57,7 +57,7 @@ module Constants_imp_15CBHTD
        (.dout(Net6));
 endmodule
 
-(* CORE_GENERATION_INFO = "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=35,numReposBlks=33,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=18,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "blockdesign.hwdef" *) 
+(* CORE_GENERATION_INFO = "blockdesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=34,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=18,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "blockdesign.hwdef" *) 
 module blockdesign
    (btn_down_l,
     btn_down_r,
@@ -65,6 +65,7 @@ module blockdesign
     btn_up_r,
     controller_switch,
     enable,
+    enable_state,
     hdmi_out_clk_n,
     hdmi_out_clk_p,
     hdmi_out_data_n,
@@ -74,6 +75,7 @@ module blockdesign
     sensor_l,
     sensor_r,
     sys_clock,
+    test,
     trigger_l,
     trigger_r);
   input btn_down_l;
@@ -82,6 +84,7 @@ module blockdesign
   input btn_up_r;
   input controller_switch;
   input enable;
+  output [0:0]enable_state;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_out_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_out_clk_p;
   output [2:0]hdmi_out_data_n;
@@ -91,6 +94,7 @@ module blockdesign
   input sensor_l;
   input sensor_r;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN blockdesign_sys_clock, FREQ_HZ 12000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
+  output [0:0]test;
   output trigger_l;
   output trigger_r;
 
@@ -117,7 +121,8 @@ module blockdesign
   wire [8:0]controller_interconn_0_value_r_o;
   wire controller_ultrasonic_0_trigger;
   wire controller_ultrasonic_1_trigger;
-  wire enable_0_1;
+  wire [0:0]enable_0_1;
+  wire enable_1;
   wire [0:0]one_dout;
   wire paint_ball_video_enable_o;
   wire paint_centerline_0_hsync_o;
@@ -181,7 +186,8 @@ module blockdesign
   assign btn_down_1_1 = btn_down_r;
   assign btn_up_0_1 = btn_up_l;
   assign btn_up_1_1 = btn_up_r;
-  assign enable_0_1 = enable;
+  assign enable_1 = enable;
+  assign enable_state[0] = enable_0_1;
   assign hdmi_out_clk_n = rgb2dvi_0_TMDS_Clk_n;
   assign hdmi_out_clk_p = rgb2dvi_0_TMDS_Clk_p;
   assign hdmi_out_data_n[2:0] = rgb2dvi_0_TMDS_Data_n;
@@ -191,6 +197,7 @@ module blockdesign
   assign sensor_1_1 = sensor_r;
   assign switch_0_1 = controller_switch;
   assign sys_clock_1 = sys_clock;
+  assign test[0] = one_dout;
   assign trigger_l = controller_ultrasonic_0_trigger;
   assign trigger_r = controller_ultrasonic_1_trigger;
   Constants_imp_15CBHTD Constants
@@ -372,6 +379,9 @@ module blockdesign
         .point_l(collision_detection_0_collision_ball_edge_r),
         .point_r(collision_detection_0_collision_ball_edge_l),
         .reset(Net3));
+  blockdesign_util_vector_logic_0_2 util_vector_logic_0
+       (.Op1(enable_1),
+        .Res(enable_0_1));
   blockdesign_util_vector_logic_0_1 util_vector_logic_1
        (.Op1(collision_detection_0_collision_ball_edge_l),
         .Op2(collision_detection_0_collision_ball_edge_r),

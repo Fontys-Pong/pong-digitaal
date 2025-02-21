@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Mon Apr  1 17:13:47 2024
+| Date         : Fri Feb 21 13:41:44 2025
 | Host         : XPS-Tommy running 64-bit major release  (build 9200)
 | Command      : report_drc -file blockdesign_wrapper_drc_routed.rpt -pb blockdesign_wrapper_drc_routed.pb -rpx blockdesign_wrapper_drc_routed.rpx
 | Design       : blockdesign_wrapper
@@ -24,15 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 45
+             Violations found: 27
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning  | Input pipelining                                    | 10         |
+| DPIP-1   | Warning  | Input pipelining                                    | 8          |
 | DPOP-1   | Warning  | PREG Output pipelining                              | 8          |
 | DPOP-2   | Warning  | MREG Output pipelining                              | 8          |
-| PDRC-153 | Warning  | Gated clock check                                   | 18         |
+| PDRC-153 | Warning  | Gated clock check                                   | 2          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -82,20 +82,10 @@ Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP blockdesign_i/position_paddles_0/inst/paddle_l_pos_y0 input blockdesign_i/position_paddles_0/inst/paddle_l_pos_y0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#8 Warning
-Input pipelining  
 DSP blockdesign_i/position_paddles_0/inst/paddle_l_pos_y0 input blockdesign_i/position_paddles_0/inst/paddle_l_pos_y0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
-DPIP-1#9 Warning
-Input pipelining  
-DSP blockdesign_i/position_paddles_0/inst/paddle_r_pos_y0 input blockdesign_i/position_paddles_0/inst/paddle_r_pos_y0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#10 Warning
+DPIP-1#8 Warning
 Input pipelining  
 DSP blockdesign_i/position_paddles_0/inst/paddle_r_pos_y0 input blockdesign_i/position_paddles_0/inst/paddle_r_pos_y0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
@@ -188,86 +178,6 @@ Related violations: <none>
 PDRC-153#2 Warning
 Gated clock check  
 Net blockdesign_i/controllers/controller_ultrasonic_1/inst/go_to_next__0 is a gated clock net sourced by a combinational pin blockdesign_i/controllers/controller_ultrasonic_1/inst/go_to_next_reg_i_1/O, cell blockdesign_i/controllers/controller_ultrasonic_1/inst/go_to_next_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/x_pos_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/x_pos_reg[0]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/x_pos_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#4 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/x_pos_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/x_pos_reg[2]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/x_pos_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#5 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/x_pos_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/x_pos_reg[4]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/x_pos_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#6 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/x_pos_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/x_pos_reg[5]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/x_pos_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#7 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/x_pos_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/x_pos_reg[6]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/x_pos_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#8 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/x_pos_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/x_pos_reg[8]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/x_pos_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#9 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/x_pos_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/x_pos_reg[9]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/x_pos_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#10 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/y_pos_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/y_pos_reg[1]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/y_pos_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#11 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/y_pos_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/y_pos_reg[2]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/y_pos_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#12 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/y_pos_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/y_pos_reg[3]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/y_pos_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#13 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/y_pos_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/y_pos_reg[4]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/y_pos_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#14 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/y_pos_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/y_pos_reg[6]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/y_pos_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#15 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/y_pos_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/y_pos_reg[7]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/y_pos_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#16 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/y_pos_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/y_pos_reg[8]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/y_pos_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#17 Warning
-Gated clock check  
-Net blockdesign_i/position_ball_0/inst/y_pos_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin blockdesign_i/position_ball_0/inst/y_pos_reg[9]_LDC_i_1/O, cell blockdesign_i/position_ball_0/inst/y_pos_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#18 Warning
-Gated clock check  
-Net blockdesign_i/util_vector_logic_2/Res[0] is a gated clock net sourced by a combinational pin blockdesign_i/util_vector_logic_2/Res[0]_INST_0/O, cell blockdesign_i/util_vector_logic_2/Res[0]_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

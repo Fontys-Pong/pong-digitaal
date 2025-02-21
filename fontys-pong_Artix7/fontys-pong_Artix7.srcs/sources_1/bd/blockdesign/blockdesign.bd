@@ -1,12 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x639264345497D807",
+      "boundary_crc": "0x8955E6E464B2D42F",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign",
       "name": "blockdesign",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2023.1",
       "validated": "true"
     },
@@ -47,7 +47,8 @@
       "video_buffer_0": "",
       "zero": "",
       "one": "",
-      "rgb2dvi_0": ""
+      "rgb2dvi_0": "",
+      "util_vector_logic_0": ""
     },
     "ports": {
       "trigger_l": {
@@ -91,7 +92,17 @@
         "direction": "I"
       },
       "enable": {
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
       },
       "hdmi_out_hpd": {
         "direction": "O",
@@ -175,6 +186,26 @@
             "value": "0.0"
           }
         }
+      },
+      "enable_state": {
+        "direction": "O",
+        "left": "0",
+        "right": "0",
+        "parameters": {
+          "PortType": {
+            "value": "undef",
+            "value_src": "ip_prop"
+          },
+          "PortType.PROP_SRC": {
+            "value": "false",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "test": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
       }
     },
     "components": {
@@ -1570,7 +1601,17 @@
             }
           },
           "enable": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "reset": {
             "type": "rst",
@@ -1908,6 +1949,20 @@
         "xci_name": "blockdesign_rgb2dvi_0_1",
         "xci_path": "ip\\blockdesign_rgb2dvi_0_1\\blockdesign_rgb2dvi_0_1.xci",
         "inst_hier_path": "rgb2dvi_0"
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "blockdesign_util_vector_logic_0_2",
+        "xci_path": "ip\\blockdesign_util_vector_logic_0_2\\blockdesign_util_vector_logic_0_2.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
       }
     },
     "nets": {
@@ -2083,14 +2138,22 @@
       },
       "enable_0_1": {
         "ports": [
+          "util_vector_logic_0/Res",
+          "position_ball_0/enable",
+          "enable_state"
+        ]
+      },
+      "enable_1": {
+        "ports": [
           "enable",
-          "position_ball_0/enable"
+          "util_vector_logic_0/Op1"
         ]
       },
       "one_dout": {
         "ports": [
           "one/dout",
-          "hdmi_out_hpd"
+          "hdmi_out_hpd",
+          "test"
         ]
       },
       "paint_ball_video_enable_o": {

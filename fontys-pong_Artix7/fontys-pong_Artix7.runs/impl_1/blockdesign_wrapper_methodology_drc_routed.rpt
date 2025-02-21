@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Mon Apr  1 17:13:48 2024
+| Date         : Fri Feb 21 13:41:46 2025
 | Host         : XPS-Tommy running 64-bit major release  (build 9200)
 | Command      : report_methodology -file blockdesign_wrapper_methodology_drc_routed.rpt -pb blockdesign_wrapper_methodology_drc_routed.pb -rpx blockdesign_wrapper_methodology_drc_routed.rpx
 | Design       : blockdesign_wrapper
@@ -23,16 +23,16 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 246
+             Violations found: 182
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 88         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 71         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
 | DPIR-1    | Warning          | Asynchronous driver check                          | 64         |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 35         |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 55         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 5          |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 38         |
 | XDCB-5    | Warning          | Runtime inefficient way to find pin objects        | 1          |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -226,260 +226,175 @@ Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[0]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[0]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[10]/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[1]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[2]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[2]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[3]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[4]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[4]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[5]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[5]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[6]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_dir_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[6]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[7]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[7]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[8]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[8]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[9]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/x_pos_reg[9]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_dir_reg/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[0]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[0]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[10]/C is not reached by a timing clock
+The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[1]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/game_reset_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#61 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[1]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/game_reset_s_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#62 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[2]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/point_l_s_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#63 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[2]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/point_r_s_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#64 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[3]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/score_left_u_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#65 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[3]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/score_left_u_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#66 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[4]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/score_left_u_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#67 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[4]_P/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/score_left_u_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#68 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[5]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/score_right_u_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#69 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[6]_C/C is not reached by a timing clock
+The clock pin blockdesign_i/score_counter_0/inst/score_right_u_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#70 Critical Warning
 Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[6]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#71 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[7]_C/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#72 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[7]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#73 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[8]_C/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#74 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[8]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#75 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[9]_C/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#76 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/position_ball_0/inst/y_pos_reg[9]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#77 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/game_reset_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#78 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/game_reset_s_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#79 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/point_l_s_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#80 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/point_r_s_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#81 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/score_left_u_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#82 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/score_left_u_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#83 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/score_left_u_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#84 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/score_left_u_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#85 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/score_right_u_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#86 Critical Warning
-Non-clocked sequential cell  
-The clock pin blockdesign_i/score_counter_0/inst/score_right_u_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#87 Critical Warning
-Non-clocked sequential cell  
 The clock pin blockdesign_i/score_counter_0/inst/score_right_u_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#88 Critical Warning
+TIMING-17#71 Critical Warning
 Non-clocked sequential cell  
 The clock pin blockdesign_i/score_counter_0/inst/score_right_u_reg[3]/C is not reached by a timing clock
 Related violations: <none>
@@ -891,187 +806,22 @@ Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[0]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[0]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#6 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[0]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[0]_C/CLR
-blockdesign_i/position_ball_0/inst/x_pos_reg[0]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#7 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[2]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[2]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#8 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[2]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[2]_C/CLR
-blockdesign_i/position_ball_0/inst/x_pos_reg[2]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#9 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[4]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[4]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#10 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[4]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[4]_C/CLR
-blockdesign_i/position_ball_0/inst/x_pos_reg[4]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#11 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[5]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[5]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#12 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[5]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[5]_C/CLR
-blockdesign_i/position_ball_0/inst/x_pos_reg[5]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#13 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[6]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[6]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#14 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[6]_C/CLR
-blockdesign_i/position_ball_0/inst/x_pos_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#15 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[8]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[8]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#16 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[8]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[8]_C/CLR
-blockdesign_i/position_ball_0/inst/x_pos_reg[8]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#17 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[9]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[9]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#18 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/x_pos_reg[9]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[9]_C/CLR
-blockdesign_i/position_ball_0/inst/x_pos_reg[9]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#19 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[1]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[1]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#20 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[1]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[1]_C/CLR
-blockdesign_i/position_ball_0/inst/y_pos_reg[1]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#21 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[2]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[2]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#22 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[2]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[2]_C/CLR
-blockdesign_i/position_ball_0/inst/y_pos_reg[2]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#23 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[3]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[3]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#24 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[3]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[3]_C/CLR
-blockdesign_i/position_ball_0/inst/y_pos_reg[3]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#25 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[4]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[4]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#26 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[4]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[4]_C/CLR
-blockdesign_i/position_ball_0/inst/y_pos_reg[4]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#27 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[6]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[6]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#28 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[6]_C/CLR
-blockdesign_i/position_ball_0/inst/y_pos_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#29 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[7]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[7]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#30 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[7]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[7]_C/CLR
-blockdesign_i/position_ball_0/inst/y_pos_reg[7]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#31 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[8]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[8]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#32 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[8]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[8]_C/CLR
-blockdesign_i/position_ball_0/inst/y_pos_reg[8]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#33 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[9]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[9]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#34 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/position_ball_0/inst/y_pos_reg[9]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/y_pos_reg[9]_C/CLR
-blockdesign_i/position_ball_0/inst/y_pos_reg[9]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#35 Warning
-LUT drives async reset alert  
-LUT cell blockdesign_i/util_vector_logic_2/Res[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/angle_counter_reg[8]/CLR,
-blockdesign_i/position_ball_0/inst/angle_counter_reg[9]/CLR,
-blockdesign_i/position_ball_0/inst/angle_reg[0]/CLR,
-blockdesign_i/position_ball_0/inst/angle_reg[1]/PRE,
-blockdesign_i/position_ball_0/inst/angle_reg[2]/CLR,
-blockdesign_i/position_ball_0/inst/angle_reg[3]/PRE,
-blockdesign_i/position_ball_0/inst/x_dir_reg/PRE,
-blockdesign_i/position_ball_0/inst/x_pos_reg[10]/CLR,
-blockdesign_i/position_ball_0/inst/x_pos_reg[1]_C/CLR,
-blockdesign_i/position_ball_0/inst/x_pos_reg[3]_C/CLR,
-blockdesign_i/position_ball_0/inst/x_pos_reg[7]_P/PRE,
+LUT cell blockdesign_i/util_vector_logic_2/Res[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) blockdesign_i/position_ball_0/inst/x_pos_reg[7]/PRE,
+blockdesign_i/position_ball_0/inst/x_pos_reg[8]/PRE,
+blockdesign_i/position_ball_0/inst/x_pos_reg[9]/PRE,
 blockdesign_i/position_ball_0/inst/y_dir_reg/PRE,
-blockdesign_i/position_ball_0/inst/y_pos_reg[0]_P/PRE,
+blockdesign_i/position_ball_0/inst/y_pos_reg[0]/PRE,
 blockdesign_i/position_ball_0/inst/y_pos_reg[10]/CLR,
-blockdesign_i/position_ball_0/inst/y_pos_reg[5]_C/CLR
- (the first 15 of 23 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+blockdesign_i/position_ball_0/inst/y_pos_reg[1]/CLR,
+blockdesign_i/position_ball_0/inst/y_pos_reg[2]/PRE,
+blockdesign_i/position_ball_0/inst/y_pos_reg[3]/PRE,
+blockdesign_i/position_ball_0/inst/y_pos_reg[4]/CLR,
+blockdesign_i/position_ball_0/inst/y_pos_reg[5]/CLR,
+blockdesign_i/position_ball_0/inst/y_pos_reg[6]/CLR,
+blockdesign_i/position_ball_0/inst/y_pos_reg[7]/CLR,
+blockdesign_i/position_ball_0/inst/y_pos_reg[8]/CLR,
+blockdesign_i/position_ball_0/inst/y_pos_reg[9]/PRE
+ (the first 15 of 38 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-20#1 Warning
@@ -1264,91 +1014,6 @@ Non-clocked latch
 The latch blockdesign_i/controllers/controller_ultrasonic_1/inst/trigger_enable_reg cannot be properly analyzed as its control pin blockdesign_i/controllers/controller_ultrasonic_1/inst/trigger_enable_reg/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#39 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/x_pos_reg[0]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/x_pos_reg[0]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#40 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/x_pos_reg[2]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/x_pos_reg[2]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#41 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/x_pos_reg[4]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/x_pos_reg[4]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#42 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/x_pos_reg[5]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/x_pos_reg[5]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#43 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/x_pos_reg[6]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/x_pos_reg[6]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#44 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/x_pos_reg[7]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/x_pos_reg[7]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#45 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/x_pos_reg[8]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/x_pos_reg[8]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#46 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/x_pos_reg[9]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/x_pos_reg[9]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#47 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[0]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[0]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#48 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[1]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[1]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#49 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[2]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[2]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#50 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[3]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[3]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#51 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[4]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[4]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#52 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[6]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[6]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#53 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[7]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[7]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#54 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[8]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[8]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#55 Warning
-Non-clocked latch  
-The latch blockdesign_i/position_ball_0/inst/y_pos_reg[9]_LDC cannot be properly analyzed as its control pin blockdesign_i/position_ball_0/inst/y_pos_reg[9]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '6' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
@@ -1357,7 +1022,7 @@ Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 55 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 38 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

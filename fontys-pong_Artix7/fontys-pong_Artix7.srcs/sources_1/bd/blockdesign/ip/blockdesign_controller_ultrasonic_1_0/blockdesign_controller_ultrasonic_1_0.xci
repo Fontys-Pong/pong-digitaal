@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "blockdesign_controller_ultrasonic_1_0",
-    "cell_name": "controller_ultrasonic_1",
+    "cell_name": "controllers/controller_ultrasonic_1",
     "component_reference": "xilinx.com:module_ref:controller_ultrasonic:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../fontys-pong_Artix7.gen/sources_1/bd/blockdesign/ip/blockdesign_controller_ultrasonic_1_0",
@@ -43,7 +43,7 @@
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.1" } ],
-        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
     "boundary": {
