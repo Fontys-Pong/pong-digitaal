@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1'
+HD_PWD='D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -43,6 +43,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log blockdesign_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source blockdesign_wrapper.tcl -notrace
+EAStep vivado -log ZYNQ_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ZYNQ_wrapper.tcl -notrace
 
 

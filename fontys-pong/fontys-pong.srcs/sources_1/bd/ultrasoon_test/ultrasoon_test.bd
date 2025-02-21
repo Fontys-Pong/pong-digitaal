@@ -11,9 +11,9 @@
     },
     "design_tree": {
       "clk_wiz_0": "",
+      "system_ila_0": "",
       "clk_divider_0": "",
       "seven_segment_contro_0": "",
-      "system_ila_0": "",
       "controller_ultrasoni_0": ""
     },
     "ports": {
@@ -94,6 +94,26 @@
           }
         }
       },
+      "system_ila_0": {
+        "vlnv": "xilinx.com:ip:system_ila:1.1",
+        "xci_name": "ultrasoon_test_system_ila_0_1",
+        "xci_path": "ip\\ultrasoon_test_system_ila_0_1\\ultrasoon_test_system_ila_0_1.xci",
+        "inst_hier_path": "system_ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "131072"
+          },
+          "C_MON_TYPE": {
+            "value": "NATIVE"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "2"
+          },
+          "C_PROBE0_TYPE": {
+            "value": "0"
+          }
+        }
+      },
       "clk_divider_0": {
         "vlnv": "xilinx.com:module_ref:clk_divider:1.0",
         "xci_name": "ultrasoon_test_clk_divider_0_0",
@@ -111,21 +131,7 @@
         },
         "ports": {
           "clk_i": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "reset": {
             "type": "rst",
@@ -175,26 +181,6 @@
             "direction": "O",
             "left": "7",
             "right": "0"
-          }
-        }
-      },
-      "system_ila_0": {
-        "vlnv": "xilinx.com:ip:system_ila:1.1",
-        "xci_name": "ultrasoon_test_system_ila_0_1",
-        "xci_path": "ip\\ultrasoon_test_system_ila_0_1\\ultrasoon_test_system_ila_0_1.xci",
-        "inst_hier_path": "system_ila_0",
-        "parameters": {
-          "C_DATA_DEPTH": {
-            "value": "131072"
-          },
-          "C_MON_TYPE": {
-            "value": "NATIVE"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "2"
-          },
-          "C_PROBE0_TYPE": {
-            "value": "0"
           }
         }
       },
@@ -263,16 +249,16 @@
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "clk_divider_0/clk_i",
           "system_ila_0/clk",
+          "clk_divider_0/clk_i",
           "controller_ultrasoni_0/clk"
         ]
       },
       "controller_ultrasoni_0_data": {
         "ports": [
           "controller_ultrasoni_0/data",
-          "seven_segment_contro_0/value_a",
-          "system_ila_0/probe0"
+          "system_ila_0/probe0",
+          "seven_segment_contro_0/value_a"
         ],
         "hdl_attributes": {
           "DEBUG": {

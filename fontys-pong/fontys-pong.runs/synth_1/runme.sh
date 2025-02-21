@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/synth_1'
+HD_PWD='D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log blockdesign_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blockdesign_wrapper.tcl
+EAStep vivado -log ZYNQ_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZYNQ_wrapper.tcl

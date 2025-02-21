@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Aug 27 17:08:33 2024
-# Process ID: 6232
-# Current directory: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1
-# Command line: vivado.exe -log blockdesign_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source blockdesign_wrapper.tcl -notrace
-# Log file: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1/blockdesign_wrapper.vdi
-# Journal file: C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1\vivado.jou
-# Running On: Lenovo-Jochem, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 17041 MB
+# Start of session at: Fri Feb 21 15:09:10 2025
+# Process ID: 27884
+# Current directory: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1
+# Command line: vivado.exe -log ZYNQ_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ZYNQ_wrapper.tcl -notrace
+# Log file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1/ZYNQ_wrapper.vdi
+# Journal file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.runs/impl_1\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
 #-----------------------------------------------------------
-source blockdesign_wrapper.tcl -notrace
+source ZYNQ_wrapper.tcl -notrace

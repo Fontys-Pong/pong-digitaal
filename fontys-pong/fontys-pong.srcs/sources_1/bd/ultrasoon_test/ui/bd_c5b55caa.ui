@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.948353",
-   "Default View_TopLeft":"-100,-1",
+   "Default View_ScaleFactor":"1.98092",
+   "Default View_TopLeft":"-112,-117",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
@@ -13,9 +13,9 @@ preplace port port-id_trigger_l -pg 1 -lvl 4 -x 860 -y 60 -defaultsOSRD
 preplace portBus seven_seg_select -pg 1 -lvl 4 -x 860 -y 280 -defaultsOSRD
 preplace portBus seven_seg_value -pg 1 -lvl 4 -x 860 -y 310 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 60 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 3 -x 670 -y 140 -defaultsOSRD
 preplace inst clk_divider_0 -pg 1 -lvl 2 -x 360 -y 280 -defaultsOSRD
 preplace inst seven_segment_contro_0 -pg 1 -lvl 3 -x 670 -y 300 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 3 -x 670 -y 140 -defaultsOSRD
 preplace inst controller_ultrasoni_0 -pg 1 -lvl 2 -x 360 -y 140 -defaultsOSRD
 preplace netloc clk_divider_0_clk_o 1 2 1 N 280
 preplace netloc clk_in1_0_1 1 0 1 NJ 60

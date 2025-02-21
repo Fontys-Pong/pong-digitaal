@@ -3,169 +3,18 @@
 
 # XDC: new/constraints.xdc
 
-# Block Designs: bd/blockdesign/blockdesign.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign || ORIG_REF_NAME==blockdesign} -quiet] -quiet
+# Block Designs: bd/ZYNQ/ZYNQ.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ || ORIG_REF_NAME==ZYNQ} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_util_vector_logic_0_1/blockdesign_util_vector_logic_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_util_vector_logic_0_1 || ORIG_REF_NAME==blockdesign_util_vector_logic_0_1} -quiet] -quiet
+# IP: bd/ZYNQ/ip/ZYNQ_clk_wiz_0/ZYNQ_clk_wiz_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_clk_wiz_0 || ORIG_REF_NAME==ZYNQ_clk_wiz_0} -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_clk_wiz_0/blockdesign_clk_wiz_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_clk_wiz_0 || ORIG_REF_NAME==blockdesign_clk_wiz_0} -quiet] -quiet
+# XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ip/ZYNQ_clk_wiz_0/ZYNQ_clk_wiz_0_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==ZYNQ_clk_wiz_0 || ORIG_REF_NAME==ZYNQ_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_0/blockdesign_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_0 || ORIG_REF_NAME==blockdesign_xlconstant_0_0} -quiet] -quiet
+# XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ip/ZYNQ_clk_wiz_0/ZYNQ_clk_wiz_0.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==ZYNQ_clk_wiz_0 || ORIG_REF_NAME==ZYNQ_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_1/blockdesign_xlconstant_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_1 || ORIG_REF_NAME==blockdesign_xlconstant_0_1} -quiet] -quiet
+# XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ip/ZYNQ_clk_wiz_0/ZYNQ_clk_wiz_0_ooc.xdc
 
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_2/blockdesign_xlconstant_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_2 || ORIG_REF_NAME==blockdesign_xlconstant_0_2} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_3/blockdesign_xlconstant_0_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_3 || ORIG_REF_NAME==blockdesign_xlconstant_0_3} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_4/blockdesign_xlconstant_0_4.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_4 || ORIG_REF_NAME==blockdesign_xlconstant_0_4} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_5/blockdesign_xlconstant_0_5.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_5 || ORIG_REF_NAME==blockdesign_xlconstant_0_5} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_6/blockdesign_xlconstant_0_6.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_6 || ORIG_REF_NAME==blockdesign_xlconstant_0_6} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_screen_size_y_0/blockdesign_screen_size_y_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_screen_size_y_0 || ORIG_REF_NAME==blockdesign_screen_size_y_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_screen_size_y_1/blockdesign_screen_size_y_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_screen_size_y_1 || ORIG_REF_NAME==blockdesign_screen_size_y_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_screen_size_y_2/blockdesign_screen_size_y_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_screen_size_y_2 || ORIG_REF_NAME==blockdesign_screen_size_y_2} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_screen_size_y_3/blockdesign_screen_size_y_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_screen_size_y_3 || ORIG_REF_NAME==blockdesign_screen_size_y_3} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_controller_buttons_0_0/blockdesign_controller_buttons_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_buttons_0_0 || ORIG_REF_NAME==blockdesign_controller_buttons_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_controller_buttons_1_0/blockdesign_controller_buttons_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_buttons_1_0 || ORIG_REF_NAME==blockdesign_controller_buttons_1_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_clk_divider_1_0/blockdesign_clk_divider_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_clk_divider_1_0 || ORIG_REF_NAME==blockdesign_clk_divider_1_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_controller_interconn_0_0/blockdesign_controller_interconn_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_interconn_0_0 || ORIG_REF_NAME==blockdesign_controller_interconn_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_controller_ultrasoni_0_0/blockdesign_controller_ultrasoni_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_ultrasoni_0_0 || ORIG_REF_NAME==blockdesign_controller_ultrasoni_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_controller_ultrasoni_0_1/blockdesign_controller_ultrasoni_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_controller_ultrasoni_0_1 || ORIG_REF_NAME==blockdesign_controller_ultrasoni_0_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_clk_wiz_0_0/blockdesign_clk_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_clk_wiz_0_0 || ORIG_REF_NAME==blockdesign_clk_wiz_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_v_tc_0_0/blockdesign_v_tc_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_v_tc_0_0 || ORIG_REF_NAME==blockdesign_v_tc_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_7/blockdesign_xlconstant_0_7.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_7 || ORIG_REF_NAME==blockdesign_xlconstant_0_7} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_xlconstant_0_8/blockdesign_xlconstant_0_8.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_xlconstant_0_8 || ORIG_REF_NAME==blockdesign_xlconstant_0_8} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_rgb2dvi_0_0/blockdesign_rgb2dvi_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_rgb2dvi_0_0 || ORIG_REF_NAME==blockdesign_rgb2dvi_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_util_vector_logic_1_2/blockdesign_util_vector_logic_1_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_util_vector_logic_1_2 || ORIG_REF_NAME==blockdesign_util_vector_logic_1_2} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_score_counter_0_0/blockdesign_score_counter_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_score_counter_0_0 || ORIG_REF_NAME==blockdesign_score_counter_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_collision_detection_0_0/blockdesign_collision_detection_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_collision_detection_0_0 || ORIG_REF_NAME==blockdesign_collision_detection_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_position_ball_0_1/blockdesign_position_ball_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_position_ball_0_1 || ORIG_REF_NAME==blockdesign_position_ball_0_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_clk_divider_0_0/blockdesign_clk_divider_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_clk_divider_0_0 || ORIG_REF_NAME==blockdesign_clk_divider_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_pixel_counter_0_0/blockdesign_pixel_counter_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_pixel_counter_0_0 || ORIG_REF_NAME==blockdesign_pixel_counter_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_color_generator_0_0/blockdesign_color_generator_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_color_generator_0_0 || ORIG_REF_NAME==blockdesign_color_generator_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_video_buffer_0_0/blockdesign_video_buffer_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_video_buffer_0_0 || ORIG_REF_NAME==blockdesign_video_buffer_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_position_paddles_0_0/blockdesign_position_paddles_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_position_paddles_0_0 || ORIG_REF_NAME==blockdesign_position_paddles_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_centerline_0_0/blockdesign_paint_centerline_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_centerline_0_0 || ORIG_REF_NAME==blockdesign_paint_centerline_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_2/blockdesign_paint_rectangle_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_2 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_2} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_3/blockdesign_paint_rectangle_0_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_3 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_3} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_4/blockdesign_paint_rectangle_0_4.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_4 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_4} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_5/blockdesign_paint_rectangle_0_5.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_5 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_5} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_6/blockdesign_paint_rectangle_0_6.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_6 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_6} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_7/blockdesign_paint_rectangle_0_7.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_7 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_7} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_1/blockdesign_paint_rectangle_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_1 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_seven_seg_display_co_0_0/blockdesign_seven_seg_display_co_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_seven_seg_display_co_0_0 || ORIG_REF_NAME==blockdesign_seven_seg_display_co_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_1_2/blockdesign_paint_rectangle_1_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_1_2 || ORIG_REF_NAME==blockdesign_paint_rectangle_1_2} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_2_2/blockdesign_paint_rectangle_2_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_2_2 || ORIG_REF_NAME==blockdesign_paint_rectangle_2_2} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_3_1/blockdesign_paint_rectangle_3_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_3_1 || ORIG_REF_NAME==blockdesign_paint_rectangle_3_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_4_1/blockdesign_paint_rectangle_4_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_4_1 || ORIG_REF_NAME==blockdesign_paint_rectangle_4_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_5_1/blockdesign_paint_rectangle_5_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_5_1 || ORIG_REF_NAME==blockdesign_paint_rectangle_5_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_6_1/blockdesign_paint_rectangle_6_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_6_1 || ORIG_REF_NAME==blockdesign_paint_rectangle_6_1} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_10/blockdesign_paint_rectangle_0_10.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_10 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_10} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_seven_seg_display_co_0_2/blockdesign_seven_seg_display_co_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_seven_seg_display_co_0_2 || ORIG_REF_NAME==blockdesign_seven_seg_display_co_0_2} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_scoreboard_controller_0_0/blockdesign_scoreboard_controller_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_scoreboard_controller_0_0 || ORIG_REF_NAME==blockdesign_scoreboard_controller_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_0_0/blockdesign_paint_rectangle_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_0_0 || ORIG_REF_NAME==blockdesign_paint_rectangle_0_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_1_0/blockdesign_paint_rectangle_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_1_0 || ORIG_REF_NAME==blockdesign_paint_rectangle_1_0} -quiet] -quiet
-
-# IP: bd/blockdesign/ip/blockdesign_paint_rectangle_2_0/blockdesign_paint_rectangle_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==blockdesign_paint_rectangle_2_0 || ORIG_REF_NAME==blockdesign_paint_rectangle_2_0} -quiet] -quiet
-
-# XDC: c:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/blockdesign_ooc.xdc
+# XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/ZYNQ_ooc.xdc

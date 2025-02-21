@@ -1,8 +1,0 @@
-verilog xil_defaultlib --include "../../../../fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/30ef" --include "../../../../fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/1b7e/hdl/verilog" --include "../../../../fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/122e/hdl/verilog" --include "../../../../fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/affe/hdl/verilog" --include "../../../../fontys-pong.gen/sources_1/bd/ultrasoon_test/ipshared/20d0/hdl/verilog" \
-"../../../bd/ultrasoon_test/ip/ultrasoon_test_clk_wiz_0_0/ultrasoon_test_clk_wiz_0_0_clk_wiz.v" \
-"../../../bd/ultrasoon_test/ip/ultrasoon_test_clk_wiz_0_0/ultrasoon_test_clk_wiz_0_0.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-# Do not sort compile order
-nosort

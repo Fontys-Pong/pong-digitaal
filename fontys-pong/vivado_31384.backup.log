@@ -1,0 +1,1026 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Feb 21 14:19:26 2025
+# Process ID: 31384
+# Current directory: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20576 D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.xpr
+# Log file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/vivado.log
+# Journal file: D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong\vivado.jou
+# Running On: XPS-Tommy, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34029 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/Jochem/GitHub/Fontys/pong-digitaal/fontys-pong' since last save.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'D:/_code/Git/Fontys/projects/Vivado/vivado-library-zmod-v1-2019.1-2', nor could it be found using path 'C:/Users/Jochem/projects/Vivado/vivado-library-zmod-v1-2019.1-2'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/_code/Git/Fontys/projects/Vivado/vivado-library-zmod-v1-2019.1-2'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'blockdesign.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+blockdesign_rgb2dvi_0_0
+
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 2520.508 ; gain = 435.660
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+Reading block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd>...
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - screen_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - ball_size
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - paddle_offset_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - max_score
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - score_seg_size_x
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - score_seg_size_y
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - scoreboard_center_offset
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - scoreboard_top_offset
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_0
+Adding component instance block -- xilinx.com:module_ref:controller_buttons:1.0 - controller_buttons_1
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_1
+Adding component instance block -- xilinx.com:module_ref:controller_interconnect:1.0 - controller_interconn_0
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_0
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - v_tc_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - zero
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - one
+Adding component instance block -- digilentinc.com:ip:rgb2dvi:1.4 - rgb2dvi_0
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding component instance block -- xilinx.com:module_ref:score_counter:1.0 - score_counter_0
+Adding component instance block -- xilinx.com:module_ref:collision_detection:1.0 - collision_detection_0
+Adding component instance block -- xilinx.com:module_ref:position_ball:1.0 - position_ball_0
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_0
+Adding component instance block -- xilinx.com:module_ref:pixel_counter:1.0 - pixel_counter_0
+Adding component instance block -- xilinx.com:module_ref:color_generator:1.0 - color_generator_0
+Adding component instance block -- xilinx.com:module_ref:video_buffer:1.0 - video_buffer_0
+Adding component instance block -- xilinx.com:module_ref:position_paddles:1.0 - position_paddles_0
+Adding component instance block -- xilinx.com:module_ref:paint_centerline:1.0 - paint_centerline_0
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_1
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_2
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_3
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_4
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_5
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_6
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_0
+Adding component instance block -- xilinx.com:module_ref:seven_seg_display_controller:1.0 - seven_seg_display_co_0
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_1
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_2
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_3
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_4
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_5
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_6
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_rectangle_0
+Adding component instance block -- xilinx.com:module_ref:seven_seg_display_controller:1.0 - seven_seg_display_co_0
+Adding component instance block -- xilinx.com:module_ref:scoreboard_controller:1.0 - scoreboard_controller_0
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_ball
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_l
+Adding component instance block -- xilinx.com:module_ref:paint_rectangle:1.0 - paint_paddle_r
+Successfully read diagram <blockdesign> from block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2625.070 ; gain = 54.000
+update_compile_order -fileset sources_1
+update_module_reference {blockdesign_controller_buttons_0_0 blockdesign_controller_buttons_1_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_controller_buttons_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_controller_buttons_1_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference blockdesign_clk_divider_1_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_clk_divider_1_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference blockdesign_controller_interconn_0_0
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_controller_interconn_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference {blockdesign_controller_ultrasoni_0_0 blockdesign_controller_ultrasoni_0_1}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_controller_ultrasoni_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_controller_ultrasoni_0_1 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference blockdesign_score_counter_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'game_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'game_reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_score_counter_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+update_module_reference blockdesign_collision_detection_0_0
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_collision_detection_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+update_module_reference blockdesign_position_ball_0_1
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_position_ball_0_1 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+update_module_reference blockdesign_clk_divider_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_clk_divider_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+update_module_reference blockdesign_position_paddles_0_0
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_position_paddles_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+update_module_reference blockdesign_paint_centerline_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_centerline_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+update_module_reference {blockdesign_paint_rectangle_0_2 blockdesign_paint_rectangle_0_3 blockdesign_paint_rectangle_0_4 blockdesign_paint_rectangle_0_5 blockdesign_paint_rectangle_0_6 blockdesign_paint_rectangle_0_7 blockdesign_paint_rectangle_0_1}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_1 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_2 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_3 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_4 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_5 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_6 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_7 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference blockdesign_seven_seg_display_co_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_seven_seg_display_co_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference {blockdesign_paint_rectangle_1_2 blockdesign_paint_rectangle_2_2 blockdesign_paint_rectangle_3_1 blockdesign_paint_rectangle_4_1 blockdesign_paint_rectangle_5_1 blockdesign_paint_rectangle_6_1 blockdesign_paint_rectangle_0_10}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_10 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_1_2 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_2_2 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_3_1 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_4_1 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_5_1 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_6_1 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference blockdesign_seven_seg_display_co_0_2
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_seven_seg_display_co_0_2 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference blockdesign_scoreboard_controller_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_scoreboard_controller_0_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+update_module_reference {blockdesign_paint_rectangle_0_0 blockdesign_paint_rectangle_1_0 blockdesign_paint_rectangle_2_0}
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd'
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_1_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated blockdesign_paint_rectangle_2_0 to use current project options
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+update_module_reference ultrasoon_test_clk_divider_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+Reading block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd>...
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:module_ref:clk_divider:1.0 - clk_divider_0
+Adding component instance block -- xilinx.com:module_ref:seven_segment_controller:1.0 - seven_segment_contro_0
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding component instance block -- xilinx.com:module_ref:controller_ultrasonic_hcsr04:1.0 - controller_ultrasoni_0
+Successfully read diagram <ultrasoon_test> from block design file <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd>
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd'
+INFO: [IP_Flow 19-3420] Updated ultrasoon_test_clk_divider_0_0 to use current project options
+WARNING: [BD 41-597] NET <controller_ultrasoni_0_distance_mm_o> has no source
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ultrasoon_test\ultrasoon_test.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ui/bd_c5b55caa.ui> 
+update_module_reference ultrasoon_test_seven_segment_contro_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd'
+INFO: [IP_Flow 19-3420] Updated ultrasoon_test_seven_segment_contro_0_0 to use current project options
+WARNING: [BD 41-597] NET <controller_ultrasoni_0_distance_mm_o> has no source
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ultrasoon_test\ultrasoon_test.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ui/bd_c5b55caa.ui> 
+update_module_reference ultrasoon_test_controller_ultrasoni_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+Upgrading 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ultrasoon_test.bd'
+INFO: [IP_Flow 19-3420] Updated ultrasoon_test_controller_ultrasoni_0_0 to use current project options
+WARNING: [BD 41-597] NET <controller_ultrasoni_0_distance_mm_o> has no source
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ultrasoon_test\ultrasoon_test.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ultrasoon_test/ui/bd_c5b55caa.ui> 
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+report_ip_status -name ip_status 
+set_property LOCK_UPGRADE 1 [get_bd_cells /rgb2dvi_0]
+INFO: [IP_Flow 19-8015] Moving outputs for IP 'blockdesign_rgb2dvi_0_0' to 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0'
+WARNING: [IP_Flow 19-2162] IP 'blockdesign_rgb2dvi_0_0' is locked:
+* IP definition 'rgb2dvi (1.4)' for IP 'blockdesign_rgb2dvi_0_0' (customized with software release 2023.1) was not found in the IP Catalog.
+report_ip_status -name ip_status 
+set_property LOCK_UPGRADE 0 [get_bd_cells /rgb2dvi_0]
+INFO: [IP_Flow 19-8015] Moving outputs for IP 'blockdesign_rgb2dvi_0_0' to 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/ip/blockdesign_rgb2dvi_0_0'
+WARNING: [IP_Flow 19-2162] IP 'blockdesign_rgb2dvi_0_0' is locked:
+* IP 'blockdesign_rgb2dvi_0_0' was locked because its BD Cell is locked for upgrade. * IP definition 'rgb2dvi (1.4)' for IP 'blockdesign_rgb2dvi_0_0' (customized with software release 2023.1) was not found in the IP Catalog.
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/_code/Git/Fontys/projects/Vivado/vivado-library-zmod-v1-2019.1-2'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+set_property  ip_repo_paths  {d:/_code/Git/Fontys/projects/Vivado/vivado-library-zmod-v1-2019.1-2 D:/_code/Vivado/vivado-library-zmod-v1-2019.1-2} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/_code/Git/Fontys/projects/Vivado/vivado-library-zmod-v1-2019.1-2'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+set_property  ip_repo_paths  d:/_code/Vivado/vivado-library-zmod-v1-2019.1-2 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
+report_ip_status -name ip_status 
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_bd_design "ZYNQ"
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ZYNQ\ZYNQ.bd> 
+update_compile_order -fileset sources_1
+create_bd_cell -type container -reference blockdesign blockdesign_0
+ERROR: [BD 41-2191] Creation of cell 'blockdesign_0' failed. The following errors were encountered when trying to instantiate cell 'blockdesign.bd':
+* blockdesign.bd is not validated. Validate the design and try again.
+
+ERROR: [BD 5-7] Error: running create_bd_cell  -type container -reference blockdesign -name blockdesign_0 .
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+make_wrapper -files [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd] -top
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ZYNQ\ZYNQ.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_bdecc542.ui> 
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/synth/ZYNQ.vhd
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/sim/ZYNQ.vhd
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/hdl/ZYNQ_wrapper.vhd
+add_files -norecurse d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/hdl/ZYNQ_wrapper.vhd
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
+create_bd_cell -type container -reference blockdesign blockdesign_0
+ERROR: [BD 41-2191] Creation of cell 'blockdesign_0' failed. The following errors were encountered when trying to instantiate cell 'blockdesign.bd':
+* blockdesign.bd is not validated. Validate the design and try again.
+
+ERROR: [BD 5-7] Error: running create_bd_cell  -type container -reference blockdesign -name blockdesign_0 .
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+delete_ip_run [get_files -of_objects [get_fileset sources_1] D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd]
+set_property synth_checkpoint_mode None [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd]
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd]
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_0/reset (associated clock /controllers/controller_buttons_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_1/reset (associated clock /controllers/controller_buttons_1/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /score_counter_0/reset (associated clock /score_counter_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_divider_0/clk_o.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+VHDL Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/synth/blockdesign.vhd
+VHDL Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/sim/blockdesign.vhd
+VHDL Output written to : d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/hdl/blockdesign_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_buttons_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_buttons_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/clk_divider_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_interconn_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_ultrasoni_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_ultrasoni_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block score_counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block collision_detection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block position_ball_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_divider_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pixel_counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block color_generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block position_paddles_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_centerline_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/seven_seg_display_co_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/seven_seg_display_co_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/scoreboard_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_ball .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_paddle_l .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_paddle_r .
+Exporting to file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/hw_handoff/blockdesign.hwh
+Generated Hardware Definition File d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/blockdesign/synth/blockdesign.hwdef
+export_ip_user_files -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd] -directory D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.ip_user_files/sim_scripts -ip_user_files_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.ip_user_files -ipstatic_source_dir D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.cache/compile_simlib/modelsim} {questa=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.cache/compile_simlib/questa} {riviera=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.cache/compile_simlib/riviera} {activehdl=D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
+create_bd_cell -type container -reference blockdesign blockdesign_0
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_0\blockdesign_inst_0.bd> 
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_0/reset (associated clock /controllers/controller_buttons_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_1/reset (associated clock /controllers/controller_buttons_1/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /score_counter_0/reset (associated clock /score_counter_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_divider_0/clk_o.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_0\blockdesign_inst_0.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ui/bd_d193abcb.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ui/bd_1c52ff04.ui> 
+report_ip_status -name ip_status 
+create_bd_cell -type container -reference blockdesign blockdesign_1
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_1\blockdesign_inst_1.bd> 
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_0/reset (associated clock /controllers/controller_buttons_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_1/reset (associated clock /controllers/controller_buttons_1/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /score_counter_0/reset (associated clock /score_counter_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_divider_0/clk_o.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_1\blockdesign_inst_1.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_1/ui/bd_d211bb4c.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_1/ui/bd_296e91c3.ui> 
+delete_bd_objs [get_bd_cells blockdesign_1]
+create_bd_cell -type container -reference blockdesign blockdesign_1
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_2\blockdesign_inst_2.bd> 
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_0/reset (associated clock /controllers/controller_buttons_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_1/reset (associated clock /controllers/controller_buttons_1/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /score_counter_0/reset (associated clock /score_counter_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_divider_0/clk_o.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_2\blockdesign_inst_2.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_2/ui/bd_d28fcacd.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_2/ui/bd_368a2482.ui> 
+delete_bd_objs [get_bd_cells blockdesign_1]
+delete_bd_objs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 3326.484 ; gain = 38.863
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
+export_ip_user_files -of_objects  [get_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_2/blockdesign_inst_2.bd] -no_script -reset -force -quiet
+WARNING: [Vivado 12-818] No files matched 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_2/blockdesign_inst_2.bd'
+file delete -force D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_2
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
+validate_bd_design
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/blockdesign_0/ext_clk
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+delete_bd_objs [get_bd_cells blockdesign_0]
+delete_bd_objs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 3326.484 ; gain = 0.000
+create_bd_cell -type container -reference blockdesign blockdesign_0
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_3\blockdesign_inst_3.bd> 
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_0/reset (associated clock /controllers/controller_buttons_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /controllers/controller_buttons_1/reset (associated clock /controllers/controller_buttons_1/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_l/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/reset (associated clock /paint_scoreboard/paint_seg_r/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /score_counter_0/reset (associated clock /score_counter_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_divider_0/clk_o.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_3\blockdesign_inst_3.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_3/ui/bd_d30dda4e.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_3/ui/bd_43a5b741.ui> 
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
+current_bd_design blockdesign
+set tmpCopyObjs [concat  [get_bd_cells {clk_wiz}]]
+current_bd_design ZYNQ
+copy_bd_objs -from_design blockdesign / $tmpCopyObjs
+set_property location {0.5 -25 85} [get_bd_cells clk_wiz]
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+set_property name clk [get_bd_ports ext_clk]
+delete_bd_objs [get_bd_nets ext_clk_1]
+delete_bd_objs [get_bd_cells clk_wiz]
+set_property location {-33 1205} [get_bd_ports clk]
+connect_bd_net [get_bd_ports clk] [get_bd_pins clk_divider_0/clk_i]
+set_property location {-29 1091} [get_bd_ports clk]
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
+open_bd_design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd
+upgrade_bd_cells [get_bd_cells blockdesign_0]
+INFO: [BD 41-1794] Referenced block design(blockdesign.bd) is not validated, the design will be opening in background if not open and then validating...
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_wiz_0/clk_in1(100000000) and /clk(12000000)
+ERROR: [BD 41-1869] Failed to validate referenced block design blockdesign.bd, please fix the reported error(s)
+INFO: [BD 41-1162] The cell '/blockdesign_0' is already at its latest version.
+ERROR: [Common 17-39] 'upgrade_bd_cells' failed due to earlier errors.
+current_bd_design [get_bd_designs blockdesign]
+save_bd_design
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+open_bd_design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd
+upgrade_bd_cells [get_bd_cells blockdesign_0]
+INFO: [BD 41-1794] Referenced block design(blockdesign.bd) is not validated, the design will be opening in background if not open and then validating...
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_wiz_0/clk_in1(100000000) and /clk(12000000)
+ERROR: [BD 41-1869] Failed to validate referenced block design blockdesign.bd, please fix the reported error(s)
+INFO: [BD 41-1162] The cell '/blockdesign_0' is already at its latest version.
+ERROR: [Common 17-39] 'upgrade_bd_cells' failed due to earlier errors.
+current_bd_design [get_bd_designs blockdesign]
+save_bd_design
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+current_bd_design [get_bd_designs ZYNQ]
+open_bd_design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd
+upgrade_bd_cells [get_bd_cells blockdesign_0]
+INFO: [BD 41-1794] Referenced block design(blockdesign.bd) is not validated, the design will be opening in background if not open and then validating...
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_wiz_0/clk_in1(100000000) and /clk(12000000)
+ERROR: [BD 41-1869] Failed to validate referenced block design blockdesign.bd, please fix the reported error(s)
+INFO: [BD 41-1162] The cell '/blockdesign_0' is already at its latest version.
+ERROR: [Common 17-39] 'upgrade_bd_cells' failed due to earlier errors.
+delete_bd_objs [get_bd_cells blockdesign_0]
+save_bd_design
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ZYNQ\ZYNQ.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_bdecc542.ui> 
+create_bd_cell -type container -reference blockdesign blockdesign_0
+ERROR: [BD 41-2191] Creation of cell 'blockdesign_0' failed. The following errors were encountered when trying to instantiate cell 'blockdesign.bd':
+* blockdesign.bd is not validated. Validate the design and try again.
+
+ERROR: [BD 5-7] Error: running create_bd_cell  -type container -reference blockdesign -name blockdesign_0 .
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+current_bd_design [get_bd_designs blockdesign]
+report_ip_status -name ip_status 
+save_bd_design
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd]
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /clk_wiz_0/clk_in1(100000000) and /clk(12000000)
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd 
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+delete_bd_objs [get_bd_ports clk]
+create_bd_port -dir I -type clk -freq_hz 100000000 clk_100MHz
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins clk_divider_0/clk_i]
+save_bd_design
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/ui/bd_12a186eb.ui> 
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
+create_bd_cell -type container -reference blockdesign blockdesign_0
+ERROR: [BD 41-2191] Creation of cell 'blockdesign_0' failed. The following errors were encountered when trying to instantiate cell 'blockdesign.bd':
+* blockdesign.bd is not validated. Validate the design and try again.
+
+ERROR: [BD 5-7] Error: running create_bd_cell  -type container -reference blockdesign -name blockdesign_0 .
+ERROR: [Common 17-39] 'create_bd_cell' failed due to earlier errors.
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/blockdesign/blockdesign.bd}
+validate_bd_design
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+open_bd_design {D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd}
+create_bd_cell -type container -reference blockdesign blockdesign_0
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\blockdesign\blockdesign.bd> 
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_4\blockdesign_inst_4.bd> 
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_4\blockdesign_inst_4.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_50c14a00.ui> 
+connect_bd_net [get_bd_pins clk_wiz/clk_out1] [get_bd_pins blockdesign_0/clk_100MHz]
+connect_bd_net [get_bd_pins clk_wiz/reset] [get_bd_pins blockdesign_0/reset]
+startgroup
+create_bd_port -dir I -type clk -freq_hz 12000000 clk_in
+set_property -dict [list CONFIG.CLK_DOMAIN [get_property CONFIG.CLK_DOMAIN [get_bd_pins clk_wiz/clk_in1]]] [get_bd_ports clk_in]
+connect_bd_net [get_bd_pins /clk_wiz/clk_in1] [get_bd_ports clk_in]
+endgroup
+set_property name sys_clk [get_bd_ports clk_in]
+set_property name clk_sys [get_bd_ports sys_clk]
+set_property location {1 -70 -14} [get_bd_cells clk_wiz]
+startgroup
+create_bd_port -dir I enable
+connect_bd_net [get_bd_pins /blockdesign_0/enable] [get_bd_ports enable]
+endgroup
+startgroup
+create_bd_port -dir I btn_down_r
+connect_bd_net [get_bd_pins /blockdesign_0/btn_down_r] [get_bd_ports btn_down_r]
+endgroup
+startgroup
+create_bd_port -dir I btn_up_r
+connect_bd_net [get_bd_pins /blockdesign_0/btn_up_r] [get_bd_ports btn_up_r]
+endgroup
+startgroup
+create_bd_port -dir I btn_down_l
+connect_bd_net [get_bd_pins /blockdesign_0/btn_down_l] [get_bd_ports btn_down_l]
+endgroup
+set_property location {1 -27 75} [get_bd_cells clk_wiz]
+set_property location {-169 -52} [get_bd_ports enable]
+set_property location {-156 -36} [get_bd_ports enable]
+set_property location {-149 -30} [get_bd_ports enable]
+set_property location {-151 -108} [get_bd_ports btn_down_l]
+set_property location {-148 -96} [get_bd_ports btn_down_l]
+set_property location {-158 -76} [get_bd_ports btn_up_r]
+set_property location {-152 -55} [get_bd_ports btn_down_r]
+startgroup
+create_bd_port -dir I btn_up_l
+connect_bd_net [get_bd_pins /blockdesign_0/btn_up_l] [get_bd_ports btn_up_l]
+endgroup
+startgroup
+create_bd_port -dir I controller_switch
+connect_bd_net [get_bd_pins /blockdesign_0/controller_switch] [get_bd_ports controller_switch]
+endgroup
+startgroup
+create_bd_port -dir I sensor_r
+connect_bd_net [get_bd_pins /blockdesign_0/sensor_r] [get_bd_ports sensor_r]
+endgroup
+startgroup
+create_bd_port -dir I -type rst reset
+set_property CONFIG.POLARITY [get_property CONFIG.POLARITY [get_bd_pins blockdesign_0/controllers/controller_buttons_0/reset]] [get_bd_ports reset]
+connect_bd_net [get_bd_pins /blockdesign_0/reset] [get_bd_ports reset]
+endgroup
+startgroup
+create_bd_port -dir I sensor_l
+connect_bd_net [get_bd_pins /blockdesign_0/sensor_l] [get_bd_ports sensor_l]
+endgroup
+startgroup
+create_bd_port -dir O trigger_l
+connect_bd_net [get_bd_pins /blockdesign_0/trigger_l] [get_bd_ports trigger_l]
+endgroup
+startgroup
+create_bd_port -dir O trigger_r
+connect_bd_net [get_bd_pins /blockdesign_0/trigger_r] [get_bd_ports trigger_r]
+endgroup
+startgroup
+create_bd_port -dir O -from 0 -to 0 hdmi_out_hpd
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_hpd] [get_bd_ports hdmi_out_hpd]
+endgroup
+startgroup
+create_bd_port -dir O -type clk hdmi_out_clk_p
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_clk_p] [get_bd_ports hdmi_out_clk_p]
+endgroup
+startgroup
+create_bd_port -dir O -type clk hdmi_out_clk_n
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_clk_n] [get_bd_ports hdmi_out_clk_n]
+endgroup
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_p
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_p] [get_bd_ports hdmi_out_data_p]
+endgroup
+startgroup
+create_bd_port -dir O -from 2 -to 0 hdmi_out_data_n
+connect_bd_net [get_bd_pins /blockdesign_0/hdmi_out_data_n] [get_bd_ports hdmi_out_data_n]
+endgroup
+set_property location {611 19} [get_bd_ports hdmi_out_data_n]
+set_property location {612 -2} [get_bd_ports hdmi_out_data_p]
+set_property location {606 -35} [get_bd_ports hdmi_out_data_p]
+set_property location {612 -68} [get_bd_ports hdmi_out_clk_n]
+set_property location {608 -98} [get_bd_ports hdmi_out_clk_p]
+set_property location {608 -88} [get_bd_ports hdmi_out_clk_p]
+set_property location {609 -81} [get_bd_ports hdmi_out_clk_p]
+set_property location {613 -111} [get_bd_ports hdmi_out_hpd]
+set_property location {603 -113} [get_bd_ports hdmi_out_hpd]
+set_property location {-155 -96} [get_bd_ports btn_up_l]
+set_property location {-152 -126} [get_bd_ports controller_switch]
+set_property location {-151 -218} [get_bd_ports reset]
+set_property location {-153 -170} [get_bd_ports sensor_r]
+set_property location {-154 8} [get_bd_ports enable]
+set_property location {-151 -2} [get_bd_ports enable]
+set_property location {-148 -7} [get_bd_ports enable]
+set_property location {-160 -211} [get_bd_ports sensor_l]
+set_property location {-168 22} [get_bd_ports reset]
+set_property location {-158 44} [get_bd_ports reset]
+set_property location {-158 53} [get_bd_ports reset]
+set_property location {-155 61} [get_bd_ports reset]
+set_property location {-156 56} [get_bd_ports reset]
+set_property location {-156 43} [get_bd_ports reset]
+set_property location {-152 85} [get_bd_ports clk_sys]
+set_property location {-151 0} [get_bd_ports enable]
+set_property location {-150 -177} [get_bd_ports controller_switch]
+set_property location {-151 -226} [get_bd_ports sensor_l]
+set_property location {-157 -229} [get_bd_ports sensor_r]
+set_property location {-152 -190} [get_bd_ports sensor_r]
+set_property location {-155 -162} [get_bd_ports controller_switch]
+set_property location {-156 -234} [get_bd_ports sensor_r]
+set_property location {-151 -254} [get_bd_ports sensor_l]
+set_property location {-149 -237} [get_bd_ports sensor_l]
+open_bd_design D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd
+upgrade_bd_cells [get_bd_cells blockdesign_0]
+INFO: [BD 41-1162] The cell '/blockdesign_0' is already at its latest version.
+report_ip_status -name ip_status 
+save_bd_design
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_4\blockdesign_inst_4.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_50c14a00.ui> 
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ZYNQ\ZYNQ.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_bdecc542.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_a4e6de9a.ui> 
+set_property top ZYNQ_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+set_property synth_checkpoint_mode None [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd]
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd]
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/controllers/controller_buttons_0/reset (associated clock /blockdesign_0/controllers/controller_buttons_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/controllers/controller_buttons_1/reset (associated clock /blockdesign_0/controllers/controller_buttons_1/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/reset (associated clock /blockdesign_0/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/paint_scoreboard/paint_seg_r/seven_seg_display_co_0/reset (associated clock /blockdesign_0/paint_scoreboard/paint_seg_r/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/score_counter_0/reset (associated clock /blockdesign_0/score_counter_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/clk_divider_0/clk_o.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /blockdesign_0/clk_wiz_0 clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_4\blockdesign_inst_4.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_50c14a00.ui> 
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ZYNQ\ZYNQ.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_bdecc542.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_a4e6de9a.ui> 
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/synth/ZYNQ.vhd
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/sim/ZYNQ.vhd
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/hdl/ZYNQ_wrapper.vhd
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_4\blockdesign_inst_4.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_50c14a00.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_bdecc542.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_a4e6de9a.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ui/bd_d193abcb.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ui/bd_1c52ff04.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_1/ui/bd_d211bb4c.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_1/ui/bd_296e91c3.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_2/ui/bd_d28fcacd.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_2/ui/bd_368a2482.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_3/ui/bd_d30dda4e.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_3/ui/bd_43a5b741.ui> 
+ERROR: [Common 17-49] Internal Data Exception: Cannot locate file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_divider_0_0/blockdesign_inst_0_clk_divider_0_0.xci.
+
+ERROR: [BD 41-1030] Generation failed for the IP Integrator block clk_wiz 
+INFO: [BD 41-1662] The design 'blockdesign_inst_4.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_50c14a00.ui> 
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/synth/blockdesign_inst_4.vhd
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/sim/blockdesign_inst_4.vhd
+VHDL Output written to : D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/hdl/blockdesign_inst_4_wrapper.vhd
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_50c14a00.ui> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/screen_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/screen_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/ball_size .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/paddle_offset_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/max_score .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/score_seg_size_x .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/score_seg_size_y .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/scoreboard_center_offset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Constants/scoreboard_top_offset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_buttons_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_buttons_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/clk_divider_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_interconn_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_ultrasoni_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block controllers/controller_ultrasoni_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zero .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block one .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pixel_counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block color_generator_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/paint_rectangle_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_l/seven_seg_display_co_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_4 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_5 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/paint_rectangle_6 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/paint_seg_r/seven_seg_display_co_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_scoreboard/scoreboard_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block score_counter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block collision_detection_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block position_ball_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_divider_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block position_paddles_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_centerline_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_ball .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_paddle_l .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block paint_paddle_r .
+Exporting to file D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/hw_handoff/blockdesign_inst_4.hwh
+Generated Hardware Definition File D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/synth/blockdesign_inst_4.hwdef
+Exporting to file D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/hw_handoff/ZYNQ.hwh
+Generated Hardware Definition File D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/synth/ZYNQ.hwdef
+ERROR: [Common 17-49] Internal Data Exception: Cannot locate file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_divider_0_0/blockdesign_inst_0_clk_divider_0_0.xci.
+
+report_ip_status -name ip_status 
+startgroup
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property name ext_clk [get_bd_ports clk_sys]
+generate_target all [get_files  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ZYNQ.bd]
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/controllers/controller_buttons_0/reset (associated clock /blockdesign_0/controllers/controller_buttons_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/controllers/controller_buttons_1/reset (associated clock /blockdesign_0/controllers/controller_buttons_1/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/reset (associated clock /blockdesign_0/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/paint_scoreboard/paint_seg_r/seven_seg_display_co_0/reset (associated clock /blockdesign_0/paint_scoreboard/paint_seg_r/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/score_counter_0/reset (associated clock /blockdesign_0/score_counter_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/clk_divider_0/clk_o.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /blockdesign_0/clk_wiz_0 clk_wiz propagate
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_4\blockdesign_inst_4.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_50c14a00.ui> 
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ZYNQ\ZYNQ.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_bdecc542.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_a4e6de9a.ui> 
+ERROR: [Common 17-49] Internal Data Exception: Cannot locate file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_divider_0_0/blockdesign_inst_0_clk_divider_0_0.xci.
+
+validate_bd_design -force
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/controllers/controller_buttons_0/reset (associated clock /blockdesign_0/controllers/controller_buttons_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/controllers/controller_buttons_1/reset (associated clock /blockdesign_0/controllers/controller_buttons_1/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/controllers/clk_divider_1/clk_o.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/reset (associated clock /blockdesign_0/paint_scoreboard/paint_seg_l/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/paint_scoreboard/paint_seg_r/seven_seg_display_co_0/reset (associated clock /blockdesign_0/paint_scoreboard/paint_seg_r/seven_seg_display_co_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /clk_wiz/clk_out1.
+CRITICAL WARNING: [BD 41-1348] Reset pin /blockdesign_0/score_counter_0/reset (associated clock /blockdesign_0/score_counter_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Please add Processor System Reset module to create a reset that is synchronous to the associated clock source /blockdesign_0/clk_divider_0/clk_o.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /blockdesign_0/clk_wiz_0 clk_wiz propagate
+save_bd_design
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.gen\sources_1\bd\ZYNQ\bd\blockdesign_inst_4\blockdesign_inst_4.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_50c14a00.ui> 
+Wrote  : <D:\_code\Git\Fontys\CSA\CSA2-pong\pong-digitaal\fontys-pong\fontys-pong.srcs\sources_1\bd\ZYNQ\ZYNQ.bd> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_bdecc542.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_a4e6de9a.ui> 
+ERROR: [Common 17-49] Internal Data Exception: Cannot locate file d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_divider_0_0/blockdesign_inst_0_clk_divider_0_0.xci.
+
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+close_bd_design [get_bd_designs ZYNQ]
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_bdecc542.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/ZYNQ/ui/bd_a4e6de9a.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_d38be9cf.ui> 
+Wrote  : <D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.gen/sources_1/bd/ZYNQ/bd/blockdesign_inst_4/ui/bd_5f4b54cd.ui> 
+current_bd_design [get_bd_designs blockdesign]
+close_bd_design [get_bd_designs blockdesign]
+current_bd_design [get_bd_designs ultrasoon_test]
+close_bd_design [get_bd_designs ultrasoon_test]
+close_project
+ERROR: [Vivado 12-106] *** Exception: ui.utils.k: ui.frmwork.cmd.CommandFailedException: Unknown exception occurred ui.frmwork.cmd.CommandFailedException: Unknown exception occurred
+	at ui.data.designgraph.designgraphi.DesignGraph_isGraphStale(Native Method)
+	at ui.data.design.e.aWY(SourceFile:31)
+	at ui.views.z.b.a.GJ(SourceFile:200)
+	at ui.views.z.b.a.GI(SourceFile:134)
+	at ui.views.z.b.b.timerActionPerformed(SourceFile:169)
+	at ui.utils.q.b.actionPerformed(SourceFile:137)
+	at java.desktop/javax.swing.Timer.fireActionPerformed(Timer.java:311)
+	at ui.utils.q.a.fireActionPerformed(SourceFile:78)
+	at java.desktop/javax.swing.Timer$DoPostEvent.run(Timer.java:243)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:771)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:722)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:716)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:741)
+	at ui.frmwork.a.d.dispatchEvent(SourceFile:92)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+ (See D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/vivado_pid31384.debug)
