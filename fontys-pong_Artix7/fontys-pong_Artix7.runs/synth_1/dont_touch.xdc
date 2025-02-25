@@ -9,9 +9,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CMOD_A7_35T
 # IP: bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CMOD_A7_35T_clk_wiz_0 || ORIG_REF_NAME==CMOD_A7_35T_clk_wiz_0} -quiet] -quiet
 
-# IP: bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CMOD_A7_35T_rst_clk_wiz_100M_0 || ORIG_REF_NAME==CMOD_A7_35T_rst_clk_wiz_100M_0} -quiet] -quiet
-
 # IP: bd/CMOD_A7_35T/ip/CMOD_A7_35T_util_vector_logic_0_0/CMOD_A7_35T_util_vector_logic_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CMOD_A7_35T_util_vector_logic_0_0 || ORIG_REF_NAME==CMOD_A7_35T_util_vector_logic_0_0} -quiet] -quiet
 
@@ -28,11 +25,5 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CMOD_A7_35T_clk_wiz_0 || ORIG_REF_NAME==CMOD_A7_35T_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
 # XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0_ooc.xdc
-
-# XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0_board.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CMOD_A7_35T_rst_clk_wiz_100M_0 || ORIG_REF_NAME==CMOD_A7_35T_rst_clk_wiz_100M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0.xdc
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CMOD_A7_35T_rst_clk_wiz_100M_0 || ORIG_REF_NAME==CMOD_A7_35T_rst_clk_wiz_100M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T_ooc.xdc

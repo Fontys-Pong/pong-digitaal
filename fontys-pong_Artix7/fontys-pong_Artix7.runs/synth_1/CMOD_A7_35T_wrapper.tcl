@@ -70,9 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 5
-set_param project.hsv.suppressChildGraphs 0
+set_param synth.incrementalSynthesisCache C:/Users/tommy/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-39460-XPS-Tommy/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -93,12 +96,14 @@ set_property ip_output_repo d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/font
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/hdl/CMOD_A7_35T_wrapper.v
+read_verilog -library xil_defaultlib D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/hdl/CMOD_A7_35T_wrapper.v
 read_vhdl -library xil_defaultlib {
   D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd
   D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_interconnect.vhd
-  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic_hcsr04.vhd
   D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_ultrasonic_hcsr04.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/new/movingAverage.vhd
+  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/new/filter.vhd
   D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/paint_rectangle.vhd
   D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd
   D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd
@@ -115,11 +120,9 @@ add_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fon
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/CMOD_A7_35T_ooc.xdc]
 
-add_files d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/blockdesign_inst_0.bd
+add_files D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/blockdesign_inst_0.bd
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0_ooc.xdc]
@@ -127,7 +130,7 @@ set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CS
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_v_tc_0_0/blockdesign_inst_0_v_tc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/blockdesign_inst_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/blockdesign_inst_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

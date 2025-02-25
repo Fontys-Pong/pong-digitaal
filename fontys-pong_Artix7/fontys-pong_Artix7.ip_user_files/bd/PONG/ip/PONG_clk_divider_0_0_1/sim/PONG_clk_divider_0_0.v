@@ -67,7 +67,7 @@ input wire reset;
 output wire clk_o;
 
   clk_divider #(
-    .division(200000)
+    .division(100000)
   ) inst (
     .clk_i(clk_i),
     .reset(reset),

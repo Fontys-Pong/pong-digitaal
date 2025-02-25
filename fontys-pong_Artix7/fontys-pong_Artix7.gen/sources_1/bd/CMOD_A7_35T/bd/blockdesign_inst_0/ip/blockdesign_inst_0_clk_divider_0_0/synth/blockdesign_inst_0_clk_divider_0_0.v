@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "clk_divider,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "blockdesign_inst_0_clk_divider_0_0,clk_divider,{}" *)
-(* CORE_GENERATION_INFO = "blockdesign_inst_0_clk_divider_0_0,clk_divider,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=clk_divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,division=200000}" *)
+(* CORE_GENERATION_INFO = "blockdesign_inst_0_clk_divider_0_0,clk_divider,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=clk_divider,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,division=100000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module blockdesign_inst_0_clk_divider_0_0 (
@@ -68,7 +68,7 @@ input wire reset;
 output wire clk_o;
 
   clk_divider #(
-    .division(200000)
+    .division(100000)
   ) inst (
     .clk_i(clk_i),
     .reset(reset),

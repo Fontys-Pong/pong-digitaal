@@ -27,10 +27,14 @@
       "controllers": {
         "clk_divider_1": "",
         "controller_interconn_0": "",
+        "controller_buttons_0": "",
+        "controller_buttons_1": "",
         "controller_ultrasoni_0": "",
         "controller_ultrasoni_1": "",
-        "controller_buttons_0": "",
-        "controller_buttons_1": ""
+        "MedianFilter_0": "",
+        "MedianFilter_1": "",
+        "MovingAverageFilter_0": "",
+        "MovingAverageFilter_1": ""
       },
       "paint_scoreboard": {
         "paint_seg_l": {
@@ -562,7 +566,7 @@
             "inst_hier_path": "controllers/clk_divider_1",
             "parameters": {
               "division": {
-                "value": "200000"
+                "value": "150000"
               }
             },
             "reference_info": {
@@ -648,6 +652,98 @@
                 "right": "0"
               },
               "value_r_o": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "controller_buttons_0": {
+            "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
+            "xci_name": "PONG_controller_buttons_0_0",
+            "xci_path": "ip\\PONG_controller_buttons_0_0\\PONG_controller_buttons_0_0.xci",
+            "inst_hier_path": "controllers/controller_buttons_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_buttons",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "btn_up": {
+                "direction": "I"
+              },
+              "btn_down": {
+                "direction": "I"
+              },
+              "value": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "controller_buttons_1": {
+            "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
+            "xci_name": "PONG_controller_buttons_1_0",
+            "xci_path": "ip\\PONG_controller_buttons_1_0\\PONG_controller_buttons_1_0.xci",
+            "inst_hier_path": "controllers/controller_buttons_1",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "controller_buttons",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "reset",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "reset": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "enable": {
+                "direction": "I"
+              },
+              "btn_up": {
+                "direction": "I"
+              },
+              "btn_down": {
+                "direction": "I"
+              },
+              "value": {
                 "direction": "O",
                 "left": "8",
                 "right": "0"
@@ -770,14 +866,14 @@
               }
             }
           },
-          "controller_buttons_0": {
-            "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
-            "xci_name": "PONG_controller_buttons_0_0",
-            "xci_path": "ip\\PONG_controller_buttons_0_0\\PONG_controller_buttons_0_0.xci",
-            "inst_hier_path": "controllers/controller_buttons_0",
+          "MedianFilter_0": {
+            "vlnv": "xilinx.com:module_ref:MedianFilter:1.0",
+            "xci_name": "PONG_MedianFilter_0_0",
+            "xci_path": "ip\\PONG_MedianFilter_0_0\\PONG_MedianFilter_0_0.xci",
+            "inst_hier_path": "controllers/MedianFilter_0",
             "reference_info": {
               "ref_type": "hdl",
-              "ref_name": "controller_buttons",
+              "ref_name": "MedianFilter",
               "boundary_crc": "0x0"
             },
             "ports": {
@@ -786,12 +882,12 @@
                 "direction": "I",
                 "parameters": {
                   "ASSOCIATED_RESET": {
-                    "value": "reset",
+                    "value": "rst",
                     "value_src": "constant"
                   }
                 }
               },
-              "reset": {
+              "rst": {
                 "type": "rst",
                 "direction": "I",
                 "parameters": {
@@ -800,30 +896,26 @@
                   }
                 }
               },
-              "enable": {
-                "direction": "I"
+              "data_in": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
               },
-              "btn_up": {
-                "direction": "I"
-              },
-              "btn_down": {
-                "direction": "I"
-              },
-              "value": {
+              "data_out": {
                 "direction": "O",
                 "left": "8",
                 "right": "0"
               }
             }
           },
-          "controller_buttons_1": {
-            "vlnv": "xilinx.com:module_ref:controller_buttons:1.0",
-            "xci_name": "PONG_controller_buttons_1_0",
-            "xci_path": "ip\\PONG_controller_buttons_1_0\\PONG_controller_buttons_1_0.xci",
-            "inst_hier_path": "controllers/controller_buttons_1",
+          "MedianFilter_1": {
+            "vlnv": "xilinx.com:module_ref:MedianFilter:1.0",
+            "xci_name": "PONG_MedianFilter_0_1",
+            "xci_path": "ip\\PONG_MedianFilter_0_1\\PONG_MedianFilter_0_1.xci",
+            "inst_hier_path": "controllers/MedianFilter_1",
             "reference_info": {
               "ref_type": "hdl",
-              "ref_name": "controller_buttons",
+              "ref_name": "MedianFilter",
               "boundary_crc": "0x0"
             },
             "ports": {
@@ -832,12 +924,12 @@
                 "direction": "I",
                 "parameters": {
                   "ASSOCIATED_RESET": {
-                    "value": "reset",
+                    "value": "rst",
                     "value_src": "constant"
                   }
                 }
               },
-              "reset": {
+              "rst": {
                 "type": "rst",
                 "direction": "I",
                 "parameters": {
@@ -846,16 +938,96 @@
                   }
                 }
               },
-              "enable": {
-                "direction": "I"
+              "data_in": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
               },
-              "btn_up": {
-                "direction": "I"
+              "data_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "MovingAverageFilter_0": {
+            "vlnv": "xilinx.com:module_ref:MovingAverageFilter:1.0",
+            "xci_name": "PONG_MovingAverageFilter_0_2",
+            "xci_path": "ip\\PONG_MovingAverageFilter_0_2\\PONG_MovingAverageFilter_0_2.xci",
+            "inst_hier_path": "controllers/MovingAverageFilter_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MovingAverageFilter",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "rst",
+                    "value_src": "constant"
+                  }
+                }
               },
-              "btn_down": {
-                "direction": "I"
+              "rst": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
               },
-              "value": {
+              "data_in": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "data_out": {
+                "direction": "O",
+                "left": "8",
+                "right": "0"
+              }
+            }
+          },
+          "MovingAverageFilter_1": {
+            "vlnv": "xilinx.com:module_ref:MovingAverageFilter:1.0",
+            "xci_name": "PONG_MovingAverageFilter_0_3",
+            "xci_path": "ip\\PONG_MovingAverageFilter_0_3\\PONG_MovingAverageFilter_0_3.xci",
+            "inst_hier_path": "controllers/MovingAverageFilter_1",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "MovingAverageFilter",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "rst",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "rst": {
+                "type": "rst",
+                "direction": "I",
+                "parameters": {
+                  "POLARITY": {
+                    "value": "ACTIVE_HIGH"
+                  }
+                }
+              },
+              "data_in": {
+                "direction": "I",
+                "left": "8",
+                "right": "0"
+              },
+              "data_out": {
                 "direction": "O",
                 "left": "8",
                 "right": "0"
@@ -864,6 +1036,30 @@
           }
         },
         "nets": {
+          "MedianFilter_0_data_out": {
+            "ports": [
+              "MedianFilter_0/data_out",
+              "MovingAverageFilter_0/data_in"
+            ]
+          },
+          "MedianFilter_1_data_out": {
+            "ports": [
+              "MedianFilter_1/data_out",
+              "MovingAverageFilter_1/data_in"
+            ]
+          },
+          "MovingAverageFilter_0_data_out": {
+            "ports": [
+              "MovingAverageFilter_0/data_out",
+              "controller_interconn_0/value_l_2"
+            ]
+          },
+          "MovingAverageFilter_1_data_out": {
+            "ports": [
+              "MovingAverageFilter_1/data_out",
+              "controller_interconn_0/value_r_2"
+            ]
+          },
           "Net": {
             "ports": [
               "clk",
@@ -883,10 +1079,14 @@
             "ports": [
               "reset",
               "clk_divider_1/reset",
+              "controller_buttons_0/reset",
+              "controller_buttons_1/reset",
               "controller_ultrasoni_0/reset_i",
               "controller_ultrasoni_1/reset_i",
-              "controller_buttons_0/reset",
-              "controller_buttons_1/reset"
+              "MedianFilter_0/rst",
+              "MedianFilter_1/rst",
+              "MovingAverageFilter_0/rst",
+              "MovingAverageFilter_1/rst"
             ]
           },
           "btn_down_0_1": {
@@ -917,7 +1117,11 @@
             "ports": [
               "clk_divider_1/clk_o",
               "controller_buttons_0/clk",
-              "controller_buttons_1/clk"
+              "controller_buttons_1/clk",
+              "MedianFilter_0/clk",
+              "MedianFilter_1/clk",
+              "MovingAverageFilter_0/clk",
+              "MovingAverageFilter_1/clk"
             ]
           },
           "controller_buttons_0_value": {
@@ -954,7 +1158,7 @@
           "controller_ultrasoni_0_data": {
             "ports": [
               "controller_ultrasoni_0/data",
-              "controller_interconn_0/value_l_2"
+              "MedianFilter_0/data_in"
             ]
           },
           "controller_ultrasoni_0_trigger": {
@@ -966,7 +1170,7 @@
           "controller_ultrasoni_1_data": {
             "ports": [
               "controller_ultrasoni_1/data",
-              "controller_interconn_0/value_r_2"
+              "MedianFilter_1/data_in"
             ]
           },
           "controller_ultrasoni_1_trigger": {
@@ -4268,7 +4472,7 @@
         "inst_hier_path": "clk_divider_0",
         "parameters": {
           "division": {
-            "value": "200000"
+            "value": "100000"
           }
         },
         "reference_info": {

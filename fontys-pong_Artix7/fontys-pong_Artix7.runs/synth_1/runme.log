@@ -12,21 +12,13 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source CMOD_A7_35T_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1376.629 ; gain = 159.715
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1376.844 ; gain = 159.945
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/_code/Vivado/vivado-library-zmod-v1-2019.1-2'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.cache/ip 
 INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
-INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
 INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
@@ -35,6 +27,34 @@ WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'reset' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
 INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
 INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'reset'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'reset_i' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'rst'.
 WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
 WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
 INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
@@ -86,11 +106,11 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11000
+INFO: [Synth 8-7075] Helper process launched with PID 33008
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2230.840 ; gain = 410.625
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2232.441 ; gain = 410.781
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'CMOD_A7_35T_wrapper' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/hdl/CMOD_A7_35T_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'CMOD_A7_35T_wrapper' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/hdl/CMOD_A7_35T_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'CMOD_A7_35T' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v:13]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:84]
 INFO: [Synth 8-6157] synthesizing module 'Constants_imp_S4A0X8' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:13]
@@ -173,7 +193,23 @@ INFO: [Synth 8-638] synthesizing module 'color_generator' [D:/_code/Git/Fontys/C
 INFO: [Synth 8-256] done synthesizing module 'color_generator' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/color_generator.vhd:11]
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_color_generator_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_color_generator_0_0/synth/blockdesign_inst_0_color_generator_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'controllers_imp_1YRLSDT' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:480]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_MedianFilter_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MedianFilter_0_0/synth/blockdesign_inst_0_MedianFilter_0_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'MedianFilter' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/new/movingAverage.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'MedianFilter' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/new/movingAverage.vhd:15]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_MedianFilter_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MedianFilter_0_0/synth/blockdesign_inst_0_MedianFilter_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_MedianFilter_1_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MedianFilter_1_0/synth/blockdesign_inst_0_MedianFilter_1_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_MedianFilter_1_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MedianFilter_1_0/synth/blockdesign_inst_0_MedianFilter_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_MovingAverageFilter_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MovingAverageFilter_0_0/synth/blockdesign_inst_0_MovingAverageFilter_0_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'MovingAverageFilter' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/new/filter.vhd:18]
+WARNING: [Synth 8-3819] Generic 'samples' not present in instantiated entity will be ignored [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MovingAverageFilter_0_0/synth/blockdesign_inst_0_MovingAverageFilter_0_0.v:75]
+WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/new/filter.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'MovingAverageFilter' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.srcs/sources_1/new/filter.vhd:18]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_MovingAverageFilter_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MovingAverageFilter_0_0/synth/blockdesign_inst_0_MovingAverageFilter_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_MovingAverageFilter_1_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MovingAverageFilter_1_0/synth/blockdesign_inst_0_MovingAverageFilter_1_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_MovingAverageFilter_1_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_MovingAverageFilter_1_0/synth/blockdesign_inst_0_MovingAverageFilter_1_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_clk_divider_1_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_divider_1_0/synth/blockdesign_inst_0_clk_divider_1_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'clk_divider__parameterized0' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'clk_divider__parameterized0' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/clk_divider.vhd:16]
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_clk_divider_1_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_divider_1_0/synth/blockdesign_inst_0_clk_divider_1_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_controller_buttons_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_controller_buttons_0_0/synth/blockdesign_inst_0_controller_buttons_0_0.v:53]
 INFO: [Synth 8-638] synthesizing module 'controller_buttons' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/controller_buttons.vhd:16]
@@ -208,8 +244,8 @@ INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_paint_paddle_l_0' [
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_paint_paddle_l_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_paddle_l_0/synth/blockdesign_inst_0_paint_paddle_l_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_paint_paddle_r_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_paddle_r_0/synth/blockdesign_inst_0_paint_paddle_r_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_paint_paddle_r_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_paddle_r_0/synth/blockdesign_inst_0_paint_paddle_r_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'paint_scoreboard_imp_BUCUGD' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:586]
-INFO: [Synth 8-6157] synthesizing module 'paint_seg_l_imp_VEDB87' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:741]
+INFO: [Synth 8-6157] synthesizing module 'paint_scoreboard_imp_BUCUGD' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:610]
+INFO: [Synth 8-6157] synthesizing module 'paint_seg_l_imp_VEDB87' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:765]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_paint_rectangle_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_0_0/synth/blockdesign_inst_0_paint_rectangle_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_paint_rectangle_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_0_0/synth/blockdesign_inst_0_paint_rectangle_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_paint_rectangle_1_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_1_0/synth/blockdesign_inst_0_paint_rectangle_1_0.v:53]
@@ -228,8 +264,8 @@ INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_seven_seg_display_c
 INFO: [Synth 8-638] synthesizing module 'seven_seg_display_controller' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd:25]
 INFO: [Synth 8-256] done synthesizing module 'seven_seg_display_controller' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/seven_seg_display_controller.vhd:25]
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_seven_seg_display_co_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_seven_seg_display_co_0_0/synth/blockdesign_inst_0_seven_seg_display_co_0_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'paint_seg_l_imp_VEDB87' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:741]
-INFO: [Synth 8-6157] synthesizing module 'paint_seg_r_imp_1WA1NYJ' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:1053]
+INFO: [Synth 8-6155] done synthesizing module 'paint_seg_l_imp_VEDB87' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:765]
+INFO: [Synth 8-6157] synthesizing module 'paint_seg_r_imp_1WA1NYJ' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:1077]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_paint_rectangle_0_1' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_0_1/synth/blockdesign_inst_0_paint_rectangle_0_1.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_paint_rectangle_0_1' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_0_1/synth/blockdesign_inst_0_paint_rectangle_0_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_paint_rectangle_1_1' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_1_1/synth/blockdesign_inst_0_paint_rectangle_1_1.v:53]
@@ -246,12 +282,12 @@ INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_paint_rectangle_6_1
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_paint_rectangle_6_1' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_paint_rectangle_6_1/synth/blockdesign_inst_0_paint_rectangle_6_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_seven_seg_display_co_0_1' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_seven_seg_display_co_0_1/synth/blockdesign_inst_0_seven_seg_display_co_0_1.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_seven_seg_display_co_0_1' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_seven_seg_display_co_0_1/synth/blockdesign_inst_0_seven_seg_display_co_0_1.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'paint_seg_r_imp_1WA1NYJ' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:1053]
+INFO: [Synth 8-6155] done synthesizing module 'paint_seg_r_imp_1WA1NYJ' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:1077]
 INFO: [Synth 8-6157] synthesizing module 'blockdesign_inst_0_scoreboard_controller_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_scoreboard_controller_0_0/synth/blockdesign_inst_0_scoreboard_controller_0_0.v:53]
 INFO: [Synth 8-638] synthesizing module 'scoreboard_controller' [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'scoreboard_controller' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd:17]
 INFO: [Synth 8-6155] done synthesizing module 'blockdesign_inst_0_scoreboard_controller_0_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_scoreboard_controller_0_0/synth/blockdesign_inst_0_scoreboard_controller_0_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'paint_scoreboard_imp_BUCUGD' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:586]
+INFO: [Synth 8-6155] done synthesizing module 'paint_scoreboard_imp_BUCUGD' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:610]
 WARNING: [Synth 8-7071] port 'pxl_x_o' of module 'paint_scoreboard_imp_BUCUGD' is unconnected for instance 'paint_scoreboard' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:365]
 WARNING: [Synth 8-7071] port 'pxl_y_o' of module 'paint_scoreboard_imp_BUCUGD' is unconnected for instance 'paint_scoreboard' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:365]
 WARNING: [Synth 8-7023] instance 'paint_scoreboard' of module 'paint_scoreboard_imp_BUCUGD' has 22 connections declared, but only 20 given [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/synth/blockdesign_inst_0.v:365]
@@ -466,59 +502,6 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV__parameterized0' [C:/Xilinx
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV__parameterized0' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:80311]
 INFO: [Synth 8-6155] done synthesizing module 'CMOD_A7_35T_clk_wiz_0_clk_wiz' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0_clk_wiz.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'CMOD_A7_35T_clk_wiz_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0.v:68]
-INFO: [Synth 8-638] synthesizing module 'CMOD_A7_35T_rst_clk_wiz_100M_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/synth/CMOD_A7_35T_rst_clk_wiz_100M_0.vhd:74]
-	Parameter C_FAMILY bound to: artix7 - type: string 
-	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_EXT_RESET_HIGH bound to: 1'b1 
-	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
-	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
-	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
-	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'd:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/synth/CMOD_A7_35T_rst_clk_wiz_100M_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
-	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
-	Parameter INIT bound to: 1'b1 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132157' bound to instance 'POR_SRL_I' of component 'SRL16' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
-INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132157]
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [C:/Xilinx/Vivado/2023.1/scripts/rt/data/unisim_comp.v:132157]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'CMOD_A7_35T_rst_clk_wiz_100M_0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/synth/CMOD_A7_35T_rst_clk_wiz_100M_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'CMOD_A7_35T_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v:126]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'CMOD_A7_35T_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v:126]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'CMOD_A7_35T_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v:126]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'CMOD_A7_35T_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v:126]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'CMOD_A7_35T_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v:126]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_100M' of module 'CMOD_A7_35T_rst_clk_wiz_100M_0' has 10 connections declared, but only 5 given [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v:126]
 INFO: [Synth 8-6157] synthesizing module 'CMOD_A7_35T_util_vector_logic_0_0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_util_vector_logic_0_0/synth/CMOD_A7_35T_util_vector_logic_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'util_vector_logic_v2_0_2_util_vector_logic__parameterized0' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/3d84/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
 INFO: [Synth 8-6155] done synthesizing module 'util_vector_logic_v2_0_2_util_vector_logic__parameterized0' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/3d84/hdl/util_vector_logic_v2_0_vl_rfs.v:45]
@@ -528,17 +511,12 @@ INFO: [Synth 8-6155] done synthesizing module 'CMOD_A7_35T_util_vector_logic_1_1
 INFO: [Synth 8-6157] synthesizing module 'CMOD_A7_35T_util_vector_logic_1_2' [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_util_vector_logic_1_2/synth/CMOD_A7_35T_util_vector_logic_1_2.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'CMOD_A7_35T_util_vector_logic_1_2' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_util_vector_logic_1_2/synth/CMOD_A7_35T_util_vector_logic_1_2.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'CMOD_A7_35T' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/synth/CMOD_A7_35T.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'CMOD_A7_35T_wrapper' (0#1) [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/hdl/CMOD_A7_35T_wrapper.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'CMOD_A7_35T_wrapper' (0#1) [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/hdl/CMOD_A7_35T_wrapper.v:13]
 WARNING: [Synth 8-3848] Net paddle_l_pos_x_uns in module/entity collision_detection does not have driver. [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/collision_detection.vhd:32]
 WARNING: [Synth 8-6014] Unused sequential element seg_r_pos_y_reg was removed.  [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/scoreboard_controller.vhd:27]
 WARNING: [Synth 8-6014] Unused sequential element hsync_o_reg was removed.  [D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/new/pixel_counter.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element pLockGained_reg was removed.  [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ipshared/20df/src/ClockGen.vhd:102]
 WARNING: [Synth 8-7129] Port Op2[0] in module util_vector_logic_v2_0_2_util_vector_logic__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync is either unconnected or has no load
-WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync is either unconnected or has no load
-WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[9] in module tc_generator is either unconnected or has no load
@@ -633,21 +611,26 @@ WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[5] in module tc_generator is ei
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[4] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[3] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[2] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[1] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[0] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[11] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[10] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[9] in module tc_generator is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2354.852 ; gain = 534.637
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2361.480 ; gain = 539.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2372.773 ; gain = 552.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2379.402 ; gain = 557.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2372.773 ; gain = 552.559
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2379.402 ; gain = 557.742
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 2384.809 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2391.457 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -659,10 +642,6 @@ Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Ar
 Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0.xdc] for cell 'CMOD_A7_35T_i/clk_wiz/inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_clk_wiz_0/CMOD_A7_35T_clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CMOD_A7_35T_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CMOD_A7_35T_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0_board.xdc] for cell 'CMOD_A7_35T_i/rst_clk_wiz_100M/U0'
-Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0_board.xdc] for cell 'CMOD_A7_35T_i/rst_clk_wiz_100M/U0'
-Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0.xdc] for cell 'CMOD_A7_35T_i/rst_clk_wiz_100M/U0'
-Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0.xdc] for cell 'CMOD_A7_35T_i/rst_clk_wiz_100M/U0'
 Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0_board.xdc] for cell 'CMOD_A7_35T_i/blockdesign_0/clk_wiz_0/inst'
 Finished Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0_board.xdc] for cell 'CMOD_A7_35T_i/blockdesign_0/clk_wiz_0/inst'
 Parsing XDC File [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0.xdc] for cell 'CMOD_A7_35T_i/blockdesign_0/clk_wiz_0/inst'
@@ -690,33 +669,29 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/CMOD_A7_35T_
 INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2485.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2492.117 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 13 instances were transformed.
-  FDR => FDRE: 12 instances
-  SRL16 => SRL16E: 1 instance 
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2485.500 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2492.117 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/clk_wiz/inst. (constraint file  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/dont_touch.xdc, line 25).
-Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/rst_clk_wiz_100M/U0. (constraint file  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/dont_touch.xdc, line 33).
+Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/clk_wiz/inst. (constraint file  D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/dont_touch.xdc, line 22).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/clk_wiz. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/rst_clk_wiz_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/util_vector_logic_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/util_vector_logic_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/util_vector_logic_2. (constraint file  auto generated constraint).
@@ -734,10 +709,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/Const
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/Constants/screen_size_y_RnM. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/clk_divider_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/controller_interconn_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/controller_ultrasoni_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/controller_ultrasoni_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/controller_buttons_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/controller_buttons_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/controller_ultrasoni_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/controller_ultrasoni_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/MedianFilter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/MedianFilter_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/MovingAverageFilter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/controllers/MovingAverageFilter_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/paint_scoreboard/paint_seg_l/paint_rectangle_2. (constraint file  auto generated constraint).
@@ -777,10 +756,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/video
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/util_vector_logic_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CMOD_A7_35T_i/blockdesign_0/v_tc_0/U0/xpm_cdc_single_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -788,14 +767,14 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   31 Bit       Adders := 2     
+	   4 Input   15 Bit       Adders := 2     
 	   3 Input   12 Bit       Adders := 37    
 	   2 Input   12 Bit       Adders := 11    
 	   2 Input   11 Bit       Adders := 55    
 	   4 Input   11 Bit       Adders := 6     
 	   3 Input   11 Bit       Adders := 5     
 	   2 Input   10 Bit       Adders := 7     
-	   2 Input    9 Bit       Adders := 6     
-	   2 Input    6 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 4     
 	   3 Input    5 Bit       Adders := 9     
 	   4 Input    5 Bit       Adders := 3     
 	   2 Input    5 Bit       Adders := 3     
@@ -809,20 +788,20 @@ Detailed RTL Component Info :
 	               31 Bit    Registers := 2     
 	               24 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
+	               15 Bit    Registers := 2     
 	               12 Bit    Registers := 18    
 	               11 Bit    Registers := 45    
 	               10 Bit    Registers := 5     
-	                9 Bit    Registers := 5     
+	                9 Bit    Registers := 157   
 	                8 Bit    Registers := 3     
 	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 3     
 	                4 Bit    Registers := 15    
-	                3 Bit    Registers := 9     
+	                3 Bit    Registers := 6     
 	                2 Bit    Registers := 5     
-	                1 Bit    Registers := 154   
+	                1 Bit    Registers := 146   
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 7     
+	   2 Input   32 Bit        Muxes := 179   
 	   3 Input   31 Bit        Muxes := 2     
 	   2 Input   31 Bit        Muxes := 2     
 	   2 Input   24 Bit        Muxes := 1     
@@ -833,13 +812,13 @@ Detailed RTL Component Info :
 	   4 Input   10 Bit        Muxes := 4     
 	   2 Input   10 Bit        Muxes := 4     
 	   2 Input    9 Bit        Muxes := 9     
-	   2 Input    6 Bit        Muxes := 1     
+	   3 Input    9 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 9     
 	   3 Input    3 Bit        Muxes := 6     
 	   2 Input    3 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 12    
 	   3 Input    2 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 74    
+	   2 Input    1 Bit        Muxes := 73    
 	   6 Input    1 Bit        Muxes := 2     
 	   5 Input    1 Bit        Muxes := 3     
 	   8 Input    1 Bit        Muxes := 2     
@@ -865,25 +844,8 @@ DSP Report: Generating DSP inst/paddle_l_pos_y0, operation Mode is: A*B.
 DSP Report: operator inst/paddle_l_pos_y0 is absorbed into DSP inst/paddle_l_pos_y0.
 DSP Report: Generating DSP inst/paddle_r_pos_y0, operation Mode is: A*B.
 DSP Report: operator inst/paddle_r_pos_y0 is absorbed into DSP inst/paddle_r_pos_y0.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (FDRE_inst) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset.
-WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -904,23 +866,22 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 49 of d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0.xdc. [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/ip/CMOD_A7_35T_rst_clk_wiz_100M_0/CMOD_A7_35T_rst_clk_wiz_100M_0.xdc:49]
 CRITICAL WARNING: [Synth 8-3321] create_clock attempting to set clock on an unknown port/pin for constraint at line 56 of d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0.xdc. [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0.xdc:56]
 CRITICAL WARNING: [Synth 8-3321] No instance found in 'current_instance CMOD_A7_35T_i/blockdesign_0/clk_wiz_0/inst' for constraint at line 56 of d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0.xdc. [d:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.gen/sources_1/bd/CMOD_A7_35T/bd/blockdesign_inst_0/ip/blockdesign_inst_0_clk_wiz_0_0/blockdesign_inst_0_clk_wiz_0_0.xdc:56]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -938,49 +899,51 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|v_tc        | U_TC_TOP/detect_en_d_reg[3]   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|v_tc        | U_TC_TOP/generate_en_d_reg[3] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-+------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++-------------------------------------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                                | RTL Name                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------------------------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|blockdesign_inst_0_MovingAverageFilter_0_0 | inst/p_moving_average_reg[63][8] | 64     | 9     | YES          | NO                 | YES               | 0      | 18      | 
+|blockdesign_inst_0_MovingAverageFilter_1_0 | inst/p_moving_average_reg[63][8] | 64     | 9     | YES          | NO                 | YES               | 0      | 18      | 
+|v_tc                                       | U_TC_TOP/detect_en_d_reg[3]      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|v_tc                                       | U_TC_TOP/generate_en_d_reg[3]    | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-------------------------------------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1009,50 +972,51 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     4|
-|2     |CARRY4     |   911|
+|2     |CARRY4     |  1215|
 |3     |DSP48E1    |     2|
-|4     |LUT1       |   436|
-|5     |LUT2       |   981|
-|6     |LUT3       |   734|
-|7     |LUT4       |  1050|
-|8     |LUT5       |   534|
-|9     |LUT6       |  1000|
+|4     |LUT1       |   479|
+|5     |LUT2       |  1089|
+|6     |LUT3       |  1432|
+|7     |LUT4       |  1562|
+|8     |LUT5       |  1285|
+|9     |LUT6       |  1922|
 |10    |MMCME2_ADV |     2|
 |11    |OSERDESE2  |     8|
 |13    |PLLE2_ADV  |     1|
 |14    |SRL16E     |     2|
-|15    |FDCE       |    27|
-|16    |FDPE       |    19|
-|17    |FDRE       |  1279|
-|18    |FDSE       |    33|
-|19    |IBUF       |    11|
-|20    |OBUF       |     7|
-|21    |OBUFDS     |     4|
+|15    |SRLC32E    |    36|
+|16    |FDCE       |   219|
+|17    |FDPE       |    19|
+|18    |FDRE       |  1495|
+|19    |FDSE       |    33|
+|20    |IBUF       |    11|
+|21    |OBUF       |     7|
+|22    |OBUFDS     |     4|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2492.117 ; gain = 670.457
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 2 critical warnings and 1891 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 2485.500 ; gain = 552.559
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2485.500 ; gain = 665.285
+Synthesis finished with 0 errors, 2 critical warnings and 1873 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 2492.117 ; gain = 557.742
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 2492.117 ; gain = 670.457
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2485.500 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 920 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 2492.117 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1224 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. CMOD_A7_35T_i/blockdesign_0/clk_wiz_0/inst/clkin1_ibufg 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2485.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2492.496 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 9af469d0
+Synth Design complete | Checksum: 862e5705
 INFO: [Common 17-83] Releasing license: Synthesis
-317 Infos, 192 Warnings, 2 Critical Warnings and 0 Errors encountered.
+316 Infos, 186 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2485.500 ; gain = 1051.766
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 2492.496 ; gain = 1058.477
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'D:/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong_Artix7/fontys-pong_Artix7.runs/synth_1/CMOD_A7_35T_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CMOD_A7_35T_wrapper_utilization_synth.rpt -pb CMOD_A7_35T_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 21 16:45:11 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 25 16:10:04 2025...

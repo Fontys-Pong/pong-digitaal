@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Feb 21 16:44:13 2025
+//Date        : Tue Feb 25 16:08:51 2025
 //Host        : XPS-Tommy running 64-bit major release  (build 9200)
 //Command     : generate_target blockdesign_inst_0.bd
 //Design      : blockdesign_inst_0
@@ -81,7 +81,7 @@ module Constants_imp_S4A0X8
        (.dout(Net6));
 endmodule
 
-(* CORE_GENERATION_INFO = "blockdesign_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=59,numReposBlks=54,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=35,numPkgbdBlks=0,bdsource=D_/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd,synth_mode=Global}" *) (* HW_HANDOFF = "blockdesign_inst_0.hwdef" *) 
+(* CORE_GENERATION_INFO = "blockdesign_inst_0,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=blockdesign_inst_0,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=63,numReposBlks=58,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=39,numPkgbdBlks=0,bdsource=D_/_code/Git/Fontys/CSA/CSA2-pong/pong-digitaal/fontys-pong/fontys-pong.srcs/sources_1/bd/PONG/PONG.bd,synth_mode=Global}" *) (* HW_HANDOFF = "blockdesign_inst_0.hwdef" *) 
 module blockdesign_inst_0
    (btn_down_l,
     btn_down_r,
@@ -505,6 +505,10 @@ module controllers_imp_1YRLSDT
   output [8:0]value_l_o;
   output [8:0]value_r_o;
 
+  wire [8:0]MedianFilter_0_data_out;
+  wire [8:0]MedianFilter_1_data_out;
+  wire [8:0]MovingAverageFilter_0_data_out;
+  wire [8:0]MovingAverageFilter_1_data_out;
   wire Net;
   wire Net2;
   wire Net3;
@@ -539,6 +543,26 @@ module controllers_imp_1YRLSDT
   assign trigger_1 = controller_ultrasoni_1_trigger;
   assign value_l_o[8:0] = controller_interconn_0_value_l_o;
   assign value_r_o[8:0] = controller_interconn_0_value_r_o;
+  blockdesign_inst_0_MedianFilter_0_0 MedianFilter_0
+       (.clk(clk_divider_1_clk_o),
+        .data_in(controller_ultrasoni_0_data),
+        .data_out(MedianFilter_0_data_out),
+        .rst(Net3));
+  blockdesign_inst_0_MedianFilter_1_0 MedianFilter_1
+       (.clk(clk_divider_1_clk_o),
+        .data_in(controller_ultrasoni_1_data),
+        .data_out(MedianFilter_1_data_out),
+        .rst(Net3));
+  blockdesign_inst_0_MovingAverageFilter_0_0 MovingAverageFilter_0
+       (.clk(clk_divider_1_clk_o),
+        .data_in(MedianFilter_0_data_out),
+        .data_out(MovingAverageFilter_0_data_out),
+        .rst(Net3));
+  blockdesign_inst_0_MovingAverageFilter_1_0 MovingAverageFilter_1
+       (.clk(clk_divider_1_clk_o),
+        .data_in(MedianFilter_1_data_out),
+        .data_out(MovingAverageFilter_1_data_out),
+        .rst(Net3));
   blockdesign_inst_0_clk_divider_1_0 clk_divider_1
        (.clk_i(Net),
         .clk_o(clk_divider_1_clk_o),
@@ -562,10 +586,10 @@ module controllers_imp_1YRLSDT
         .enable_2(Net2),
         .switch(switch_0_1),
         .value_l_1(controller_buttons_0_value),
-        .value_l_2(controller_ultrasoni_0_data),
+        .value_l_2(MovingAverageFilter_0_data_out),
         .value_l_o(controller_interconn_0_value_l_o),
         .value_r_1(controller_buttons_1_value),
-        .value_r_2(controller_ultrasoni_1_data),
+        .value_r_2(MovingAverageFilter_1_data_out),
         .value_r_o(controller_interconn_0_value_r_o));
   blockdesign_inst_0_controller_ultrasoni_0_0 controller_ultrasoni_0
        (.clk(Net),

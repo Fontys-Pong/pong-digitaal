@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 21 16:44:14 2025" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 25 16:08:51 2025" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:cmod_a7-35t:part0:1.2" DEVICE="7a35t" NAME="blockdesign_inst_0" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -27,10 +27,14 @@
     <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
         <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="reset"/>
-        <CONNECTION INSTANCE="controllers_controller_ultrasoni_0" PORT="reset_i"/>
-        <CONNECTION INSTANCE="controllers_controller_ultrasoni_1" PORT="reset_i"/>
         <CONNECTION INSTANCE="controllers_controller_buttons_0" PORT="reset"/>
         <CONNECTION INSTANCE="controllers_controller_buttons_1" PORT="reset"/>
+        <CONNECTION INSTANCE="controllers_controller_ultrasoni_0" PORT="reset_i"/>
+        <CONNECTION INSTANCE="controllers_controller_ultrasoni_1" PORT="reset_i"/>
+        <CONNECTION INSTANCE="controllers_MedianFilter_0" PORT="rst"/>
+        <CONNECTION INSTANCE="controllers_MedianFilter_1" PORT="rst"/>
+        <CONNECTION INSTANCE="controllers_MovingAverageFilter_0" PORT="rst"/>
+        <CONNECTION INSTANCE="controllers_MovingAverageFilter_1" PORT="rst"/>
         <CONNECTION INSTANCE="paint_scoreboard_paint_seg_l_seven_seg_display_co_0" PORT="reset"/>
         <CONNECTION INSTANCE="paint_scoreboard_paint_seg_r_seven_seg_display_co_0" PORT="reset"/>
         <CONNECTION INSTANCE="clk_divider_0" PORT="reset"/>
@@ -328,7 +332,7 @@
     <MODULE COREREVISION="1" FULLNAME="/clk_divider_0" HWVERSION="1.0" INSTANCE="clk_divider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_divider" VLNV="xilinx.com:module_ref:clk_divider:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="division" VALUE="200000"/>
+        <PARAMETER NAME="division" VALUE="100000"/>
         <PARAMETER NAME="Component_Name" VALUE="blockdesign_inst_0_clk_divider_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1083,10 +1087,132 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/controllers/MedianFilter_0" HWVERSION="1.0" INSTANCE="controllers_MedianFilter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MedianFilter" VLNV="xilinx.com:module_ref:MedianFilter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_inst_0_MedianFilter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="controllers_clk_divider_1_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="controllers_controller_ultrasoni_0_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_controller_ultrasoni_0" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="controllers_MedianFilter_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_MovingAverageFilter_0" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/controllers/MedianFilter_1" HWVERSION="1.0" INSTANCE="controllers_MedianFilter_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MedianFilter" VLNV="xilinx.com:module_ref:MedianFilter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_inst_0_MedianFilter_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="controllers_clk_divider_1_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="controllers_controller_ultrasoni_1_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_controller_ultrasoni_1" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="controllers_MedianFilter_1_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_MovingAverageFilter_1" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/controllers/MovingAverageFilter_0" HWVERSION="1.0" INSTANCE="controllers_MovingAverageFilter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MovingAverageFilter" VLNV="xilinx.com:module_ref:MovingAverageFilter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="samples" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_inst_0_MovingAverageFilter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="controllers_clk_divider_1_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="controllers_MedianFilter_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_MedianFilter_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="controllers_MovingAverageFilter_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_controller_interconn_0" PORT="value_l_2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/controllers/MovingAverageFilter_1" HWVERSION="1.0" INSTANCE="controllers_MovingAverageFilter_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MovingAverageFilter" VLNV="xilinx.com:module_ref:MovingAverageFilter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="samples" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="blockdesign_inst_0_MovingAverageFilter_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="controllers_clk_divider_1_clk_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_clk_divider_1" PORT="clk_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="controllers_MedianFilter_1_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_MedianFilter_1" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="controllers_MovingAverageFilter_1_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controllers_controller_interconn_0" PORT="value_r_2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/controllers/clk_divider_1" HWVERSION="1.0" INSTANCE="controllers_clk_divider_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_divider" VLNV="xilinx.com:module_ref:clk_divider:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="division" VALUE="200000"/>
+        <PARAMETER NAME="division" VALUE="150000"/>
         <PARAMETER NAME="Component_Name" VALUE="blockdesign_inst_0_clk_divider_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -1105,6 +1231,10 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="controllers_controller_buttons_0" PORT="clk"/>
             <CONNECTION INSTANCE="controllers_controller_buttons_1" PORT="clk"/>
+            <CONNECTION INSTANCE="controllers_MedianFilter_0" PORT="clk"/>
+            <CONNECTION INSTANCE="controllers_MedianFilter_1" PORT="clk"/>
+            <CONNECTION INSTANCE="controllers_MovingAverageFilter_0" PORT="clk"/>
+            <CONNECTION INSTANCE="controllers_MovingAverageFilter_1" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1207,9 +1337,9 @@
             <CONNECTION INSTANCE="controllers_controller_buttons_0" PORT="value"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="value_l_2" RIGHT="0" SIGIS="undef" SIGNAME="controllers_controller_ultrasoni_0_data">
+        <PORT DIR="I" LEFT="8" NAME="value_l_2" RIGHT="0" SIGIS="undef" SIGNAME="controllers_MovingAverageFilter_0_data_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="controllers_controller_ultrasoni_0" PORT="data"/>
+            <CONNECTION INSTANCE="controllers_MovingAverageFilter_0" PORT="data_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="8" NAME="value_r_1" RIGHT="0" SIGIS="undef" SIGNAME="controllers_controller_buttons_1_value">
@@ -1217,9 +1347,9 @@
             <CONNECTION INSTANCE="controllers_controller_buttons_1" PORT="value"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="value_r_2" RIGHT="0" SIGIS="undef" SIGNAME="controllers_controller_ultrasoni_1_data">
+        <PORT DIR="I" LEFT="8" NAME="value_r_2" RIGHT="0" SIGIS="undef" SIGNAME="controllers_MovingAverageFilter_1_data_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="controllers_controller_ultrasoni_1" PORT="data"/>
+            <CONNECTION INSTANCE="controllers_MovingAverageFilter_1" PORT="data_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="enable_1" SIGIS="undef" SIGNAME="controllers_controller_interconn_0_enable_1">
@@ -1283,7 +1413,7 @@
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="controllers_controller_ultrasoni_0_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="controllers_controller_interconn_0" PORT="value_l_2"/>
+            <CONNECTION INSTANCE="controllers_MedianFilter_0" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1325,7 +1455,7 @@
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="controllers_controller_ultrasoni_1_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="controllers_controller_interconn_0" PORT="value_r_2"/>
+            <CONNECTION INSTANCE="controllers_MedianFilter_1" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

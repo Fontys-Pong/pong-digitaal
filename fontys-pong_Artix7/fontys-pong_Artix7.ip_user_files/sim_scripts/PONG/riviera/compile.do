@@ -33,13 +33,12 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../../fontys-pong/fonty
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_scoreboard_top_offset_0/sim/PONG_scoreboard_top_offset_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_screen_size_x_0/sim/PONG_screen_size_x_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_screen_size_y_0_1/sim/PONG_screen_size_y_0.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_clk_divider_1_0_1/sim/PONG_clk_divider_1_0.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_controller_interconn_0_0_1/sim/PONG_controller_interconn_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_controller_ultrasoni_0_0_1/sim/PONG_controller_ultrasoni_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_controller_ultrasoni_1_0/sim/PONG_controller_ultrasoni_1_0.v" \
-"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_clk_divider_1_0_1/sim/PONG_clk_divider_1_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_controller_buttons_0_0_1/sim/PONG_controller_buttons_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_controller_buttons_1_0_1/sim/PONG_controller_buttons_1_0.v" \
-"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_controller_interconn_0_0_1/sim/PONG_controller_interconn_0_0.v" \
-"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_seven_seg_display_co_0_0_1/sim/PONG_seven_seg_display_co_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_0_0_1/sim/PONG_paint_rectangle_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_1_0_1/sim/PONG_paint_rectangle_1_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_2_0_1/sim/PONG_paint_rectangle_2_0.v" \
@@ -47,7 +46,7 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../../fontys-pong/fonty
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_4_0/sim/PONG_paint_rectangle_4_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_5_0/sim/PONG_paint_rectangle_5_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_6_0/sim/PONG_paint_rectangle_6_0.v" \
-"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_seven_seg_display_co_0_1/sim/PONG_seven_seg_display_co_0_1.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_seven_seg_display_co_0_0_1/sim/PONG_seven_seg_display_co_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_0_1_1/sim/PONG_paint_rectangle_0_1.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_1_1/sim/PONG_paint_rectangle_1_1.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_2_1/sim/PONG_paint_rectangle_2_1.v" \
@@ -55,19 +54,17 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../../fontys-pong/fonty
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_4_1_1/sim/PONG_paint_rectangle_4_1.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_5_1_1/sim/PONG_paint_rectangle_5_1.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_rectangle_6_1_1/sim/PONG_paint_rectangle_6_1.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_seven_seg_display_co_0_1/sim/PONG_seven_seg_display_co_0_1.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_scoreboard_controller_0_0_1/sim/PONG_scoreboard_controller_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_clk_divider_0_0_1/sim/PONG_clk_divider_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_collision_detection_0_0_1/sim/PONG_collision_detection_0_0.v" \
-"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_color_generator_0_0_1/sim/PONG_color_generator_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_ball_0/sim/PONG_paint_ball_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_centerline_0_0_1/sim/PONG_paint_centerline_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_paddle_l_0/sim/PONG_paint_paddle_l_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_paint_paddle_r_0/sim/PONG_paint_paddle_r_0.v" \
-"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_pixel_counter_0_0_1/sim/PONG_pixel_counter_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_position_ball_0_0/sim/PONG_position_ball_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_position_paddles_0_0_1/sim/PONG_position_paddles_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_score_counter_0_0_1/sim/PONG_score_counter_0_0.v" \
-"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_video_buffer_0_0_1/sim/PONG_video_buffer_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_clk_wiz_0_0_1/PONG_clk_wiz_0_0_clk_wiz.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_clk_wiz_0_0_1/PONG_clk_wiz_0_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_one_0/sim/PONG_one_0.v" \
@@ -100,6 +97,12 @@ vcom -work xil_defaultlib -93  -incr \
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ipshared/30ef" -l xpm -l xlconstant_v1_1_7 -l xil_defaultlib -l util_vector_logic_v2_0_2 -l axi_lite_ipif_v3_0_4 -l v_tc_v6_2_6 \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_zero_0/sim/PONG_zero_0.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_color_generator_0_0_1/sim/PONG_color_generator_0_0.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_pixel_counter_0_0_1/sim/PONG_pixel_counter_0_0.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_video_buffer_0_0_1/sim/PONG_video_buffer_0_0.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_util_vector_logic_0_0/sim/PONG_util_vector_logic_0_0.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_movingAverage_0_2/sim/PONG_movingAverage_0_2.v" \
+"../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/ip/PONG_movingAverage_1_0/sim/PONG_movingAverage_1_0.v" \
 "../../../../../fontys-pong/fontys-pong.gen/sources_1/bd/PONG/sim/PONG.v" \
 
 vlog -work xil_defaultlib \

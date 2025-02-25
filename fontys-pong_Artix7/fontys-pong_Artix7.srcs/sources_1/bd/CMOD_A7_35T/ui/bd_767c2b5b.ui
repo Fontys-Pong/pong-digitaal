@@ -1,0 +1,122 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Addressing View_Layers":"/controllers/Net:false|/controllers/Net3:false|",
+   "Addressing View_ScaleFactor":"0.8",
+   "Addressing View_TopLeft":"-1480,-809",
+   "Color Coded_ScaleFactor":"2.25",
+   "Color Coded_TopLeft":"-184,-89",
+   "Default View_ScaleFactor":"1.97686",
+   "Default View_TopLeft":"-136,-32",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_ScaleFactor":"2.25",
+   "Grouping and No Loops_TopLeft":"-184,-74",
+   "Interfaces View_Layers":"/controllers/Net:false|/controllers/Net3:false|",
+   "Interfaces View_ScaleFactor":"0.8",
+   "Interfaces View_TopLeft":"-1485,-799",
+   "No Loops_ScaleFactor":"2.25",
+   "No Loops_TopLeft":"-180,-24",
+   "Reduced Jogs_ExpandedHierarchyInLayout":"",
+   "Reduced Jogs_Layers":"/controllers/Net:true|/controllers/Net3:true|",
+   "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace port port-id_switch_0 -pg 1 -lvl 0 -x 0 -y 720 -defaultsOSRD
+preplace port port-id_sensor_0 -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port port-id_trigger_0 -pg 1 -lvl 5 -x 1060 -y 210 -defaultsOSRD
+preplace port port-id_sensor_1 -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace port port-id_trigger_1 -pg 1 -lvl 5 -x 1060 -y 630 -defaultsOSRD
+preplace port port-id_btn_up_1 -pg 1 -lvl 0 -x 0 -y 630 -defaultsOSRD
+preplace port port-id_btn_down_1 -pg 1 -lvl 0 -x 0 -y 660 -defaultsOSRD
+preplace port port-id_btn_up_0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port port-id_btn_down_0 -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus value_l_o -pg 1 -lvl 5 -x 1060 -y 710 -defaultsOSRD
+preplace portBus value_r_o -pg 1 -lvl 5 -x 1060 -y 740 -defaultsOSRD
+preplace inst clk_divider_1 -pg 1 -lvl 1 -x 110 -y 390 -defaultsOSRD -pinY clk_i 20L -pinY reset 40L -pinY clk_o 20R
+preplace inst controller_interconn_0 -pg 1 -lvl 3 -x 640 -y 550 -swap {3 1 0 2 4 5 6 7 8} -defaultsOSRD -pinY switch 170L -pinBusY value_l_1 40L -pinBusY value_l_2 20L -pinBusY value_r_1 60L -pinBusY value_r_2 190L -pinY enable_1 20R -pinY enable_2 40R -pinBusY value_l_o 160R -pinBusY value_r_o 190R
+preplace inst controller_ultrasoni_0 -pg 1 -lvl 4 -x 930 -y 190 -swap {2 0 3 1 4 5} -defaultsOSRD -pinY clk 60L -pinY reset_i 20L -pinY enable 80L -pinY echo 40L -pinY trigger 20R -pinBusY data 80R
+preplace inst controller_ultrasoni_1 -pg 1 -lvl 4 -x 930 -y 370 -swap {1 0 3 2 4 5} -defaultsOSRD -pinY clk 40L -pinY reset_i 20L -pinY enable 140L -pinY echo 120L -pinY trigger 260R -pinBusY data 280R
+preplace inst controller_buttons_0 -pg 1 -lvl 2 -x 360 -y 40 -swap {2 3 4 0 1 5} -defaultsOSRD -pinY clk 70L -pinY reset 90L -pinY enable 110L -pinY btn_up 20L -pinY btn_down 50L -pinBusY value 110R
+preplace inst controller_buttons_1 -pg 1 -lvl 2 -x 360 -y 550 -swap {1 2 0 3 4 5} -defaultsOSRD -pinY clk 40L -pinY reset 60L -pinY enable 20L -pinY btn_up 80L -pinY btn_down 110L -pinBusY value 60R
+preplace netloc Net 1 0 4 20 350 NJ 350 NJ 350 800
+preplace netloc Net2 1 3 1 820 270n
+preplace netloc Net3 1 0 4 20 510 220 210 NJ 210 780
+preplace netloc btn_down_0_1 1 0 2 NJ 90 NJ
+preplace netloc btn_down_1_1 1 0 2 NJ 660 NJ
+preplace netloc btn_up_0_1 1 0 2 NJ 60 NJ
+preplace netloc btn_up_1_1 1 0 2 NJ 630 NJ
+preplace netloc clk_divider_1_clk_o 1 1 1 200 110n
+preplace netloc controller_buttons_0_value 1 2 1 480 150n
+preplace netloc controller_buttons_1_value 1 2 1 N 610
+preplace netloc controller_interconn_0_enable_1 1 1 3 240 510 NJ 510 780
+preplace netloc controller_interconn_0_value_l_o 1 3 2 NJ 710 NJ
+preplace netloc controller_interconn_0_value_r_o 1 3 2 NJ 740 NJ
+preplace netloc controller_ultrasoni_0_data 1 2 3 500 330 NJ 330 1040
+preplace netloc controller_ultrasoni_0_trigger 1 4 1 NJ 210
+preplace netloc controller_ultrasoni_1_data 1 2 3 500 800 NJ 800 1040
+preplace netloc controller_ultrasoni_1_trigger 1 4 1 NJ 630
+preplace netloc sensor_0_1 1 0 4 NJ 230 NJ 230 NJ 230 NJ
+preplace netloc sensor_1_1 1 0 4 NJ 490 NJ 490 NJ 490 NJ
+preplace netloc switch_0_1 1 0 3 NJ 720 NJ 720 NJ
+levelinfo -pg 1 0 110 360 640 930 1060
+pagesize -pg 1 -db -bbox -sgen -130 0 1200 810
+",
+   "Reduced Jogs_ScaleFactor":"2.25",
+   "Reduced Jogs_TopLeft":"-180,-8",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 630 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -10 -y 660 -defaultsOSRD
+preplace port port-id_switch_0 -pg 1 -lvl 0 -x -10 -y 570 -defaultsOSRD
+preplace port port-id_sensor_0 -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
+preplace port port-id_trigger_0 -pg 1 -lvl 6 -x 1370 -y 400 -defaultsOSRD
+preplace port port-id_sensor_1 -pg 1 -lvl 0 -x -10 -y 800 -defaultsOSRD
+preplace port port-id_trigger_1 -pg 1 -lvl 6 -x 1370 -y 780 -defaultsOSRD
+preplace port port-id_btn_up_1 -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
+preplace port port-id_btn_down_1 -pg 1 -lvl 0 -x -10 -y 150 -defaultsOSRD
+preplace port port-id_btn_up_0 -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace port port-id_btn_down_0 -pg 1 -lvl 0 -x -10 -y 290 -defaultsOSRD
+preplace portBus value_l_o -pg 1 -lvl 6 -x 1370 -y 510 -defaultsOSRD
+preplace portBus value_r_o -pg 1 -lvl 6 -x 1370 -y 540 -defaultsOSRD
+preplace inst clk_divider_1 -pg 1 -lvl 1 -x 120 -y 640 -defaultsOSRD
+preplace inst controller_interconn_0 -pg 1 -lvl 4 -x 950 -y 500 -swap {3 1 0 2 4 5 6 7 8} -defaultsOSRD
+preplace inst controller_buttons_0 -pg 1 -lvl 3 -x 660 -y 300 -swap {2 3 4 0 1 5} -defaultsOSRD
+preplace inst controller_buttons_1 -pg 1 -lvl 3 -x 660 -y 100 -swap {1 2 0 3 4 5} -defaultsOSRD
+preplace inst controller_ultrasoni_0 -pg 1 -lvl 5 -x 1230 -y 410 -swap {2 0 3 1 4 5} -defaultsOSRD
+preplace inst controller_ultrasoni_1 -pg 1 -lvl 5 -x 1230 -y 790 -swap {1 0 3 2 4 5} -defaultsOSRD
+preplace inst MedianFilter_0 -pg 1 -lvl 2 -x 360 -y 450 -defaultsOSRD
+preplace inst MedianFilter_1 -pg 1 -lvl 2 -x 360 -y 710 -defaultsOSRD
+preplace inst MovingAverageFilter_0 -pg 1 -lvl 3 -x 660 -y 460 -defaultsOSRD
+preplace inst MovingAverageFilter_1 -pg 1 -lvl 3 -x 660 -y 690 -defaultsOSRD
+preplace netloc Net 1 0 5 30 570 NJ 570 NJ 570 800J 610 1110
+preplace netloc Net2 1 4 1 1120 440n
+preplace netloc Net3 1 0 5 20 560 220 530 520 610 790J 620 1100
+preplace netloc btn_down_0_1 1 0 3 10J 280 NJ 280 NJ
+preplace netloc btn_down_1_1 1 0 3 10J 140 NJ 140 NJ
+preplace netloc btn_up_0_1 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc btn_up_1_1 1 0 3 NJ 120 NJ 120 NJ
+preplace netloc clk_divider_1_clk_o 1 1 2 210 370 510
+preplace netloc controller_buttons_0_value 1 3 1 800 300n
+preplace netloc controller_buttons_1_value 1 3 1 810 100n
+preplace netloc controller_interconn_0_enable_1 1 2 3 530 200 NJ 200 1090
+preplace netloc controller_interconn_0_value_l_o 1 4 2 NJ 510 NJ
+preplace netloc controller_interconn_0_value_r_o 1 4 2 1090J 540 NJ
+preplace netloc controller_ultrasoni_0_trigger 1 5 1 NJ 400
+preplace netloc controller_ultrasoni_1_trigger 1 5 1 NJ 780
+preplace netloc sensor_0_1 1 0 5 NJ 540 NJ 540 NJ 540 790J 400 NJ
+preplace netloc sensor_1_1 1 0 5 NJ 800 NJ 800 NJ 800 NJ 800 NJ
+preplace netloc switch_0_1 1 0 4 10J 550 NJ 550 NJ 550 800J
+preplace netloc controller_ultrasoni_1_data 1 1 5 230 880 NJ 880 NJ 880 NJ 880 1340
+preplace netloc controller_ultrasoni_0_data 1 1 5 230 600 NJ 600 NJ 600 NJ 600 1340
+preplace netloc MedianFilter_0_data_out 1 2 1 490 450n
+preplace netloc MovingAverageFilter_0_data_out 1 3 1 N 460
+preplace netloc MovingAverageFilter_1_data_out 1 3 1 810 540n
+preplace netloc MedianFilter_1_data_out 1 2 1 N 710
+levelinfo -pg 1 -10 120 360 660 950 1230 1370
+pagesize -pg 1 -db -bbox -sgen -140 0 1510 890
+"
+}
+

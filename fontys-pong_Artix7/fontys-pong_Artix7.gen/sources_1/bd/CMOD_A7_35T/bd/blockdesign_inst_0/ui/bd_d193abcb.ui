@@ -1,129 +1,426 @@
 {
-   "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.90611",
-   "Default View_TopLeft":"483,-40",
+   "ActiveEmotionalView":"No Loops",
+   "Addressing View_Layers":"/Net:false|/score_counter_0_game_reset:false|/rgb2dvi_0_TMDS_Clk_n:false|/clk_wiz_0_clk_hdmi:false|/Net3:false|/rgb2dvi_0_TMDS_Clk_p:false|",
+   "Addressing View_ScaleFactor":"0.8",
+   "Addressing View_TopLeft":"651,-503",
+   "Color Coded_ScaleFactor":"0.572386",
+   "Color Coded_TopLeft":"-155,-1001",
+   "Default View_ScaleFactor":"0.589004",
+   "Default View_TopLeft":"-156,-881",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
    "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_trigger_l -pg 1 -lvl 15 -x 5500 -y 1320 -defaultsOSRD
+preplace port port-id_trigger_r -pg 1 -lvl 15 -x 5500 -y 1350 -defaultsOSRD
+preplace port port-id_sensor_l -pg 1 -lvl 0 -x 0 -y 1420 -defaultsOSRD
+preplace port port-id_sensor_r -pg 1 -lvl 0 -x 0 -y 1450 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 1070 -defaultsOSRD
+preplace port port-id_controller_switch -pg 1 -lvl 0 -x 0 -y 1380 -defaultsOSRD
+preplace port port-id_btn_up_l -pg 1 -lvl 0 -x 0 -y 1540 -defaultsOSRD
+preplace port port-id_btn_down_l -pg 1 -lvl 0 -x 0 -y 1570 -defaultsOSRD
+preplace port port-id_btn_up_r -pg 1 -lvl 0 -x 0 -y 1480 -defaultsOSRD
+preplace port port-id_btn_down_r -pg 1 -lvl 0 -x 0 -y 1510 -defaultsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x 0 -y 1320 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_p -pg 1 -lvl 15 -x 5500 -y 1020 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_n -pg 1 -lvl 15 -x 5500 -y 1050 -defaultsOSRD
+preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x 0 -y 1160 -defaultsOSRD
+preplace port port-id_game_reset -pg 1 -lvl 0 -x 0 -y 1100 -defaultsOSRD
+preplace portBus hdmi_out_hpd -pg 1 -lvl 15 -x 5500 -y 1220 -defaultsOSRD
+preplace portBus hdmi_out_data_p -pg 1 -lvl 15 -x 5500 -y 1080 -defaultsOSRD
+preplace portBus hdmi_out_data_n -pg 1 -lvl 15 -x 5500 -y 1110 -defaultsOSRD
+preplace inst Constants -pg 1 -lvl 1 -x 160 -y 300 -swap {1 5 3 4 0 7 8 2 9 6 10} -defaultsOSRD -pinBusDir screen_size_x right -pinBusY screen_size_x 40R -pinBusDir screen_size_y right -pinBusY screen_size_y 120R -pinBusDir paddle_size_x right -pinBusY paddle_size_x 80R -pinBusDir paddle_size_y right -pinBusY paddle_size_y 100R -pinBusDir ball_size right -pinBusY ball_size 20R -pinBusDir paddle_offset_x right -pinBusY paddle_offset_x 340R -pinBusDir max_score right -pinBusY max_score 480R -pinBusDir score_seg_size_x right -pinBusY score_seg_size_x 60R -pinBusDir score_seg_size_y right -pinBusY score_seg_size_y 560R -pinBusDir scoreboard_center_offset right -pinBusY scoreboard_center_offset 140R -pinBusDir scoreboard_top_offset right -pinBusY scoreboard_top_offset 580R
+preplace inst controllers -pg 1 -lvl 14 -x 5320 -y 1300 -swap {0 1 3 2 4 5 6 7 8 9 10 11 12} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir reset left -pinY reset 40L -pinDir switch_0 left -pinY switch_0 80L -pinBusDir value_l_o left -pinBusY value_l_o 60L -pinBusDir value_r_o left -pinBusY value_r_o 100L -pinDir sensor_0 left -pinY sensor_0 120L -pinDir trigger_0 right -pinY trigger_0 20R -pinDir sensor_1 left -pinY sensor_1 150L -pinDir trigger_1 right -pinY trigger_1 50R -pinDir btn_up_1 left -pinY btn_up_1 180L -pinDir btn_down_1 left -pinY btn_down_1 210L -pinDir btn_up_0 left -pinY btn_up_0 240L -pinDir btn_down_0 left -pinY btn_down_0 270L
+preplace inst paint_scoreboard -pg 1 -lvl 11 -x 4450 -y 320 -swap {0 1 2 3 4 5 11 9 10 6 7 8 12 21 20 18 19 14 16 13 15 17} -defaultsOSRD -pinDir video_enable_i left -pinY video_enable_i 20L -pinDir hsync_i left -pinY hsync_i 40L -pinDir vsync_i left -pinY vsync_i 60L -pinBusDir pxl_x_i left -pinBusY pxl_x_i 80L -pinBusDir pxl_y_i left -pinBusY pxl_y_i 100L -pinDir pxl_value_i left -pinY pxl_value_i 120L -pinDir video_enable_o right -pinY video_enable_o 760R -pinDir hsync_o right -pinY hsync_o 720R -pinDir vsync_o right -pinY vsync_o 740R -pinBusDir pxl_x_o right -pinBusY pxl_x_o 20R -pinBusDir pxl_y_o right -pinBusY pxl_y_o 40R -pinDir pxl_value_o right -pinY pxl_value_o 660R -pinDir pxlClk left -pinY pxlClk 180L -pinDir clk left -pinY clk 820L -pinDir reset left -pinY reset 800L -pinBusDir score_l left -pinBusY score_l 760L -pinBusDir score_r left -pinBusY score_r 780L -pinBusDir score_seg_size_x left -pinBusY score_seg_size_x 220L -pinBusDir score_seg_size_y left -pinBusY score_seg_size_y 580L -pinBusDir screen_size_x left -pinBusY screen_size_x 200L -pinBusDir scoreboard_center_offset left -pinBusY scoreboard_center_offset 240L -pinBusDir scoreboard_top_offset left -pinBusY scoreboard_top_offset 600L
+preplace inst clk_divider_0 -pg 1 -lvl 3 -x 1050 -y 1200 -swap {1 0 2} -defaultsOSRD -pinDir clk_i left -pinY clk_i 40L -pinDir reset left -pinY reset 20L -pinDir clk_o right -pinY clk_o 20R
+preplace inst collision_detection_0 -pg 1 -lvl 3 -x 1050 -y 500 -swap {1 4 2 3 5 6 7 8 0 9 10 11 12 14 15 13} -defaultsOSRD -pinBusDir screen_size_x left -pinBusY screen_size_x 40L -pinBusDir screen_size_y left -pinBusY screen_size_y 100L -pinBusDir paddle_size_x left -pinBusY paddle_size_x 60L -pinBusDir paddle_size_y left -pinBusY paddle_size_y 80L -pinBusDir paddle_l_pos_x left -pinBusY paddle_l_pos_x 120L -pinBusDir paddle_l_pos_y left -pinBusY paddle_l_pos_y 140L -pinBusDir paddle_r_pos_x left -pinBusY paddle_r_pos_x 160L -pinBusDir paddle_r_pos_y left -pinBusY paddle_r_pos_y 180L -pinBusDir ball_size left -pinBusY ball_size 20L -pinBusDir ball_pos_x right -pinBusY ball_pos_x 20R -pinBusDir ball_pos_y right -pinBusY ball_pos_y 40R -pinDir collision_ball_paddle right -pinY collision_ball_paddle 100R -pinBusDir collision_paddle_index right -pinBusY collision_paddle_index 120R -pinDir collision_ball_edge_l right -pinY collision_ball_edge_l 160R -pinDir collision_ball_edge_r right -pinY collision_ball_edge_r 180R -pinDir collision_ball_topbottom right -pinY collision_ball_topbottom 140R
+preplace inst paint_ball -pg 1 -lvl 7 -x 2930 -y 40 -swap {9 10 0 1 2 3 4 11 7 8 5 6 12 13 14 15 16 17} -defaultsOSRD -pinDir clk left -pinY clk 200L -pinDir enable left -pinY enable 220L -pinDir video_enable_i left -pinY video_enable_i 20L -pinDir hsync_i left -pinY hsync_i 40L -pinDir vsync_i left -pinY vsync_i 60L -pinBusDir pxl_x_i left -pinBusY pxl_x_i 80L -pinBusDir pxl_y_i left -pinBusY pxl_y_i 100L -pinDir pxl_value_i left -pinY pxl_value_i 240L -pinBusDir rect_pos_x left -pinBusY rect_pos_x 160L -pinBusDir rect_pos_y left -pinBusY rect_pos_y 180L -pinBusDir rect_size_x left -pinBusY rect_size_x 120L -pinBusDir rect_size_y left -pinBusY rect_size_y 140L -pinDir video_enable_o right -pinY video_enable_o 100R -pinDir hsync_o right -pinY hsync_o 120R -pinDir vsync_o right -pinY vsync_o 140R -pinBusDir pxl_x_o right -pinBusY pxl_x_o 160R -pinBusDir pxl_y_o right -pinBusY pxl_y_o 180R -pinDir pxl_value_o right -pinY pxl_value_o 200R
+preplace inst paint_centerline_0 -pg 1 -lvl 10 -x 4080 -y 260 -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir video_enable_i left -pinY video_enable_i 40L -pinDir hsync_i left -pinY hsync_i 60L -pinDir vsync_i left -pinY vsync_i 80L -pinBusDir pxl_x_i left -pinBusY pxl_x_i 100L -pinBusDir pxl_y_i left -pinBusY pxl_y_i 120L -pinDir pxl_value_i left -pinY pxl_value_i 140L -pinBusDir screen_size_x left -pinBusY screen_size_x 160L -pinBusDir screen_size_y left -pinBusY screen_size_y 180L -pinDir video_enable_o right -pinY video_enable_o 80R -pinDir hsync_o right -pinY hsync_o 100R -pinDir vsync_o right -pinY vsync_o 120R -pinBusDir pxl_x_o right -pinBusY pxl_x_o 140R -pinBusDir pxl_y_o right -pinBusY pxl_y_o 160R -pinDir pxl_value_o right -pinY pxl_value_o 180R
+preplace inst paint_paddle_l -pg 1 -lvl 8 -x 3370 -y 120 -swap {6 7 0 1 2 3 4 5 10 11 8 9 12 13 14 15 16 17} -defaultsOSRD -pinDir clk left -pinY clk 140L -pinDir enable left -pinY enable 160L -pinDir video_enable_i left -pinY video_enable_i 20L -pinDir hsync_i left -pinY hsync_i 40L -pinDir vsync_i left -pinY vsync_i 60L -pinBusDir pxl_x_i left -pinBusY pxl_x_i 80L -pinBusDir pxl_y_i left -pinBusY pxl_y_i 100L -pinDir pxl_value_i left -pinY pxl_value_i 120L -pinBusDir rect_pos_x left -pinBusY rect_pos_x 220L -pinBusDir rect_pos_y left -pinBusY rect_pos_y 240L -pinBusDir rect_size_x left -pinBusY rect_size_x 180L -pinBusDir rect_size_y left -pinBusY rect_size_y 200L -pinDir video_enable_o right -pinY video_enable_o 30R -pinDir hsync_o right -pinY hsync_o 50R -pinDir vsync_o right -pinY vsync_o 70R -pinBusDir pxl_x_o right -pinBusY pxl_x_o 90R -pinBusDir pxl_y_o right -pinBusY pxl_y_o 110R -pinDir pxl_value_o right -pinY pxl_value_o 130R
+preplace inst paint_paddle_r -pg 1 -lvl 9 -x 3730 -y 50 -swap {0 1 2 3 4 5 6 7 10 11 8 9 12 13 14 15 16 17} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir enable left -pinY enable 40L -pinDir video_enable_i left -pinY video_enable_i 100L -pinDir hsync_i left -pinY hsync_i 120L -pinDir vsync_i left -pinY vsync_i 140L -pinBusDir pxl_x_i left -pinBusY pxl_x_i 160L -pinBusDir pxl_y_i left -pinBusY pxl_y_i 180L -pinDir pxl_value_i left -pinY pxl_value_i 200L -pinBusDir rect_pos_x left -pinBusY rect_pos_x 410L -pinBusDir rect_pos_y left -pinBusY rect_pos_y 430L -pinBusDir rect_size_x left -pinBusY rect_size_x 370L -pinBusDir rect_size_y left -pinBusY rect_size_y 390L -pinDir video_enable_o right -pinY video_enable_o 250R -pinDir hsync_o right -pinY hsync_o 270R -pinDir vsync_o right -pinY vsync_o 290R -pinBusDir pxl_x_o right -pinBusY pxl_x_o 310R -pinBusDir pxl_y_o right -pinBusY pxl_y_o 330R -pinDir pxl_value_o right -pinY pxl_value_o 350R
+preplace inst position_ball_0 -pg 1 -lvl 6 -x 2490 -y 640 -swap {6 9 8 0 1 2 3 4 5 7 10 11} -defaultsOSRD -pinDir clk left -pinY clk 140L -pinDir enable left -pinY enable 200L -pinDir reset left -pinY reset 180L -pinBusDir screen_size_x left -pinBusY screen_size_x 20L -pinBusDir screen_size_y left -pinBusY screen_size_y 40L -pinBusDir ball_size left -pinBusY ball_size 60L -pinDir collision_ball_paddle left -pinY collision_ball_paddle 80L -pinBusDir collision_ball_paddle_index left -pinBusY collision_ball_paddle_index 100L -pinDir collision_ball_topbottom left -pinY collision_ball_topbottom 120L -pinDir collision_ball_edge left -pinY collision_ball_edge 160L -pinBusDir ball_pos_x right -pinBusY ball_pos_x 20R -pinBusDir ball_pox_y right -pinBusY ball_pox_y 40R
+preplace inst position_paddles_0 -pg 1 -lvl 2 -x 540 -y 480 -swap {1 2 4 0 3 9 10 5 6 7 8} -defaultsOSRD -pinBusDir paddle_size_x left -pinBusY paddle_size_x 40L -pinBusDir paddle_size_y left -pinBusY paddle_size_y 60L -pinBusDir paddle_offset_x left -pinBusY paddle_offset_x 160L -pinBusDir screen_size_x left -pinBusY screen_size_x 20L -pinBusDir screen_size_y left -pinBusY screen_size_y 80L -pinBusDir controller_value_l right -pinBusY controller_value_l 220R -pinBusDir controller_value_r right -pinBusY controller_value_r 240R -pinBusDir paddle_l_pos_x right -pinBusY paddle_l_pos_x 140R -pinBusDir paddle_l_pos_y right -pinBusY paddle_l_pos_y 160R -pinBusDir paddle_r_pos_x right -pinBusY paddle_r_pos_x 180R -pinBusDir paddle_r_pos_y right -pinBusY paddle_r_pos_y 200R
+preplace inst score_counter_0 -pg 1 -lvl 4 -x 1570 -y 1020 -swap {4 3 1 0 2 5 6 7} -defaultsOSRD -pinDir clk left -pinY clk 100L -pinDir reset left -pinY reset 80L -pinDir point_l left -pinY point_l 40L -pinDir point_r left -pinY point_r 20L -pinBusDir max_score left -pinBusY max_score 60L -pinBusDir score_left right -pinBusY score_left 60R -pinBusDir score_right right -pinBusY score_right 80R -pinDir game_reset right -pinY game_reset 100R
+preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 1570 -y 1200 -swap {1 0 2} -defaultsOSRD -pinDir reset left -pinY reset 40L -pinDir clk_in1 left -pinY clk_in1 20L -pinDir clk_hdmi right -pinY clk_hdmi 20R
+preplace inst one -pg 1 -lvl 14 -x 5320 -y 1200 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst rgb2dvi_0 -pg 1 -lvl 14 -x 5320 -y 980 -defaultsOSRD -pinDir TMDS right -pinY TMDS 20R -pinDir TMDS.TMDS_Clk_p right -pinY TMDS.TMDS_Clk_p 40R -pinDir TMDS.TMDS_Clk_n right -pinY TMDS.TMDS_Clk_n 70R -pinDir TMDS.TMDS_Data_p right -pinY TMDS.TMDS_Data_p 100R -pinDir TMDS.TMDS_Data_n right -pinY TMDS.TMDS_Data_n 130R -pinDir RGB left -pinY RGB 20L -pinDir RGB.vid_pData left -pinY RGB.vid_pData 40L -pinDir RGB.vid_pHSync left -pinY RGB.vid_pHSync 60L -pinDir RGB.vid_pVSync left -pinY RGB.vid_pVSync 80L -pinDir RGB.vid_pVDE left -pinY RGB.vid_pVDE 100L -pinDir aRst left -pinY aRst 120L -pinDir PixelClk left -pinY PixelClk 140L
+preplace inst util_vector_logic_1 -pg 1 -lvl 5 -x 1880 -y 940 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 20L -pinBusDir Op2 left -pinBusY Op2 40L -pinBusDir Res right -pinBusY Res 20R
+preplace inst util_vector_logic_2 -pg 1 -lvl 5 -x 1880 -y 1140 -swap {1 0 2} -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 100L -pinBusDir Op2 left -pinBusY Op2 20L -pinBusDir Res right -pinBusY Res 20R
+preplace inst v_tc_0 -pg 1 -lvl 5 -x 1880 -y 140 -swap {0 1 2 3 4 5 10 6 7 8 9 11} -defaultsOSRD -pinDir vtiming_out right -pinY vtiming_out 20R -pinDir vtiming_out.active_video_out right -pinY vtiming_out.active_video_out 40R -pinDir vtiming_out.hblank_out right -pinY vtiming_out.hblank_out 60R -pinDir vtiming_out.hsync_out right -pinY vtiming_out.hsync_out 80R -pinDir vtiming_out.vblank_out right -pinY vtiming_out.vblank_out 100R -pinDir vtiming_out.vsync_out right -pinY vtiming_out.vsync_out 120R -pinDir clk left -pinY clk 140L -pinDir clken left -pinY clken 20L -pinDir gen_clken left -pinY gen_clken 40L -pinDir sof_state left -pinY sof_state 60L -pinDir resetn left -pinY resetn 80L -pinBusDir fsync_out right -pinBusY fsync_out 140R
+preplace inst zero -pg 1 -lvl 6 -x 2490 -y 1000 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst color_generator_0 -pg 1 -lvl 12 -x 4740 -y 960 -defaultsOSRD -pinDir enable_i left -pinY enable_i 20L -pinBusDir data_o right -pinBusY data_o 20R
+preplace inst pixel_counter_0 -pg 1 -lvl 6 -x 2490 -y 40 -swap {5 0 1 2 3 4 9 10 7 8 6} -defaultsOSRD -pinDir pxCLK_i left -pinY pxCLK_i 260L -pinDir video_enable_i left -pinY video_enable_i 140L -pinDir hblank_i left -pinY hblank_i 160L -pinDir hsync_i left -pinY hsync_i 180L -pinDir vblank_i left -pinY vblank_i 200L -pinDir vsync_i left -pinY vsync_i 220L -pinBusDir hpx_o right -pinBusY hpx_o 80R -pinBusDir vpx_o right -pinBusY vpx_o 100R -pinDir hsync_o right -pinY hsync_o 40R -pinDir vsync_o right -pinY vsync_o 60R -pinDir video_enable_o right -pinY video_enable_o 20R
+preplace inst video_buffer_0 -pg 1 -lvl 13 -x 5010 -y 940 -defaultsOSRD -pinDir pixel_clk left -pinY pixel_clk 20L -pinBusDir Vdata_i left -pinBusY Vdata_i 40L -pinDir HSync_i left -pinY HSync_i 100L -pinDir VSync_i left -pinY VSync_i 120L -pinDir Vdata_enable_i left -pinY Vdata_enable_i 140L -pinBusDir Vdata_o right -pinBusY Vdata_o 80R -pinDir HSync_o right -pinY HSync_o 100R -pinDir VSync_o right -pinY VSync_o 120R -pinDir Vdata_enable_o right -pinY Vdata_enable_o 140R
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 1050 -y 1060 -defaultsOSRD -pinBusDir Op1 left -pinBusY Op1 20L -pinBusDir Op2 left -pinBusY Op2 40L -pinBusDir Res right -pinBusY Res 40R
+preplace netloc Constants_score_seg_size_x 1 1 10 NJ 360 NJ 360 NJ 360 NJ 360 2080J 400 NJ 400 3180J 500 3580J 540 NJ 540 N
+preplace netloc Constants_scoreboard_center_offset 1 1 10 NJ 440 820J 380 NJ 380 NJ 380 2280J 420 NJ 420 3160J 520 3560J 560 NJ 560 N
+preplace netloc Net 1 0 14 NJ 1160 NJ 1160 860 1160 1400 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 4260 1320 NJ 1320 NJ 1320 NJ
+preplace netloc Net3 1 0 14 NJ 1070 NJ 1070 740 1300 1420 1300 1720 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 4280 1340 NJ 1340 NJ 1340 NJ
+preplace netloc Net4 1 3 3 1380 780 NJ 780 NJ
+preplace netloc Net5 1 1 10 360 340 760 400 NJ 400 NJ 400 2060 580 NJ 580 NJ 580 NJ 580 3880 520 NJ
+preplace netloc Net6 1 1 9 300 420 860 420 NJ 420 NJ 420 2260 600 NJ 600 NJ 600 NJ 600 3920
+preplace netloc Net7 1 1 8 340 380 780 340 NJ 340 NJ 340 2300J 380 NJ 380 3220 420 NJ
+preplace netloc Net8 1 1 8 320 400 720 440 NJ 440 NJ 440 NJ 440 NJ 440 3200 440 NJ
+preplace netloc Net9 1 1 6 NJ 320 840 460 NJ 460 NJ 460 2100 360 2680
+preplace netloc btn_down_0_1 1 0 14 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ
+preplace netloc btn_down_1_1 1 0 14 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ 1510 NJ
+preplace netloc btn_up_0_1 1 0 14 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ 1540 NJ
+preplace netloc btn_up_1_1 1 0 14 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ 1480 NJ
+preplace netloc clk_wiz_0_clk_hdmi 1 4 10 1720 900 2220 940 2740 340 3080 60 3580 10 3900 500 4240 1190 4620J 920 4860 1140 5160J
+preplace netloc collision_detection_0_collision_ball_edge_l 1 3 2 1340 960 NJ
+preplace netloc collision_detection_0_collision_ball_edge_r 1 3 2 1300 980 NJ
+preplace netloc collision_detection_0_collision_ball_paddle 1 3 3 NJ 600 NJ 600 2200
+preplace netloc collision_detection_0_collision_ball_topbottom 1 3 3 NJ 640 NJ 640 2080
+preplace netloc collision_detection_0_collision_paddle_index 1 3 3 NJ 620 NJ 620 2120
+preplace netloc color_generator_0_data_o 1 12 1 NJ 980
+preplace netloc controller_interconn_0_value_l_o 1 2 12 760 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ
+preplace netloc controller_interconn_0_value_r_o 1 2 12 720 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ
+preplace netloc controller_ultrasonic_0_trigger 1 14 1 NJ 1320
+preplace netloc controller_ultrasonic_1_trigger 1 14 1 NJ 1350
+preplace netloc enable_0_1 1 0 9 NJ 1320 NJ 1320 NJ 1320 NJ 1320 NJ 1320 2300 960 2760 360 3100 80 3520
+preplace netloc game_reset_1 1 0 3 NJ 1100 NJ 1100 NJ
+preplace netloc one_dout 1 14 1 NJ 1220
+preplace netloc paint_ball_video_enable_o 1 7 1 N 140
+preplace netloc paint_centerline_0_hsync_o 1 10 1 N 360
+preplace netloc paint_centerline_0_pxl_value_o 1 10 1 N 440
+preplace netloc paint_centerline_0_pxl_x_o 1 10 1 N 400
+preplace netloc paint_paddle_l_video_enable_o 1 8 1 N 150
+preplace netloc paint_paddle_r_video_enable_o 1 9 1 N 300
+preplace netloc paint_rectangle_0_hsync_o 1 7 1 N 160
+preplace netloc paint_rectangle_0_pxl_value_o 1 7 1 N 240
+preplace netloc paint_rectangle_0_pxl_x_o 1 7 1 N 200
+preplace netloc paint_rectangle_0_pxl_y_o 1 7 1 N 220
+preplace netloc paint_rectangle_0_vsync_o 1 7 1 N 180
+preplace netloc paint_rectangle_1_hsync_o 1 8 1 N 170
+preplace netloc paint_rectangle_1_pxl_value_o 1 8 1 N 250
+preplace netloc paint_rectangle_1_pxl_x_o 1 8 1 N 210
+preplace netloc paint_rectangle_1_pxl_y_o 1 8 1 N 230
+preplace netloc paint_rectangle_1_vsync_o 1 8 1 N 190
+preplace netloc paint_rectangle_2_hsync_o 1 9 1 N 320
+preplace netloc paint_rectangle_2_pxl_value_o 1 9 1 N 400
+preplace netloc paint_rectangle_2_pxl_x_o 1 9 1 N 360
+preplace netloc paint_rectangle_2_pxl_y_o 1 9 1 N 380
+preplace netloc paint_rectangle_2_vsync_o 1 9 1 N 340
+preplace netloc paint_scoreboard_hsync_o 1 11 2 N 1040 NJ
+preplace netloc paint_scoreboard_pxl_value_o 1 11 1 N 980
+preplace netloc paint_scoreboard_video_enable_o 1 11 2 N 1080 NJ
+preplace netloc paint_scoreboard_vsync_o 1 11 2 N 1060 NJ
+preplace netloc pixel_counter_0_hpx_o 1 6 1 N 120
+preplace netloc pixel_counter_0_hsync_o 1 6 1 N 80
+preplace netloc pixel_counter_0_video_enable_o 1 6 1 N 60
+preplace netloc pixel_counter_0_vpx_o 1 6 1 N 140
+preplace netloc pixel_counter_0_vsync_o 1 6 1 N 100
+preplace netloc position_ball_0_ball_pos_x 1 3 4 1240J 480 NJ 480 2120J 460 2700
+preplace netloc position_ball_0_ball_pox_y 1 3 4 1260J 500 NJ 500 2140J 480 2720
+preplace netloc position_paddles_0_paddle_l_pos_x 1 2 6 860 760 1240J 700 1740J 660 2160J 500 NJ 500 3120
+preplace netloc position_paddles_0_paddle_l_pos_y 1 2 6 840 780 1280J 720 NJ 720 2180J 520 NJ 520 3140
+preplace netloc position_paddles_0_paddle_r_pos_x 1 2 7 800 800 1320J 740 NJ 740 2020J 540 NJ 540 NJ 540 3520
+preplace netloc position_paddles_0_paddle_r_pos_y 1 2 7 780 820 1360J 760 NJ 760 2040J 560 NJ 560 NJ 560 3540
+preplace netloc pxl_y_i_1 1 10 1 N 420
+preplace netloc rgb2dvi_0_TMDS_Clk_n 1 14 1 NJ 1050
+preplace netloc rgb2dvi_0_TMDS_Clk_p 1 14 1 NJ 1020
+preplace netloc rgb2dvi_0_TMDS_Data_n 1 14 1 NJ 1110
+preplace netloc rgb2dvi_0_TMDS_Data_p 1 14 1 NJ 1080
+preplace netloc score_counter_0_game_reset 1 4 1 1740 1120n
+preplace netloc score_counter_0_score_right 1 4 7 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 N
+preplace netloc score_l_1 1 4 7 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 N
+preplace netloc score_seg_size_y_1 1 1 10 NJ 860 NJ 860 NJ 860 NJ 860 2240J 900 NJ 900 NJ 900 NJ 900 NJ 900 N
+preplace netloc scoreboard_top_offset_1 1 1 10 NJ 880 NJ 880 NJ 880 NJ 880 2020J 920 NJ 920 NJ 920 NJ 920 NJ 920 N
+preplace netloc sensor_0_1 1 0 14 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ
+preplace netloc sensor_1_1 1 0 14 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ 1450 NJ
+preplace netloc switch_0_1 1 0 14 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ
+preplace netloc util_vector_logic_0_Res 1 3 1 N 1100
+preplace netloc util_vector_logic_1_Res 1 5 1 2260 800n
+preplace netloc util_vector_logic_2_Res 1 5 1 2280 820n
+preplace netloc v_tc_0_active_video_out 1 5 1 N 180
+preplace netloc v_tc_0_hblank_out 1 5 1 N 200
+preplace netloc v_tc_0_hsync_out 1 5 1 N 220
+preplace netloc v_tc_0_vblank_out 1 5 1 N 240
+preplace netloc v_tc_0_vsync_out 1 5 1 N 260
+preplace netloc video_buffer_0_HSync_o 1 13 1 N 1040
+preplace netloc video_buffer_0_VSync_o 1 13 1 N 1060
+preplace netloc video_buffer_0_Vdata_enable_o 1 13 1 N 1080
+preplace netloc video_buffer_0_Vdata_o 1 13 1 N 1020
+preplace netloc video_enable_i_1 1 10 1 N 340
+preplace netloc vsync_i_1 1 10 1 N 380
+preplace netloc xlconstant_5_dout 1 1 1 N 640
+preplace netloc xlconstant_6_dout 1 1 3 NJ 780 820J 740 1260
+preplace netloc zero_dout 1 6 1 2780J 280n
+levelinfo -pg 1 0 160 540 1050 1570 1880 2490 2930 3370 3730 4080 4450 4740 5010 5320 5500
+pagesize -pg 1 -db -bbox -sgen -160 0 5690 1620
+",
+   "No Loops_ScaleFactor":"0.555727",
+   "No Loops_TopLeft":"-158,-884",
+   "Reduced Jogs_ExpandedHierarchyInLayout":"",
+   "Reduced Jogs_Layers":"/Net:true|/score_counter_0_game_reset:true|/rgb2dvi_0_TMDS_Clk_n:true|/clk_wiz_0_clk_hdmi:true|/Net3:true|/rgb2dvi_0_TMDS_Clk_p:true|",
+   "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_trigger_l -pg 1 -lvl 15 -x 5380 -y 1380 -defaultsOSRD
+preplace port port-id_trigger_r -pg 1 -lvl 15 -x 5380 -y 1410 -defaultsOSRD
+preplace port port-id_sensor_l -pg 1 -lvl 0 -x 0 -y 1550 -defaultsOSRD
+preplace port port-id_sensor_r -pg 1 -lvl 0 -x 0 -y 1580 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 1230 -defaultsOSRD
+preplace port port-id_controller_switch -pg 1 -lvl 0 -x 0 -y 1520 -defaultsOSRD
+preplace port port-id_btn_up_l -pg 1 -lvl 0 -x 0 -y 1670 -defaultsOSRD
+preplace port port-id_btn_down_l -pg 1 -lvl 0 -x 0 -y 1700 -defaultsOSRD
+preplace port port-id_btn_up_r -pg 1 -lvl 0 -x 0 -y 1610 -defaultsOSRD
+preplace port port-id_btn_down_r -pg 1 -lvl 0 -x 0 -y 1640 -defaultsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x 0 -y 1080 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_p -pg 1 -lvl 15 -x 5380 -y 1010 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_n -pg 1 -lvl 15 -x 5380 -y 1040 -defaultsOSRD
+preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x 0 -y 1380 -defaultsOSRD
+preplace port port-id_game_reset -pg 1 -lvl 0 -x 0 -y 1260 -defaultsOSRD
+preplace portBus hdmi_out_hpd -pg 1 -lvl 15 -x 5380 -y 1240 -defaultsOSRD
+preplace portBus hdmi_out_data_p -pg 1 -lvl 15 -x 5380 -y 1070 -defaultsOSRD
+preplace portBus hdmi_out_data_n -pg 1 -lvl 15 -x 5380 -y 1100 -defaultsOSRD
+preplace inst Constants -pg 1 -lvl 1 -x 160 -y 400 -swap {1 6 3 4 0 5 10 2 8 7 9} -defaultsOSRD -pinBusY screen_size_x 80R -pinBusY screen_size_y 340R -pinBusY paddle_size_x 180R -pinBusY paddle_size_y 200R -pinBusY ball_size 20R -pinBusY paddle_offset_x 320R -pinBusY max_score 630R -pinBusY score_seg_size_x 100R -pinBusY score_seg_size_y 480R -pinBusY scoreboard_center_offset 440R -pinBusY scoreboard_top_offset 500R
+preplace inst controllers -pg 1 -lvl 14 -x 5180 -y 1320 -swap {0 1 2 4 3 5 6 7 8 9 10 11 12} -defaultsOSRD -pinY clk 20L -pinY reset 40L -pinY switch_0 200L -pinBusY value_l_o 40R -pinBusY value_r_o 20R -pinY sensor_0 230L -pinY trigger_0 60R -pinY sensor_1 260L -pinY trigger_1 90R -pinY btn_up_1 290L -pinY btn_down_1 320L -pinY btn_up_0 350L -pinY btn_down_0 380L
+preplace inst paint_scoreboard -pg 1 -lvl 11 -x 4310 -y 380 -swap {0 1 2 3 4 5 11 9 10 6 7 8 12 21 20 18 19 14 16 13 15 17} -defaultsOSRD -pinY video_enable_i 20L -pinY hsync_i 40L -pinY vsync_i 60L -pinBusY pxl_x_i 80L -pinBusY pxl_y_i 100L -pinY pxl_value_i 120L -pinY video_enable_o 640R -pinY hsync_o 600R -pinY vsync_o 620R -pinBusY pxl_x_o 20R -pinBusY pxl_y_o 40R -pinY pxl_value_o 540R -pinY pxlClk 180L -pinY clk 710L -pinY reset 690L -pinBusY score_l 650L -pinBusY score_r 670L -pinBusY score_seg_size_x 220L -pinBusY score_seg_size_y 260L -pinBusY screen_size_x 200L -pinBusY scoreboard_center_offset 240L -pinBusY scoreboard_top_offset 280L
+preplace inst clk_divider_0 -pg 1 -lvl 3 -x 1070 -y 1340 -swap {1 0 2} -defaultsOSRD -pinY clk_i 40L -pinY reset 20L -pinY clk_o 20R
+preplace inst collision_detection_0 -pg 1 -lvl 3 -x 1070 -y 560 -swap {5 10 3 4 6 7 8 9 2 1 0 11 12 13 14 15} -defaultsOSRD -pinBusY screen_size_x 120L -pinBusY screen_size_y 220L -pinBusY paddle_size_x 80L -pinBusY paddle_size_y 100L -pinBusY paddle_l_pos_x 140L -pinBusY paddle_l_pos_y 160L -pinBusY paddle_r_pos_x 180L -pinBusY paddle_r_pos_y 200L -pinBusY ball_size 60L -pinBusY ball_pos_x 40L -pinBusY ball_pos_y 20L -pinY collision_ball_paddle 140R -pinBusY collision_paddle_index 160R -pinY collision_ball_edge_l 180R -pinY collision_ball_edge_r 200R -pinY collision_ball_topbottom 220R
+preplace inst paint_ball -pg 1 -lvl 7 -x 2850 -y 40 -swap {9 10 0 1 2 3 4 11 5 6 7 8 12 13 14 15 16 17} -defaultsOSRD -pinY clk 200L -pinY enable 220L -pinY video_enable_i 20L -pinY hsync_i 40L -pinY vsync_i 60L -pinBusY pxl_x_i 80L -pinBusY pxl_y_i 100L -pinY pxl_value_i 240L -pinBusY rect_pos_x 120L -pinBusY rect_pos_y 140L -pinBusY rect_size_x 160L -pinBusY rect_size_y 180L -pinY video_enable_o 100R -pinY hsync_o 120R -pinY vsync_o 140R -pinBusY pxl_x_o 160R -pinBusY pxl_y_o 180R -pinY pxl_value_o 200R
+preplace inst paint_centerline_0 -pg 1 -lvl 10 -x 3900 -y 320 -swap {6 0 1 2 3 4 5 7 8 9 10 11 12 13 14} -defaultsOSRD -pinY clk 140L -pinY video_enable_i 20L -pinY hsync_i 40L -pinY vsync_i 60L -pinBusY pxl_x_i 80L -pinBusY pxl_y_i 100L -pinY pxl_value_i 120L -pinBusY screen_size_x 160L -pinBusY screen_size_y 180L -pinY video_enable_o 80R -pinY hsync_o 100R -pinY vsync_o 120R -pinBusY pxl_x_o 140R -pinBusY pxl_y_o 160R -pinY pxl_value_o 180R
+preplace inst paint_paddle_l -pg 1 -lvl 8 -x 3250 -y 120 -swap {6 7 0 1 2 3 4 5 8 9 10 11 12 13 14 15 16 17} -defaultsOSRD -pinY clk 140L -pinY enable 160L -pinY video_enable_i 20L -pinY hsync_i 40L -pinY vsync_i 60L -pinBusY pxl_x_i 80L -pinBusY pxl_y_i 100L -pinY pxl_value_i 120L -pinBusY rect_pos_x 180L -pinBusY rect_pos_y 200L -pinBusY rect_size_x 220L -pinBusY rect_size_y 240L -pinY video_enable_o 140R -pinY hsync_o 160R -pinY vsync_o 180R -pinBusY pxl_x_o 200R -pinBusY pxl_y_o 220R -pinY pxl_value_o 240R
+preplace inst paint_paddle_r -pg 1 -lvl 9 -x 3550 -y 240 -swap {6 7 0 1 2 3 4 5 8 9 10 11 12 13 14 15 16 17} -defaultsOSRD -pinY clk 180L -pinY enable 200L -pinY video_enable_i 20L -pinY hsync_i 40L -pinY vsync_i 60L -pinBusY pxl_x_i 80L -pinBusY pxl_y_i 100L -pinY pxl_value_i 120L -pinBusY rect_pos_x 220L -pinBusY rect_pos_y 240L -pinBusY rect_size_x 260L -pinBusY rect_size_y 280L -pinY video_enable_o 100R -pinY hsync_o 120R -pinY vsync_o 140R -pinBusY pxl_x_o 160R -pinBusY pxl_y_o 180R -pinY pxl_value_o 200R
+preplace inst position_ball_0 -pg 1 -lvl 6 -x 2390 -y 760 -swap {8 7 9 0 5 4 1 2 3 6 10 11} -defaultsOSRD -pinY clk 180L -pinY enable 160L -pinY reset 200L -pinBusY screen_size_x 20L -pinBusY screen_size_y 120L -pinBusY ball_size 100L -pinY collision_ball_paddle 40L -pinBusY collision_ball_paddle_index 60L -pinY collision_ball_topbottom 80L -pinY collision_ball_edge 140L -pinBusY ball_pos_x 20R -pinBusY ball_pox_y 40R
+preplace inst position_paddles_0 -pg 1 -lvl 2 -x 520 -y 540 -swap {1 2 3 0 4 6 5 7 8 9 10} -defaultsOSRD -pinBusY paddle_size_x 40L -pinBusY paddle_size_y 60L -pinBusY paddle_offset_x 180L -pinBusY screen_size_x 20L -pinBusY screen_size_y 200L -pinBusY controller_value_l 240L -pinBusY controller_value_r 220L -pinBusY paddle_l_pos_x 20R -pinBusY paddle_l_pos_y 40R -pinBusY paddle_r_pos_x 60R -pinBusY paddle_r_pos_y 80R
+preplace inst score_counter_0 -pg 1 -lvl 4 -x 1490 -y 1180 -swap {4 3 1 0 2 5 6 7} -defaultsOSRD -pinY clk 100L -pinY reset 80L -pinY point_l 40L -pinY point_r 20L -pinBusY max_score 60L -pinBusY score_left 20R -pinBusY score_right 40R -pinY game_reset 100R
+preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 1490 -y 1420 -swap {1 0 2} -defaultsOSRD -pinY reset 40L -pinY clk_in1 20L -pinY clk_hdmi 20R
+preplace inst one -pg 1 -lvl 14 -x 5180 -y 1220 -defaultsOSRD -pinBusY dout 20R
+preplace inst rgb2dvi_0 -pg 1 -lvl 14 -x 5180 -y 940 -defaultsOSRD -pinY TMDS 50R -pinY TMDS.TMDS_Clk_p 70R -pinY TMDS.TMDS_Clk_n 100R -pinY TMDS.TMDS_Data_p 130R -pinY TMDS.TMDS_Data_n 160R -pinY RGB 20L -pinY RGB.vid_pData 40L -pinY RGB.vid_pHSync 60L -pinY RGB.vid_pVSync 80L -pinY RGB.vid_pVDE 100L -pinY aRst 120L -pinY PixelClk 160L
+preplace inst util_vector_logic_1 -pg 1 -lvl 5 -x 1820 -y 980 -defaultsOSRD -pinBusY Op1 20L -pinBusY Op2 40L -pinBusY Res 20R
+preplace inst util_vector_logic_2 -pg 1 -lvl 5 -x 1820 -y 1260 -swap {1 0 2} -defaultsOSRD -pinBusY Op1 40L -pinBusY Op2 20L -pinBusY Res 20R
+preplace inst v_tc_0 -pg 1 -lvl 5 -x 1820 -y 140 -swap {0 1 2 3 4 5 10 6 7 8 9 11} -defaultsOSRD -pinY vtiming_out 20R -pinY vtiming_out.active_video_out 40R -pinY vtiming_out.hblank_out 60R -pinY vtiming_out.hsync_out 80R -pinY vtiming_out.vblank_out 100R -pinY vtiming_out.vsync_out 120R -pinY clk 140L -pinY clken 20L -pinY gen_clken 40L -pinY sof_state 60L -pinY resetn 80L -pinBusY fsync_out 140R
+preplace inst zero -pg 1 -lvl 6 -x 2390 -y 1080 -defaultsOSRD -pinBusY dout 20R
+preplace inst color_generator_0 -pg 1 -lvl 12 -x 4600 -y 900 -defaultsOSRD -pinY enable_i 20L -pinBusY data_o 20R
+preplace inst pixel_counter_0 -pg 1 -lvl 6 -x 2390 -y 40 -swap {5 0 1 2 3 4 9 10 7 8 6} -defaultsOSRD -pinY pxCLK_i 240L -pinY video_enable_i 140L -pinY hblank_i 160L -pinY hsync_i 180L -pinY vblank_i 200L -pinY vsync_i 220L -pinBusY hpx_o 80R -pinBusY vpx_o 100R -pinY hsync_o 40R -pinY vsync_o 60R -pinY video_enable_o 20R
+preplace inst video_buffer_0 -pg 1 -lvl 13 -x 4870 -y 900 -swap {4 0 1 2 3 5 6 7 8} -defaultsOSRD -pinY pixel_clk 140L -pinBusY Vdata_i 20L -pinY HSync_i 80L -pinY VSync_i 100L -pinY Vdata_enable_i 120L -pinBusY Vdata_o 80R -pinY HSync_o 100R -pinY VSync_o 120R -pinY Vdata_enable_o 140R
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 1070 -y 1220 -defaultsOSRD -pinBusY Op1 20L -pinBusY Op2 40L -pinBusY Res 40R
+preplace netloc Constants_score_seg_size_x 1 1 10 NJ 500 NJ 500 NJ 500 NJ 500 NJ 500 2640J 600 NJ 600 NJ 600 NJ 600 N
+preplace netloc Constants_scoreboard_center_offset 1 1 10 NJ 840 720J 860 NJ 860 NJ 860 1960J 620 NJ 620 NJ 620 NJ 620 NJ 620 N
+preplace netloc Net 1 0 14 NJ 1380 NJ 1380 880 1440 1340 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 4140 1340 NJ 1340 NJ 1340 NJ
+preplace netloc Net3 1 0 14 NJ 1230 NJ 1230 700 1460 1320 1360 1680 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 4120 1360 NJ 1360 NJ 1360 NJ
+preplace netloc Net4 1 3 3 1280 1100 NJ 1100 2180
+preplace netloc Net5 1 1 10 340 480 700 520 NJ 520 NJ 520 2140 680 NJ 680 NJ 680 NJ 680 3720 580 NJ
+preplace netloc Net6 1 1 9 300 860 700 920 NJ 920 NJ 920 2100 720 NJ 720 NJ 720 NJ 720 3740
+preplace netloc Net7 1 1 8 300 440 800 420 NJ 420 NJ 420 NJ 420 NJ 420 3080 500 NJ
+preplace netloc Net8 1 1 8 320 460 820 440 NJ 440 NJ 440 NJ 440 NJ 440 3100 520 NJ
+preplace netloc Net9 1 1 6 NJ 420 740 840 NJ 840 NJ 840 2020 700 2600
+preplace netloc btn_down_0_1 1 0 14 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ 1700 NJ
+preplace netloc btn_down_1_1 1 0 14 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ 1640 NJ
+preplace netloc btn_up_0_1 1 0 14 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ
+preplace netloc btn_up_1_1 1 0 14 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ
+preplace netloc clk_wiz_0_clk_hdmi 1 4 10 1660 940 2120 1020 2660 340 3040 420 3400 580 3700 560 4100 1140 NJ 1140 4720 1100 NJ
+preplace netloc collision_detection_0_collision_ball_edge_l 1 3 2 1340 780 1680
+preplace netloc collision_detection_0_collision_ball_edge_r 1 3 2 1300 800 1640
+preplace netloc collision_detection_0_collision_ball_paddle 1 3 3 NJ 700 NJ 700 1980
+preplace netloc collision_detection_0_collision_ball_topbottom 1 3 3 1320J 820 NJ 820 2060
+preplace netloc collision_detection_0_collision_paddle_index 1 3 3 NJ 720 NJ 720 2080
+preplace netloc color_generator_0_data_o 1 12 1 N 920
+preplace netloc controller_interconn_0_value_l_o 1 1 14 340 1120 NJ 1120 NJ 1120 NJ 1120 2120J 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 NJ 1160 5360
+preplace netloc controller_interconn_0_value_r_o 1 1 14 320 1140 NJ 1140 NJ 1140 NJ 1140 1980J 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 5340
+preplace netloc controller_ultrasonic_0_trigger 1 14 1 NJ 1380
+preplace netloc controller_ultrasonic_1_trigger 1 14 1 NJ 1410
+preplace netloc enable_0_1 1 0 9 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 2160 1040 2680 360 3060 440 NJ
+preplace netloc game_reset_1 1 0 3 NJ 1260 NJ 1260 NJ
+preplace netloc one_dout 1 14 1 NJ 1240
+preplace netloc paint_ball_video_enable_o 1 7 1 N 140
+preplace netloc paint_centerline_0_hsync_o 1 10 1 N 420
+preplace netloc paint_centerline_0_pxl_value_o 1 10 1 N 500
+preplace netloc paint_centerline_0_pxl_x_o 1 10 1 N 460
+preplace netloc paint_paddle_l_video_enable_o 1 8 1 N 260
+preplace netloc paint_paddle_r_video_enable_o 1 9 1 N 340
+preplace netloc paint_rectangle_0_hsync_o 1 7 1 N 160
+preplace netloc paint_rectangle_0_pxl_value_o 1 7 1 N 240
+preplace netloc paint_rectangle_0_pxl_x_o 1 7 1 N 200
+preplace netloc paint_rectangle_0_pxl_y_o 1 7 1 N 220
+preplace netloc paint_rectangle_0_vsync_o 1 7 1 N 180
+preplace netloc paint_rectangle_1_hsync_o 1 8 1 N 280
+preplace netloc paint_rectangle_1_pxl_value_o 1 8 1 N 360
+preplace netloc paint_rectangle_1_pxl_x_o 1 8 1 N 320
+preplace netloc paint_rectangle_1_pxl_y_o 1 8 1 N 340
+preplace netloc paint_rectangle_1_vsync_o 1 8 1 N 300
+preplace netloc paint_rectangle_2_hsync_o 1 9 1 N 360
+preplace netloc paint_rectangle_2_pxl_value_o 1 9 1 N 440
+preplace netloc paint_rectangle_2_pxl_x_o 1 9 1 N 400
+preplace netloc paint_rectangle_2_pxl_y_o 1 9 1 N 420
+preplace netloc paint_rectangle_2_vsync_o 1 9 1 N 380
+preplace netloc paint_scoreboard_hsync_o 1 11 2 NJ 980 N
+preplace netloc paint_scoreboard_pxl_value_o 1 11 1 NJ 920
+preplace netloc paint_scoreboard_video_enable_o 1 11 2 NJ 1020 N
+preplace netloc paint_scoreboard_vsync_o 1 11 2 NJ 1000 N
+preplace netloc pixel_counter_0_hpx_o 1 6 1 N 120
+preplace netloc pixel_counter_0_hsync_o 1 6 1 N 80
+preplace netloc pixel_counter_0_video_enable_o 1 6 1 N 60
+preplace netloc pixel_counter_0_vpx_o 1 6 1 N 140
+preplace netloc pixel_counter_0_vsync_o 1 6 1 N 100
+preplace netloc position_ball_0_ball_pos_x 1 2 5 860 340 NJ 340 NJ 340 NJ 340 2580
+preplace netloc position_ball_0_ball_pox_y 1 2 5 880 360 NJ 360 NJ 360 NJ 360 2620
+preplace netloc position_paddles_0_paddle_l_pos_x 1 2 6 760 380 NJ 380 NJ 380 NJ 380 NJ 380 3000J
+preplace netloc position_paddles_0_paddle_l_pos_y 1 2 6 780 400 NJ 400 NJ 400 NJ 400 NJ 400 3020J
+preplace netloc position_paddles_0_paddle_r_pos_x 1 2 7 840 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ
+preplace netloc position_paddles_0_paddle_r_pos_y 1 2 7 720 480 NJ 480 NJ 480 NJ 480 NJ 480 NJ 480 NJ
+preplace netloc pxl_y_i_1 1 10 1 N 480
+preplace netloc rgb2dvi_0_TMDS_Clk_n 1 14 1 NJ 1040
+preplace netloc rgb2dvi_0_TMDS_Clk_p 1 14 1 NJ 1010
+preplace netloc rgb2dvi_0_TMDS_Data_n 1 14 1 NJ 1100
+preplace netloc rgb2dvi_0_TMDS_Data_p 1 14 1 NJ 1070
+preplace netloc score_counter_0_game_reset 1 4 1 N 1280
+preplace netloc score_counter_0_score_right 1 4 7 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 4080
+preplace netloc score_l_1 1 4 7 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 1200 NJ 1200 4060
+preplace netloc score_seg_size_y_1 1 1 10 NJ 880 NJ 880 NJ 880 NJ 880 2000J 640 NJ 640 NJ 640 NJ 640 NJ 640 N
+preplace netloc scoreboard_top_offset_1 1 1 10 NJ 900 NJ 900 NJ 900 NJ 900 2040J 660 NJ 660 NJ 660 NJ 660 NJ 660 N
+preplace netloc sensor_0_1 1 0 14 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ
+preplace netloc sensor_1_1 1 0 14 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ 1580 NJ
+preplace netloc switch_0_1 1 0 14 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ 1520 NJ
+preplace netloc util_vector_logic_0_Res 1 3 1 N 1260
+preplace netloc util_vector_logic_1_Res 1 5 1 2140 900n
+preplace netloc util_vector_logic_2_Res 1 5 1 2200 960n
+preplace netloc v_tc_0_active_video_out 1 5 1 N 180
+preplace netloc v_tc_0_hblank_out 1 5 1 N 200
+preplace netloc v_tc_0_hsync_out 1 5 1 N 220
+preplace netloc v_tc_0_vblank_out 1 5 1 N 240
+preplace netloc v_tc_0_vsync_out 1 5 1 N 260
+preplace netloc video_buffer_0_HSync_o 1 13 1 N 1000
+preplace netloc video_buffer_0_VSync_o 1 13 1 N 1020
+preplace netloc video_buffer_0_Vdata_enable_o 1 13 1 N 1040
+preplace netloc video_buffer_0_Vdata_o 1 13 1 N 980
+preplace netloc video_enable_i_1 1 10 1 N 400
+preplace netloc vsync_i_1 1 10 1 N 440
+preplace netloc xlconstant_5_dout 1 1 1 N 720
+preplace netloc xlconstant_6_dout 1 1 3 300 1180 NJ 1180 1260J
+preplace netloc zero_dout 1 6 1 2700J 280n
+levelinfo -pg 1 0 160 520 1070 1490 1820 2390 2850 3250 3550 3900 4310 4600 4870 5180 5380
+pagesize -pg 1 -db -bbox -sgen -160 0 5570 1750
+",
+   "Reduced Jogs_ScaleFactor":"0.567383",
+   "Reduced Jogs_TopLeft":"-157,-791",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_trigger_l -pg 1 -lvl 15 -x 5800 -y 1310 -defaultsOSRD
-preplace port port-id_trigger_r -pg 1 -lvl 15 -x 5800 -y 1340 -defaultsOSRD
-preplace port port-id_sensor_l -pg 1 -lvl 0 -x -40 -y 1270 -defaultsOSRD
-preplace port port-id_sensor_r -pg 1 -lvl 0 -x -40 -y 1300 -defaultsOSRD
-preplace port port-id_reset -pg 1 -lvl 0 -x -40 -y 1110 -defaultsOSRD
-preplace port port-id_controller_switch -pg 1 -lvl 0 -x -40 -y 1240 -defaultsOSRD
-preplace port port-id_btn_up_l -pg 1 -lvl 0 -x -40 -y 1390 -defaultsOSRD
-preplace port port-id_btn_down_l -pg 1 -lvl 0 -x -40 -y 1420 -defaultsOSRD
-preplace port port-id_btn_up_r -pg 1 -lvl 0 -x -40 -y 1330 -defaultsOSRD
-preplace port port-id_btn_down_r -pg 1 -lvl 0 -x -40 -y 1360 -defaultsOSRD
-preplace port port-id_enable -pg 1 -lvl 0 -x -40 -y 940 -defaultsOSRD
-preplace port port-id_hdmi_out_clk_p -pg 1 -lvl 15 -x 5800 -y 700 -defaultsOSRD
-preplace port port-id_hdmi_out_clk_n -pg 1 -lvl 15 -x 5800 -y 730 -defaultsOSRD
-preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x -40 -y 1140 -defaultsOSRD
-preplace port port-id_game_reset -pg 1 -lvl 0 -x -40 -y 1050 -defaultsOSRD
-preplace portBus hdmi_out_hpd -pg 1 -lvl 15 -x 5800 -y 1130 -defaultsOSRD
-preplace portBus hdmi_out_data_p -pg 1 -lvl 15 -x 5800 -y 760 -defaultsOSRD
-preplace portBus hdmi_out_data_n -pg 1 -lvl 15 -x 5800 -y 790 -defaultsOSRD
+preplace port port-id_trigger_l -pg 1 -lvl 15 -x 5170 -y 1320 -defaultsOSRD
+preplace port port-id_trigger_r -pg 1 -lvl 15 -x 5170 -y 1350 -defaultsOSRD
+preplace port port-id_sensor_l -pg 1 -lvl 0 -x 0 -y 1280 -defaultsOSRD
+preplace port port-id_sensor_r -pg 1 -lvl 0 -x 0 -y 1310 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x 0 -y 990 -defaultsOSRD
+preplace port port-id_controller_switch -pg 1 -lvl 0 -x 0 -y 1250 -defaultsOSRD
+preplace port port-id_btn_up_l -pg 1 -lvl 0 -x 0 -y 1400 -defaultsOSRD
+preplace port port-id_btn_down_l -pg 1 -lvl 0 -x 0 -y 1430 -defaultsOSRD
+preplace port port-id_btn_up_r -pg 1 -lvl 0 -x 0 -y 1340 -defaultsOSRD
+preplace port port-id_btn_down_r -pg 1 -lvl 0 -x 0 -y 1370 -defaultsOSRD
+preplace port port-id_enable -pg 1 -lvl 0 -x 0 -y 940 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_p -pg 1 -lvl 15 -x 5170 -y 700 -defaultsOSRD
+preplace port port-id_hdmi_out_clk_n -pg 1 -lvl 15 -x 5170 -y 730 -defaultsOSRD
+preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x 0 -y 1120 -defaultsOSRD
+preplace port port-id_game_reset -pg 1 -lvl 0 -x 0 -y 1020 -defaultsOSRD
+preplace portBus hdmi_out_hpd -pg 1 -lvl 15 -x 5170 -y 1140 -defaultsOSRD
+preplace portBus hdmi_out_data_p -pg 1 -lvl 15 -x 5170 -y 760 -defaultsOSRD
+preplace portBus hdmi_out_data_n -pg 1 -lvl 15 -x 5170 -y 790 -defaultsOSRD
 preplace inst Constants -pg 1 -lvl 1 -x 160 -y 790 -defaultsOSRD
-preplace inst controllers -pg 1 -lvl 14 -x 5600 -y 1310 -defaultsOSRD
-preplace inst paint_scoreboard -pg 1 -lvl 11 -x 4550 -y 760 -defaultsOSRD
-preplace inst clk_divider_0 -pg 1 -lvl 3 -x 1110 -y 1150 -defaultsOSRD
-preplace inst collision_detection_0 -pg 1 -lvl 3 -x 1110 -y 590 -defaultsOSRD
-preplace inst paint_ball -pg 1 -lvl 7 -x 2810 -y 180 -defaultsOSRD
-preplace inst paint_centerline_0 -pg 1 -lvl 10 -x 3940 -y 660 -defaultsOSRD
-preplace inst paint_paddle_l -pg 1 -lvl 8 -x 3190 -y 210 -defaultsOSRD
-preplace inst paint_paddle_r -pg 1 -lvl 9 -x 3560 -y 330 -defaultsOSRD
-preplace inst position_ball_0 -pg 1 -lvl 6 -x 2370 -y 560 -defaultsOSRD
-preplace inst position_paddles_0 -pg 1 -lvl 2 -x 590 -y 780 -defaultsOSRD
-preplace inst score_counter_0 -pg 1 -lvl 4 -x 1570 -y 1030 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 1570 -y 1320 -defaultsOSRD
-preplace inst one -pg 1 -lvl 14 -x 5600 -y 1130 -defaultsOSRD
-preplace inst rgb2dvi_0 -pg 1 -lvl 14 -x 5600 -y 730 -defaultsOSRD
-preplace inst util_vector_logic_1 -pg 1 -lvl 5 -x 1980 -y 780 -defaultsOSRD
-preplace inst util_vector_logic_2 -pg 1 -lvl 5 -x 1980 -y 1020 -defaultsOSRD
-preplace inst v_tc_0 -pg 1 -lvl 5 -x 1980 -y 220 -defaultsOSRD
-preplace inst zero -pg 1 -lvl 6 -x 2370 -y 780 -defaultsOSRD
-preplace inst color_generator_0 -pg 1 -lvl 12 -x 4940 -y 670 -defaultsOSRD
-preplace inst pixel_counter_0 -pg 1 -lvl 6 -x 2370 -y 210 -defaultsOSRD
-preplace inst video_buffer_0 -pg 1 -lvl 13 -x 5250 -y 720 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 1110 -y 1010 -defaultsOSRD
-preplace inst util_vector_logic_3 -pg 1 -lvl 5 -x 1980 -y 1170 -defaultsOSRD
-preplace netloc Constants_score_seg_size_x 1 1 10 330J 620 890J 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 4380
-preplace netloc Constants_scoreboard_center_offset 1 1 10 390J 660 770J 870 NJ 870 NJ 870 NJ 870 2650J 880 NJ 880 NJ 880 NJ 880 4100
-preplace netloc Net 1 0 14 N 1140 N 1140 780 1250 1340 1210 1840J 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ 1240 4340 1230 NJ 1230 NJ 1230 NJ
-preplace netloc Net3 1 0 14 NJ 1110 N 1110 920 1080 1420 930 1840 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 4370 1220 NJ 1220 NJ 1220 5420J
-preplace netloc Net4 1 3 3 1350 470 NJ 470 N
-preplace netloc Net5 1 1 10 380 610 840 770 1360J 670 NJ 670 2160 840 2660J 870 NJ 870 NJ 870 3780 870 NJ
-preplace netloc Net6 1 1 9 340 590 820 750 1370J 690 NJ 690 2180 720 2560J 740 NJ 740 NJ 740 NJ
-preplace netloc Net7 1 1 8 300 530 860 350 NJ 350 NJ 350 NJ 350 NJ 350 3030 420 NJ
-preplace netloc Net8 1 1 8 310 600 900 780 NJ 780 1740J 710 NJ 710 NJ 710 3040 440 NJ
-preplace netloc Net9 1 1 6 320J 630 810 760 1300J 600 NJ 600 2120 320 2610
-preplace netloc btn_down_0_1 1 0 14 NJ 1420 NJ 1420 NJ 1420 NJ 1420 1780J 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ 1390 NJ
-preplace netloc btn_down_1_1 1 0 14 NJ 1360 NJ 1360 NJ 1360 1300J 1400 1720J 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ
-preplace netloc btn_up_0_1 1 0 14 NJ 1390 NJ 1390 NJ 1390 NJ 1390 1740J 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ
-preplace netloc btn_up_1_1 1 0 14 -20J 1220 NJ 1220 NJ 1220 NJ 1220 1830J 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 5410J
-preplace netloc clk_wiz_0_clk_hdmi 1 4 10 1810 100 2120 70 2560 10 3020 40 3410 160 3780 520 4370 550 NJ 550 5090 820 5420
-preplace netloc collision_detection_0_collision_ball_edge_l 1 3 2 1400 770 NJ
-preplace netloc collision_detection_0_collision_ball_edge_r 1 3 2 1390 790 NJ
-preplace netloc collision_detection_0_collision_ball_paddle 1 3 3 1420 590 NJ 590 NJ
+preplace inst controllers -pg 1 -lvl 14 -x 4980 -y 1320 -defaultsOSRD
+preplace inst paint_scoreboard -pg 1 -lvl 11 -x 4060 -y 760 -defaultsOSRD
+preplace inst clk_divider_0 -pg 1 -lvl 3 -x 1020 -y 1130 -defaultsOSRD
+preplace inst collision_detection_0 -pg 1 -lvl 3 -x 1020 -y 590 -defaultsOSRD
+preplace inst paint_ball -pg 1 -lvl 7 -x 2590 -y 180 -defaultsOSRD
+preplace inst paint_centerline_0 -pg 1 -lvl 10 -x 3670 -y 660 -defaultsOSRD
+preplace inst paint_paddle_l -pg 1 -lvl 8 -x 2930 -y 210 -defaultsOSRD
+preplace inst paint_paddle_r -pg 1 -lvl 9 -x 3300 -y 330 -defaultsOSRD
+preplace inst position_ball_0 -pg 1 -lvl 6 -x 2170 -y 560 -defaultsOSRD
+preplace inst position_paddles_0 -pg 1 -lvl 2 -x 550 -y 690 -defaultsOSRD
+preplace inst score_counter_0 -pg 1 -lvl 4 -x 1410 -y 1030 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 1410 -y 1210 -defaultsOSRD
+preplace inst one -pg 1 -lvl 14 -x 4980 -y 1140 -defaultsOSRD
+preplace inst rgb2dvi_0 -pg 1 -lvl 14 -x 4980 -y 730 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 5 -x 1730 -y 780 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 5 -x 1730 -y 1070 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 5 -x 1730 -y 220 -defaultsOSRD
+preplace inst zero -pg 1 -lvl 6 -x 2170 -y 780 -defaultsOSRD
+preplace inst color_generator_0 -pg 1 -lvl 12 -x 4370 -y 670 -defaultsOSRD
+preplace inst pixel_counter_0 -pg 1 -lvl 6 -x 2170 -y 210 -defaultsOSRD
+preplace inst video_buffer_0 -pg 1 -lvl 13 -x 4660 -y 720 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 1020 -y 1010 -defaultsOSRD
+preplace netloc Constants_score_seg_size_x 1 1 10 340J 860 NJ 860 NJ 860 NJ 860 1910J 880 NJ 880 NJ 880 NJ 880 NJ 880 3840
+preplace netloc Constants_scoreboard_center_offset 1 1 10 NJ 870 NJ 870 NJ 870 NJ 870 1920J 890 NJ 890 NJ 890 NJ 890 NJ 890 N
+preplace netloc Net 1 0 14 NJ 1120 NJ 1120 820 1200 1210 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 NJ 1140 3860 1240 NJ 1240 NJ 1240 NJ
+preplace netloc Net3 1 0 14 NJ 990 NJ 990 730 1210 1260 1130 1590 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 NJ 1000 3870 1260 NJ 1260 NJ 1260 NJ
+preplace netloc Net4 1 3 3 1250 910 NJ 910 1870
+preplace netloc Net5 1 1 10 350 820 810 750 1210J 580 NJ 580 1980 850 NJ 850 NJ 850 NJ 850 3510 870 NJ
+preplace netloc Net6 1 1 9 340 810 800 410 NJ 410 NJ 410 1920 860 NJ 860 NJ 860 NJ 860 3450J
+preplace netloc Net7 1 1 8 300 550 750 380 NJ 380 NJ 380 NJ 380 NJ 380 2750 420 NJ
+preplace netloc Net8 1 1 8 310 560 780 420 NJ 420 NJ 420 1930J 410 NJ 410 2780 440 NJ
+preplace netloc Net9 1 1 6 320J 570 730 430 NJ 430 NJ 430 1970 330 2430
+preplace netloc btn_down_0_1 1 0 14 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 NJ 1430 4820J
+preplace netloc btn_down_1_1 1 0 14 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 4810J
+preplace netloc btn_up_0_1 1 0 14 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 4810J
+preplace netloc btn_up_1_1 1 0 14 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ
+preplace netloc clk_wiz_0_clk_hdmi 1 4 10 1570 990 1940 720 2390 350 2770 380 3120 510 3480 520 3830 550 NJ 550 4500 820 4810
+preplace netloc collision_detection_0_collision_ball_edge_l 1 3 2 1240 770 NJ
+preplace netloc collision_detection_0_collision_ball_edge_r 1 3 2 1230 790 NJ
+preplace netloc collision_detection_0_collision_ball_paddle 1 3 3 1260 590 NJ 590 NJ
 preplace netloc collision_detection_0_collision_ball_topbottom 1 3 3 N 630 NJ 630 NJ
-preplace netloc collision_detection_0_collision_paddle_index 1 3 3 1410 610 NJ 610 NJ
-preplace netloc color_generator_0_data_o 1 12 1 5060J 670n
-preplace netloc controller_interconn_0_value_l_o 1 1 14 410 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 2970J 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 NJ 20 5760
-preplace netloc controller_interconn_0_value_r_o 1 1 14 400 -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 5770
-preplace netloc controller_ultrasonic_0_trigger 1 14 1 5780J 1310n
-preplace netloc controller_ultrasonic_1_trigger 1 14 1 NJ 1340
-preplace netloc enable_0_1 1 0 9 -20J 430 NJ 430 NJ 430 NJ 430 NJ 430 2180 330 2630 370 3020 380 3370
-preplace netloc one_dout 1 14 1 NJ 1130
-preplace netloc paint_ball_video_enable_o 1 7 1 3040 130n
+preplace netloc collision_detection_0_collision_paddle_index 1 3 3 1250 610 NJ 610 NJ
+preplace netloc color_generator_0_data_o 1 12 1 4490J 670n
+preplace netloc controller_interconn_0_value_l_o 1 1 14 370 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 NJ 920 3850J 960 NJ 960 NJ 960 NJ 960 5140
+preplace netloc controller_interconn_0_value_r_o 1 1 14 360 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 NJ 930 3450J 960 3840J 970 NJ 970 NJ 970 NJ 970 5150
+preplace netloc controller_ultrasonic_0_trigger 1 14 1 5140J 1320n
+preplace netloc controller_ultrasonic_1_trigger 1 14 1 NJ 1350
+preplace netloc enable_0_1 1 0 9 NJ 940 300J 910 NJ 910 1210J 900 NJ 900 1880 840 2400 10 2780 40 3150
+preplace netloc game_reset_1 1 0 3 NJ 1020 NJ 1020 NJ
+preplace netloc one_dout 1 14 1 NJ 1140
+preplace netloc paint_ball_video_enable_o 1 7 1 2780 130n
 preplace netloc paint_centerline_0_hsync_o 1 10 1 N 630
 preplace netloc paint_centerline_0_pxl_value_o 1 10 1 N 710
 preplace netloc paint_centerline_0_pxl_x_o 1 10 1 N 670
-preplace netloc paint_paddle_l_video_enable_o 1 8 1 3400 160n
-preplace netloc paint_paddle_r_video_enable_o 1 9 1 3760 280n
-preplace netloc paint_rectangle_0_hsync_o 1 7 1 3010 150n
-preplace netloc paint_rectangle_0_pxl_value_o 1 7 1 2960 230n
-preplace netloc paint_rectangle_0_pxl_x_o 1 7 1 2980 190n
-preplace netloc paint_rectangle_0_pxl_y_o 1 7 1 2980 210n
-preplace netloc paint_rectangle_0_vsync_o 1 7 1 3010 170n
-preplace netloc paint_rectangle_1_hsync_o 1 8 1 3390 180n
-preplace netloc paint_rectangle_1_pxl_value_o 1 8 1 3340 260n
-preplace netloc paint_rectangle_1_pxl_x_o 1 8 1 3360 220n
-preplace netloc paint_rectangle_1_pxl_y_o 1 8 1 3350 240n
-preplace netloc paint_rectangle_1_vsync_o 1 8 1 3380 200n
-preplace netloc paint_rectangle_2_hsync_o 1 9 1 3750 300n
-preplace netloc paint_rectangle_2_pxl_value_o 1 9 1 3710 380n
-preplace netloc paint_rectangle_2_pxl_x_o 1 9 1 3730 340n
-preplace netloc paint_rectangle_2_pxl_y_o 1 9 1 3720 360n
-preplace netloc paint_rectangle_2_vsync_o 1 9 1 3740 320n
-preplace netloc paint_scoreboard_hsync_o 1 11 2 N 730 5100J
-preplace netloc paint_scoreboard_pxl_value_o 1 11 1 4730 670n
-preplace netloc paint_scoreboard_video_enable_o 1 11 2 4720 760 NJ
-preplace netloc paint_scoreboard_vsync_o 1 11 2 4740 740 NJ
+preplace netloc paint_paddle_l_video_enable_o 1 8 1 3140 160n
+preplace netloc paint_paddle_r_video_enable_o 1 9 1 3510 280n
+preplace netloc paint_rectangle_0_hsync_o 1 7 1 2780 150n
+preplace netloc paint_rectangle_0_pxl_value_o 1 7 1 2740 230n
+preplace netloc paint_rectangle_0_pxl_x_o 1 7 1 2740 190n
+preplace netloc paint_rectangle_0_pxl_y_o 1 7 1 2740 210n
+preplace netloc paint_rectangle_0_vsync_o 1 7 1 2740 170n
+preplace netloc paint_rectangle_1_hsync_o 1 8 1 3130 180n
+preplace netloc paint_rectangle_1_pxl_value_o 1 8 1 3080 260n
+preplace netloc paint_rectangle_1_pxl_x_o 1 8 1 3100 220n
+preplace netloc paint_rectangle_1_pxl_y_o 1 8 1 3090 240n
+preplace netloc paint_rectangle_1_vsync_o 1 8 1 3110 200n
+preplace netloc paint_rectangle_2_hsync_o 1 9 1 3500 300n
+preplace netloc paint_rectangle_2_pxl_value_o 1 9 1 3450 380n
+preplace netloc paint_rectangle_2_pxl_x_o 1 9 1 3470 340n
+preplace netloc paint_rectangle_2_pxl_y_o 1 9 1 3460 360n
+preplace netloc paint_rectangle_2_vsync_o 1 9 1 3490 320n
+preplace netloc paint_scoreboard_hsync_o 1 11 2 N 730 4510J
+preplace netloc paint_scoreboard_pxl_value_o 1 11 1 4240 670n
+preplace netloc paint_scoreboard_video_enable_o 1 11 2 4230 760 NJ
+preplace netloc paint_scoreboard_vsync_o 1 11 2 4250 740 NJ
 preplace netloc pixel_counter_0_hpx_o 1 6 1 N 170
-preplace netloc pixel_counter_0_hsync_o 1 6 1 2560 130n
-preplace netloc pixel_counter_0_video_enable_o 1 6 1 2570 110n
+preplace netloc pixel_counter_0_hsync_o 1 6 1 2360 130n
+preplace netloc pixel_counter_0_video_enable_o 1 6 1 2370 110n
 preplace netloc pixel_counter_0_vpx_o 1 6 1 N 190
-preplace netloc pixel_counter_0_vsync_o 1 6 1 2580 150n
-preplace netloc position_ball_0_ball_pos_x 1 2 5 920 370 NJ 370 NJ 370 NJ 370 2590
-preplace netloc position_ball_0_ball_pox_y 1 2 5 910 340 NJ 340 NJ 340 NJ 340 2620
-preplace netloc position_paddles_0_paddle_l_pos_x 1 2 6 800 800 NJ 800 1730J 700 2130J 380 NJ 380 3000J
-preplace netloc position_paddles_0_paddle_l_pos_y 1 2 6 830 790 1380J 680 NJ 680 2140J 390 NJ 390 3010J
-preplace netloc position_paddles_0_paddle_r_pos_x 1 2 7 850 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 3390J
-preplace netloc position_paddles_0_paddle_r_pos_y 1 2 7 870 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 3410J
+preplace netloc pixel_counter_0_vsync_o 1 6 1 2380 150n
+preplace netloc position_ball_0_ball_pos_x 1 2 5 830 760 1220J 710 NJ 710 NJ 710 2410
+preplace netloc position_ball_0_ball_pox_y 1 2 5 820 850 NJ 850 NJ 850 1950J 870 2440
+preplace netloc position_paddles_0_paddle_l_pos_x 1 2 6 740 360 NJ 360 NJ 360 NJ 360 NJ 360 2740J
+preplace netloc position_paddles_0_paddle_l_pos_y 1 2 6 760 370 NJ 370 NJ 370 NJ 370 NJ 370 2760J
+preplace netloc position_paddles_0_paddle_r_pos_x 1 2 7 770 390 NJ 390 NJ 390 NJ 390 NJ 390 NJ 390 3150J
+preplace netloc position_paddles_0_paddle_r_pos_y 1 2 7 790 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ
 preplace netloc pxl_y_i_1 1 10 1 N 690
 preplace netloc rgb2dvi_0_TMDS_Clk_n 1 14 1 NJ 730
-preplace netloc rgb2dvi_0_TMDS_Clk_p 1 14 1 5780J 700n
-preplace netloc rgb2dvi_0_TMDS_Data_n 1 14 1 5780J 770n
-preplace netloc rgb2dvi_0_TMDS_Data_p 1 14 1 5780J 750n
-preplace netloc score_counter_0_game_reset 1 4 1 1820 1030n
-preplace netloc score_counter_0_score_right 1 4 7 1720J 0 NJ 0 NJ 0 NJ 0 NJ 0 NJ 0 4380
-preplace netloc score_l_1 1 4 7 1820J 880 NJ 880 2640J 850 NJ 850 NJ 850 NJ 850 4350
-preplace netloc score_seg_size_y_1 1 1 10 360J 640 880J 850 NJ 850 NJ 850 NJ 850 2630J 420 2990J 30 NJ 30 NJ 30 4360
-preplace netloc scoreboard_top_offset_1 1 1 10 300 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ
-preplace netloc sensor_0_1 1 0 14 NJ 1270 NJ 1270 NJ 1270 1380J 1250 1720J 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ
-preplace netloc sensor_1_1 1 0 14 -10J 1230 NJ 1230 NJ 1230 NJ 1230 1740J 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 5400J
-preplace netloc switch_0_1 1 0 14 NJ 1240 NJ 1240 NJ 1240 NJ 1240 1730J 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ
-preplace netloc util_vector_logic_1_Res 1 5 1 2170 650n
+preplace netloc rgb2dvi_0_TMDS_Clk_p 1 14 1 5140J 700n
+preplace netloc rgb2dvi_0_TMDS_Data_n 1 14 1 5140J 770n
+preplace netloc rgb2dvi_0_TMDS_Data_p 1 14 1 5140J 750n
+preplace netloc score_counter_0_game_reset 1 4 1 1560 1050n
+preplace netloc score_counter_0_score_right 1 4 7 1580J 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 3880
+preplace netloc score_l_1 1 4 7 1560J 970 NJ 970 NJ 970 NJ 970 NJ 970 NJ 970 3830
+preplace netloc score_seg_size_y_1 1 1 10 300J 880 NJ 880 NJ 880 NJ 880 1900J 900 NJ 900 NJ 900 NJ 900 NJ 900 3890
+preplace netloc scoreboard_top_offset_1 1 1 10 N 890 NJ 890 NJ 890 NJ 890 1890J 910 NJ 910 NJ 910 NJ 910 NJ 910 NJ
+preplace netloc sensor_0_1 1 0 14 NJ 1280 NJ 1280 NJ 1280 1210J 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 4810J
+preplace netloc sensor_1_1 1 0 14 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 4810J
+preplace netloc switch_0_1 1 0 14 NJ 1250 NJ 1250 NJ 1250 1260J 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ
+preplace netloc util_vector_logic_0_Res 1 3 1 N 1010
+preplace netloc util_vector_logic_1_Res 1 5 1 1950 650n
+preplace netloc util_vector_logic_2_Res 1 5 1 1960 510n
 preplace netloc v_tc_0_active_video_out 1 5 1 N 180
 preplace netloc v_tc_0_hblank_out 1 5 1 N 200
 preplace netloc v_tc_0_hsync_out 1 5 1 N 220
@@ -135,15 +432,11 @@ preplace netloc video_buffer_0_Vdata_enable_o 1 13 1 N 750
 preplace netloc video_buffer_0_Vdata_o 1 13 1 N 690
 preplace netloc video_enable_i_1 1 10 1 N 610
 preplace netloc vsync_i_1 1 10 1 N 650
-preplace netloc xlconstant_5_dout 1 1 1 370 760n
-preplace netloc xlconstant_6_dout 1 1 3 350 650 780J 810 1300J
-preplace netloc zero_dout 1 6 1 2600J 210n
-preplace netloc util_vector_logic_0_Res 1 3 1 N 1010
-preplace netloc game_reset_1 1 0 5 NJ 1050 NJ 1050 800 920 N 920 1830
-preplace netloc util_vector_logic_3_Res 1 5 1 2150 510n
-preplace netloc util_vector_logic_2_Res 1 4 2 1840 1090 2120
-levelinfo -pg 1 -40 160 590 1110 1570 1980 2370 2810 3190 3560 3940 4550 4940 5250 5600 5800
-pagesize -pg 1 -db -bbox -sgen -200 -20 7950 1790
+preplace netloc xlconstant_5_dout 1 1 1 330 670n
+preplace netloc xlconstant_6_dout 1 1 3 320 940 NJ 940 1210J
+preplace netloc zero_dout 1 6 1 2420J 210n
+levelinfo -pg 1 0 160 550 1020 1410 1730 2170 2590 2930 3300 3670 4060 4370 4660 4980 5170
+pagesize -pg 1 -db -bbox -sgen -160 0 5360 1450
 "
 }
-
+0

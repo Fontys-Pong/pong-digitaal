@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Feb 21 15:52:31 2025
+//Date        : Tue Feb 25 11:48:23 2025
 //Host        : XPS-Tommy running 64-bit major release  (build 9200)
 //Command     : generate_target PONG.bd
 //Design      : PONG
@@ -81,7 +81,7 @@ module Constants_imp_YX2WQJ
        (.dout(Net6));
 endmodule
 
-(* CORE_GENERATION_INFO = "PONG,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=PONG,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=58,numReposBlks=53,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=35,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}" *) (* HW_HANDOFF = "PONG.hwdef" *) 
+(* CORE_GENERATION_INFO = "PONG,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=PONG,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=61,numReposBlks=56,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=37,numPkgbdBlks=0,bdsource=USER,synth_mode=Global}" *) (* HW_HANDOFF = "PONG.hwdef" *) 
 module PONG
    (btn_down_l,
     btn_down_r,
@@ -90,6 +90,7 @@ module PONG
     clk_100MHz,
     controller_switch,
     enable,
+    game_reset,
     hdmi_out_clk_n,
     hdmi_out_clk_p,
     hdmi_out_data_n,
@@ -107,6 +108,7 @@ module PONG
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_100MHZ CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_100MHZ, ASSOCIATED_RESET reset, CLK_DOMAIN PONG_clk_100MHz, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input clk_100MHz;
   input controller_switch;
   input enable;
+  input game_reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_N, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_out_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.HDMI_OUT_CLK_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.HDMI_OUT_CLK_P, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output hdmi_out_clk_p;
   output [2:0]hdmi_out_data_n;
@@ -144,6 +146,7 @@ module PONG
   wire controller_ultrasonic_0_trigger;
   wire controller_ultrasonic_1_trigger;
   wire enable_0_1;
+  wire game_reset_1;
   wire [0:0]one_dout;
   wire paint_ball_video_enable_o;
   wire paint_centerline_0_hsync_o;
@@ -194,6 +197,7 @@ module PONG
   wire sensor_0_1;
   wire sensor_1_1;
   wire switch_0_1;
+  wire [0:0]util_vector_logic_0_Res;
   wire [0:0]util_vector_logic_1_Res;
   wire [0:0]util_vector_logic_2_Res;
   wire v_tc_0_active_video_out;
@@ -218,6 +222,7 @@ module PONG
   assign btn_up_0_1 = btn_up_l;
   assign btn_up_1_1 = btn_up_r;
   assign enable_0_1 = enable;
+  assign game_reset_1 = game_reset;
   assign hdmi_out_clk_n = rgb2dvi_0_TMDS_Clk_n;
   assign hdmi_out_clk_p = rgb2dvi_0_TMDS_Clk_p;
   assign hdmi_out_data_n[2:0] = rgb2dvi_0_TMDS_Data_n;
@@ -432,9 +437,13 @@ module PONG
         .max_score(xlconstant_6_dout),
         .point_l(collision_detection_0_collision_ball_edge_r),
         .point_r(collision_detection_0_collision_ball_edge_l),
-        .reset(Net3),
+        .reset(util_vector_logic_0_Res),
         .score_left(score_l_1),
         .score_right(score_counter_0_score_right));
+  PONG_util_vector_logic_0_0 util_vector_logic_0
+       (.Op1(Net3),
+        .Op2(game_reset_1),
+        .Res(util_vector_logic_0_Res));
   PONG_util_vector_logic_1_0 util_vector_logic_1
        (.Op1(collision_detection_0_collision_ball_edge_l),
         .Op2(collision_detection_0_collision_ball_edge_r),
@@ -513,6 +522,8 @@ module controllers_imp_10DA66H
   wire controller_ultrasoni_0_trigger;
   wire [8:0]controller_ultrasoni_1_data;
   wire controller_ultrasoni_1_trigger;
+  wire [8:0]movingAverage_0_data_o;
+  wire [8:0]movingAverage_1_data_o;
   wire sensor_0_1;
   wire sensor_1_1;
   wire switch_0_1;
@@ -553,10 +564,10 @@ module controllers_imp_10DA66H
         .enable_2(Net2),
         .switch(switch_0_1),
         .value_l_1(controller_buttons_0_value),
-        .value_l_2(controller_ultrasoni_0_data),
+        .value_l_2(movingAverage_0_data_o),
         .value_l_o(controller_interconn_0_value_l_o),
         .value_r_1(controller_buttons_1_value),
-        .value_r_2(controller_ultrasoni_1_data),
+        .value_r_2(movingAverage_1_data_o),
         .value_r_o(controller_interconn_0_value_r_o));
   PONG_controller_ultrasoni_0_0 controller_ultrasoni_0
        (.clk(Net),
@@ -572,6 +583,16 @@ module controllers_imp_10DA66H
         .enable(Net2),
         .reset_i(Net3),
         .trigger(controller_ultrasoni_1_trigger));
+  PONG_movingAverage_0_2 movingAverage_0
+       (.clk(clk_divider_1_clk_o),
+        .data_i(controller_ultrasoni_0_data),
+        .data_o(movingAverage_0_data_o),
+        .reset_i(Net3));
+  PONG_movingAverage_1_0 movingAverage_1
+       (.clk(clk_divider_1_clk_o),
+        .data_i(controller_ultrasoni_1_data),
+        .data_o(movingAverage_1_data_o),
+        .reset_i(Net3));
 endmodule
 
 module paint_scoreboard_imp_1D47EDC

@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-//Date        : Fri Feb 21 16:44:13 2025
+//Date        : Tue Feb 25 16:08:48 2025
 //Host        : XPS-Tommy running 64-bit major release  (build 9200)
 //Command     : generate_target CMOD_A7_35T.bd
 //Design      : CMOD_A7_35T
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "CMOD_A7_35T,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CMOD_A7_35T,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=65,numReposBlks=59,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=35,numPkgbdBlks=1,bdsource=USER,da_clkrst_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "CMOD_A7_35T.hwdef" *) 
+(* CORE_GENERATION_INFO = "CMOD_A7_35T,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CMOD_A7_35T,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=68,numReposBlks=62,numNonXlnxBlks=1,numHierBlks=6,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=39,numPkgbdBlks=1,bdsource=USER,da_clkrst_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "CMOD_A7_35T.hwdef" *) 
 module CMOD_A7_35T
    (btn_down_l,
     btn_down_r,
@@ -68,7 +68,6 @@ module CMOD_A7_35T
   wire btn_up_l_1;
   wire btn_up_r_1;
   wire clk_wiz_clk_out1;
-  wire clk_wiz_locked;
   wire controller_switch_1;
   wire game_reset_1;
   wire reset_1;
@@ -121,14 +120,7 @@ module CMOD_A7_35T
   CMOD_A7_35T_clk_wiz_0 clk_wiz
        (.clk_in1(sys_clk_1),
         .clk_out1(clk_wiz_clk_out1),
-        .locked(clk_wiz_locked),
         .reset(reset_1));
-  CMOD_A7_35T_rst_clk_wiz_100M_0 rst_clk_wiz_100M
-       (.aux_reset_in(1'b1),
-        .dcm_locked(clk_wiz_locked),
-        .ext_reset_in(reset_1),
-        .mb_debug_sys_rst(1'b0),
-        .slowest_sync_clk(clk_wiz_clk_out1));
   CMOD_A7_35T_util_vector_logic_0_0 util_vector_logic_0
        (.Op1(util_vector_logic_2_Res),
         .Res(util_vector_logic_0_Res));
