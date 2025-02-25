@@ -147,9 +147,9 @@ begin
         end if;
     end process;
 
-    data <= std_logic_vector(to_unsigned((512 - ((distance_mm - MinDistance_mm) * 512) / (MaxDistance_mm - MinDistance_mm)), 9)) when distance_mm >= MinDistance_mm and distance_mm <= MaxDistance_mm else 
+    data <= std_logic_vector(to_unsigned((511 - ((distance_mm - MinDistance_mm) * 511) / (MaxDistance_mm - MinDistance_mm)), 9)) when distance_mm >= MinDistance_mm and distance_mm <= MaxDistance_mm else 
             std_logic_vector(to_unsigned(0, 9)) when distance_mm > MaxDistance_mm else 
-            std_logic_vector(to_unsigned(512, 9));
+            std_logic_vector(to_unsigned(511, 9));
 
 
     output_decoder: process(clk)
